@@ -14,8 +14,10 @@ info:
 servers:
   - url: 'https://api.wingspan.app'
     description: Wingspan's Payments API in Production
+    x-speakeasy-server-id: prod
   - url: 'https://stagingapi.wingspan.app'
     description: Wingspan's Payments API in Staging
+    x-speakeasy-server-id: prod
 x-speakeasy-name-override:
   - operationId: ^get.*
     methodNameOverride: get
