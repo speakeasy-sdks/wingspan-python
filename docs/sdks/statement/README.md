@@ -12,10 +12,10 @@ Download bank statement pdf
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.DownloadStatementRequest(
     id='028921cd-dc69-4260-9fb5-76b0d5f0d30c',
@@ -46,10 +46,10 @@ Get bank statement
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.GetStatementRequest(
     id='5fbb2587-0532-402c-b3d5-fe9b90c28909',

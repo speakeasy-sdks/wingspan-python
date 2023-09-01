@@ -11,10 +11,10 @@ Get Institution By Routing Number
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.GetInstitutionRequest(
     routing_number='quidem',

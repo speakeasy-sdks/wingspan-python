@@ -13,10 +13,10 @@ Create Payment Eligibility Requirement
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import shared
+import wingspan
+from wingspan.models import shared
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = shared.PaymentEligibility(
     field='provident',
@@ -48,10 +48,10 @@ Delete Payment Eligibility Requirement
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.DeletePaymentEligibilityRequirementRequest(
     id='a88f3a66-9970-474b-a446-9b6e21419598',
@@ -82,10 +82,10 @@ Get Payment Eligibility Requirement
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.GetPaymentEligibilityRequirementRequest(
     id='90afa563-e251-46fe-8c8b-711e5b7fd2ed',

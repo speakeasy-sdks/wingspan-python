@@ -11,10 +11,10 @@ List Payment Eligigbility Requirements
 ### Example Usage
 
 ```python
-import petstore
+import wingspan
 
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 
 res = s.payment_eligibility_requirements.list()

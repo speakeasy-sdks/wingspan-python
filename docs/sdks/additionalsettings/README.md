@@ -11,10 +11,10 @@ List additional settings
 ### Example Usage
 
 ```python
-import petstore
+import wingspan
 
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 
 res = s.additional_settings.list()

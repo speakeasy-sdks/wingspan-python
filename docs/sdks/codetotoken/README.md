@@ -11,10 +11,10 @@ Exchange the code for a token
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations, shared
+import wingspan
+from wingspan.models import operations, shared
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.ExchangeCodeToTokenRequest(
     card_token_request=shared.CardTokenRequest(
