@@ -17,7 +17,7 @@ servers:
     x-speakeasy-server-id: prod
   - url: 'https://stagingapi.wingspan.app'
     description: Wingspan's Payments API in Staging
-    x-speakeasy-server-id: prod
+    x-speakeasy-server-id: staging
 x-speakeasy-name-override:
   - operationId: ^get.*
     methodNameOverride: get
