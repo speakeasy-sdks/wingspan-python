@@ -11,10 +11,10 @@ Mark a 1099 submission as returned by mail for collaborator
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import shared
+import wingspan
+from wingspan.models import shared
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = shared.Mark1099AsUndeliveredRequest(
     member_id='quibusdam',

@@ -13,10 +13,10 @@ Create additional data
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import shared
+import wingspan
+from wingspan.models import shared
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = shared.AdditionalData(
     key='corrupti',
@@ -50,10 +50,10 @@ Delete additional data
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.DeleteAdditionalDataRequest(
     id='4e0f467c-c879-46ed-951a-05dfc2ddf7cc',
@@ -84,10 +84,10 @@ Get additional data
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.GetAdditionalDataRequest(
     id='78ca1ba9-28fc-4816-b42c-b73920592939',

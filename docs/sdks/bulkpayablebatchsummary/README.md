@@ -11,10 +11,10 @@ Get Bulk Payable Batch Import Summary
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.GetBulkPayableBatchSummaryRequest(
     batch_id='hic',

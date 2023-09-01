@@ -12,10 +12,10 @@ Delete a card by cardId
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.DeleteCardRequest(
     id='ea7596eb-10fa-4aa2-b52c-5955907aff1a',
@@ -46,10 +46,10 @@ Update card by cardId
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations, shared
+import wingspan
+from wingspan.models import operations, shared
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.UpdateCardRequest(
     card_update_request=shared.CardUpdateRequest(

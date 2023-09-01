@@ -2,10 +2,10 @@
 
 
 ```python
-import petstore
-from petstore.models import shared
+import wingspan
+from wingspan.models import shared
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = shared.Mark1099AsUndeliveredRequest(
     member_id='corrupti',

@@ -11,10 +11,10 @@ Downloads a form W9 PDF for a collaborator
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.DownloadFormW9Request(
     id='63c969e9-a3ef-4a77-9fb1-4cd66ae395ef',

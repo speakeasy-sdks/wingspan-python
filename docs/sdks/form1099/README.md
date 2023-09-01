@@ -11,10 +11,10 @@ Downloads a form 1099 PDF for a collaborator
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.DownloadForm1099Request(
     id='1e91e450-ad2a-4bd4-8269-802d502a94bb',

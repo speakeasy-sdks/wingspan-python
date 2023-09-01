@@ -11,10 +11,10 @@ Gets an application link for creating the clearing bank account
 ### Example Usage
 
 ```python
-import petstore
-from petstore.models import operations
+import wingspan
+from wingspan.models import operations
 
-s = petstore.Petstore()
+s = wingspan.Wingspan()
 
 req = operations.GetAppLinkRequest(
     member_id='laboriosam',
