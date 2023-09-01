@@ -5,7 +5,10 @@ from dataclasses import dataclass
 
 
 SERVERS = [
-    'http://petstore.swagger.io/v1',
+    'https://api.wingspan.app',
+    # Wingspan's Payments API in Production
+    'https://stagingapi.wingspan.app',
+    # Wingspan's Payments API in Staging
 ]
 """Contains the list of servers available to the SDK"""
 
@@ -17,8 +20,8 @@ class SDKConfiguration:
     server_idx: int = 0
     language: str = 'python'
     openapi_doc_version: str = '1.0.0'
-    sdk_version: str = '1.24.0'
-    gen_version: str = '2.89.1'
+    sdk_version: str = '1.25.0'
+    gen_version: str = '2.91.4'
 
     def get_server_details(self) -> tuple[str, dict[str, str]]:
         if self.server_url:

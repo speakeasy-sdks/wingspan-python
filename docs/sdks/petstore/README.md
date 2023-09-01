@@ -2,5 +2,7 @@
 
 ## Overview
 
+Wingspan Payments API: Payments
+
 ### Available Operations
 
