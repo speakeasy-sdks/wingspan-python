@@ -1,4 +1,4 @@
-# Petstore
+# Wingspan Python SDK
 
 <!-- Start SDK Installation -->
 ## SDK Installation
