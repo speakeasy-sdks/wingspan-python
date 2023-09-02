@@ -14,19 +14,17 @@ pip install git+https://github.com/speakeasy-sdks/wingspan-python.git
 
 ```python
 import wingspan
-from wingspan.models import shared
+from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
-req = shared.Mark1099AsUndeliveredRequest(
-    member_id='corrupti',
-    submission_index=5928.45,
-    year=7151.9,
+req = operations.DeletePaymentsBankingCardIDRequest(
+    id='89bd9d8d-69a6-474e-8f46-7cc8796ed151',
 )
 
-res = s.one_thousand_and_ninety_nine.mark(req)
+res = s.delete_payments_banking_card_id_(req)
 
-if res.mark1099_as_undelivered_response is not None:
+if res.card is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -34,92 +32,48 @@ if res.mark1099_as_undelivered_response is not None:
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
+### [Wingspan SDK](docs/sdks/wingspan/README.md)
 
-### [one_thousand_and_ninety_nine](docs/sdks/onethousandandninetynine/README.md)
-
-* [mark](docs/sdks/onethousandandninetynine/README.md#mark) - Mark a 1099 submission as returned by mail for collaborator
-
-### [additional_data](docs/sdks/additionaldata/README.md)
-
-* [create](docs/sdks/additionaldata/README.md#create) - Create additional data
-* [delete](docs/sdks/additionaldata/README.md#delete) - Delete additional data
-* [get](docs/sdks/additionaldata/README.md#get) - Get additional data
-
-### [additional_settings](docs/sdks/additionalsettings/README.md)
-
-* [list](docs/sdks/additionalsettings/README.md#list) - List additional settings
-
-### [app_link](docs/sdks/applink/README.md)
-
-* [get](docs/sdks/applink/README.md#get) - Gets an application link for creating the clearing bank account
-
-### [bank_statements](docs/sdks/bankstatements/README.md)
-
-* [list](docs/sdks/bankstatements/README.md#list) - List bank statements
-
-### [bulk_payable_batch_summary](docs/sdks/bulkpayablebatchsummary/README.md)
-
-* [get](docs/sdks/bulkpayablebatchsummary/README.md#get) - Get Bulk Payable Batch Import Summary
-
-### [card](docs/sdks/card/README.md)
-
-* [delete](docs/sdks/card/README.md#delete) - Delete a card by cardId
-* [update](docs/sdks/card/README.md#update) - Update card by cardId
-
-### [cards](docs/sdks/cards/README.md)
-
-* [list](docs/sdks/cards/README.md#list) - List cards
-
-### [client_invoice_fees](docs/sdks/clientinvoicefees/README.md)
-
-* [list](docs/sdks/clientinvoicefees/README.md#list) - List client-invoice fees
-
-### [code_to_token](docs/sdks/codetotoken/README.md)
-
-* [exchange](docs/sdks/codetotoken/README.md#exchange) - Exchange the code for a token
-
-### [form1099](docs/sdks/form1099/README.md)
-
-* [download](docs/sdks/form1099/README.md#download) - Downloads a form 1099 PDF for a collaborator
-
-### [form_w9](docs/sdks/formw9/README.md)
-
-* [download](docs/sdks/formw9/README.md#download) - Downloads a form W9 PDF for a collaborator
-
-### [institution](docs/sdks/institution/README.md)
-
-* [get](docs/sdks/institution/README.md#get) - Get Institution By Routing Number
-
-### [mcc](docs/sdks/mcc/README.md)
-
-* [list](docs/sdks/mcc/README.md#list) - List mcc codes
-
-### [payables](docs/sdks/payables/README.md)
-
-* [get](docs/sdks/payables/README.md#get) - Get payables summary
-
-### [payment_eligibility_requirement](docs/sdks/paymenteligibilityrequirement/README.md)
-
-* [create](docs/sdks/paymenteligibilityrequirement/README.md#create) - Create Payment Eligibility Requirement
-* [delete](docs/sdks/paymenteligibilityrequirement/README.md#delete) - Delete Payment Eligibility Requirement
-* [get](docs/sdks/paymenteligibilityrequirement/README.md#get) - Get Payment Eligibility Requirement
-
-### [payment_eligibility_requirements](docs/sdks/paymenteligibilityrequirements/README.md)
-
-* [list](docs/sdks/paymenteligibilityrequirements/README.md#list) - List Payment Eligigbility Requirements
-
-### [service_status](docs/sdks/servicestatus/README.md)
-
-* [get](docs/sdks/servicestatus/README.md#get) - Get Service Status
-
-### [statement](docs/sdks/statement/README.md)
-
-* [download](docs/sdks/statement/README.md#download) - Download bank statement pdf
-* [get](docs/sdks/statement/README.md#get) - Get bank statement
-
-### [verification](docs/sdks/verification/README.md)
-
-* [send](docs/sdks/verification/README.md#send) - Sends a verification code
+* [delete_payments_banking_card_id_](docs/sdks/wingspan/README.md#delete_payments_banking_card_id_) - delete a card by cardId
+* [delete_payments_banking_instant_payout](docs/sdks/wingspan/README.md#delete_payments_banking_instant_payout) - delete instant payout
+* [delete_payments_collaborator_settings_additional_data_id_](docs/sdks/wingspan/README.md#delete_payments_collaborator_settings_additional_data_id_) - Delete additional data
+* [delete_payments_collaborator_settings_eligibility_requirement_id_](docs/sdks/wingspan/README.md#delete_payments_collaborator_settings_eligibility_requirement_id_) - Delete Eligibility Requirement
+* [delete_payments_collaborator_settings_payment_eligibility_id_](docs/sdks/wingspan/README.md#delete_payments_collaborator_settings_payment_eligibility_id_) - Delete Payment Eligibility Requirement
+* [delete_payments_payout_settings_member_id_debit_card_id_](docs/sdks/wingspan/README.md#delete_payments_payout_settings_member_id_debit_card_id_) - delete the payout debit card
+* [get_payments](docs/sdks/wingspan/README.md#get_payments) - getServiceStatus
+* [get_payments_banking_card](docs/sdks/wingspan/README.md#get_payments_banking_card) - list cards
+* [get_payments_banking_instant_payout](docs/sdks/wingspan/README.md#get_payments_banking_instant_payout) - fetch instant payout details
+* [get_payments_banking_institution_routing_number_](docs/sdks/wingspan/README.md#get_payments_banking_institution_routing_number_) - Get Institution By Routing Number
+* [get_payments_banking_statement](docs/sdks/wingspan/README.md#get_payments_banking_statement) - list bank statements
+* [get_payments_banking_statement_id_](docs/sdks/wingspan/README.md#get_payments_banking_statement_id_) - get bank statement
+* [get_payments_banking_statement_id_download](docs/sdks/wingspan/README.md#get_payments_banking_statement_id_download) - download bank statement pdf
+* [get_payments_bulk_payable_batch_batch_id_import_summary](docs/sdks/wingspan/README.md#get_payments_bulk_payable_batch_batch_id_import_summary) - Get Bulk Payable Batch Import Summary
+* [get_payments_client_invoice_invoice_id_fees](docs/sdks/wingspan/README.md#get_payments_client_invoice_invoice_id_fees) - list client-invoice fees
+* [get_payments_collaborator_settings_additional_data](docs/sdks/wingspan/README.md#get_payments_collaborator_settings_additional_data) - list additional settings
+* [get_payments_collaborator_settings_additional_data_id_](docs/sdks/wingspan/README.md#get_payments_collaborator_settings_additional_data_id_) - Get additional data
+* [get_payments_collaborator_settings_eligibility_requirement](docs/sdks/wingspan/README.md#get_payments_collaborator_settings_eligibility_requirement) - List Eligibility Requirements
+* [get_payments_collaborator_settings_eligibility_requirement_id_](docs/sdks/wingspan/README.md#get_payments_collaborator_settings_eligibility_requirement_id_) - Get Eligibility Requirement
+* [get_payments_collaborator_settings_payment_eligibility](docs/sdks/wingspan/README.md#get_payments_collaborator_settings_payment_eligibility) - List Payment Eligigbility Requirements
+* [get_payments_collaborator_settings_payment_eligibility_id_](docs/sdks/wingspan/README.md#get_payments_collaborator_settings_payment_eligibility_id_) - Get Payment Eligibility Requirement
+* [get_payments_collaborator_id_download_1099_year_index_](docs/sdks/wingspan/README.md#get_payments_collaborator_id_download_1099_year_index_) - Downloads a form 1099 PDF for a collaborator
+* [get_payments_collaborator_id_download_w9](docs/sdks/wingspan/README.md#get_payments_collaborator_id_download_w9) - Downloads a form W9 PDF for a collaborator
+* [get_payments_collaborator_id_events](docs/sdks/wingspan/README.md#get_payments_collaborator_id_events) - Get collaborator events by collaboratorId
+* [get_payments_mcc](docs/sdks/wingspan/README.md#get_payments_mcc) - list mcc codes
+* [get_payments_payout_settings_id_](docs/sdks/wingspan/README.md#get_payments_payout_settings_id_) - get the payout settings
+* [get_payments_payout_settings_member_id_debit_card](docs/sdks/wingspan/README.md#get_payments_payout_settings_member_id_debit_card) - list the payout debit cards
+* [get_payments_payout_settings_member_id_debit_card_id_](docs/sdks/wingspan/README.md#get_payments_payout_settings_member_id_debit_card_id_) - get the payout debit card
+* [get_payments_service_banking_member_id_application](docs/sdks/wingspan/README.md#get_payments_service_banking_member_id_application) - gets an application link for creating the clearing bank account
+* [get_payments_summary_payables](docs/sdks/wingspan/README.md#get_payments_summary_payables) - get payables summary
+* [patch_payments_banking_card_id_](docs/sdks/wingspan/README.md#patch_payments_banking_card_id_) - update card by cardId
+* [patch_payments_banking_card_id_token](docs/sdks/wingspan/README.md#patch_payments_banking_card_id_token) - exchange the code for a token
+* [patch_payments_collaborator_settings_eligibility_requirement_id_](docs/sdks/wingspan/README.md#patch_payments_collaborator_settings_eligibility_requirement_id_) - Update Eligibility Requirement
+* [post_payments_banking_card_id_token](docs/sdks/wingspan/README.md#post_payments_banking_card_id_token) - sends a verification code
+* [post_payments_banking_instant_payout](docs/sdks/wingspan/README.md#post_payments_banking_instant_payout) - create instant payout details
+* [post_payments_collaborator_settings_additional_data](docs/sdks/wingspan/README.md#post_payments_collaborator_settings_additional_data) - Create additional data
+* [post_payments_collaborator_settings_eligibility_requirement](docs/sdks/wingspan/README.md#post_payments_collaborator_settings_eligibility_requirement) - Create Eligibility Requirement
+* [post_payments_collaborator_settings_payment_eligibility](docs/sdks/wingspan/README.md#post_payments_collaborator_settings_payment_eligibility) - Create Payment Eligibility Requirement
+* [post_payments_collaborator_1099_mark_undelivered](docs/sdks/wingspan/README.md#post_payments_collaborator_1099_mark_undelivered) - Mark a 1099 submission as returned by mail for collaborator
+* [post_payments_collaborator_1099_remail](docs/sdks/wingspan/README.md#post_payments_collaborator_1099_remail) - Re-mail 1099 submission for collaborator
 <!-- End SDK Available Operations -->
 
 ### Maturity
