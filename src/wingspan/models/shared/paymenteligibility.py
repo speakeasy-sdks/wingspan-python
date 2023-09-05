@@ -10,7 +10,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class PaymentEligibility:
-    r"""See payment eligibility requirements on member"""
     field: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('field') }})
     value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})
     

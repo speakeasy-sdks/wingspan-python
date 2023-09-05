@@ -3,19 +3,17 @@
 
 ```python
 import wingspan
-from wingspan.models import shared
+from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
-req = shared.Mark1099AsUndeliveredRequest(
-    member_id='corrupti',
-    submission_index=5928.45,
-    year=7151.9,
+req = operations.DeletePaymentsBankingCardIDRequest(
+    id='89bd9d8d-69a6-474e-8f46-7cc8796ed151',
 )
 
-res = s.one_thousand_and_ninety_nine.mark(req)
+res = s.delete_payments_banking_card_id_(req)
 
-if res.mark1099_as_undelivered_response is not None:
+if res.card is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
