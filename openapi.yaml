@@ -60,6 +60,7 @@ components:
           enum:
             - USD
             - CAD
+          $anchor: CurrencyPayableSchema
         dueDate:
           type: string
         events:
@@ -101,6 +102,7 @@ components:
             - Pending
             - PaymentInTransit
             - Paid
+          $anchor: StatusPayableSchema
         updatedAt:
           type: string
         userRoles:
@@ -109,11 +111,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPayableMethodPayableSchema
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -200,11 +204,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPayableMethodPayableCreateRequest
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -221,9 +227,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CurrencyPayableCreateRequest
           enum:
             - USD
             - CAD
+            - null
         integration:
           anyOf:
             - $ref: '#/components/schemas/NullObject'
@@ -269,6 +277,8 @@ components:
             - Pending
             - PaymentInTransit
             - Paid
+            - null
+          $anchor: StatusPayableCreateRequest
       required:
         - collaboratorId
         - creditFeeHandling
@@ -281,11 +291,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPayableMethodPayableUpdateRequest
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -363,11 +375,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: PaymentMethodsPayableUpdateRequest
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -375,6 +389,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusPayableUpdateRequest
           enum:
             - Draft
             - Open
@@ -383,6 +398,7 @@ components:
             - Pending
             - PaymentInTransit
             - Paid
+            - null
     Invoice:
       type: object
       properties:
@@ -397,6 +413,7 @@ components:
           enum:
             - USD
             - CAD
+          $anchor: CurrencyInvoice
         dueDate:
           type: string
         events:
@@ -431,6 +448,7 @@ components:
             - Pending
             - PaymentInTransit
             - Paid
+          $anchor: StatusInvoice
         updatedAt:
           type: string
         userRoles:
@@ -439,11 +457,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPaymentMethodsInvoice
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -595,11 +615,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPaymentMethodsInvoiceCreateRequest
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -624,9 +646,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CurrencyInvoiceCreateRequest
           enum:
             - USD
             - CAD
+            - null
         integration:
           anyOf:
             - $ref: '#/components/schemas/NullObject'
@@ -660,6 +684,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusInvoiceCreateRequest
           enum:
             - Draft
             - Open
@@ -668,6 +693,7 @@ components:
             - Pending
             - PaymentInTransit
             - Paid
+            - null
       required:
         - creditFeeHandling
         - dueDate
@@ -680,11 +706,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPaymentMethodsInvoiceUpdateRequest
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -762,6 +790,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusInvoiceUpdateRequest
           enum:
             - Draft
             - Open
@@ -770,6 +799,7 @@ components:
             - Pending
             - PaymentInTransit
             - Paid
+            - null
     ClientInvoice:
       type: object
       properties:
@@ -824,6 +854,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusClientInvoice
           enum:
             - Draft
             - Open
@@ -838,11 +869,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPaymentMethodsClientInvoice
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -979,9 +1012,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CurrencyClientInvoiceCreateRequest
           enum:
             - USD
             - CAD
+            - null
       required:
         - clientEmail
         - dueDate
@@ -998,6 +1033,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusClientInvoiceUpdateRequest
           enum:
             - Draft
             - Open
@@ -1006,6 +1042,7 @@ components:
             - Pending
             - PaymentInTransit
             - Paid
+            - null
     PayRequest:
       type: object
       properties:
@@ -1036,6 +1073,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusInvoiceTemplate
           enum:
             - Active
             - Draft
@@ -1050,7 +1088,7 @@ components:
             - string
             - 'null'
         autoPaymentRequired:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         createdInvoiceId:
@@ -1066,7 +1104,7 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Frequency'
         isSchedulingOnly:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         lastInvoiceDate:
@@ -1105,6 +1143,7 @@ components:
           $ref: '#/components/schemas/InvoiceDataCreateRequest'
         status:
           type: string
+          $anchor: StatusInvoiceTemplateCreateRequest
           enum:
             - Active
             - Draft
@@ -1119,11 +1158,11 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Frequency'
         isSchedulingOnly:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         scheduleDates:
@@ -1135,7 +1174,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/ScheduleDate'
         sendEmails:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
       required:
@@ -1149,7 +1188,7 @@ components:
             - string
             - 'null'
         autoPaymentRequired:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         dueInDays:
@@ -1165,7 +1204,7 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceUpdateRequest'
         isSchedulingOnly:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         labels:
@@ -1185,18 +1224,20 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/ScheduleDateUpdate'
         sendEmails:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         status:
           type:
             - string
             - 'null'
+          $anchor: StatusInvoiceTemplateUpdateRequest
           enum:
             - Active
             - Draft
             - Expired
             - Cancelled
+            - null
     ClientInvoiceTemplate:
       type: object
       properties:
@@ -1218,6 +1259,7 @@ components:
             $ref: '#/components/schemas/ScheduleDate'
         status:
           type: string
+          $anchor: StatusClientInvoiceTemplate
           enum:
             - Active
             - Draft
@@ -1266,6 +1308,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusClientInvoiceTemplateCreateRequest
           enum:
             - Active
             - Draft
@@ -1379,6 +1422,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusMemberClientSchema
           enum:
             - Active
             - Inactive
@@ -1485,10 +1529,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusMemberClientCreateRequest
           enum:
             - Active
             - Inactive
             - Pending
+            - null
     MemberClientUpdateRequest:
       type: object
       properties:
@@ -1546,10 +1592,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusMemberClientUpdateRequest
           enum:
             - Active
             - Inactive
             - Pending
+            - null
     Ping:
       type: object
       properties:
@@ -1603,6 +1651,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusCard
           enum:
             - Active
             - Inactive
@@ -1613,6 +1662,7 @@ components:
             - SuspectedFraud
         type:
           type: string
+          $anchor: TypeCard
           enum:
             - individualDebitCard
             - businessDebitCard
@@ -1630,7 +1680,7 @@ components:
       type: object
       properties:
         requestPhysicalCard:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         shippingAddress:
@@ -1657,6 +1707,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusCardDetails
           enum:
             - Active
             - Inactive
@@ -1667,13 +1718,14 @@ components:
             - SuspectedFraud
         type:
           type: string
+          $anchor: TypeCardDetails
           enum:
             - individualDebitCard
             - businessDebitCard
             - individualVirtualDebitCard
             - businessVirtualDebitCard
         pinSet:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
       required:
@@ -1691,6 +1743,7 @@ components:
       properties:
         status:
           type: string
+          $anchor: PropertiesCardUpdateRequest
           enum:
             - Active
             - Inactive
@@ -1889,16 +1942,18 @@ components:
             - string
             - 'null'
         required:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         type:
           type:
             - string
             - 'null'
+          $anchor: TypeAdditionalDataUpdateRequest
           enum:
             - Boolean
             - String
+            - null
     DeductionCreateRequest:
       type: object
       properties:
@@ -1917,6 +1972,7 @@ components:
           type: string
         type:
           type: string
+          $anchor: TypeDeductionCreateRequest
           enum:
             - PrePayment
             - PostPayment
@@ -1954,6 +2010,7 @@ components:
           type: string
         currency:
           type: string
+          $anchor: CurrencyDeductionResponse
           enum:
             - USD
             - CAD
@@ -1977,6 +2034,7 @@ components:
             - Complete
         type:
           type: string
+          $anchor: TypeDeductionResponse
           enum:
             - PrePayment
             - PostPayment
@@ -2023,9 +2081,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CurrencyDeductionUpdateRequest
           enum:
             - USD
             - CAD
+            - null
         name:
           type:
             - string
@@ -2046,14 +2106,17 @@ components:
           type:
             - string
             - 'null'
+          $anchor: TypeDeductionUpdateRequest
           enum:
             - PrePayment
             - PostPayment
+            - null
     PayrollSettings:
       type: object
       properties:
         status:
           type: string
+          $anchor: StatusPayrollSettings
           enum:
             - Active
             - Draft
@@ -2064,11 +2127,11 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CalculationSettings1099'
         enablePlannedPayroll:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         enableProcessDaysBeforeDue:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         frequency:
@@ -2080,7 +2143,7 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FundingSource'
         issue1099s:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         processDaysBeforeDue:
@@ -2102,6 +2165,7 @@ components:
           enum:
             - SingleStage
             - DualStage
+            - null
       required:
         - status
     PayrollSettingsUpdate:
@@ -2112,11 +2176,11 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CalculationSettings1099'
         enablePlannedPayroll:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         enableProcessDaysBeforeDue:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         frequency:
@@ -2128,7 +2192,7 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FundingSource'
         issue1099s:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         processDaysBeforeDue:
@@ -2147,18 +2211,22 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusPayrollSettingsUpdate
           enum:
             - Active
             - Draft
             - Expired
             - Cancelled
+            - null
         workflow:
           type:
             - string
             - 'null'
+          $anchor: WorkflowPayrollSettingsUpdate
           enum:
             - SingleStage
             - DualStage
+            - null
     CollaboratorEvents:
       type: object
       properties:
@@ -2200,12 +2268,14 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusCollaboratorSchema
           enum:
             - Active
             - Inactive
             - Pending
         taxStatus:
           type: string
+          $anchor: TaxStatusCollaboratorSchema
           enum:
             - Complete
             - Failed
@@ -2291,10 +2361,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusCollaboratorUpdateRequest
           enum:
             - Active
             - Inactive
             - Pending
+            - null
     CollaboratorCreateRequest:
       type: object
       properties:
@@ -2341,10 +2413,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusCollaboratorCreateRequest
           enum:
             - Active
             - Inactive
             - Pending
+            - null
       required:
         - clientId
     CollaboratorGroupResponse:
@@ -2574,6 +2648,7 @@ components:
             $ref: '#/components/schemas/PayoutDestinationResponse'
         payoutPreferences:
           type: string
+          $anchor: PayoutPreferencesPayoutSettingsResponse
           enum:
             - Standard
             - Instant
@@ -2598,12 +2673,14 @@ components:
           type:
             - string
             - 'null'
+          $anchor: PayoutPreferencesPayoutSettingsUpdate
           enum:
             - Standard
             - Instant
             - Expedited
             - Check
             - ECheck
+            - null
     BulkPayableBatch:
       type: object
       properties:
@@ -2624,6 +2701,7 @@ components:
             - Single
         status:
           type: string
+          $anchor: StatusBulkPayableBatch
           enum:
             - Open
             - Pending
@@ -2674,12 +2752,14 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusBulkPayableBatchUpdate
           enum:
             - Open
             - Pending
             - Processing
             - Complete
             - Failed
+            - null
     BulkPayableItem:
       type: object
       properties:
@@ -2703,6 +2783,7 @@ components:
           type: string
         payableStatus:
           type: string
+          $anchor: PayableStatusBulkPayableItem
           enum:
             - Draft
             - Open
@@ -2711,6 +2792,7 @@ components:
             - Cancelled
         status:
           type: string
+          $anchor: StatusBulkPayableItem
           enum:
             - Open
             - Pending
@@ -2763,7 +2845,7 @@ components:
             - string
             - 'null'
         reimbursableExpense:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         workflowSubStatus:
@@ -2772,6 +2854,7 @@ components:
             - 'null'
           enum:
             - Submitted
+            - null
       required:
         - amount
         - bulkPayableBatchId
@@ -2799,6 +2882,7 @@ components:
           type: string
         payableStatus:
           type: string
+          $anchor: PayableStatusBulkPayableItemCreate
           enum:
             - Draft
             - Open
@@ -2846,15 +2930,17 @@ components:
             - string
             - 'null'
         reimbursableExpense:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         workflowSubStatus:
           type:
             - string
             - 'null'
+          $anchor: WorkflowSubStatusBulkPayableItemCreate
           enum:
             - Submitted
+            - null
       required:
         - amount
         - bulkPayableBatchId
@@ -2958,14 +3044,16 @@ components:
           type:
             - string
             - 'null'
+          $anchor: PayableStatusBulkPayableItemUpdate
           enum:
             - Draft
             - Open
             - Approved
             - Paid
             - Cancelled
+            - null
         reimbursableExpense:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         workflowSubStatus:
@@ -2974,6 +3062,7 @@ components:
             - 'null'
           enum:
             - Submitted
+            - null
     BulkInvoiceBatch:
       type: object
       properties:
@@ -2992,6 +3081,7 @@ components:
             - Single
         status:
           type: string
+          $anchor: StatusBulkInvoiceBatch
           enum:
             - Open
             - Pending
@@ -3041,12 +3131,14 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusBulkInvoiceBatchUpdate
           enum:
             - Open
             - Pending
             - Processing
             - Complete
             - Failed
+            - null
     BulkInvoiceItem:
       type: object
       properties:
@@ -3062,6 +3154,7 @@ components:
           type: string
         invoiceStatus:
           type: string
+          $anchor: InvoiceStatusBulkInvoiceItem
           enum:
             - Draft
             - Open
@@ -3078,6 +3171,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusBulkInvoiceItem
           enum:
             - Open
             - Pending
@@ -3092,11 +3186,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPaymentMethodsBulkInvoiceItem
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -3146,7 +3242,7 @@ components:
             - string
             - 'null'
         reimbursableExpense:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         sendDate:
@@ -3178,6 +3274,7 @@ components:
           type: string
         invoiceStatus:
           type: string
+          $anchor: InvoiceStatusBulkInvoiceItemCreate
           enum:
             - Draft
             - Open
@@ -3190,11 +3287,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor:  AcceptedPaymentMethodsBulkInvoiceItemCreate
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -3243,7 +3342,7 @@ components:
             - string
             - 'null'
         reimbursableExpense:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         sendDate:
@@ -3263,11 +3362,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor:  AcceptedPaymentMethodsBulkInvoiceItemUpdate
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -3311,12 +3412,14 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  InvoiceStatusBulkInvoiceItemUpdate
           enum:
             - Draft
             - Open
             - Approved
             - Paid
             - Cancelled
+            - null
         labels:
           anyOf:
             - $ref: '#/components/schemas/NullObject'
@@ -3342,7 +3445,7 @@ components:
             - string
             - 'null'
         reimbursableExpense:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         sendDate:
@@ -3362,6 +3465,7 @@ components:
           $ref: '#/components/schemas/LabelsDictionary'
         status:
           type: string
+          $anchor:  StatusBulkCollaboratorBatch
           enum:
             - Open
             - Pending
@@ -3403,12 +3507,14 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  StatusBulkBatchUpdate
           enum:
             - Open
             - Pending
             - Processing
             - Complete
             - Failed
+            - null
     BulkCollaboratorItem:
       type: object
       properties:
@@ -3420,6 +3526,7 @@ components:
           type: string
         collaboratorStatus:
           type: string
+          $anchor:  CollaboratorStatusBulkCollaboratorItem
           enum:
             - Active
             - Inactive
@@ -3430,6 +3537,7 @@ components:
           $ref: '#/components/schemas/LabelsDictionary'
         status:
           type: string
+          $anchor:  StatusBulkCollaboratorItem
           enum:
             - Open
             - Pending
@@ -3502,10 +3610,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  CollaboratorStatusBulkCollaboratorItemCreate
           enum:
             - Active
             - Inactive
             - Pending
+            - null
         company:
           type:
             - string
@@ -3545,10 +3655,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  CollaboratorStatusBulkCollaboratorItemUpdate
           enum:
             - Active
             - Inactive
             - Pending
+            - null
         company:
           type:
             - string
@@ -3586,6 +3698,7 @@ components:
           type: string
         status:
           type: string
+          $anchor:  StatusBulkClientBatch
           enum:
             - Open
             - Pending
@@ -3618,6 +3731,7 @@ components:
           type: string
         clientStatus:
           type: string
+          $anchor:  ClientStatusBulkClientItem
           enum:
             - Active
             - Inactive
@@ -3630,6 +3744,7 @@ components:
           type: string
         status:
           type: string
+          $anchor:  StatusBulkClientItem
           enum:
             - Open
             - Pending
@@ -3691,10 +3806,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  ClientStatusBulkClientItemCreate
           enum:
             - Active
             - Inactive
             - Pending
+            - null
         company:
           type:
             - string
@@ -3731,10 +3848,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  ClientStatusBulkClientItemUpdate
           enum:
             - Active
             - Inactive
             - Pending
+            - null
         company:
           type:
             - string
@@ -3777,6 +3896,7 @@ components:
           $ref: '#/components/schemas/LabelsDictionary'
         status:
           type: string
+          $anchor:  StatusBulkCalculation1099Batch
           enum:
             - Open
             - Pending
@@ -3809,6 +3929,7 @@ components:
           type: string
         calculationType:
           type: string
+          $anchor:  CalculationTypeBulkCalculation1099Item
           enum:
             - Balances
             - Submissions
@@ -3820,6 +3941,7 @@ components:
           $ref: '#/components/schemas/LabelsDictionary'
         status:
           type: string
+          $anchor:  StatusBulkCalculation1099Item
           enum:
             - Open
             - Pending
@@ -3859,9 +3981,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  CalculationTypeBulkCalculation1099ItemCreate
           enum:
             - Balances
             - Submissions
+            - null
         labels:
           anyOf:
             - $ref: '#/components/schemas/NullObject'
@@ -3876,9 +4000,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  CalculationTypeBulkCalculation1099ItemUpdate
           enum:
             - Balances
             - Submissions
+            - null
         clientId:
           type:
             - string
@@ -3926,12 +4052,14 @@ components:
           type: string
         status:
           type: string
+          $anchor:  StatusCollaboratorV2
           enum:
             - Active
             - Inactive
             - Pending
         taxStatus:
           type: string
+          $anchor:  TaxStatusCollaboratorV2
           enum:
             - Complete
             - Failed
@@ -3993,12 +4121,14 @@ components:
           type: string
         status:
           type: string
+          $anchor:  StatusCollaboratorsReportResponse
           enum:
             - Active
             - Inactive
             - Pending
         taxStatus:
           type: string
+          $anchor:  TaxStatusCollaboratorsReportResponse
           enum:
             - Complete
             - Failed
@@ -4019,7 +4149,7 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CollaboratorEvents'
         taxDocumentStared:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
       required:
@@ -4075,6 +4205,7 @@ components:
           type: string
         status:
           type: string
+          $anchor:  StatusPayableAgingReportResponse
           enum:
             - Draft
             - Open
@@ -4157,6 +4288,7 @@ components:
           type: string
         status:
           type: string
+          $anchor:  StatusLineItemsAgingReportResponse
           enum:
             - Draft
             - Open
@@ -4213,17 +4345,18 @@ components:
         sendReminders:
           type: boolean
         sendInvoice:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         sendReceipt:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
       required:
         - sendReminders
     PaymentMethod:
       type: string
+      $anchor:  PaymentMethod
       enum:
         - Credit
         - ACH
@@ -4303,6 +4436,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  WorkflowStatusClientOptions
           enum:
             - Pending
             - PreApproved
@@ -4310,12 +4444,15 @@ components:
             - PaymentInitiated
             - Funded
             - Declined
+            - null
         workflowSubStatus:
           type:
             - string
             - 'null'
+          $anchor:  WorkflowSubStatusClientOptions
           enum:
             - Submitted
+            - null
     MemberOptions:
       type: object
       properties:
@@ -4327,26 +4464,32 @@ components:
           type:
             - string
             - 'null'
+          $anchor:  PayoutPreferencesMemberOptions
           enum:
             - Standard
             - Instant
             - Expedited
             - Check
             - ECheck
+            - null
         workflowStatus:
           type:
             - string
             - 'null'
+          $anchor:  WorkflowStatusMemberOptions
           enum:
             - Disputed
             - Accepted
             - Resubmitted
+            - null
         workflowSubStatus:
           type:
             - string
             - 'null'
+          $anchor:  WorkflowSubStatusMemberOptions
           enum:
             - Submitted
+            - null
     FeeHandlingConfig:
       type: object
       properties:
@@ -4364,6 +4507,7 @@ components:
             - 'null'
     Currency:
       type: string
+      $anchor:  Currency
       enum:
         - USD
         - CAD
@@ -4627,6 +4771,7 @@ components:
         - state
     InvoiceStatus:
       type: string
+      $anchor:  InvoiceStatus
       enum:
         - Draft
         - Open
@@ -4649,6 +4794,7 @@ components:
           type: string
         status:
           type: string
+          $anchor:  StatusScheduleDate
           enum:
             - Pending
             - Completed
@@ -4721,7 +4867,7 @@ components:
             - number
             - 'null'
         reimbursableExpense:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         totalCost:
@@ -4822,6 +4968,7 @@ components:
           type: string
         destinationType:
           type: string
+          $anchor: DestinationTypeInvoicePayoutDestination
           enum:
             - Account
             - Card
@@ -4830,6 +4977,7 @@ components:
             - WeGift
         payoutMethod:
           type: string
+          $anchor: PayoutMethodInvoicePayoutDestination
           enum:
             - Standard
             - Instant
@@ -4866,6 +5014,7 @@ components:
           type: number
         currency:
           type: string
+          $anchor: CurrencyInvoiceCollaborator
           enum:
             - USD
             - CAD
@@ -4915,6 +5064,7 @@ components:
       properties:
         meansType:
           type: string
+          $anchor: MeansTypePaymentInfo
           enum:
             - Card
             - Account
@@ -4966,6 +5116,7 @@ components:
           type: number
         currency:
           type: string
+          $anchor: CurrencyInvoiceCollaboratorCreateRequest
           enum:
             - USD
             - CAD
@@ -5017,12 +5168,14 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusMemberClient
           enum:
             - Active
             - Inactive
             - Pending
         taxStatus:
           type: string
+          $anchor: TaxStatusMemberClient
           enum:
             - Complete
             - Failed
@@ -5100,7 +5253,7 @@ components:
         startDate:
           type: string
         daily:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         dayInInterval:
@@ -5119,17 +5272,20 @@ components:
           type:
             - string
             - 'null'
+          $anchor: IntervalFrequency
           enum:
             - Week
             - Month
+            - null
         twicePerMonth:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
       required:
         - startDate
     FrequencyAndScheduleStatus:
       type: string
+      $anchor: FrequencyAndScheduleStatus
       enum:
         - Active
         - Draft
@@ -5148,11 +5304,13 @@ components:
           type:
             - array
             - 'null'
+          $anchor: AcceptedPaymentMethodsInvoiceDataCreateRequest
           items:
             enum:
               - Credit
               - ACH
               - Manual
+              - null
             type:
               - string
               - 'null'
@@ -5177,9 +5335,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CurrencyInvoiceDataCreateRequest
           enum:
             - USD
             - CAD
+            - null
         dueDate:
           type:
             - string
@@ -5204,6 +5364,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusInvoiceDataCreateRequest
           enum:
             - Draft
             - Open
@@ -5212,6 +5373,7 @@ components:
             - Pending
             - PaymentInTransit
             - Paid
+            - null
       required:
         - lineItems
         - memberClientId
@@ -5219,7 +5381,7 @@ components:
       type: object
       properties:
         daily:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         dayInInterval:
@@ -5238,15 +5400,17 @@ components:
           type:
             - string
             - 'null'
+          $anchor: IntervalFrequencyUpdate
           enum:
             - Week
             - Month
+            - null
         startDate:
           type:
             - string
             - 'null'
         twicePerMonth:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
     ScheduleDateUpdate:
@@ -5264,11 +5428,13 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusScheduleDateUpdate
           enum:
             - Pending
             - Completed
             - Skipped
             - Modified
+            - null
     ClientInvoiceDataCreateRequest:
       type: object
       properties:
@@ -5284,9 +5450,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CurrencyClientInvoiceDataCreateRequest
           enum:
             - USD
             - CAD
+            - null
         dueDate:
           type:
             - string
@@ -5356,11 +5524,13 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusMemberClientRequirementResponse
           enum:
             - New
             - Sent
             - Pending
             - Complete
+            - null
         templateId:
           type:
             - string
@@ -5376,6 +5546,7 @@ components:
         - requirementType
     MemberClientStatus:
       type: string
+      $anchor: MemberClientStatus
       enum:
         - Active
         - Inactive
@@ -5406,9 +5577,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: AutoPayRequirementMemberData
           enum:
             - All
             - None
+            - null
         externalId:
           type:
             - string
@@ -5417,9 +5590,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: shareTaxDocumentMemberData
           enum:
             - Allow
             - Decline
+            - null
     90f96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7:
       type: object
       properties:
@@ -5438,9 +5613,11 @@ components:
           type:
             - string
             - 'null'
+          $anchor: AutoPayStrategyClientData
           enum:
             - All
             - None
+            - null
         externalId:
           type:
             - string
@@ -5449,11 +5626,14 @@ components:
           type:
             - string
             - 'null'
+          $anchor: VerificationStratgyClientData
           enum:
             - None
             - All
+            - null
     DepositProduct:
       type: string
+      $anchor: DepositProduct
       enum:
         - Member1
         - Member2
@@ -5466,6 +5646,7 @@ components:
       properties:
         banking:
           type: string
+          $anchor: PropertiesVerifications
           enum:
             - None
             - Pending
@@ -5473,6 +5654,7 @@ components:
             - Verified
         cardPayments:
           type: string
+          $anchor: CardPaymentsVerifications
           enum:
             - None
             - Pending
@@ -5480,6 +5662,7 @@ components:
             - Verified
         taxDocumentation:
           type: string
+          $anchor: TaxDocumentationVerifications
           enum:
             - None
             - Pending
@@ -5491,6 +5674,7 @@ components:
         - taxDocumentation
     CardType:
       type: string
+      $anchor: CardType
       enum:
         - individualDebitCard
         - businessDebitCard
@@ -5498,6 +5682,7 @@ components:
         - businessVirtualDebitCard
     CardStatus:
       type: string
+      $anchor: CardStatus
       enum:
         - Active
         - Inactive
@@ -5515,6 +5700,7 @@ components:
         - unitCardId
     CardStatusUpdate:
       type: string
+      $anchor: CardStatusUpdate
       enum:
         - Active
         - Inactive
@@ -5529,6 +5715,7 @@ components:
           type: string
         currency:
           type: string
+          $anchor: CurrencyFundsTransferAccount
           enum:
             - USD
             - CAD
@@ -5542,6 +5729,7 @@ components:
             #/components/schemas/8212ee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f
         type:
           type: string
+          $anchor: TypeFundsTransferAccount
           enum:
             - Card
             - BankAccount
@@ -5560,15 +5748,18 @@ components:
         - type
     RequirementType:
       type: string
+      $anchor: RequirementType
       enum:
         - Signature
     WSDataTypes:
       type: string
+      $anchor: WSDataTypes
       enum:
         - Boolean
         - String
     DeductionType:
       type: string
+      $anchor: DeductionType
       enum:
         - PrePayment
         - PostPayment
@@ -5599,12 +5790,14 @@ components:
         - strategy
     DeductionStatus:
       type: string
+      $anchor: DeductionStatus
       enum:
         - Pending
         - PartiallyApplied
         - Complete
     PayrollWorkflowStrategy:
       type: string
+      $anchor: PayrollWorkflowStrategy
       enum:
         - SingleStage
         - DualStage
@@ -5613,6 +5806,7 @@ components:
       properties:
         fundingSourceCurrency:
           type: string
+          $anchor: FundingSourceCurrency
           enum:
             - USD
             - CAD
@@ -5620,6 +5814,7 @@ components:
           type: string
         fundingSourceType:
           type: string
+          $anchor: TypeFundingSource
           enum:
             - InternalAccount
             - Account
@@ -5635,23 +5830,29 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CardProcessingFeesCalculationSettings1099
           enum:
             - Include
             - Exclude
+            - null
         offPlatformPayments:
           type:
             - string
             - 'null'
+          $anchor: OffPlatformPaymentsCalculationSettings1099
           enum:
             - Include
             - Exclude
+            - null
         reimbursableExpenses:
           type:
             - string
             - 'null'
+          $anchor: ReimbursableExpensesCalculationSettings1099
           enum:
             - Include
             - Exclude
+            - null
         stateTaxId:
           anyOf:
             - $ref: '#/components/schemas/NullObject'
@@ -5678,6 +5879,7 @@ components:
           type: string
         companyStructure:
           type: string
+          $anchor: CompanyStructureMemberClientFormW9Info
           enum:
             - None
             - SoleProprietorship
@@ -5732,6 +5934,7 @@ components:
         - state
     MemberClientTaxStatus:
       type: string
+      $anchor: MemberClientTaxStatus
       enum:
         - Complete
         - Failed
@@ -5766,6 +5969,7 @@ components:
         - state
     CardBrand:
       type: string
+      $anchor: CardBrand
       enum:
         - AmericanExpress
         - Visa
@@ -5780,6 +5984,7 @@ components:
           type: string
         destinationType:
           type: string
+          $anchor: DestinationTypePayoutDestinationResponse
           enum:
             - Account
             - Card
@@ -5788,6 +5993,7 @@ components:
           type: string
         payoutMethod:
           type: string
+          $anchor: PayoutMethodPayoutDestinationResponse
           enum:
             - Standard
             - Instant
@@ -5808,6 +6014,7 @@ components:
         - percentage
     PayoutPreferences:
       type: string
+      $anchor: PayoutPreferences
       enum:
         - Standard
         - Instant
@@ -5825,31 +6032,37 @@ components:
           type:
             - string
             - 'null'
+          $anchor: DestinationTypePayoutDestinationUpdate
           enum:
             - Account
             - Card
             - WeGift
+            - null
         payoutMethod:
           type:
             - string
             - 'null'
+          $anchor: PayoutMethodPayoutDestinationUpdate
           enum:
             - Standard
             - Instant
             - Expedited
             - Check
             - ECheck
+            - null
         percentage:
           type:
             - number
             - 'null'
     BatchProcessingStrategy:
       type: string
+      $anchor: BatchProcessingStrategy
       enum:
         - Merge
         - Single
     BulkStatus:
       type: string
+      $anchor: BulkStatus
       enum:
         - Open
         - Pending
@@ -5871,6 +6084,7 @@ components:
         - itemsTotal
     BulkPayableStatus:
       type: string
+      $anchor: BulkPayableStatus
       enum:
         - Draft
         - Open
@@ -5947,6 +6161,7 @@ components:
             - 'null'
     BulkCalculation1099Type:
       type: string
+      $anchor: BulkCalculation1099Type
       enum:
         - Balances
         - Submissions
@@ -5981,6 +6196,7 @@ components:
           type: string
         companyStructure:
           type: string
+          $anchor: CompanyStructureCollaboratorV2FormW9Info
           enum:
             - None
             - SoleProprietorship
@@ -6040,6 +6256,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusCollaboration
           enum:
             - Active
             - Inactive
@@ -6098,6 +6315,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: Status42f004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07
           enum:
             - Draft
             - Open
@@ -6158,6 +6376,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusPayrollReportInvoice
           enum:
             - Draft
             - Open
@@ -6289,6 +6508,7 @@ components:
         - amount
     ClientWorkFlowStatus:
       type: string
+      $anchor: ClientWorkFlowStatus
       enum:
         - Pending
         - PreApproved
@@ -6298,6 +6518,7 @@ components:
         - Declined
     MemberWorkFlowStatus:
       type: string
+      $anchor: MemberWorkFlowStatus
       enum:
         - Disputed
         - Accepted
@@ -6326,6 +6547,7 @@ components:
             - 'null'
     ScheduleStatus:
       type: string
+      $anchor: ScheduleStatus
       enum:
         - Pending
         - Completed
@@ -6354,6 +6576,7 @@ components:
         - rate
     InvoicePayoutDestinationType:
       type: string
+      $anchor: InvoicePayoutDestinationType
       enum:
         - Account
         - Card
@@ -6362,6 +6585,7 @@ components:
         - WeGift
     TransferType:
       type: string
+      $anchor: TransferType
       enum:
         - Card
         - Account
@@ -6410,6 +6634,7 @@ components:
                 #/components/schemas/87539cb97aa7616e350fc0d23c5a49177ea4c4a8bd00ec2a2cfd2a9a5c4e648a
     Intervals:
       type: string
+      $anchor: Intervals
       enum:
         - Week
         - Month
@@ -6483,6 +6708,7 @@ components:
           type: string
         status:
           type: string
+          $anchor: StatusDocumentResponse
           enum:
             - Required
             - Approved
@@ -6514,6 +6740,7 @@ components:
         - userRoles
     RequirementStatus:
       type: string
+      $anchor: RequirementStatus
       enum:
         - New
         - Sent
@@ -6526,11 +6753,13 @@ components:
           type: number
         deliveryMethod:
           type: string
+          $anchor: DeliveryMethodMemberClientForm1099Balances
           enum:
             - Electronic
             - Mail
         exclusionReason:
           type: string
+          $anchor: ExclusionReasonMemberClientForm1099Balances
           enum:
             - BelowThreshold
             - CompanyStructure
@@ -6543,6 +6772,7 @@ components:
           type: number
         status:
           type: string
+          $anchor: StatusMemberClientForm1099Balances
           enum:
             - Ready
             - NeedsActionInfo
@@ -6553,6 +6783,7 @@ components:
             - Excluded
         type:
           type: string
+          $anchor: TypeMemberClientForm1099Balances
           enum:
             - NEC
         correction:
@@ -6598,11 +6829,13 @@ components:
             - 'null'
     MemberTaxDocumentSharePermission:
       type: string
+      $anchor: MemberTaxDocumentSharePermission
       enum:
         - Allow
         - Decline
     AutoPayRequirement:
       type: string
+      $anchor: AutoPayRequirement
       enum:
         - All
         - None
@@ -6622,10 +6855,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor: DeliveryMethodCollaboratorForm1099BalancesUpdateRequest
           enum:
             - Electronic
             - Mail
             - Both
+            - null
         dispute:
           anyOf:
             - $ref: '#/components/schemas/NullObject'
@@ -6639,6 +6874,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StatusCollaboratorForm1099BalancesUpdateRequest
           enum:
             - Ready
             - NeedsActionInfo
@@ -6647,18 +6883,22 @@ components:
             - Rejected
             - Accepted
             - Excluded
+            - null
     MemberVerificationStrategy:
       type: string
+      $anchor: MemberVerificationStrategy
       enum:
         - None
         - All
     AutoPayStrategy:
       type: string
+      $anchor: AutoPayStrategy
       enum:
         - All
         - None
     VerificationStatus:
       type: string
+      $anchor: VerificationStatus
       enum:
         - None
         - Pending
@@ -6666,6 +6906,7 @@ components:
         - Verified
     FundsTransferAccountType:
       type: string
+      $anchor: FundsTransferAccountType
       enum:
         - Card
         - BankAccount
@@ -6707,6 +6948,7 @@ components:
       properties:
         provider:
           type: string
+          $anchor: Provider35e19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc
           enum:
             - Unit
             - Stripe
@@ -6725,12 +6967,14 @@ components:
         type: string
     FundingSourceType:
       type: string
+      $anchor: FundingSourceType
       enum:
         - InternalAccount
         - Account
         - PaymentCard
     CalculationSettings1099Toggle:
       type: string
+      $anchor: CalculationSettings1099Toggle
       enum:
         - Include
         - Exclude
@@ -6747,6 +6991,7 @@ components:
             - 'null'
     CompanyStructure:
       type: string
+      $anchor: CompanyStructure
       enum:
         - None
         - SoleProprietorship
@@ -6760,6 +7005,7 @@ components:
         - Partnership
     PayoutDestinationType:
       type: string
+      $anchor: PayoutDestinationType
       enum:
         - Account
         - Card
@@ -6831,15 +7077,15 @@ components:
         syncToken:
           type: string
         doCreate:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         doDelete:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         doUpdate:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
       required:
@@ -6873,7 +7119,7 @@ components:
       type: object
       properties:
         banking:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         companyOwners:
@@ -6908,6 +7154,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: StructureCompany
           enum:
             - None
             - SoleProprietorship
@@ -6919,6 +7166,7 @@ components:
             - LLCPartnership
             - CorporationC
             - Partnership
+            - null
         taxId:
           type:
             - string
@@ -6951,6 +7199,7 @@ components:
             - 'null'
     DocumentStatus:
       type: string
+      $anchor: DocumentStatus
       enum:
         - Required
         - Approved
@@ -6982,6 +7231,7 @@ components:
             - 'null'
     Form1099Status:
       type: string
+      $anchor: Form1099Status
       enum:
         - Ready
         - NeedsActionInfo
@@ -6992,6 +7242,7 @@ components:
         - Excluded
     ExclusionReason:
       type: string
+      $anchor: ExclusionReason
       enum:
         - BelowThreshold
         - CompanyStructure
@@ -7046,10 +7297,12 @@ components:
           type:
             - string
             - 'null'
+          $anchor: Status8a9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5
           enum:
             - Open
             - Accepted
             - Rejected
+            - null
     Form1099Correction:
       type: object
       properties:
@@ -7061,6 +7314,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CompanyStructureForm1099Correction
           enum:
             - None
             - SoleProprietorship
@@ -7072,6 +7326,7 @@ components:
             - LLCPartnership
             - CorporationC
             - Partnership
+            - null
         ein:
           type:
             - string
@@ -7098,10 +7353,12 @@ components:
             - 'null'
     Form1099Type:
       type: string
+      $anchor: Form1099Type
       enum:
         - NEC
     TaxFormDeliveryMethod:
       type: string
+      $anchor: TaxFormDeliveryMethod
       enum:
         - Electronic
         - Mail
@@ -7116,6 +7373,7 @@ components:
           type:
             - string
             - 'null'
+          $anchor: CompanyStructurece853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481
           enum:
             - None
             - SoleProprietorship
@@ -7127,6 +7385,7 @@ components:
             - LLCPartnership
             - CorporationC
             - Partnership
+            - null
         ein:
           type:
             - string
@@ -7153,12 +7412,14 @@ components:
             - 'null'
     Form1099DeliveryMethod:
       type: string
+      $anchor: Form1099DeliveryMethod
       enum:
         - Electronic
         - Mail
         - Both
     FundsTransferProvider:
       type: string
+      $anchor: FundsTransferProvider
       enum:
         - Unit
         - Stripe
@@ -7205,6 +7466,7 @@ components:
         - memberId
     Form1099DisputeStatus:
       type: string
+      $anchor: Form1099DisputeStatus
       enum:
         - Open
         - Accepted
@@ -7213,7 +7475,7 @@ components:
       description: >-
         This is a schema for representing null. It should be passed explicitly
         when listed as an option in an array
-      type: 'null'
+      type: null
       required: []
 info:
   title: Wingspan Payments API
@@ -7235,7 +7497,9 @@ servers:
 paths:
   /payments/summary/payables:
     get:
-      summary: get payables summary
+      summary: Get payables summary
+      operationId: getPayables
+      x-speakeasy-group: Payables
       responses:
         '200':
           description: 'A payables summary, with current payables numbers'
@@ -7245,7 +7509,9 @@ paths:
                 $ref: '#/components/schemas/PayablesSummary'
   /payments/payroll/immediate/payable:
     get:
-      summary: list approved payables for payroll
+      summary: List approved payables for payroll
+      operationId: listApprovedPayables
+      x-speakeasy-group: ApprovedPayables
       responses:
         '200':
           description: A list of payables
@@ -7257,7 +7523,9 @@ paths:
                   $ref: '#/components/schemas/PayableSchema'
   /payments/payable:
     get:
-      summary: list invoices on client
+      summary: List invoices on client
+      operationId: listClientInvoices
+      x-speakeasy-group: ClientInvoices
       responses:
         '200':
           description: A list of payables
@@ -7268,7 +7536,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/PayableSchema'
     post:
-      summary: create payable on client for member
+      summary: Create payable on client for member
+      operationId: createPayableOnClient
+      x-speakeasy-group: PayableOnClient
       requestBody:
         content:
           application/json:
@@ -7290,7 +7560,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get invoice on member by payableId
+      summary: Get invoice on member by payableId
+      operationId: getInvoicePayableOnMember
+      x-speakeasy-group: InvoicePayableOnMember
       responses:
         '200':
           description: A payable
@@ -7306,7 +7578,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: update payable on client by payableId
+      summary: Update payable on client by payableId
+      operationId: updatePayableOnClient
+      x-speakeasy-group: PayableOnClient
       requestBody:
         content:
           application/json:
@@ -7327,7 +7601,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: delete payable on client by payableId
+      summary: Delete payable on client by payableId
+      operationId: deletePayableOnClient
+      x-speakeasy-group: PaPayableOnClientyable
       responses:
         '200':
           description: A payable
@@ -7337,7 +7613,9 @@ paths:
                 $ref: '#/components/schemas/PayableSchema'
   /payments/invoice:
     get:
-      summary: list invoices on member
+      summary: List invoices on member
+      operationId: listMemberInvoices
+      x-speakeasy-group: MemberInvoices
       responses:
         '200':
           description: A list of invoices
@@ -7348,7 +7626,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Invoice'
     post:
-      summary: create invoice on member
+      summary: Create invoice on member
+      operationId: createMemberInvoice
+      x-speakeasy-group: MemberInvoice
       requestBody:
         content:
           application/json:
@@ -7370,7 +7650,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get invoice on member by invoiceId
+      summary: Get invoice on member by invoiceId
+      operationId: getMemberInvoice
+      x-speakeasy-group: MemberInvoice
       responses:
         '200':
           description: An invoice
@@ -7386,7 +7668,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: update invoice on member by invoiceId
+      summary: Update invoice on member by invoiceId
+      operationId: updateMemberInvoice
+      x-speakeasy-group: MemberInvoice
       requestBody:
         content:
           application/json:
@@ -7407,7 +7691,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: delete invoice on member by invoiceId
+      summary: Delete invoice on member by invoiceId
+      operationId: deleteMemberInvoice
+      x-speakeasy-group: MemberInvoice
       responses:
         '200':
           description: An invoice
@@ -7417,7 +7703,9 @@ paths:
                 $ref: '#/components/schemas/Invoice'
   /payments/client/invoice:
     get:
-      summary: list invoices created by client
+      summary: List invoices created by client
+      operationId: listCreatedInvoicesByClient
+      x-speakeasy-group: CreatedInvoicesByClient
       responses:
         '200':
           description: A list of Client Created Invoices
@@ -7428,7 +7716,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/ClientInvoice'
     post:
-      summary: create invoice as client
+      summary: Create invoice as client
+      operationId: createInvoiceAsClient
+      x-speakeasy-group: InvoiceAsClient
       requestBody:
         content:
           application/json:
@@ -7450,7 +7740,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get client-invoice by invoiceId
+      summary: Get client-invoice by invoiceId
+      operationId: getClientInvoice
+      x-speakeasy-group: ClientInvoice
       responses:
         '200':
           description: A client created invoice
@@ -7466,7 +7758,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: update client-invoice by invoiceId
+      summary: Update client-invoice by invoiceId
+      operationId: updateClientInvoice
+      x-speakeasy-group: ClientInvoice
       requestBody:
         content:
           application/json:
@@ -7488,7 +7782,9 @@ paths:
           description: Unique identifier of an invoice
           schema:
             type: string
-      summary: pay client-invoice
+      summary: Pay client-invoice
+      operationId: postPayClientInvoice
+      x-speakeasy-group: PayClientInvoice
       requestBody:
         content:
           application/json:
@@ -7503,7 +7799,9 @@ paths:
                 $ref: '#/components/schemas/ClientInvoice'
   /payments/pay-approved:
     post:
-      summary: execute payroll
+      summary: Execute payroll
+      operationId: executePayroll
+      x-speakeasy-group: Payroll
       responses:
         '200':
           description: An invoice
@@ -7513,7 +7811,9 @@ paths:
                 $ref: '#/components/schemas/Invoice'
   /payments/invoice-template:
     get:
-      summary: list invoiceTemplates
+      summary: List invoiceTemplates
+      operationId: listInvoiceTemplates
+      x-speakeasy-group: InvoiceTemplates
       responses:
         '200':
           description: At list of invoice templates
@@ -7524,7 +7824,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/InvoiceTemplate'
     post:
-      summary: create invoice-template
+      summary: Create invoice-template
+      operationId: createInvoiceTemplate
+      x-speakeasy-group: InvoiceTemplate
       requestBody:
         content:
           application/json:
@@ -7546,7 +7848,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get invoice-template
+      summary: Get invoice-template
+      operationId: getInvoiceTemplate
+      x-speakeasy-group: InvoiceTemplate
       responses:
         '200':
           description: A recurring invoice
@@ -7562,7 +7866,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: update invoice-template
+      summary: Update invoice-template
+      operationId: updateInvoiceTemplate
+      x-speakeasy-group: InvoiceTemplate
       requestBody:
         content:
           application/json:
@@ -7583,7 +7889,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: delete invoice-template
+      summary: Delete invoice-template
+      operationId: deleteInvoiceTemplate
+      x-speakeasy-group: InvoiceTemplate
       responses:
         '200':
           description: A recurring invoice
@@ -7593,7 +7901,9 @@ paths:
                 $ref: '#/components/schemas/InvoiceTemplate'
   /payments/client/invoice-template:
     get:
-      summary: list client-invoice-templates
+      summary: List client-invoice-templates
+      operationId: listClientInvoiceTemplates
+      x-speakeasy-group: ClientInvoiceTemplates
       responses:
         '200':
           description: A list of Client Created Invoice Template
@@ -7604,7 +7914,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/ClientInvoiceTemplate'
     post:
-      summary: create client-invoice-template
+      summary: Create client-invoice-template
+      operationId: createClientInvoiceTemplate
+      x-speakeasy-group: ClientInvoiceTemplate
       requestBody:
         content:
           application/json:
@@ -7626,7 +7938,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get client-invoice-template
+      summary: Get client-invoice-template
+      operationId: getClientInvoiceTemplate
+      x-speakeasy-group: ClientInvoiceTemplate
       responses:
         '200':
           description: A client created invoiceTemplate (recurring Invoice)
@@ -7642,7 +7956,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: update client-invoice-template
+      summary: Update client-invoice-template
+      operationId: updateClientInvoiceTemplate
+      x-speakeasy-group: ClientInvoiceTemplate
       requestBody:
         content:
           application/json:
@@ -7664,7 +7980,9 @@ paths:
           description: Unique identifier of an invoice
           schema:
             type: string
-      summary: generate invoice
+      summary: Generate invoice
+      operationId: generateInvoice
+      x-speakeasy-group: Invoice
       responses:
         '200':
           description: Response from generation of invoice pdf
@@ -7681,7 +7999,9 @@ paths:
           description: Unique identifier of an invoice
           schema:
             type: string
-      summary: send invoice
+      summary: Send invoice
+      operationId: sendInvoice
+      x-speakeasy-group: Invoice
       responses:
         '200':
           description: An invoice
@@ -7691,7 +8011,9 @@ paths:
                 $ref: '#/components/schemas/Invoice'
   /payments/mcc:
     get:
-      summary: list mcc codes
+      summary: List mcc codes
+      operationId: listMCC
+      x-speakeasy-group: MCC
       responses:
         '200':
           description: A list of MCC
@@ -7703,7 +8025,9 @@ paths:
                   $ref: '#/components/schemas/MccResponse'
   /payments/memberClient:
     get:
-      summary: list memberClients
+      summary: List memberClients
+      operationId: listMemberClients
+      x-speakeasy-group: MemberClients
       responses:
         '200':
           description: A list of memberClient objects
@@ -7714,7 +8038,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/MemberClientSchema'
     post:
-      summary: create memberClient
+      summary: Create memberClient
+      operationId: createMemberClient
+      x-speakeasy-group: MemberClient
       requestBody:
         content:
           application/json:
@@ -7736,7 +8062,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get memberClient
+      summary: Get Member Client
+      operationId: getMemberClient
+      x-speakeasy-group: MemberClient
       responses:
         '200':
           description: Describes details of member and client
@@ -7752,7 +8080,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: update memberClient
+      summary: Update memberClient
+      operationId: updateMemberClient
+      x-speakeasy-group: MemberClient
       requestBody:
         content:
           application/json:
@@ -7773,7 +8103,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: delete memberClient
+      summary: Delete memberClient
+      operationId: deleteMemberClient
+      x-speakeasy-group: MemberClient
       responses:
         '200':
           description: Describes details of member and client
@@ -7783,7 +8115,9 @@ paths:
                 $ref: '#/components/schemas/MemberClientSchema'
   /payments:
     get:
-      summary: getServiceStatus
+      summary: Get Service Status
+      operationId: getServiceStatus
+      x-speakeasy-group: ServiceStatus
       responses:
         '200':
           description: timestamp and name of service being pinged
@@ -7800,7 +8134,9 @@ paths:
           description: Unique identifier of an invoice
           schema:
             type: string
-      summary: list client-invoice fees
+      summary: List client-invoice fees
+      operationId: listClientInvoiceFees
+      x-speakeasy-group: ClientInvoiceFees
       responses:
         '200':
           description: Fees on Invoice
@@ -7810,7 +8146,9 @@ paths:
                 $ref: '#/components/schemas/InvoiceFeeCalculation'
   /payments/invoice/test/create:
     post:
-      summary: list client-invoice fees
+      summary: Create client-invoice fees
+      operationId: createClientInvoiceFees
+      x-speakeasy-group: ClientInvoiceFees
       requestBody:
         content:
           application/json:
@@ -7825,7 +8163,9 @@ paths:
                 $ref: '#/components/schemas/ClientInvoice'
   /payments/banking/card:
     get:
-      summary: list cards
+      summary: List cards
+      operationId: listCards
+      x-speakeasy-group: Cards
       responses:
         '200':
           description: A list of card summaries
@@ -7836,7 +8176,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Card'
     post:
-      summary: create card
+      summary: Create card
+      operationId: createCard
+      x-speakeasy-group: Card
       requestBody:
         content:
           application/json:
@@ -7858,7 +8200,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get card by cardId
+      summary: Get card by cardId
+      operationId: getCard
+      x-speakeasy-group: Card
       responses:
         '200':
           description: A card summary with additional details
@@ -7874,7 +8218,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: update card by cardId
+      summary: Update card by cardId
+      operationId: updateCard
+      x-speakeasy-group: Card
       requestBody:
         content:
           application/json:
@@ -7895,7 +8241,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: delete a card by cardId
+      summary: Delete a card by cardId
+      operationId: deleteCard
+      x-speakeasy-group: Card
       responses:
         '200':
           description: A card summary
@@ -7912,7 +8260,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: sends a verification code
+      summary: Sends a verification code
+      operationId: sendVerification
+      x-speakeasy-group: Verification
       requestBody:
         content:
           application/json:
@@ -7933,7 +8283,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: exchange the code for a token
+      summary: Exchange the code for a token
+      operationId: exchangeCodeToToken
+      x-speakeasy-group: CodeToToken
       requestBody:
         content:
           application/json:
@@ -7948,7 +8300,9 @@ paths:
                 $ref: '#/components/schemas/CardTokenResponse'
   /payments/banking/instant-payout:
     get:
-      summary: fetch instant payout details
+      summary: Fetch instant payout details
+      operationId: fetchInstantPayout
+      x-speakeasy-group: InstantPayout
       responses:
         '200':
           description: Instant Payout details
@@ -7957,7 +8311,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/InstantPayoutResponse'
     delete:
-      summary: delete instant payout
+      summary: Delete instant payout
+      operationId: deleteInstantPayout
+      x-speakeasy-group: InstantPayout
       responses:
         '200':
           description: Instant Payout details
@@ -7966,7 +8322,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/InstantPayoutResponse'
     post:
-      summary: create instant payout details
+      summary: Create instant payout details
+      operationId: createInstantPayout
+      x-speakeasy-group: InstantPayout
       requestBody:
         content:
           application/json:
@@ -7981,7 +8339,9 @@ paths:
                 $ref: '#/components/schemas/InstantPayoutResponse'
   /payments/banking/statement:
     get:
-      summary: list bank statements
+      summary: List bank statements
+      operationId: listBankStatements
+      x-speakeasy-group: BankStatements
       responses:
         '200':
           description: A list of bank statements
@@ -8000,7 +8360,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get bank statement
+      summary: Get bank statement
+      operationId: getStatement
+      x-speakeasy-group: Statement
       responses:
         '200':
           description: A list of bank statements
@@ -8019,7 +8381,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: download bank statement pdf
+      summary: Download bank statement pdf
+      operationId: downloadStatement
+      x-speakeasy-group: Statement
       responses:
         '204':
           description: This is a default response
@@ -8032,7 +8396,9 @@ paths:
           description: Unique identifier of a member
           schema:
             type: string
-      summary: gets an application link for creating the clearing bank account
+      summary: Gets an application link for creating the clearing bank account
+      operationId: getAppLink
+      x-speakeasy-group: AppLink
       responses:
         '200':
           description: A Bank Application form
@@ -8043,6 +8409,8 @@ paths:
   /payments/collaborator-settings/eligibility-requirement:
     post:
       summary: Create Eligibility Requirement
+      operationId: createEligibilityRequirement
+      x-speakeasy-group: EligibilityRequirement
       requestBody:
         content:
           application/json:
@@ -8057,6 +8425,8 @@ paths:
                 $ref: '#/components/schemas/EligibilityRequirement'
     get:
       summary: List Eligibility Requirements
+      operationId: listEligibilityRequirements
+      x-speakeasy-group: EligibilityRequirements
       responses:
         '200':
           description: List of Eligibility Requirements
@@ -8076,6 +8446,8 @@ paths:
           schema:
             type: string
       summary: Get Eligibility Requirement
+      operationId: getEligibilityRequirement
+      x-speakeasy-group: EligibilityRequirement
       responses:
         '200':
           description: List of Eligibility Requirements
@@ -8094,6 +8466,8 @@ paths:
           schema:
             type: string
       summary: Update Eligibility Requirement
+      operationId: updateEligibilityRequirement
+      x-speakeasy-group: EligibilityRequirement
       requestBody:
         content:
           application/json:
@@ -8117,6 +8491,8 @@ paths:
           schema:
             type: string
       summary: Delete Eligibility Requirement
+      operationId: deleteEligibilityRequirement
+      x-speakeasy-group: EligibilityRequirement
       responses:
         '200':
           description: List of Eligibility Requirements
@@ -8129,6 +8505,8 @@ paths:
   /payments/collaborator-settings/payment-eligibility:
     post:
       summary: Create Payment Eligibility Requirement
+      operationId: createPaymentEligibilityRequirement
+      x-speakeasy-group: PaymentEligibilityRequirement
       requestBody:
         content:
           application/json:
@@ -8143,6 +8521,8 @@ paths:
                 $ref: '#/components/schemas/PaymentEligibility'
     get:
       summary: List Payment Eligigbility Requirements
+      operationId: listPaymentEligibilityRequirements
+      x-speakeasy-group: PaymentEligibilityRequirements
       responses:
         '200':
           description: See payment eligibility requirements on member
@@ -8162,6 +8542,8 @@ paths:
           schema:
             type: string
       summary: Get Payment Eligibility Requirement
+      operationId: getPaymentEligibilityRequirement
+      x-speakeasy-group: PaymentEligibilityRequirement
       responses:
         '200':
           description: See payment eligibility requirements on member
@@ -8178,6 +8560,8 @@ paths:
           schema:
             type: string
       summary: Update Payment Eligibility Requirement
+      operationId: updatePaymentEligibilityRequirement
+      x-speakeasy-group: PaymentEligibilityRequirement
       requestBody:
         content:
           application/json:
@@ -8199,6 +8583,8 @@ paths:
           schema:
             type: string
       summary: Delete Payment Eligibility Requirement
+      operationId: deletePaymentEligibilityRequirement
+      x-speakeasy-group: PaymentEligibilityRequirement
       responses:
         '200':
           description: See payment eligibility requirements on member
@@ -8209,6 +8595,8 @@ paths:
   /payments/collaborator-settings/additional-data:
     post:
       summary: Create additional data
+      operationId: createAdditionalData
+      x-speakeasy-group: AdditionalData
       requestBody:
         content:
           application/json:
@@ -8224,7 +8612,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/AdditionalData'
     get:
-      summary: list additional settings
+      summary: List additional settings
+      operationId: listAdditionalSettings
+      x-speakeasy-group: AdditionalSettings
       responses:
         '200':
           description: A list of custom data-points
@@ -8244,6 +8634,8 @@ paths:
           schema:
             type: string
       summary: Get additional data
+      operationId: getAdditionalData
+      x-speakeasy-group: AdditionalData
       responses:
         '200':
           description: >-
@@ -8262,6 +8654,8 @@ paths:
           schema:
             type: string
       summary: Update additional settings
+      operationId: updateAdditionalSettings
+      x-speakeasy-group: AdditionalSettings
       requestBody:
         content:
           application/json:
@@ -8285,6 +8679,8 @@ paths:
           schema:
             type: string
       summary: Delete additional data
+      operationId: deleteAdditionalData
+      x-speakeasy-group: AdditionalData
       responses:
         '200':
           description: >-
@@ -8297,6 +8693,8 @@ paths:
   /payments/client-deduction:
     post:
       summary: Create deduction
+      operationId: createClientDeduction
+      x-speakeasy-group: ClientDeduction
       requestBody:
         content:
           application/json:
@@ -8310,7 +8708,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/DeductionResponse'
     get:
-      summary: list deductions
+      summary: List deductions
+      operationId: listClientDeductions
+      x-speakeasy-group: ClientDeductions
       responses:
         '200':
           description: A list of deductions
@@ -8330,6 +8730,8 @@ paths:
           schema:
             type: string
       summary: Get deduction
+      operationId: getClientDeductionID
+      x-speakeasy-group: ClientDeductionID
       responses:
         '200':
           description: A deduction
@@ -8346,6 +8748,8 @@ paths:
           schema:
             type: string
       summary: Update deduction
+      operationId: updateClientDeductionID
+      x-speakeasy-group: ClientDeductionID
       requestBody:
         content:
           application/json:
@@ -8367,6 +8771,8 @@ paths:
           schema:
             type: string
       summary: Delete deduction
+      operationId: deleteClientDeductionID
+      x-speakeasy-group: ClientDeductionID
       responses:
         '200':
           description: A deduction
@@ -8377,6 +8783,8 @@ paths:
   /payments/collaborator-deduction:
     post:
       summary: Create deduction
+      operationId: createCollaboratorDeduction
+      x-speakeasy-group: CollaboratorDeduction
       requestBody:
         content:
           application/json:
@@ -8390,7 +8798,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/DeductionResponse'
     get:
-      summary: list deductions
+      summary: List deductions
+      operationId: listCollaboratorDeductions
+      x-speakeasy-group: CollaboratorDeductions
       responses:
         '200':
           description: A list of deductions
@@ -8410,6 +8820,8 @@ paths:
           schema:
             type: string
       summary: Get deduction
+      operationId: getCollaboratorDeduction
+      x-speakeasy-group: CollaboratorDeduction
       responses:
         '200':
           description: A deduction
@@ -8426,6 +8838,8 @@ paths:
           schema:
             type: string
       summary: Update deduction
+      operationId: updateCollaboratorDeduction
+      x-speakeasy-group: CollaboratorDeduction
       requestBody:
         content:
           application/json:
@@ -8447,6 +8861,8 @@ paths:
           schema:
             type: string
       summary: Delete deduction
+      operationId: deleteCollaboratorDeduction
+      x-speakeasy-group: CollaboratorDeduction
       responses:
         '200':
           description: A deduction
@@ -8464,6 +8880,8 @@ paths:
           schema:
             type: string
       summary: Get payroll settings
+      operationId: getPayrollSettings
+      x-speakeasy-group: PayrollSettings
       responses:
         '200':
           description: The payroll settings for a member
@@ -8480,6 +8898,8 @@ paths:
           schema:
             type: string
       summary: Update payroll settings
+      operationId: updatePayrollSettings
+      x-speakeasy-group: PayrollSettings
       requestBody:
         content:
           application/json:
@@ -8502,6 +8922,8 @@ paths:
           schema:
             type: string
       summary: Get collaborator events by collaboratorId
+      operationId: getCollaboratorEvents
+      x-speakeasy-group: CollaboratorEvents
       responses:
         '200':
           description: List of events on collaborator
@@ -8519,6 +8941,8 @@ paths:
           schema:
             type: string
       summary: Get collaborator by Id
+      operationId: getCollaborator
+      x-speakeasy-group: Collaborator
       responses:
         '200':
           description: A collaborator is a contractor that can receive payments
@@ -8535,6 +8959,8 @@ paths:
           schema:
             type: string
       summary: Update a collaborator by Id
+      operationId: updateCollaborator
+      x-speakeasy-group: Collaborator
       requestBody:
         content:
           application/json:
@@ -8556,6 +8982,8 @@ paths:
           schema:
             type: string
       summary: Delete collaborator by Id
+      operationId: deleteCollaborator
+      x-speakeasy-group: Collaborator
       responses:
         '200':
           description: A collaborator is a contractor that can receive payments
@@ -8566,6 +8994,8 @@ paths:
   /payments/collaborator:
     get:
       summary: List all collaborators
+      operationId: listCollaborators
+      x-speakeasy-group: Collaborators
       responses:
         '200':
           description: ' A list of collaborators'
@@ -8577,6 +9007,8 @@ paths:
                   $ref: '#/components/schemas/CollaboratorSchema'
     post:
       summary: Create new collaborator
+      operationId: createCollaborator
+      x-speakeasy-group: Collaborator
       requestBody:
         content:
           application/json:
@@ -8605,6 +9037,8 @@ paths:
           schema:
             type: string
       summary: Add collaborator to collaborators group
+      operationId: addCollaboratorToGroup
+      x-speakeasy-group: CollaboratorToGroup
       responses:
         '200':
           description: A collaborator is a contractor that can receive payments
@@ -8628,6 +9062,8 @@ paths:
           schema:
             type: string
       summary: Remove collaborator from collaborators group
+      operationId: removeCollaboratorToGroup
+      x-speakeasy-group: CollaboratorToGroup
       responses:
         '200':
           description: A collaborator is a contractor that can receive payments
@@ -8638,6 +9074,8 @@ paths:
   /payments/collaborator-group:
     get:
       summary: List Collaborator Groups
+      operationId: listCollaboratorGroups
+      x-speakeasy-group: CollaboratorGroups
       responses:
         '200':
           description: A list of Collaborator Configurations created by client
@@ -8649,6 +9087,8 @@ paths:
                   $ref: '#/components/schemas/CollaboratorGroupResponse'
     post:
       summary: Create Collaborator Group
+      operationId: createCollaboratorGroup
+      x-speakeasy-group: CollaboratorGroup
       requestBody:
         content:
           application/json:
@@ -8676,7 +9116,9 @@ paths:
           description: Unique eligibility Requirement Id
           schema:
             type: string
-      summary: deleteEligibilityRequirement
+      summary: Delete Eligibility Requirement
+      operationId: deleteCollaboratorGroupEligibilityRequirement
+      x-speakeasy-group: CollaboratorGroupEligibilityRequirement
       responses:
         '200':
           description: Collaborator Configuration Per Group
@@ -8698,7 +9140,9 @@ paths:
           description: Unique eligibility Requirement Id
           schema:
             type: string
-      summary: Replace EligibilityRequirement
+      summary: Replace Eligibility Requirement
+      operationId: replaceCollaboratorGroupEligibilityRequirement
+      x-speakeasy-group: CollaboratorGroupEligibilityRequirement
       requestBody:
         content:
           application/json:
@@ -8721,6 +9165,8 @@ paths:
           schema:
             type: string
       summary: Get Collaborator Group
+      operationId: getCollaboratorGroup
+      x-speakeasy-group: CollaboratorGroup
       responses:
         '200':
           description: Collaborator Configuration Per Group
@@ -8737,6 +9183,8 @@ paths:
           schema:
             type: string
       summary: Update Collaborator Group
+      operationId: updateCollaboratorGroup
+      x-speakeasy-group: CollaboratorGroup
       requestBody:
         content:
           application/json:
@@ -8771,6 +9219,8 @@ paths:
           schema:
             type: string
       summary: Downloads a form 1099 PDF for a collaborator
+      operationId: downloadForm1099
+      x-speakeasy-group: Form1099
       responses:
         '200':
           description: Download1099Response
@@ -8788,6 +9238,8 @@ paths:
           schema:
             type: string
       summary: Downloads a form W9 PDF for a collaborator
+      operationId: downloadFormW9
+      x-speakeasy-group: FormW9
       responses:
         '200':
           description: A file stream for a W9 PDF download.
@@ -8798,6 +9250,8 @@ paths:
   /payments/collaborator/1099/calculate:
     post:
       summary: Calculate 1099 amounts for collaborator
+      operationId: calculate1099
+      x-speakeasy-group: 1099
       requestBody:
         content:
           application/json:
@@ -8813,6 +9267,8 @@ paths:
   /payments/collaborator/1099/remail:
     post:
       summary: Re-mail 1099 submission for collaborator
+      operationId: remail1099
+      x-speakeasy-group: 1099
       requestBody:
         content:
           application/json:
@@ -8828,6 +9284,8 @@ paths:
   /payments/collaborator/1099/mark-undelivered:
     post:
       summary: Mark a 1099 submission as returned by mail for collaborator
+      operationId: mark1099
+      x-speakeasy-group: 1099
       requestBody:
         content:
           application/json:
@@ -8850,6 +9308,8 @@ paths:
           schema:
             type: string
       summary: Get Institution By Routing Number
+      operationId: getInstitution
+      x-speakeasy-group: Institution
       responses:
         '200':
           description: Institution Response
@@ -8866,7 +9326,9 @@ paths:
           description: Unique identifier of a member
           schema:
             type: string
-      summary: list the payout debit cards
+      summary: List the payout debit cards
+      operationId: listPayoutDebitCards
+      x-speakeasy-group: PayoutDebitCards
       responses:
         '200':
           description: A list of payout debit cards
@@ -8884,7 +9346,9 @@ paths:
           description: Unique identifier of a member
           schema:
             type: string
-      summary: create a payout debit card
+      summary: Create a payout debit card
+      operationId: createPayoutDebitCard
+      x-speakeasy-group: PayoutDebitCard
       requestBody:
         content:
           application/json:
@@ -8912,7 +9376,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get the payout debit card
+      summary: Get the payout debit card
+      operationId: getPayoutDebitCard
+      x-speakeasy-group: PayoutDebitCard
       responses:
         '200':
           description: A payout debit card
@@ -8934,7 +9400,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: delete the payout debit card
+      summary: Delete the payout debit card
+      operationId: deletePayoutDebitCard
+      x-speakeasy-group: PayoutDebitCard
       responses:
         '200':
           description: A payout debit card
@@ -8951,7 +9419,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: get the payout settings
+      summary: Get the payout settings
+      operationId: getPayoutSettings
+      x-speakeasy-group: PayoutSettings
       responses:
         '200':
           description: The payout settings for a member
@@ -8967,7 +9437,9 @@ paths:
           description: Unique identifier
           schema:
             type: string
-      summary: update the payout settings
+      summary: Update the payout settings
+      operationId: updatePayoutSettings
+      x-speakeasy-group: PayoutSettings
       requestBody:
         content:
           application/json:
@@ -8983,6 +9455,8 @@ paths:
   /payments/bulk/payable/batch:
     get:
       summary: List bulk payable batches
+      operationId: listBulkPayableBatches
+      x-speakeasy-group: BulkPayableBatches
       responses:
         '200':
           description: A list of bulk payable batches
@@ -8994,6 +9468,8 @@ paths:
                   $ref: '#/components/schemas/BulkPayableBatch'
     post:
       summary: Create a bulk payable batch
+      operationId: createBulkPayableBatch
+      x-speakeasy-group: BulkPayableBatch
       requestBody:
         content:
           application/json:
@@ -9016,6 +9492,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk payable batch
+      operationId: getBulkPayableBatch
+      x-speakeasy-group: BulkPayableBatch
       responses:
         '200':
           description: A batch of items for importing as payables
@@ -9032,6 +9510,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk payable batch
+      operationId: updateBulkPayableBatch
+      x-speakeasy-group: BulkPayableBatch
       requestBody:
         content:
           application/json:
@@ -9053,6 +9533,8 @@ paths:
           schema:
             type: string
       summary: Delete a bulk payable batch
+      operationId: deleteBulkPayableBatch
+      x-speakeasy-group: BulkPayableBatch
       responses:
         '200':
           description: A batch of items for importing as payables
@@ -9070,6 +9552,8 @@ paths:
           schema:
             type: string
       summary: List bulk payable batch items
+      operationId: listBulkPayableBatchItems
+      x-speakeasy-group: BulkPayableBatchItems
       responses:
         '200':
           description: A list of bulk payable items
@@ -9088,6 +9572,8 @@ paths:
           schema:
             type: string
       summary: Create a bulk payable batch item
+      operationId: createBulkPayableBatchItem
+      x-speakeasy-group: BulkPayableBatchItem
       requestBody:
         content:
           application/json:
@@ -9110,6 +9596,8 @@ paths:
           schema:
             type: string
       summary: Get Bulk Payable Batch Import Summary
+      operationId: getBulkPayableBatchSummary
+      x-speakeasy-group: BulkPayableBatchSummary
       responses:
         '200':
           description: Summary of the bulk payable import
@@ -9133,6 +9621,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk payable batch item
+      operationId: getBulkPayableBatchItem
+      x-speakeasy-group: BulkPayableBatchItem
       responses:
         '200':
           description: An item that will be converted into a payable
@@ -9155,6 +9645,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk payable batch item
+      operationId: updateBulkPayableBatchItem
+      x-speakeasy-group: BulkPayableBatchItem
       requestBody:
         content:
           application/json:
@@ -9170,6 +9662,8 @@ paths:
   /payments/bulk/invoice/batch:
     get:
       summary: List bulk invoice batches
+      operationId: listBulkInvoiceBatches
+      x-speakeasy-group: BulkInvoiceBatches
       responses:
         '200':
           description: A list of bulk invoice batches
@@ -9181,6 +9675,8 @@ paths:
                   $ref: '#/components/schemas/BulkInvoiceBatch'
     post:
       summary: Create a bulk invoice batch
+      operationId: createBulkInvoiceBatch
+      x-speakeasy-group: BulkInvoiceBatch
       requestBody:
         content:
           application/json:
@@ -9203,6 +9699,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk invoice batch
+      operationId: getBulkInvoiceBatch
+      x-speakeasy-group: BulkInvoiceBatch
       responses:
         '200':
           description: A batch of items for importing as invoices
@@ -9219,6 +9717,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk invoice batch
+      operationId: updateBulkInvoiceBatch
+      x-speakeasy-group: BulkInvoiceBatch
       requestBody:
         content:
           application/json:
@@ -9241,6 +9741,8 @@ paths:
           schema:
             type: string
       summary: List bulk invoice batch items
+      operationId: listBulkInvoiceBatchItems
+      x-speakeasy-group: BulkInvoiceBatchItems
       responses:
         '200':
           description: A list of bulk invoice items
@@ -9259,6 +9761,8 @@ paths:
           schema:
             type: string
       summary: Create a bulk invoice batch item
+      operationId: createBulkInvoiceBatchItem
+      x-speakeasy-group: BulkInvoiceBatchItem
       requestBody:
         content:
           application/json:
@@ -9287,6 +9791,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk invoice batch item
+      operationId: getBulkInvoiceBatchItem
+      x-speakeasy-group: BulkInvoiceBatchItem
       responses:
         '200':
           description: An item that will be converted into a invoice
@@ -9309,6 +9815,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk invoice batch item
+      operationId: updateBulkInvoiceBatchItem
+      x-speakeasy-group: BulkInvoiceBatchItem
       requestBody:
         content:
           application/json:
@@ -9324,6 +9832,8 @@ paths:
   /payments/bulk/collaborator/batch:
     get:
       summary: List bulk collaborator batches
+      operationId: listBulkCollaboratorBatches
+      x-speakeasy-group: BulkCollaboratorBatches
       responses:
         '200':
           description: A list of bulk collaborator batches
@@ -9335,6 +9845,8 @@ paths:
                   $ref: '#/components/schemas/BulkCollaboratorBatch'
     post:
       summary: Create a bulk collaborator batch
+      operationId: createBulkCollaboratorBatch
+      x-speakeasy-group: BulkCollaboratorBatch
       requestBody:
         content:
           application/json:
@@ -9357,6 +9869,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk collaborator batch
+      operationId: getBulkCollaboratorBatch
+      x-speakeasy-group: BulkCollaboratorBatch
       responses:
         '200':
           description: A batch of items for importing as collaborators
@@ -9373,6 +9887,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk collaborator batch
+      operationId: updateBulkCollaboratorBatch
+      x-speakeasy-group: BulkCollaboratorBatch
       requestBody:
         content:
           application/json:
@@ -9395,6 +9911,8 @@ paths:
           schema:
             type: string
       summary: List bulk collaborator batch items
+      operationId: listBulkCollaboratorBatchItems
+      x-speakeasy-group: BulkCollaboratorBatchItems
       responses:
         '200':
           description: A list of bulk collaborator items
@@ -9413,6 +9931,8 @@ paths:
           schema:
             type: string
       summary: Create a bulk collaborator batch item
+      operationId: createBulkCollaboratorBatchItem
+      x-speakeasy-group: BulkCollaboratorBatchItem
       requestBody:
         content:
           application/json:
@@ -9441,6 +9961,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk collaborator batch item
+      operationId: getBulkCollaboratorBatchItem
+      x-speakeasy-group: BulkCollaboratorBatchItem
       responses:
         '200':
           description: An item that will be converted into a collaborator
@@ -9463,6 +9985,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk collaborator batch item
+      operationId: updateBulkCollaboratorBatchItem
+      x-speakeasy-group: BulkCollaboratorBatchItem
       requestBody:
         content:
           application/json:
@@ -9478,6 +10002,8 @@ paths:
   /payments/bulk/client/batch:
     get:
       summary: List bulk client batches
+      operationId: listBulkClientBatches
+      x-speakeasy-group: BulkClientBatches
       responses:
         '200':
           description: A list of bulk client batches
@@ -9489,6 +10015,8 @@ paths:
                   $ref: '#/components/schemas/BulkClientBatch'
     post:
       summary: Create a bulk client batch
+      operationId: createBulkClientBatch
+      x-speakeasy-group: BulkClientBatch
       requestBody:
         content:
           application/json:
@@ -9511,6 +10039,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk client batch
+      operationId: getBulkClientBatch
+      x-speakeasy-group: BulkClientBatch
       responses:
         '200':
           description: A batch of items for importing as clients
@@ -9527,6 +10057,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk client batch
+      operationId: updateBulkClientBatch
+      x-speakeasy-group: BulkClientBatch
       requestBody:
         content:
           application/json:
@@ -9549,6 +10081,8 @@ paths:
           schema:
             type: string
       summary: List bulk client batch items
+      operationId: listBulkClientBatchItems
+      x-speakeasy-group: BulkClientBatchItems
       responses:
         '200':
           description: A list of bulk client items
@@ -9567,6 +10101,8 @@ paths:
           schema:
             type: string
       summary: Create a bulk client batch item
+      operationId: createBulkClientBatchItem
+      x-speakeasy-group: BulkClientBatchItem
       requestBody:
         content:
           application/json:
@@ -9595,6 +10131,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk client batch item
+      operationId: getBulkClientBatchItem
+      x-speakeasy-group: BulkClientBatchItem
       responses:
         '200':
           description: An item that will be converted into a client
@@ -9617,6 +10155,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk client batch item
+      operationId: updateBulkClientBatchItem
+      x-speakeasy-group: BulkClientBatchItem
       requestBody:
         content:
           application/json:
@@ -9632,6 +10172,8 @@ paths:
   /payments/bulk/calculation1099/batch:
     get:
       summary: List bulk calculation1099 batches
+      operationId: listBulkCalculation1099Batches
+      x-speakeasy-group: BulkCalculation1099Batches
       responses:
         '200':
           description: A list of bulk calculation 1099 batches
@@ -9643,6 +10185,8 @@ paths:
                   $ref: '#/components/schemas/BulkCalculation1099Batch'
     post:
       summary: Create a bulk calculation1099 batch
+      operationId: createBulkCalculation1099Batch
+      x-speakeasy-group: BulkCalculation1099Batch
       requestBody:
         content:
           application/json:
@@ -9665,6 +10209,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk calculation1099 batch
+      operationId: getBulkCalculation1099Batch
+      x-speakeasy-group: BulkCalculation1099Batch
       responses:
         '200':
           description: A batch of items for importing as calculation 1099s
@@ -9681,6 +10227,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk calculation1099 batch
+      operationId: updateBulkCalculation1099Batch
+      x-speakeasy-group: BulkCalculation1099Batch
       requestBody:
         content:
           application/json:
@@ -9703,6 +10251,8 @@ paths:
           schema:
             type: string
       summary: List bulk calculation1099 batch items
+      operationId: listBulkCalculation1099BatchItems
+      x-speakeasy-group: BulkCalculation1099BatchItems
       responses:
         '200':
           description: A list of bulk calculation 1099 items
@@ -9721,6 +10271,8 @@ paths:
           schema:
             type: string
       summary: Create a bulk calculation1099 batch item
+      operationId: createBulkCalculation1099BatchItem
+      x-speakeasy-group: BulkCalculation1099BatchItem
       requestBody:
         content:
           application/json:
@@ -9749,6 +10301,8 @@ paths:
           schema:
             type: string
       summary: Get a bulk calculation1099 batch item
+      operationId: getBulkCalculation1099BatchItem
+      x-speakeasy-group: BulkCalculation1099BatchItem
       responses:
         '200':
           description: An item that will be converted into a calculation 1099
@@ -9771,6 +10325,8 @@ paths:
           schema:
             type: string
       summary: Update a bulk calculation1099 batch item
+      operationId: updateBulkCalculation1099BatchItem
+      x-speakeasy-group: BulkCalculation1099BatchItem
       requestBody:
         content:
           application/json:
@@ -9786,6 +10342,8 @@ paths:
   /payments/v2/collaborator:
     get:
       summary: Lists all collaborators in the V2 format
+      operationId: listCollaboratorsV2
+      x-speakeasy-group: CollaboratorsV2
       responses:
         '200':
           description: List of V2 Collaborators
@@ -9805,6 +10363,8 @@ paths:
           schema:
             type: string
       summary: Get a single V2 Collaborator by memberId
+      operationId: getCollaboratorV2
+      x-speakeasy-group: CollaboratorV2
       responses:
         '200':
           description: A single V2 Collaborator
@@ -9815,6 +10375,8 @@ paths:
   /payments/v2/client:
     get:
       summary: Lists all collaborators in the V2 format
+      operationId: listClientCollaboratorsV2
+      x-speakeasy-group: ClientCollaboratorsV2
       responses:
         '200':
           description: List of V2 Collaborators
@@ -9834,6 +10396,8 @@ paths:
           schema:
             type: string
       summary: Get a single V2 Collaborator by clientId
+      operationId: getClientCollaboratorV2
+      x-speakeasy-group: ClientCollaboratorV2
       responses:
         '200':
           description: A single V2 Collaborator
@@ -9844,6 +10408,8 @@ paths:
   /payments/reports/collaborators:
     get:
       summary: Get a list of collaborators and their details
+      operationId: getCollaboratorsDetailsV2
+      x-speakeasy-group: CollaboratorsDetailsV2
       responses:
         '200':
           description: Collaborators list in the report
@@ -9865,6 +10431,8 @@ paths:
           schema:
             type: string
       summary: Get a list of payables connected to payroll run
+      operationId: listPayablesPayroll
+      x-speakeasy-group: PayablesPayroll
       responses:
         '200':
           description: Payroll report with line items and payroll summary
@@ -9875,6 +10443,8 @@ paths:
   /payments/reports/aging/payables:
     get:
       summary: Get a list of payables with respective aging group
+      operationId: getPayablesAgingGroup
+      x-speakeasy-group: PayablesAgingGroup
       responses:
         '200':
           description: Payables list grouped by age
@@ -9887,6 +10457,8 @@ paths:
   /payments/reports/aging/line-items:
     get:
       summary: Get a list of line items with respective aging group
+      operationId: getLineItemsAgingGroup
+      x-speakeasy-group: LineItemsAgingGroup
       responses:
         '200':
           description: Line items list grouped by age
@@ -9896,43 +10468,43 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LineItemsAgingReportResponse'
-# x-speakeasy-name-override:
-#   - operationId: ^get.*
-#     methodNameOverride: get
-#   - operationId: ^add.*
-#     methodNameOverride: add
-#   - operationId: ^remove.*
-#     methodNameOverride: remove
-#   - operationId: ^create.*
-#     methodNameOverride: create
-#   - operationId: ^replace.*
-#     methodNameOverride: replace
-#   - operationId: ^delete.*
-#     methodNameOverride: delete
-#   - operationId: ^fetch.*
-#     methodNameOverride: fetch
-#   - operationId: ^list.*
-#     methodNameOverride: list
-#   - operationId: ^post.*
-#     methodNameOverride: post
-#   - operationId: ^update.*
-#     methodNameOverride: update
-#   - operationId: ^patch.*
-#     methodNameOverride: patch
-#   - operationId: ^download.*
-#     methodNameOverride: download
-#   - operationId: ^generate.*
-#     methodNameOverride: generate
-#   - operationId: ^send.*
-#     methodNameOverride: send
-#   - operationId: ^exchange.*
-#     methodNameOverride: exchange
-#   - operationId: ^remail.*
-#     methodNameOverride: remail
-#   - operationId: ^calculate.*
-#     methodNameOverride: calculate
-#   - operationId: ^mark.*
-#     methodNameOverride: mark
-#   - operationId: ^execute.*
-#     methodNameOverride: execute
+x-speakeasy-name-override:
+  - operationId: ^get.*
+    methodNameOverride: get
+  - operationId: ^add.*
+    methodNameOverride: add
+  - operationId: ^remove.*
+    methodNameOverride: remove
+  - operationId: ^create.*
+    methodNameOverride: create
+  - operationId: ^replace.*
+    methodNameOverride: replace
+  - operationId: ^delete.*
+    methodNameOverride: delete
+  - operationId: ^fetch.*
+    methodNameOverride: fetch
+  - operationId: ^list.*
+    methodNameOverride: list
+  - operationId: ^post.*
+    methodNameOverride: post
+  - operationId: ^update.*
+    methodNameOverride: update
+  - operationId: ^patch.*
+    methodNameOverride: patch
+  - operationId: ^download.*
+    methodNameOverride: download
+  - operationId: ^generate.*
+    methodNameOverride: generate
+  - operationId: ^send.*
+    methodNameOverride: send
+  - operationId: ^exchange.*
+    methodNameOverride: exchange
+  - operationId: ^remail.*
+    methodNameOverride: remail
+  - operationId: ^calculate.*
+    methodNameOverride: calculate
+  - operationId: ^mark.*
+    methodNameOverride: mark
+  - operationId: ^execute.*
+    methodNameOverride: execute
 security: []
