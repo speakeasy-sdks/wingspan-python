@@ -21,6 +21,6 @@ python:
   version: 1.27.0
   author: Speakeasy
   description: Python Client SDK for the Wingspan Payments API
-  maxMethodParams: 0
+  maxMethodParams: 4
   maxPathParams: 4
   packageName: wingspan
