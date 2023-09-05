@@ -1,9 +1,0 @@
-# PatchPaymentsCollaboratorSettingsEligibilityRequirementIDRequest
-
-
-## Fields
-
-| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `eligibility_requirement_update_request`                                                                           | [Optional[shared.EligibilityRequirementUpdateRequest]](../../models/shared/eligibilityrequirementupdaterequest.md) | :heavy_minus_sign:                                                                                                 | N/A                                                                                                                |
-| `id`                                                                                                               | *str*                                                                                                              | :heavy_check_mark:                                                                                                 | Unique identifier                                                                                                  |

@@ -1,0 +1,12 @@
+# InvoiceCollaborator
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `amount`                                                                          | *float*                                                                           | :heavy_check_mark:                                                                | N/A                                                                               |
+| `currency`                                                                        | [CurrencyInvoiceCollaborator](../../models/shared/currencyinvoicecollaborator.md) | :heavy_check_mark:                                                                | N/A                                                                               |
+| `description`                                                                     | *str*                                                                             | :heavy_check_mark:                                                                | N/A                                                                               |
+| `invoice_id`                                                                      | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `member_client_id`                                                                | *str*                                                                             | :heavy_check_mark:                                                                | N/A                                                                               |

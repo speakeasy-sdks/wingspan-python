@@ -1,5 +1,7 @@
 # PaymentEligibility
 
+See payment eligibility requirements on member
+
 
 ## Fields
 

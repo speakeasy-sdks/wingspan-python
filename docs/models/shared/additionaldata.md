@@ -1,5 +1,7 @@
 # AdditionalData
 
+Custom fields that are set on memberClient object to describe collaborator-member
+
 
 ## Fields
 

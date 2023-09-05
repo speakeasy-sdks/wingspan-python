@@ -1,0 +1,10 @@
+# ClientData
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `auto_pay_strategy`                                                                             | [Optional[AutoPayStrategyClientData]](../../models/shared/autopaystrategyclientdata.md)         | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `external_id`                                                                                   | *Optional[str]*                                                                                 | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `verification_stratgy`                                                                          | [Optional[VerificationStratgyClientData]](../../models/shared/verificationstratgyclientdata.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |

@@ -1,0 +1,11 @@
+# ListBulkCalculation1099BatchesResponse
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `bulk_calculation1099_batches`                                                           | list[[shared.BulkCalculation1099Batch](../../models/shared/bulkcalculation1099batch.md)] | :heavy_minus_sign:                                                                       | A list of bulk calculation 1099 batches                                                  |
+| `content_type`                                                                           | *str*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `status_code`                                                                            | *int*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `raw_response`                                                                           | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response)    | :heavy_minus_sign:                                                                       | N/A                                                                                      |

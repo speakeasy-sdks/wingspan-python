@@ -1,0 +1,9 @@
+# CreateBulkCalculation1099BatchItemRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `batch_id`                                                                                             | *str*                                                                                                  | :heavy_check_mark:                                                                                     | Unique identifier for a batch                                                                          |
+| `bulk_calculation1099_item_create`                                                                     | [Optional[shared.BulkCalculation1099ItemCreate]](../../models/shared/bulkcalculation1099itemcreate.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

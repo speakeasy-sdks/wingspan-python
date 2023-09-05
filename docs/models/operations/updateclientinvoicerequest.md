@@ -1,0 +1,9 @@
+# UpdateClientInvoiceRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `id`                                                                                             | *str*                                                                                            | :heavy_check_mark:                                                                               | Unique identifier                                                                                |
+| `client_invoice_update_request`                                                                  | [Optional[shared.ClientInvoiceUpdateRequest]](../../models/shared/clientinvoiceupdaterequest.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |

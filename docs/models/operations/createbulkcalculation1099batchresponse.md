@@ -1,0 +1,11 @@
+# CreateBulkCalculation1099BatchResponse
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `bulk_calculation1099_batch`                                                                 | [Optional[shared.BulkCalculation1099Batch]](../../models/shared/bulkcalculation1099batch.md) | :heavy_minus_sign:                                                                           | A batch of items for importing as calculation 1099s                                          |
+| `content_type`                                                                               | *str*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `status_code`                                                                                | *int*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `raw_response`                                                                               | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response)        | :heavy_minus_sign:                                                                           | N/A                                                                                          |

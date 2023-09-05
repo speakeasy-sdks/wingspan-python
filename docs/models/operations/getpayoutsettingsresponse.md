@@ -1,0 +1,11 @@
+# GetPayoutSettingsResponse
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `content_type`                                                                           | *str*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `payout_settings_response`                                                               | [Optional[shared.PayoutSettingsResponse]](../../models/shared/payoutsettingsresponse.md) | :heavy_minus_sign:                                                                       | The payout settings for a member                                                         |
+| `status_code`                                                                            | *int*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `raw_response`                                                                           | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response)    | :heavy_minus_sign:                                                                       | N/A                                                                                      |

@@ -1,0 +1,11 @@
+# GetPayablesAgingGroupResponse
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `content_type`                                                                               | *str*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `payable_aging_report_responses`                                                             | list[[shared.PayableAgingReportResponse](../../models/shared/payableagingreportresponse.md)] | :heavy_minus_sign:                                                                           | Payables list grouped by age                                                                 |
+| `status_code`                                                                                | *int*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `raw_response`                                                                               | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response)        | :heavy_minus_sign:                                                                           | N/A                                                                                          |

@@ -1,0 +1,9 @@
+# UpdateCollaboratorGroupRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `id`                                                                                                     | *str*                                                                                                    | :heavy_check_mark:                                                                                       | Unique identifier                                                                                        |
+| `collaborator_group_update_request`                                                                      | [Optional[shared.CollaboratorGroupUpdateRequest]](../../models/shared/collaboratorgroupupdaterequest.md) | :heavy_minus_sign:                                                                                       | N/A                                                                                                      |

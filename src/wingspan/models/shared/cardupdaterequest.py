@@ -6,7 +6,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from wingspan import utils
 
-class CardUpdateRequestStatus(str, Enum):
+class PropertiesCardUpdateRequest(str, Enum):
     ACTIVE = 'Active'
     INACTIVE = 'Inactive'
     STOLEN = 'Stolen'
@@ -19,6 +19,6 @@ class CardUpdateRequestStatus(str, Enum):
 
 @dataclasses.dataclass
 class CardUpdateRequest:
-    status: CardUpdateRequestStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: PropertiesCardUpdateRequest = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

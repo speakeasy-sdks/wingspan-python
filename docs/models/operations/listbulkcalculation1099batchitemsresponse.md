@@ -1,0 +1,11 @@
+# ListBulkCalculation1099BatchItemsResponse
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `bulk_calculation1099_items`                                                           | list[[shared.BulkCalculation1099Item](../../models/shared/bulkcalculation1099item.md)] | :heavy_minus_sign:                                                                     | A list of bulk calculation 1099 items                                                  |
+| `content_type`                                                                         | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `status_code`                                                                          | *int*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `raw_response`                                                                         | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response)  | :heavy_minus_sign:                                                                     | N/A                                                                                    |

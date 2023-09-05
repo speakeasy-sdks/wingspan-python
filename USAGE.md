@@ -3,17 +3,18 @@
 
 ```python
 import wingspan
-from wingspan.models import operations
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
-req = operations.DeletePaymentsBankingCardIDRequest(
-    id='89bd9d8d-69a6-474e-8f46-7cc8796ed151',
+req = shared.Calculate1099Request(
+    member_client_id='corrupti',
+    year=5928.45,
 )
 
-res = s.delete_payments_banking_card_id_(req)
+res = s.one_thousand_and_ninety_nine.calculate(req)
 
-if res.card is not None:
+if res.calculate1099_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

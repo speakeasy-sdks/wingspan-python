@@ -1,0 +1,11 @@
+# Calculate1099Response
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `calculate1099_response`                                                               | [Optional[shared.Calculate1099Response]](../../models/shared/calculate1099response.md) | :heavy_minus_sign:                                                                     | Calculate 1099 amounts response                                                        |
+| `content_type`                                                                         | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `status_code`                                                                          | *int*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `raw_response`                                                                         | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response)  | :heavy_minus_sign:                                                                     | N/A                                                                                    |

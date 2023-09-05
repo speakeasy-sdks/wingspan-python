@@ -15,6 +15,7 @@ class AdditionalDataType(str, Enum):
 
 @dataclasses.dataclass
 class AdditionalData:
+    r"""Custom fields that are set on memberClient object to describe collaborator-member"""
     key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     required: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('required') }})

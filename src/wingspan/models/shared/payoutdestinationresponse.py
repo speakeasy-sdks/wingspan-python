@@ -7,12 +7,12 @@ from enum import Enum
 from typing import Optional
 from wingspan import utils
 
-class PayoutDestinationResponseDestinationType(str, Enum):
+class DestinationTypePayoutDestinationResponse(str, Enum):
     ACCOUNT = 'Account'
     CARD = 'Card'
     WE_GIFT = 'WeGift'
 
-class PayoutDestinationResponsePayoutMethod(str, Enum):
+class PayoutMethodPayoutDestinationResponse(str, Enum):
     STANDARD = 'Standard'
     INSTANT = 'Instant'
     EXPEDITED = 'Expedited'
@@ -25,9 +25,9 @@ class PayoutDestinationResponsePayoutMethod(str, Enum):
 @dataclasses.dataclass
 class PayoutDestinationResponse:
     destination_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationId') }})
-    destination_type: PayoutDestinationResponseDestinationType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationType') }})
+    destination_type: DestinationTypePayoutDestinationResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationType') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    payout_method: PayoutDestinationResponsePayoutMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutMethod') }})
+    payout_method: PayoutMethodPayoutDestinationResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutMethod') }})
     percentage: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage') }})
     last4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last4'), 'exclude': lambda f: f is None }})
     
