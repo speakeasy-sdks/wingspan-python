@@ -1,0 +1,9 @@
+# UpdateAdditionalSettingsRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `id`                                                                                               | *str*                                                                                              | :heavy_check_mark:                                                                                 | Unique identifier                                                                                  |
+| `additional_data_update_request`                                                                   | [Optional[shared.AdditionalDataUpdateRequest]](../../models/shared/additionaldataupdaterequest.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |

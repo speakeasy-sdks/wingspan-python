@@ -7,7 +7,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from wingspan import utils
 
-class CardStatus(str, Enum):
+class StatusCard(str, Enum):
     ACTIVE = 'Active'
     INACTIVE = 'Inactive'
     STOLEN = 'Stolen'
@@ -16,7 +16,7 @@ class CardStatus(str, Enum):
     CLOSED_BY_CUSTOMER = 'ClosedByCustomer'
     SUSPECTED_FRAUD = 'SuspectedFraud'
 
-class CardType(str, Enum):
+class TypeCard(str, Enum):
     INDIVIDUAL_DEBIT_CARD = 'individualDebitCard'
     BUSINESS_DEBIT_CARD = 'businessDebitCard'
     INDIVIDUAL_VIRTUAL_DEBIT_CARD = 'individualVirtualDebitCard'
@@ -33,7 +33,7 @@ class Card:
     expiration_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expirationDate') }})
     internal: shared_c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875.C43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internal') }})
     last4_digits: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last4Digits') }})
-    status: CardStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-    type: CardType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    status: StatusCard = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    type: TypeCard = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
 

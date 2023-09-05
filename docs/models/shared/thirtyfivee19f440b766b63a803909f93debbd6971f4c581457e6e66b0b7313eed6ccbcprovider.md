@@ -1,9 +1,0 @@
-# ThirtyFivee19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbcProvider
-
-
-## Values
-
-| Name     | Value    |
-| -------- | -------- |
-| `UNIT`   | Unit     |
-| `STRIPE` | Stripe   |

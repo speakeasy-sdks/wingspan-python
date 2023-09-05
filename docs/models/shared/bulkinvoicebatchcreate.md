@@ -1,0 +1,9 @@
+# BulkInvoiceBatchCreate
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `labels`                                                                                                    | *Optional[Any]*                                                                                             | :heavy_minus_sign:                                                                                          | N/A                                                                                                         |
+| `processing_strategy`                                                                                       | [BulkInvoiceBatchCreateProcessingStrategy](../../models/shared/bulkinvoicebatchcreateprocessingstrategy.md) | :heavy_check_mark:                                                                                          | N/A                                                                                                         |

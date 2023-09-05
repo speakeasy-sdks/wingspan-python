@@ -7,7 +7,7 @@ from enum import Enum
 from typing import Optional
 from wingspan import utils
 
-class ThirtyFivee19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbcProvider(str, Enum):
+class Provider35e19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc(str, Enum):
     UNIT = 'Unit'
     STRIPE = 'Stripe'
 
@@ -16,7 +16,7 @@ class ThirtyFivee19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbcPr
 
 @dataclasses.dataclass
 class ThirtyFivee19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc:
-    provider: ThirtyFivee19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbcProvider = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
+    provider: Provider35e19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
     provider_account_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('providerAccountId') }})
     wingspan_account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wingspanAccountId'), 'exclude': lambda f: f is None }})
     
