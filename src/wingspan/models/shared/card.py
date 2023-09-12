@@ -27,7 +27,6 @@ class TypeCard(str, Enum):
 
 @dataclasses.dataclass
 class Card:
-    r"""A card summary"""
     brand: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     expiration_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expirationDate') }})

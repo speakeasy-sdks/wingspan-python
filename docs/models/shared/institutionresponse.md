@@ -1,7 +1,5 @@
 # InstitutionResponse
 
-Institution Response
-
 
 ## Fields
 

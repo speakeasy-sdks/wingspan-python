@@ -1,7 +1,5 @@
 # CollaboratorV2
 
-A single V2 Collaborator
-
 
 ## Fields
 

@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.add(group_id='eos', id='praesentium')
+res = s.collaborator_to_group.add(group_id='dolores', id='distinctio')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -50,7 +50,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.remove(group_id='quisquam', id='veritatis')
+res = s.collaborator_to_group.remove(group_id='facilis', id='aliquid')
 
 if res.collaborator_schema is not None:
     # handle response

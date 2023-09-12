@@ -20,8 +20,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.PaymentEligibility(
-    field='sapiente',
-    value='cumque',
+    field='accusamus',
+    value='similique',
 )
 
 res = s.payment_eligibility_requirement.create(req)
@@ -55,7 +55,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.delete(id='vitae')
+res = s.payment_eligibility_requirement.delete(id='tempora')
 
 if res.payment_eligibility is not None:
     # handle response
@@ -86,7 +86,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.get(id='rerum')
+res = s.payment_eligibility_requirement.get(id='aspernatur')
 
 if res.payment_eligibility is not None:
     # handle response
@@ -117,9 +117,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.update(id='tempora', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest(
-    field='quis',
-    value='fugit',
+res = s.payment_eligibility_requirement.update(id='voluptas', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest(
+    field='voluptas',
+    value='minima',
 ))
 
 if res.payment_eligibility is not None:

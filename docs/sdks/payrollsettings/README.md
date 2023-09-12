@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payroll_settings.get(id='fuga')
+res = s.payroll_settings.get(id='laborum')
 
 if res.payroll_settings is not None:
     # handle response
@@ -49,27 +49,30 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payroll_settings.update(id='ratione', payroll_settings_update=shared.PayrollSettingsUpdate(
-    calculation_settings1099=shared.CalculationSettings1099(
-        card_processing_fees=shared.CardProcessingFeesCalculationSettings1099.LESS_THAN_NIL_GREATER_THAN_,
-        off_platform_payments=shared.OffPlatformPaymentsCalculationSettings1099.LESS_THAN_NIL_GREATER_THAN_,
-        reimbursable_expenses=shared.ReimbursableExpensesCalculationSettings1099.INCLUDE,
-        state_tax_id='et',
-        threshold_amount=4977.77,
-    ),
+res = s.payroll_settings.update(id='sed', payroll_settings_update=shared.PayrollSettingsUpdate(
+    calculation_settings1099='commodi',
     enable_planned_payroll=False,
-    enable_process_days_before_due=False,
-    frequency='adipisci',
-    funding_source='magni',
-    issue1099s=False,
-    process_days_before_due=8595.81,
+    enable_process_days_before_due='voluptas',
+    frequency=shared.FrequencyUpdate(
+        daily='suscipit',
+        day_in_interval=9602.57,
+        end_date='debitis',
+        every=724.34,
+        interval=shared.IntervalFrequencyUpdate.LESS_THAN_NIL_GREATER_THAN_,
+        start_date='perferendis',
+        twice_per_month=False,
+    ),
+    funding_source=shared.FundingSource(
+        funding_source_currency=shared.FundingSourceCurrency.USD,
+        funding_source_id='sed',
+        funding_source_type=shared.TypeFundingSource.ACCOUNT,
+    ),
+    issue1099s='necessitatibus',
+    process_days_before_due=2155.29,
     schedule_dates=[
-        'tempora',
-        'molestiae',
-        'iusto',
-        'praesentium',
+        'occaecati',
     ],
-    status=shared.StatusPayrollSettingsUpdate.LESS_THAN_NIL_GREATER_THAN_,
+    status=shared.StatusPayrollSettingsUpdate.EXPIRED,
     workflow=shared.WorkflowPayrollSettingsUpdate.LESS_THAN_NIL_GREATER_THAN_,
 ))
 

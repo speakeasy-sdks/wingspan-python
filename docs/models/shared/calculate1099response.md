@@ -1,7 +1,5 @@
 # Calculate1099Response
 
-Calculate 1099 amounts response
-
 
 ## Fields
 

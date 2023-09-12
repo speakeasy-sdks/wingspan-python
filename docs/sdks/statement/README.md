@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.download(id='vel')
+res = s.statement.download(id='tempora')
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +49,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.get(id='architecto')
+res = s.statement.get(id='tempora')
 
 if res.bank_statements is not None:
     # handle response

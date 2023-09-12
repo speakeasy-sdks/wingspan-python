@@ -1,7 +1,5 @@
 # BulkCalculation1099Item
 
-An item that will be converted into a calculation 1099
-
 
 ## Fields
 

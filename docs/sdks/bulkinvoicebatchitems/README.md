@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_items.list(batch_id='ipsam')
+res = s.bulk_invoice_batch_items.list(batch_id='molestiae')
 
 if res.bulk_invoice_items is not None:
     # handle response

@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.form1099.download(id='eius', index='eos', year='voluptas')
+res = s.form1099.download(id='sunt', index='ullam', year='nam')
 
 if res.download1099_response is not None:
     # handle response

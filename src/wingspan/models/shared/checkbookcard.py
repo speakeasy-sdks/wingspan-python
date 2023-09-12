@@ -20,7 +20,6 @@ class CheckbookCardBrand(str, Enum):
 
 @dataclasses.dataclass
 class CheckbookCard:
-    r"""A payout debit card"""
     address: shared_address.Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
     brand: CheckbookCardBrand = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand') }})
     card_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardId') }})

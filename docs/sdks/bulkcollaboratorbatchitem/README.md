@@ -19,30 +19,30 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.create(batch_id='maiores', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
-    collaborator_group_id='dicta',
-    collaborator_id='corporis',
-    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemCreate.INACTIVE,
-    company='Carter - Pfeffer',
-    email='Shania.Jerde21@gmail.com',
-    external_id='quidem',
-    first_last_name='molestias',
+res = s.bulk_collaborator_batch_item.create(batch_id='enim', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
+    collaborator_group_id='odit',
+    collaborator_id='quo',
+    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemCreate.ACTIVE,
+    company='Hills, Ondricka and Schuster',
+    email='Avery_Mueller9@gmail.com',
+    external_id='reiciendis',
+    first_last_name='voluptatibus',
     form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='pariatur',
-        address_line2='modi',
-        city='Judahshire',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.NONE,
-        country='Turks and Caicos Islands',
-        dob='sint',
-        ein='veritatis',
-        first_name='Tobin',
-        last_name='Gottlieb',
-        legal_business_name='enim',
-        postal_code='68167',
-        ssn='quibusdam',
-        state='labore',
+        address_line1='nihil',
+        address_line2='praesentium',
+        city='Baltimore',
+        company_structure=shared.CompanyStructureMemberClientFormW9Info.LLC_CORPORATION_C,
+        country='Kazakhstan',
+        dob='cum',
+        ein='perferendis',
+        first_name='Alison',
+        last_name='Kiehn',
+        legal_business_name='ut',
+        postal_code='13241-6384',
+        ssn='repudiandae',
+        state='quae',
     ),
-    labels='qui',
+    labels='quidem',
 ))
 
 if res.bulk_collaborator_item is not None:
@@ -75,7 +75,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.get(batch_id='aliquid', batch_item_id='cupiditate')
+res = s.bulk_collaborator_batch_item.get(batch_id='molestias', batch_item_id='excepturi')
 
 if res.bulk_collaborator_item is not None:
     # handle response
@@ -107,32 +107,17 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.update(batch_id='quos', batch_item_id='perferendis', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
-    collaborator_group_id='magni',
-    collaborator_id='assumenda',
-    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemUpdate.INACTIVE,
-    company='Corkery LLC',
-    email='Dominique.Prosacco96@yahoo.com',
-    external_id='eum',
-    first_last_name='non',
-    form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='sint',
-        address_line2='aliquid',
-        city='Sonyastead',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.LLC_CORPORATION_C,
-        country='Cyprus',
-        dob='debitis',
-        ein='a',
-        first_name='Marilou',
-        last_name='King',
-        legal_business_name='in',
-        postal_code='96127-8436',
-        ssn='accusamus',
-        state='non',
-    ),
+res = s.bulk_collaborator_batch_item.update(batch_id='pariatur', batch_item_id='modi', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
+    collaborator_group_id='praesentium',
+    collaborator_id='rem',
+    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemUpdate.LESS_THAN_NIL_GREATER_THAN_,
+    company='Waelchi LLC',
+    email='Tobin0@gmail.com',
+    external_id='est',
+    first_last_name='quibusdam',
+    form_w9_data='deserunt',
     labels={
-        "accusamus": 'delectus',
-        "quidem": 'provident',
+        "quibusdam": 'labore',
     },
 ))
 

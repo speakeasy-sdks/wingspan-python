@@ -1,7 +1,5 @@
 # BulkPayableImportSummary
 
-Summary of the bulk payable import
-
 
 ## Fields
 

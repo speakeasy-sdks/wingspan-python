@@ -15,7 +15,6 @@ class EligibilityRequirementRequirementType(str, Enum):
 
 @dataclasses.dataclass
 class EligibilityRequirement:
-    r"""Eligibility Requirement"""
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     eligibility_requirement_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirementId') }})
     requirement_type: EligibilityRequirementRequirementType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requirementType') }})

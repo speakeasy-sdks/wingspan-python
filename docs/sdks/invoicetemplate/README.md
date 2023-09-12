@@ -20,108 +20,83 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InvoiceTemplateCreateRequest(
-    due_in_days=5361.78,
-    frequency='fuga',
+    due_in_days=4856.28,
+    frequency=shared.Frequency(
+        daily=False,
+        day_in_interval=7875.42,
+        end_date='vero',
+        every=6064.76,
+        interval=shared.IntervalFrequency.MONTH,
+        start_date='ipsum',
+        twice_per_month=False,
+    ),
     invoice_data=shared.InvoiceDataCreateRequest(
         accepted_payment_methods=[
             shared.InvoiceDataCreateRequestAcceptedPaymentMethods.ACH,
-            shared.InvoiceDataCreateRequestAcceptedPaymentMethods.MANUAL,
-            shared.InvoiceDataCreateRequestAcceptedPaymentMethods.CREDIT,
         ],
-        attachments='nisi',
+        attachments='vero',
         collaborators=[
             shared.InvoiceCollaboratorCreateRequest(
-                amount=1598.7,
-                currency=shared.CurrencyInvoiceCollaboratorCreateRequest.USD,
-                description='explicabo',
-                member_client_id='saepe',
+                amount=4922.68,
+                currency=shared.CurrencyInvoiceCollaboratorCreateRequest.CAD,
+                description='distinctio',
+                member_client_id='quod',
             ),
         ],
-        credit_fee_handling=shared.FeeHandlingConfig(
-            client_absolute_percentage=5438.06,
-            client_pays=922.6,
-            member_pays=4569.11,
-        ),
+        credit_fee_handling='similique',
         currency=shared.CurrencyInvoiceDataCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
-        due_date='accusamus',
-        invoice_notes='veritatis',
-        labels='quod',
+        due_date='vero',
+        invoice_notes='ducimus',
+        labels='quibusdam',
         late_fee_handling=shared.LateFeeConfig(
             frequency=shared.Frequency(
-                daily=False,
-                day_in_interval=3990.25,
-                end_date='quasi',
-                every=9040.45,
+                daily='natus',
+                day_in_interval=7733.26,
+                end_date='aut',
+                every=9742.59,
                 interval=shared.IntervalFrequency.MONTH,
-                start_date='harum',
-                twice_per_month='rerum',
+                start_date='nulla',
+                twice_per_month='porro',
             ),
-            late_fee_amount=5801.97,
-            late_fee_percentage=3277.2,
+            late_fee_amount=9818.3,
+            late_fee_percentage=9850.33,
         ),
         line_items=[
             shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=7567.79,
-                description='sit',
-                detail='culpa',
-                discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                    amount=2400.2,
-                    description='cumque',
-                    percentage=1605.38,
-                ),
-                integration='minus',
-                labels='sapiente',
-                quantity=2328.65,
-                reimbursable_expense='blanditiis',
-                total_cost=5909.84,
-                unit='a',
-            ),
-            shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=8577.23,
-                description='quas',
-                detail='esse',
-                discount='a',
-                integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                    quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                        expense_account_id='pariatur',
-                        item_id='possimus',
-                    ),
-                ),
-                labels='eveniet',
-                quantity=9924.3,
+                cost_per_unit=4783.7,
+                description='eligendi',
+                detail='ducimus',
+                discount='officia',
+                integration='ipsam',
+                labels='aspernatur',
+                quantity=4282.24,
                 reimbursable_expense=False,
-                total_cost=850.01,
-                unit='consequuntur',
-            ),
-            shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=944.58,
-                description='similique',
-                detail='culpa',
-                discount='tenetur',
-                integration='earum',
-                labels='in',
-                quantity=2586.84,
-                reimbursable_expense=False,
-                total_cost=8490.39,
-                unit='soluta',
+                total_cost=2978.42,
+                unit='ratione',
             ),
         ],
-        member_client_id='accusantium',
-        notification_preferences='sapiente',
+        member_client_id='ex',
+        notification_preferences=shared.InvoiceNotificationPreferences(
+            send_invoice='dolor',
+            send_receipt=False,
+            send_reminders=False,
+        ),
         status=shared.StatusInvoiceDataCreateRequest.DRAFT,
     ),
-    is_scheduling_only='reprehenderit',
-    labels='nisi',
+    is_scheduling_only='nulla',
+    labels={
+        "voluptatibus": 'nostrum',
+    },
     schedule_dates=[
         shared.ScheduleDate(
-            cut_off_date='qui',
-            date_='quibusdam',
-            invoice_id='ex',
-            invoice_template_id='deleniti',
-            status=shared.StatusScheduleDate.MODIFIED,
+            cut_off_date='quisquam',
+            date_='saepe',
+            invoice_id='ea',
+            invoice_template_id='impedit',
+            status=shared.StatusScheduleDate.COMPLETED,
         ),
     ],
-    send_emails=False,
+    send_emails='aliquid',
     status=shared.StatusInvoiceTemplateCreateRequest.ACTIVE,
 )
 
@@ -156,7 +131,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.delete(id='omnis')
+res = s.invoice_template.delete(id='magnam')
 
 if res.invoice_template is not None:
     # handle response
@@ -187,7 +162,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.get(id='tenetur')
+res = s.invoice_template.get(id='ea')
 
 if res.invoice_template is not None:
     # handle response
@@ -218,27 +193,80 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.update(id='quasi', invoice_template_update_request=shared.InvoiceTemplateUpdateRequest(
-    account_id='at',
-    auto_payment_required='voluptate',
-    due_in_days=559.65,
-    frequency='veritatis',
-    invoice_data='adipisci',
+res = s.invoice_template.update(id='quo', invoice_template_update_request=shared.InvoiceTemplateUpdateRequest(
+    account_id='consectetur',
+    auto_payment_required=False,
+    due_in_days=1324.87,
+    frequency='eaque',
+    invoice_data=shared.InvoiceUpdateRequest(
+        accepted_payment_methods=[
+            shared.InvoiceUpdateRequestAcceptedPaymentMethods.MANUAL,
+        ],
+        attachments='aut',
+        charged_fees=shared.Fees(
+            late_fee=shared.Fee(
+                amount=3045.82,
+                calculated_at='fugit',
+            ),
+            processing_fee=shared.Fee(
+                amount=795.22,
+                calculated_at='non',
+            ),
+        ),
+        client='dolorum',
+        collaborators=[
+            shared.InvoiceCollaboratorUpdateRequest(
+                amount=8104.24,
+                description='velit',
+            ),
+        ],
+        credit_fee_handling='autem',
+        due_date='nobis',
+        integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+            quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
+                expense_account_id='nulla',
+                item_id='voluptas',
+            ),
+        ),
+        invoice_notes='libero',
+        labels='tempora',
+        late_fee_handling='explicabo',
+        line_items=[
+            shared.InvoiceLineItemsCreateRequest(
+                cost_per_unit=553.74,
+                description='molestiae',
+                detail='magnam',
+                discount='eius',
+                integration='esse',
+                labels={
+                    "fuga": 'reprehenderit',
+                },
+                quantity=6956.26,
+                reimbursable_expense=False,
+                total_cost=2835.19,
+                unit='eum',
+            ),
+        ],
+        member='assumenda',
+        member_client_id='eos',
+        metadata=shared.InvoiceMetadata(
+            purchase_order_number='quisquam',
+        ),
+        notification_preferences='ipsa',
+        status=shared.StatusInvoiceUpdateRequest.PAYMENT_IN_TRANSIT,
+    ),
     is_scheduling_only=False,
-    labels={
-        "rem": 'aut',
-    },
-    payment_method_id='laudantium',
+    labels='quo',
+    payment_method_id='illum',
     schedule_dates=[
         shared.ScheduleDateUpdate(
-            date_='ab',
-            invoice_template_id='corrupti',
-            status=shared.StatusScheduleDateUpdate.COMPLETED,
+            date_='fuga',
+            invoice_template_id='eius',
+            status=shared.StatusScheduleDateUpdate.PENDING,
         ),
-        'dolor',
     ],
-    send_emails=False,
-    status=shared.StatusInvoiceTemplateUpdateRequest.DRAFT,
+    send_emails='ab',
+    status=shared.StatusInvoiceTemplateUpdateRequest.EXPIRED,
 ))
 
 if res.invoice_template is not None:

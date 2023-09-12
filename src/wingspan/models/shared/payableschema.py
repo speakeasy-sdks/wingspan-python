@@ -42,7 +42,6 @@ class StatusPayableSchema(str, Enum):
 
 @dataclasses.dataclass
 class PayableSchema:
-    r"""A payable"""
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     attachments: shared_invoiceattachments.InvoiceAttachments = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments') }})
     client: shared_clientoptions.ClientOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client') }})

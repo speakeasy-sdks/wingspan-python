@@ -33,7 +33,6 @@ class StatusBulkInvoiceItem(str, Enum):
 
 @dataclasses.dataclass
 class BulkInvoiceItem:
-    r"""An item that will be converted into a invoice"""
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     bulk_invoice_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkInvoiceBatchId') }})
     bulk_invoice_item_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkInvoiceItemId') }})

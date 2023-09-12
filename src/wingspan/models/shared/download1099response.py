@@ -7,6 +7,4 @@ import dataclasses
 
 @dataclasses.dataclass
 class Download1099Response:
-    r"""Download1099Response"""
-    
-
+    pass

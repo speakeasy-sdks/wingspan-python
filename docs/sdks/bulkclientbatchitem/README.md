@@ -19,19 +19,21 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.create(batch_id='architecto', bulk_client_item_create=shared.BulkClientItemCreate(
+res = s.bulk_client_batch_item.create(batch_id='iste', bulk_client_item_create=shared.BulkClientItemCreate(
     client_status=shared.ClientStatusBulkClientItemCreate.ACTIVE,
-    company='Orn, O'Hara and Osinski',
-    email='Corrine75@gmail.com',
-    external_id='enim',
-    first_last_name='omnis',
-    integration='minima',
+    company='Howe - Welch',
+    email='Marisa_Kirlin@hotmail.com',
+    external_id='iure',
+    first_last_name='saepe',
+    integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
+        quickbooks='ipsa',
+    ),
     labels={
-        "iure": 'culpa',
+        "est": 'mollitia',
     },
     member_data=shared.MemberData(
-        auto_pay_requirement=shared.AutoPayRequirementMemberData.LESS_THAN_NIL_GREATER_THAN_,
-        external_id='architecto',
+        auto_pay_requirement=shared.AutoPayRequirementMemberData.ALL,
+        external_id='dolorem',
         share_tax_document=shared.ShareTaxDocumentMemberData.DECLINE,
     ),
 ))
@@ -66,7 +68,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.get(batch_id='dolorem', batch_item_id='culpa')
+res = s.bulk_client_batch_item.get(batch_id='explicabo', batch_item_id='nobis')
 
 if res.bulk_client_item is not None:
     # handle response
@@ -98,26 +100,17 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.update(batch_id='consequuntur', batch_item_id='repellat', bulk_client_item_update=shared.BulkClientItemUpdate(
-    client_status=shared.ClientStatusBulkClientItemUpdate.PENDING,
-    company='Fritsch - Jerde',
-    email='Jarred.Frami@yahoo.com',
-    external_id='quis',
-    first_last_name='vitae',
-    integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
-        quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(
-            customer_id='enim',
-            item_id='odit',
-        ),
-    ),
+res = s.bulk_client_batch_item.update(batch_id='enim', batch_item_id='omnis', bulk_client_item_update=shared.BulkClientItemUpdate(
+    client_status=shared.ClientStatusBulkClientItemUpdate.INACTIVE,
+    company='Marks Inc',
+    email='Lorenza.Yundt65@yahoo.com',
+    external_id='dolorem',
+    first_last_name='culpa',
+    integration='repellat',
     labels={
-        "tenetur": 'ipsam',
+        "occaecati": 'numquam',
     },
-    member_data=shared.MemberData(
-        auto_pay_requirement=shared.AutoPayRequirementMemberData.LESS_THAN_NIL_GREATER_THAN_,
-        external_id='aut',
-        share_tax_document=shared.ShareTaxDocumentMemberData.ALLOW,
-    ),
+    member_data='quam',
 ))
 
 if res.bulk_client_item is not None:

@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payables_payroll.list(payroll_id='officiis')
+res = s.payables_payroll.list(payroll_id='vitae')
 
 if res.payroll_report_response is not None:
     # handle response

@@ -19,107 +19,56 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceTemplateCreateRequest(
-    account_id='id',
-    client_company='saepe',
-    client_email='eius',
+    account_id='hic',
+    client_company='recusandae',
+    client_email='omnis',
     client_email_cc=[
-        'perferendis',
+        'facilis',
     ],
-    client_first_name='amet',
-    client_last_name='optio',
-    due_in_days=8815.86,
-    frequency='saepe',
+    client_first_name='perspiciatis',
+    client_last_name='voluptatem',
+    due_in_days=7836.45,
+    frequency='blanditiis',
     invoice_data=shared.ClientInvoiceDataCreateRequest(
-        credit_fee_handling='deserunt',
-        currency=shared.CurrencyClientInvoiceDataCreateRequest.CAD,
-        due_date='minima',
+        credit_fee_handling=shared.FeeHandlingConfig(
+            client_absolute_percentage=503.7,
+            client_pays=5772.29,
+            member_pays=6990.98,
+        ),
+        currency=shared.CurrencyClientInvoiceDataCreateRequest.USD,
+        due_date='asperiores',
         line_items=[
             shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=5197.11,
-                description='similique',
-                detail='alias',
+                cost_per_unit=9342.14,
+                description='modi',
+                detail='iste',
                 discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                    amount=3118.6,
-                    description='tempora',
-                    percentage=4254.51,
+                    amount=5356.33,
+                    description='pariatur',
+                    percentage=5899.1,
                 ),
                 integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
                     quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                        expense_account_id='qui',
-                        item_id='dolorum',
+                        expense_account_id='delectus',
+                        item_id='quaerat',
                     ),
                 ),
                 labels={
-                    "harum": 'iusto',
-                    "ipsum": 'quisquam',
+                    "aliquid": 'dolorem',
                 },
-                quantity=9473.71,
-                reimbursable_expense='tempore',
-                total_cost=8802.98,
-                unit='numquam',
-            ),
-            shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=3136.92,
-                description='dolorem',
-                detail='sapiente',
-                discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                    amount=4717.52,
-                    description='sit',
-                    percentage=7115.84,
-                ),
-                integration='sed',
-                labels='libero',
-                quantity=3741.7,
-                reimbursable_expense=False,
-                total_cost=4635.75,
-                unit='ipsum',
-            ),
-            shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=2776.28,
-                description='qui',
-                detail='cupiditate',
-                discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                    amount=8638.56,
-                    description='soluta',
-                    percentage=1175.31,
-                ),
-                integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                    quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                        expense_account_id='incidunt',
-                        item_id='aspernatur',
-                    ),
-                ),
-                labels='distinctio',
-                quantity=7044.74,
-                reimbursable_expense='quam',
-                total_cost=5654.21,
-                unit='temporibus',
-            ),
-            shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=1832.8,
-                description='neque',
-                detail='fugit',
-                discount='odio',
-                integration='ullam',
-                labels={
-                    "voluptatem": 'cumque',
-                    "soluta": 'nobis',
-                    "et": 'saepe',
-                    "ipsum": 'veritatis',
-                },
-                quantity=7492.55,
-                reimbursable_expense=False,
-                total_cost=7316.94,
-                unit='cupiditate',
+                quantity=2098.43,
+                reimbursable_expense='qui',
+                total_cost=2187.49,
+                unit='hic',
             ),
         ],
     ),
-    member_id='aperiam',
-    payment_method_id='delectus',
+    member_id='excepturi',
+    payment_method_id='cum',
     schedule_dates=[
-        'labore',
+        'dignissimos',
     ],
-    status=shared.StatusClientInvoiceTemplateCreateRequest.ACTIVE,
+    status=shared.StatusClientInvoiceTemplateCreateRequest.CANCELLED,
 )
 
 res = s.client_invoice_template.create(req)
@@ -153,7 +102,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.get(id='dolorum')
+res = s.client_invoice_template.get(id='amet')
 
 if res.client_invoice_template is not None:
     # handle response
@@ -184,10 +133,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.update(id='architecto', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
-    account_id='quae',
-    client_id='aut',
-    payment_method_id='quas',
+res = s.client_invoice_template.update(id='dolorum', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
+    account_id='numquam',
+    client_id='veritatis',
+    payment_method_id='ipsa',
 ))
 
 if res.client_invoice_template is not None:

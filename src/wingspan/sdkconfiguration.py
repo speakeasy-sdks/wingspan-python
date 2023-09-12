@@ -3,6 +3,8 @@
 import requests
 from dataclasses import dataclass
 
+from .utils.retries import RetryConfig
+
 
 SERVERS = [
     'https://api.wingspan.app',
@@ -20,8 +22,9 @@ class SDKConfiguration:
     server_idx: int = 0
     language: str = 'python'
     openapi_doc_version: str = '1.0.0'
-    sdk_version: str = '1.28.0'
-    gen_version: str = '2.96.6'
+    sdk_version: str = '1.28.1'
+    gen_version: str = '2.108.3'
+    retry_config: RetryConfig = None
 
     def get_server_details(self) -> tuple[str, dict[str, str]]:
         if self.server_url:

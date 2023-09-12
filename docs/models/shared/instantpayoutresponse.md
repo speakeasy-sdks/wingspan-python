@@ -1,7 +1,5 @@
 # InstantPayoutResponse
 
-Instant Payout details
-
 
 ## Fields
 

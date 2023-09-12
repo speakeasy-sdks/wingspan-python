@@ -1,7 +1,5 @@
 # PayoutSettingsResponse
 
-The payout settings for a member
-
 
 ## Fields
 

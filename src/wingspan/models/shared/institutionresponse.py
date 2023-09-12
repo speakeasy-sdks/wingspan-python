@@ -10,7 +10,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class InstitutionResponse:
-    r"""Institution Response"""
     address: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
     is_ach_supported: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isACHSupported') }})
     is_rtp_supported: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isRTPSupported') }})

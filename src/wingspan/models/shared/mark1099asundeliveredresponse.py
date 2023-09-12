@@ -7,6 +7,4 @@ import dataclasses
 
 @dataclasses.dataclass
 class Mark1099AsUndeliveredResponse:
-    r"""Mark 1099 as undelivered response"""
-    
-
+    pass

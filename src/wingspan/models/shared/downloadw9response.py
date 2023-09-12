@@ -7,6 +7,4 @@ import dataclasses
 
 @dataclasses.dataclass
 class DownloadW9Response:
-    r"""A file stream for a W9 PDF download."""
-    
-
+    pass

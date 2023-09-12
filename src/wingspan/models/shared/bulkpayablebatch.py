@@ -25,7 +25,6 @@ class StatusBulkPayableBatch(str, Enum):
 
 @dataclasses.dataclass
 class BulkPayableBatch:
-    r"""A batch of items for importing as payables"""
     bulk_payable_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkPayableBatchId') }})
     client: shared_redactedmember.RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})

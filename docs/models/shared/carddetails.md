@@ -1,7 +1,5 @@
 # CardDetails
 
-A card summary with additional details
-
 
 ## Fields
 

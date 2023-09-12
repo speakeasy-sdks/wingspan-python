@@ -19,12 +19,16 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
-    collaborator_settings='fugit',
-    description='accusamus',
+    collaborator_settings={
+        "numquam": 'enim',
+    },
+    description='dolorem',
     eligibility_requirements=[
-        'et',
+        shared.CollaboratorGroupRequirement(
+            eligibility_requirement_id='totam',
+        ),
     ],
-    name='Neal Schroeder',
+    name='Karen Rath',
 )
 
 res = s.collaborator_group.create(req)
@@ -58,7 +62,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.get(id='autem')
+res = s.collaborator_group.get(id='vel')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -89,19 +93,13 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.update(id='nobis', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
-    collaborator_settings={
-        "nulla": 'voluptas',
-        "libero": 'quasi',
-        "tempora": 'numquam',
-        "explicabo": 'provident',
-    },
-    description='ipsa',
+res = s.collaborator_group.update(id='libero', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
+    collaborator_settings='deserunt',
+    description='quam',
     eligibility_requirements=[
-        'odio',
-        'esse',
+        'incidunt',
     ],
-    name='Hilda Paucek',
+    name='Shelly Schoen',
 ))
 
 if res.collaborator_group_response is not None:

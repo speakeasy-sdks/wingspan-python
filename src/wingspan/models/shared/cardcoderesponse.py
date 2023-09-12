@@ -10,7 +10,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class CardCodeResponse:
-    r"""A card code response"""
     phone_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('phoneNumber') }})
     verification_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('verificationToken') }})
     

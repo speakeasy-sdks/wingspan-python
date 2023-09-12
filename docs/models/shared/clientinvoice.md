@@ -1,7 +1,5 @@
 # ClientInvoice
 
-A client created invoice
-
 
 ## Fields
 

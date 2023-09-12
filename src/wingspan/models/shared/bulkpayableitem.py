@@ -31,7 +31,6 @@ class BulkPayableItemWorkflowSubStatus(str, Enum):
 
 @dataclasses.dataclass
 class BulkPayableItem:
-    r"""An item that will be converted into a payable"""
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     bulk_payable_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkPayableBatchId') }})
     bulk_payable_item_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkPayableItemId') }})

@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_collaborator_v2.get(client_id='qui')
+res = s.client_collaborator_v2.get(client_id='ea')
 
 if res.collaborator_v2 is not None:
     # handle response

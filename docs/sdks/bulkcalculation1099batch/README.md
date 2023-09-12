@@ -86,12 +86,9 @@ s = wingspan.Wingspan()
 
 res = s.bulk_calculation1099_batch.update(batch_id='esse', bulk_batch_update=shared.BulkBatchUpdate(
     labels={
-        "dolorum": 'dicta',
-        "nam": 'officia',
-        "occaecati": 'fugit',
-        "deleniti": 'hic',
+        "porro": 'dolorum',
     },
-    status=shared.StatusBulkBatchUpdate.FAILED,
+    status=shared.StatusBulkBatchUpdate.OPEN,
 ))
 
 if res.bulk_calculation1099_batch is not None:

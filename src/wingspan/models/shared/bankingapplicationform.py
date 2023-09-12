@@ -10,7 +10,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class BankingApplicationForm:
-    r"""A Bank Application form"""
     application_link: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applicationLink') }})
     member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})
     

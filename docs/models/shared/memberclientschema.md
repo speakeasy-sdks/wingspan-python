@@ -1,7 +1,5 @@
 # MemberClientSchema
 
-Describes details of member and client
-
 
 ## Fields
 

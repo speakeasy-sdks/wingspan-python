@@ -20,7 +20,6 @@ class StatusBulkCalculation1099Batch(str, Enum):
 
 @dataclasses.dataclass
 class BulkCalculation1099Batch:
-    r"""A batch of items for importing as calculation 1099s"""
     bulk_calculation1099_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkCalculation1099BatchId') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})

@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_items.list(batch_id='error')
+res = s.bulk_client_batch_items.list(batch_id='molestiae')
 
 if res.bulk_client_items is not None:
     # handle response

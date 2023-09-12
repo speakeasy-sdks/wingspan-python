@@ -27,7 +27,6 @@ class TypeDeductionResponse(str, Enum):
 
 @dataclasses.dataclass
 class DeductionResponse:
-    r"""A deduction"""
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     application: list[shared_deductionapplication.DeductionApplication] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('application') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})

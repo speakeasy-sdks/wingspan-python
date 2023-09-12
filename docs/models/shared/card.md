@@ -1,7 +1,5 @@
 # Card
 
-A card summary
-
 
 ## Fields
 

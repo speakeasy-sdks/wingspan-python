@@ -20,7 +20,6 @@ class StatusInvoiceTemplate(str, Enum):
 
 @dataclasses.dataclass
 class InvoiceTemplate:
-    r"""A recurring invoice"""
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     invoice_data: shared_invoice.Invoice = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceData') }})
     invoice_template_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceTemplateId') }})

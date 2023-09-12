@@ -30,7 +30,6 @@ class TaxStatusCollaboratorV2(str, Enum):
 
 @dataclasses.dataclass
 class CollaboratorV2:
-    r"""A single V2 Collaborator"""
     ach_credit_account: shared_memberclientwireaccount.MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('achCreditAccount') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     collaborations: list[shared_collaboration.Collaboration] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaborations') }})

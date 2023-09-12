@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group_eligibility_requirement.delete(eligibility_requirement_id='fugiat', id='ut')
+res = s.collaborator_group_eligibility_requirement.delete(eligibility_requirement_id='dicta', id='laborum')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -50,8 +50,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group_eligibility_requirement.replace(eligibility_requirement_id='eum', id='suscipit', collaborator_group_requirement_update=shared.CollaboratorGroupRequirementUpdate(
-    new_eligibility_requirement_id='assumenda',
+res = s.collaborator_group_eligibility_requirement.replace(eligibility_requirement_id='totam', id='incidunt', collaborator_group_requirement_update=shared.CollaboratorGroupRequirementUpdate(
+    new_eligibility_requirement_id='aspernatur',
 ))
 
 if res.collaborator_group_response is not None:

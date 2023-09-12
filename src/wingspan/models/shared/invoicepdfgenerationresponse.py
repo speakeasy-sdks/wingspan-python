@@ -11,7 +11,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class InvoicePdfGenerationResponse:
-    r"""Response from generation of invoice pdf"""
     attachments: shared_invoiceattachments.InvoiceAttachments = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments') }})
     invoice_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceId') }})
     

@@ -1,7 +1,5 @@
 # CollaboratorGroupResponse
 
-Collaborator Configuration Per Group
-
 
 ## Fields
 

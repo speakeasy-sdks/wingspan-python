@@ -17,15 +17,15 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.DeductionCreateRequest(
-    amount=2187.49,
-    client_id='hic',
-    currency=shared.DeductionCreateRequestCurrency.CAD,
-    member_id='cum',
-    name='Marian Wisozk',
-    priority=2543.56,
-    source_invoice_id='veritatis',
-    start_date='ipsa',
-    type=shared.TypeDeductionCreateRequest.PRE_PAYMENT,
+    amount=5691.01,
+    client_id='odit',
+    currency=shared.DeductionCreateRequestCurrency.USD,
+    member_id='accusantium',
+    name='Ebony Predovic',
+    priority=4200.75,
+    source_invoice_id='nam',
+    start_date='eaque',
+    type=shared.TypeDeductionCreateRequest.POST_PAYMENT,
 )
 
 res = s.client_deduction.create(req)

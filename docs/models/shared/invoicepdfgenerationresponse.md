@@ -1,7 +1,5 @@
 # InvoicePdfGenerationResponse
 
-Response from generation of invoice pdf
-
 
 ## Fields
 

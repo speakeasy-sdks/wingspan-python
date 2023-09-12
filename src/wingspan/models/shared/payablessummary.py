@@ -10,7 +10,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class PayablesSummary:
-    r"""A payables summary, with current payables numbers"""
     invoices_approved: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicesApproved') }})
     invoices_draft: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicesDraft') }})
     invoices_open: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicesOpen') }})

@@ -20,7 +20,6 @@ class StatusBulkClientBatch(str, Enum):
 
 @dataclasses.dataclass
 class BulkClientBatch:
-    r"""A batch of items for importing as clients"""
     bulk_client_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkClientBatchId') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})

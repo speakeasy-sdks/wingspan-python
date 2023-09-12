@@ -1,7 +1,5 @@
 # BulkCalculation1099Batch
 
-A batch of items for importing as calculation 1099s
-
 
 ## Fields
 

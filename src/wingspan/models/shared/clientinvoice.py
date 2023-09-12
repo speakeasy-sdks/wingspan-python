@@ -37,7 +37,6 @@ class StatusClientInvoice(str, Enum):
 
 @dataclasses.dataclass
 class ClientInvoice:
-    r"""A client created invoice"""
     additional_recipient_emails: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additionalRecipientEmails') }})
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     client: shared_clientoptions.ClientOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client') }})

@@ -11,7 +11,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class InstantPayoutResponse:
-    r"""Instant Payout details"""
     instant_payout_account: shared_fundstransferaccount.FundsTransferAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instantPayoutAccount') }})
     instant_payout_account_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instantPayoutAccountId') }})
     

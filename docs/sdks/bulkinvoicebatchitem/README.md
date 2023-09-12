@@ -19,34 +19,34 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.create(batch_id='distinctio', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
+res = s.bulk_invoice_batch_item.create(batch_id='alias', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
     accepted_payment_methods=[
-        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.ACH,
-        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.ACH,
-        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.ACH,
+        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.CREDIT,
     ],
-    amount=6180.16,
-    bulk_invoice_batch_id='nobis',
-    bulk_invoice_item_merge_key='eum',
-    bulk_invoice_item_reference='vero',
-    client_email='aspernatur',
-    client_external_id='architecto',
-    credit_fee_handling='et',
-    due_date='excepturi',
-    invoice_notes='ullam',
+    amount=6778.17,
+    bulk_invoice_batch_id='excepturi',
+    bulk_invoice_item_merge_key='tempora',
+    bulk_invoice_item_reference='facilis',
+    client_email='tempore',
+    client_external_id='labore',
+    credit_fee_handling=shared.FeeHandlingConfig(
+        client_absolute_percentage=4332.88,
+        client_pays=2487.53,
+        member_pays=7561.07,
+    ),
+    due_date='sint',
+    invoice_notes='aliquid',
     invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.APPROVED,
     labels={
-        "accusantium": 'mollitia',
-        "reiciendis": 'mollitia',
-        "ad": 'eum',
+        "sint": 'officia',
     },
     line_item_description='dolor',
-    line_item_detail='necessitatibus',
-    member_client_id='odit',
-    paid_date='nemo',
-    project_name='quasi',
-    reimbursable_expense='doloribus',
-    send_date='debitis',
+    line_item_detail='debitis',
+    member_client_id='a',
+    paid_date='dolorum',
+    project_name='in',
+    reimbursable_expense='illum',
+    send_date='maiores',
 ))
 
 if res.bulk_invoice_item is not None:
@@ -79,7 +79,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.get(batch_id='eius', batch_item_id='maxime')
+res = s.bulk_invoice_batch_item.get(batch_id='rerum', batch_item_id='dicta')
 
 if res.bulk_invoice_item is not None:
     # handle response
@@ -111,33 +111,30 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.update(batch_id='deleniti', batch_item_id='facilis', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
+res = s.bulk_invoice_batch_item.update(batch_id='magnam', batch_item_id='cumque', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
     accepted_payment_methods=[
-        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.CREDIT,
-        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.CREDIT,
+        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
     ],
-    amount=9194.83,
-    bulk_invoice_batch_id='ullam',
-    bulk_invoice_item_merge_key='expedita',
-    bulk_invoice_item_reference='nihil',
-    client_email='repellat',
-    client_external_id='quibusdam',
-    credit_fee_handling='saepe',
-    due_date='pariatur',
-    invoice_notes='accusantium',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemUpdate.DRAFT,
+    amount=4118.2,
+    bulk_invoice_batch_id='aliquid',
+    bulk_invoice_item_merge_key='laborum',
+    bulk_invoice_item_reference='accusamus',
+    client_email='non',
+    client_external_id='occaecati',
+    credit_fee_handling='accusamus',
+    due_date='delectus',
+    invoice_notes='quidem',
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemUpdate.PAID,
     labels={
-        "magni": 'sunt',
-        "quo": 'illum',
-        "pariatur": 'maxime',
+        "id": 'blanditiis',
     },
-    line_item_description='ea',
-    line_item_detail='excepturi',
-    member_client_id='odit',
-    paid_date='ea',
-    project_name='accusantium',
-    reimbursable_expense='maiores',
-    send_date='quidem',
+    line_item_description='deleniti',
+    line_item_detail='sapiente',
+    member_client_id='amet',
+    paid_date='deserunt',
+    project_name='nisi',
+    reimbursable_expense='natus',
+    send_date='omnis',
 ))
 
 if res.bulk_invoice_item is not None:

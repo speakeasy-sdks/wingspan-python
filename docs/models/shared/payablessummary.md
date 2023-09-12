@@ -1,7 +1,5 @@
 # PayablesSummary
 
-A payables summary, with current payables numbers
-
 
 ## Fields
 

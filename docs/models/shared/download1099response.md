@@ -1,7 +1,5 @@
 # Download1099Response
 
-Download1099Response
-
 
 ## Fields
 

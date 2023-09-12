@@ -12,7 +12,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class PayrollReportResponse:
-    r"""Payroll report with line items and payroll summary"""
     invoices: list[shared_payrollreportinvoice.PayrollReportInvoice] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoices') }})
     parent_invoice: shared_forty_twof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07.FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parentInvoice') }})
     
