@@ -1,4 +1,4 @@
-# bulk_payable_batch_item
+# BulkPayableBatchItem
 
 ### Available Operations
 

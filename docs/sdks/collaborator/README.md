@@ -1,4 +1,4 @@
-# collaborator
+# Collaborator
 
 ### Available Operations
 

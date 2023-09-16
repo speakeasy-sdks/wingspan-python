@@ -1,4 +1,4 @@
-# one_thousand_and_ninety_nine
+# OneThousandAndNinetyNine
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# additional_settings
+# AdditionalSettings
 
 ### Available Operations
 

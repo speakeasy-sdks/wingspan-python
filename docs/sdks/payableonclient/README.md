@@ -1,4 +1,4 @@
-# payable_on_client
+# PayableOnClient
 
 ### Available Operations
 

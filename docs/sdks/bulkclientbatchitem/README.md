@@ -1,4 +1,4 @@
-# bulk_client_batch_item
+# BulkClientBatchItem
 
 ### Available Operations
 

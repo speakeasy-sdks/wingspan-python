@@ -1,4 +1,4 @@
-# pa_payable_on_clientyable
+# PaPayableOnClientyable
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# collaborator_v2
+# CollaboratorV2
 
 ### Available Operations
 

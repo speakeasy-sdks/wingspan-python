@@ -1,4 +1,4 @@
-# code_to_token
+# CodeToToken
 
 ### Available Operations
 

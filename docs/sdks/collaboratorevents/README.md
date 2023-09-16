@@ -1,4 +1,4 @@
-# collaborator_events
+# CollaboratorEvents
 
 ### Available Operations
 

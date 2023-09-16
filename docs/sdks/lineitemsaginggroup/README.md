@@ -1,4 +1,4 @@
-# line_items_aging_group
+# LineItemsAgingGroup
 
 ### Available Operations
 

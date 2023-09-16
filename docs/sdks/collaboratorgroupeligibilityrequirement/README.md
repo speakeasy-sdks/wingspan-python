@@ -1,4 +1,4 @@
-# collaborator_group_eligibility_requirement
+# CollaboratorGroupEligibilityRequirement
 
 ### Available Operations
 

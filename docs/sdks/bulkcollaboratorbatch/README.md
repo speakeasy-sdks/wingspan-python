@@ -1,4 +1,4 @@
-# bulk_collaborator_batch
+# BulkCollaboratorBatch
 
 ### Available Operations
 

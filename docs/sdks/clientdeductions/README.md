@@ -1,4 +1,4 @@
-# client_deductions
+# ClientDeductions
 
 ### Available Operations
 

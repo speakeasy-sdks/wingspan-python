@@ -1,4 +1,4 @@
-# statement
+# Statement
 
 ### Available Operations
 

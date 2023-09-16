@@ -1,4 +1,4 @@
-# payroll_settings
+# PayrollSettings
 
 ### Available Operations
 

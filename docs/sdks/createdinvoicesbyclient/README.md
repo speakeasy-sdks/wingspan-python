@@ -1,4 +1,4 @@
-# created_invoices_by_client
+# CreatedInvoicesByClient
 
 ### Available Operations
 

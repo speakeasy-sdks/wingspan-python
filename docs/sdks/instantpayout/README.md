@@ -1,4 +1,4 @@
-# instant_payout
+# InstantPayout
 
 ### Available Operations
 

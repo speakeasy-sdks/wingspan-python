@@ -1,4 +1,4 @@
-# bulk_calculation1099_batch
+# BulkCalculation1099Batch
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# payout_debit_card
+# PayoutDebitCard
 
 ### Available Operations
 
