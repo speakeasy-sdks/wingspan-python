@@ -1,7 +1,5 @@
 # BulkCollaboratorItem
 
-An item that will be converted into a collaborator
-
 
 ## Fields
 

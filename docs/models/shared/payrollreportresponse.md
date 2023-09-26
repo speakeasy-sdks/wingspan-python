@@ -1,7 +1,5 @@
 # PayrollReportResponse
 
-Payroll report with line items and payroll summary
-
 
 ## Fields
 

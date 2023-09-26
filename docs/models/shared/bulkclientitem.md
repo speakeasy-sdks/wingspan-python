@@ -1,7 +1,5 @@
 # BulkClientItem
 
-An item that will be converted into a client
-
 
 ## Fields
 

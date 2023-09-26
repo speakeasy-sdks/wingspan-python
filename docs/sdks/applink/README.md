@@ -1,4 +1,4 @@
-# app_link
+# AppLink
 
 ### Available Operations
 
@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.app_link.get(member_id='maiores')
+res = s.app_link.get(member_id='dolorum')
 
 if res.banking_application_form is not None:
     # handle response

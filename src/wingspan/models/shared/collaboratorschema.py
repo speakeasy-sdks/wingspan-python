@@ -27,7 +27,6 @@ class TaxStatusCollaboratorSchema(str, Enum):
 
 @dataclasses.dataclass
 class CollaboratorSchema:
-    r"""A collaborator is a contractor that can receive payments"""
     ach_credit_account: shared_memberclientwireaccount.MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('achCreditAccount') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     collaborator_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorId') }})

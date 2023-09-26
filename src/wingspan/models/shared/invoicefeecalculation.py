@@ -10,7 +10,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class InvoiceFeeCalculation:
-    r"""Fees on Invoice"""
     credit_fee_total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeTotal') }})
     
 

@@ -21,7 +21,6 @@ class StatusMemberClientSchema(str, Enum):
 
 @dataclasses.dataclass
 class MemberClientSchema:
-    r"""Describes details of member and client"""
     ach_credit_account: shared_memberclientwireaccount.MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('achCreditAccount') }})
     client: shared_redactedmember.RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})

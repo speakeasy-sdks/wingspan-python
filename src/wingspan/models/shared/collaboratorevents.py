@@ -11,7 +11,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class CollaboratorEvents:
-    r"""List of events on collaborator"""
     know_your_customer_verified_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('knowYourCustomerVerifiedAt') }})
     payout_method_first_added_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutMethodFirstAddedAt') }})
     tax_documentation_verified_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxDocumentationVerifiedAt') }})

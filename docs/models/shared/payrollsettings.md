@@ -1,7 +1,5 @@
 # PayrollSettings
 
-The payroll settings for a member
-
 
 ## Fields
 

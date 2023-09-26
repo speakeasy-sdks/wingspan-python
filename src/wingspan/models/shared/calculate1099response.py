@@ -11,7 +11,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class Calculate1099Response:
-    r"""Calculate 1099 amounts response"""
     member_client: shared_memberclient.MemberClient = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClient') }})
     
 

@@ -1,4 +1,4 @@
-# member_client
+# MemberClient
 
 ### Available Operations
 
@@ -20,19 +20,18 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.MemberClientCreateRequest(
-    client_id='impedit',
-    company='Hirthe Inc',
+    client_id='tempora',
+    company='Cole LLC',
     email_cc=[
-        'dicta',
-        'maiores',
+        'ipsa',
     ],
-    email_to='natus',
-    integration='voluptatibus',
-    labels='asperiores',
-    member_data='ea',
-    member_id='quaerat',
-    name='Kari Nikolaus',
-    status=shared.StatusMemberClientCreateRequest.PENDING,
+    email_to='molestiae',
+    integration='odio',
+    labels='esse',
+    member_data='rem',
+    member_id='fuga',
+    name='Yvette Stehr',
+    status=shared.StatusMemberClientCreateRequest.INACTIVE,
 )
 
 res = s.member_client.create(req)
@@ -66,7 +65,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_client.delete(id='asperiores')
+res = s.member_client.delete(id='assumenda')
 
 if res.member_client_schema is not None:
     # handle response
@@ -97,7 +96,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_client.get(id='nemo')
+res = s.member_client.get(id='eos')
 
 if res.member_client_schema is not None:
     # handle response
@@ -128,54 +127,29 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.member_client.update(id='quae', member_client_update_request=shared.MemberClientUpdateRequest(
-    client_data='porro',
-    client_id='quod',
-    company='Bernier Inc',
-    email_cc=[
-        'id',
-        'suscipit',
-        'velit',
-    ],
-    email_to='culpa',
-    form1099_balances=shared.Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7(
-        two_thousand_and_twenty_one=shared.CollaboratorForm1099BalancesUpdateRequest(
-            adjustments=5173.09,
-            correction=shared.Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481(
-                address='ducimus',
-                company_structure=shared.CompanyStructurece853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.LLC_CORPORATION_C,
-                ein='vel',
-                first_name='Edmund',
-                last_name='Senger',
-                legal_business_name='facilis',
-                ssn='cum',
-                total_amount=4148.57,
-            ),
-            delivery_method=shared.DeliveryMethodCollaboratorForm1099BalancesUpdateRequest.MAIL,
-            dispute='reiciendis',
-            events=shared.CollaboratorForm1099BalancesUpdateRequestEvents2(),
-            status=shared.StatusCollaboratorForm1099BalancesUpdateRequest.NEEDS_ACTION_DISPUTE,
-        ),
-        two_thousand_and_twenty_two=shared.CollaboratorForm1099BalancesUpdateRequest(
-            adjustments=3975.33,
-            correction='cum',
-            delivery_method=shared.DeliveryMethodCollaboratorForm1099BalancesUpdateRequest.ELECTRONIC,
-            dispute='exercitationem',
-            events=shared.CollaboratorForm1099BalancesUpdateRequestEvents2(),
-            status=shared.StatusCollaboratorForm1099BalancesUpdateRequest.EXCLUDED,
-        ),
+res = s.member_client.update(id='praesentium', member_client_update_request=shared.MemberClientUpdateRequest(
+    client_data=shared.ClientData(
+        auto_pay_strategy=shared.AutoPayStrategyClientData.ALL,
+        external_id='ipsa',
+        verification_stratgy=shared.VerificationStratgyClientData.ALL,
     ),
-    form_w9_data='doloribus',
-    integration='reiciendis',
+    client_id='quidem',
+    company='Satterfield Group',
+    email_cc=[
+        'quo',
+    ],
+    email_to='fuga',
+    form1099_balances='eos',
+    form_w9_data='ab',
+    integration=shared.Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f(
+        quickbooks='tempora',
+    ),
     labels={
-        "necessitatibus": 'dolore',
-        "sunt": 'asperiores',
-        "adipisci": 'non',
-        "amet": 'beatae',
+        "ipsam": 'aspernatur',
     },
-    member_data='a',
-    name='Glenn Herzog',
-    status=shared.StatusMemberClientUpdateRequest.ACTIVE,
+    member_data='quo',
+    name='Sophie Bayer',
+    status=shared.StatusMemberClientUpdateRequest.INACTIVE,
 ))
 
 if res.member_client_schema is not None:

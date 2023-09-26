@@ -29,7 +29,6 @@ class TypeCardDetails(str, Enum):
 
 @dataclasses.dataclass
 class CardDetails:
-    r"""A card summary with additional details"""
     address: shared_address.Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
     brand: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})

@@ -1,4 +1,4 @@
-# bulk_collaborator_batch
+# BulkCollaboratorBatch
 
 ### Available Operations
 
@@ -20,9 +20,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkBatchCreate(
     labels={
-        "quasi": 'reiciendis',
-        "voluptatibus": 'vero',
-        "nihil": 'praesentium',
+        "animi": 'enim',
     },
 )
 
@@ -57,7 +55,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch.get(batch_id='voluptatibus')
+res = s.bulk_collaborator_batch.get(batch_id='odit')
 
 if res.bulk_collaborator_batch is not None:
     # handle response
@@ -88,12 +86,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch.update(batch_id='ipsa', bulk_batch_update=shared.BulkBatchUpdate(
-    labels={
-        "cum": 'perferendis',
-        "doloremque": 'reprehenderit',
-    },
-    status=shared.StatusBulkBatchUpdate.PENDING,
+res = s.bulk_collaborator_batch.update(batch_id='quo', bulk_batch_update=shared.BulkBatchUpdate(
+    labels='tenetur',
+    status=shared.StatusBulkBatchUpdate.PROCESSING,
 ))
 
 if res.bulk_collaborator_batch is not None:

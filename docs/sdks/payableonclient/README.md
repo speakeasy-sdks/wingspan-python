@@ -1,4 +1,4 @@
-# payable_on_client
+# PayableOnClient
 
 ### Available Operations
 
@@ -19,112 +19,60 @@ s = wingspan.Wingspan()
 
 req = shared.PayableCreateRequest(
     accepted_payment_methods=[
-        shared.PayableCreateRequestAcceptedPaymentMethods.MANUAL,
+        shared.PayableCreateRequestAcceptedPaymentMethods.CREDIT,
     ],
-    attachments='architecto',
-    client=shared.PayableCreateRequestClient2(),
-    collaborator_id='labore',
+    attachments='sapiente',
+    client='ullam',
+    collaborator_id='reprehenderit',
     credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=6952.7,
-        client_pays=5390.74,
-        member_pays=6719.57,
+        client_absolute_percentage=3567.07,
+        client_pays=3917.74,
+        member_pays=163.28,
     ),
-    currency=shared.CurrencyPayableCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
-    due_date='tenetur',
-    integration='alias',
-    invoice_notes='amet',
+    currency=shared.CurrencyPayableCreateRequest.CAD,
+    due_date='qui',
+    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+        quickbooks='deleniti',
+    ),
+    invoice_notes='itaque',
     labels={
-        "unde": 'reiciendis',
-        "provident": 'repellendus',
+        "architecto": 'omnis',
     },
     late_fee_handling=shared.LateFeeConfigUpdate(
-        frequency=shared.FrequencyUpdate(
-            daily='est',
-            day_in_interval=6964.83,
-            end_date='reprehenderit',
-            every=8136.79,
-            interval=shared.IntervalFrequencyUpdate.LESS_THAN_NIL_GREATER_THAN_,
-            start_date='praesentium',
-            twice_per_month=False,
-        ),
-        late_fee_amount=3339.65,
-        late_fee_percentage=291,
+        frequency='at',
+        late_fee_amount=920.27,
+        late_fee_percentage=4541.62,
     ),
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=9195.32,
-            description='quasi',
-            detail='atque',
-            discount='asperiores',
+            cost_per_unit=559.65,
+            description='minima',
+            detail='veritatis',
+            discount='adipisci',
             integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks='quidem',
+                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
+                    expense_account_id='accusantium',
+                    item_id='rem',
+                ),
             ),
-            labels={
-                "esse": 'amet',
-            },
-            quantity=8268.25,
-            reimbursable_expense='atque',
-            total_cost=6232.95,
-            unit='officiis',
-        ),
-        shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=8869.61,
-            description='accusamus',
-            detail='natus',
-            discount='aspernatur',
-            integration='maiores',
-            labels={
-                "error": 'blanditiis',
-                "suscipit": 'repudiandae',
-                "atque": 'atque',
-                "sunt": 'recusandae',
-            },
-            quantity=6806.97,
+            labels='laudantium',
+            quantity=4287.96,
             reimbursable_expense=False,
-            total_cost=2871.19,
-            unit='reiciendis',
-        ),
-        shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=429.76,
-            description='repudiandae',
-            detail='dicta',
-            discount='beatae',
-            integration='enim',
-            labels='velit',
-            quantity=9521.43,
-            reimbursable_expense=False,
-            total_cost=3000.29,
-            unit='saepe',
-        ),
-        shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=1604.67,
-            description='occaecati',
-            detail='officiis',
-            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                amount=4463.94,
-                description='adipisci',
-                percentage=9078.76,
-            ),
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks='fugit',
-            ),
-            labels={
-                "reprehenderit": 'error',
-                "illo": 'corporis',
-            },
-            quantity=6964.63,
-            reimbursable_expense=False,
-            total_cost=2473.99,
-            unit='vero',
+            total_cost=680.74,
+            unit='corrupti',
         ),
     ],
-    member='iure',
-    member_client_id='ipsa',
+    member='voluptatem',
+    member_client_id='dolor',
     metadata=shared.InvoiceMetadata(
-        purchase_order_number='quae',
+        purchase_order_number='numquam',
     ),
-    notification_preferences='eveniet',
-    status=shared.StatusPayableCreateRequest.OPEN,
+    notification_preferences=shared.InvoiceNotificationPreferences(
+        send_invoice='voluptas',
+        send_receipt='dignissimos',
+        send_reminders=False,
+    ),
+    status=shared.StatusPayableCreateRequest.DRAFT,
 )
 
 res = s.payable_on_client.create(req)
@@ -158,72 +106,66 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payable_on_client.update(id='cum', payable_update_request=shared.PayableUpdateRequest(
+res = s.payable_on_client.update(id='maiores', payable_update_request=shared.PayableUpdateRequest(
     accepted_payment_methods=[
-        shared.PayableUpdateRequestAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
-        shared.PayableUpdateRequestAcceptedPaymentMethods.CREDIT,
+        shared.PayableUpdateRequestAcceptedPaymentMethods.MANUAL,
     ],
-    attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
-        custom_attachment_ids=[
-            'voluptatum',
-            'rem',
-            'aliquam',
-        ],
-    ),
-    charged_fees='repellat',
-    client='corporis',
+    attachments='voluptatibus',
+    charged_fees='asperiores',
+    client='ea',
     collaborators=[
-        'mollitia',
-        'alias',
-        shared.InvoiceCollaboratorUpdateRequest(
-            amount=9702.22,
-            description='dolores',
-        ),
+        'consequuntur',
     ],
     credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=3279.88,
-        client_pays=2931.44,
-        member_pays=6803.49,
+        client_absolute_percentage=6387.62,
+        client_pays=8070.23,
+        member_pays=4903.05,
     ),
-    due_date='nesciunt',
-    integration='recusandae',
-    invoice_notes='omnis',
-    labels='molestiae',
-    late_fee_handling='ut',
+    due_date='officia',
+    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+        quickbooks='quae',
+    ),
+    invoice_notes='quaerat',
+    labels={
+        "quod": 'labore',
+    },
+    late_fee_handling='adipisci',
     line_items=[
-        'debitis',
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=4326.06,
-            description='nemo',
-            detail='recusandae',
-            discount='provident',
-            integration='eum',
+            cost_per_unit=6625.05,
+            description='suscipit',
+            detail='velit',
+            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
+                amount=6658.59,
+                description='recusandae',
+                percentage=5173.09,
+            ),
+            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                quickbooks='ducimus',
+            ),
             labels={
-                "aspernatur": 'ullam',
-                "quasi": 'animi',
-                "nostrum": 'mollitia',
+                "vel": 'labore',
             },
-            quantity=5910.27,
+            quantity=8225.6,
             reimbursable_expense=False,
-            total_cost=6591.77,
-            unit='ex',
+            total_cost=7382.27,
+            unit='commodi',
         ),
-        'accusantium',
     ],
-    member=shared.PayableUpdateRequestMember2(),
-    member_client_id='doloribus',
-    metadata='in',
+    member='corporis',
+    member_client_id='reiciendis',
+    metadata=shared.InvoiceMetadata(
+        purchase_order_number='nemo',
+    ),
     notification_preferences=shared.InvoiceNotificationPreferences(
-        send_invoice=False,
+        send_invoice='aperiam',
         send_receipt=False,
         send_reminders=False,
     ),
     payment_methods=[
-        shared.PayableUpdateRequestPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
-        shared.PayableUpdateRequestPaymentMethods.ACH,
-        shared.PayableUpdateRequestPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
+        shared.PayableUpdateRequestPaymentMethods.CREDIT,
     ],
-    status=shared.StatusPayableUpdateRequest.PENDING,
+    status=shared.StatusPayableUpdateRequest.CANCELLED,
 ))
 
 if res.payable_schema is not None:

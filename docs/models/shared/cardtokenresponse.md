@@ -1,7 +1,5 @@
 # CardTokenResponse
 
-A card token response
-
 
 ## Fields
 

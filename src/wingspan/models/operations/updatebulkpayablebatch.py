@@ -22,9 +22,12 @@ class UpdateBulkPayableBatchRequest:
 @dataclasses.dataclass
 class UpdateBulkPayableBatchResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     bulk_payable_batch: Optional[shared_bulkpayablebatch.BulkPayableBatch] = dataclasses.field(default=None)
     r"""A batch of items for importing as payables"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

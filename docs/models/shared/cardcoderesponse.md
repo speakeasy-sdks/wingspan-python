@@ -1,7 +1,5 @@
 # CardCodeResponse
 
-A card code response
-
 
 ## Fields
 

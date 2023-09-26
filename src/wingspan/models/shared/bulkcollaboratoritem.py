@@ -25,7 +25,6 @@ class StatusBulkCollaboratorItem(str, Enum):
 
 @dataclasses.dataclass
 class BulkCollaboratorItem:
-    r"""An item that will be converted into a collaborator"""
     bulk_collaborator_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkCollaboratorBatchId') }})
     bulk_collaborator_item_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkCollaboratorItemId') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})

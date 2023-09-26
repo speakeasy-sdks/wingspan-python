@@ -22,9 +22,12 @@ class UpdateMemberInvoiceRequest:
 @dataclasses.dataclass
 class UpdateMemberInvoiceResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     invoice: Optional[shared_invoice.Invoice] = dataclasses.field(default=None)
     r"""An invoice"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -22,9 +22,12 @@ class CreateBulkInvoiceBatchItemRequest:
 @dataclasses.dataclass
 class CreateBulkInvoiceBatchItemResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     bulk_invoice_item: Optional[shared_bulkinvoiceitem.BulkInvoiceItem] = dataclasses.field(default=None)
     r"""An item that will be converted into a invoice"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -287,3 +287,35 @@ Based on:
 - Speakeasy CLI 1.78.8 (2.96.6) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [python v1.28.0] .
+
+## 2023-09-12 00:36:57
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.82.5 (2.108.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v1.28.1] .
+
+## 2023-09-16 00:37:21
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.86.0 (2.115.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v1.28.2] .
+
+## 2023-09-20 00:38:24
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.88.0 (2.118.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v1.28.3] .
+
+## 2023-09-26 00:39:02
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.91.0 (2.129.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v1.29.0] .

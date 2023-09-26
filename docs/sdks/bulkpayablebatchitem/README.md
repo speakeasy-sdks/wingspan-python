@@ -1,4 +1,4 @@
-# bulk_payable_batch_item
+# BulkPayableBatchItem
 
 ### Available Operations
 
@@ -19,24 +19,24 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.create(batch_id='cumque', bulk_payable_item_create=shared.BulkPayableItemCreate(
-    amount=3599.78,
-    attachment_id='hic',
-    bulk_payable_batch_id='libero',
-    bulk_payable_item_merge_key='nobis',
-    bulk_payable_item_reference='dolores',
-    collaborator_email='quis',
-    collaborator_external_id='totam',
-    collaborator_id='dignissimos',
-    due_date='eaque',
-    labels='nesciunt',
-    line_item_description='eos',
-    line_item_detail='perferendis',
-    paid_date='dolores',
-    payable_notes='minus',
-    payable_status=shared.PayableStatusBulkPayableItemCreate.APPROVED,
-    reimbursable_expense='vero',
-    workflow_sub_status=shared.WorkflowSubStatusBulkPayableItemCreate.SUBMITTED,
+res = s.bulk_payable_batch_item.create(batch_id='et', bulk_payable_item_create=shared.BulkPayableItemCreate(
+    amount=5699.65,
+    attachment_id='ullam',
+    bulk_payable_batch_id='provident',
+    bulk_payable_item_merge_key='quos',
+    bulk_payable_item_reference='sint',
+    collaborator_email='accusantium',
+    collaborator_external_id='mollitia',
+    collaborator_id='reiciendis',
+    due_date='mollitia',
+    labels='eum',
+    line_item_description='dolor',
+    line_item_detail='necessitatibus',
+    paid_date='odit',
+    payable_notes='nemo',
+    payable_status=shared.PayableStatusBulkPayableItemCreate.DRAFT,
+    reimbursable_expense='doloribus',
+    workflow_sub_status=shared.WorkflowSubStatusBulkPayableItemCreate.LESS_THAN_NIL_GREATER_THAN_,
 ))
 
 if res.bulk_payable_item is not None:
@@ -69,7 +69,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.get(batch_id='hic', batch_item_id='recusandae')
+res = s.bulk_payable_batch_item.get(batch_id='eius', batch_item_id='maxime')
 
 if res.bulk_payable_item is not None:
     # handle response
@@ -101,23 +101,23 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.update(batch_id='omnis', batch_item_id='facilis', bulk_payable_item_update=shared.BulkPayableItemUpdate(
-    amount=5966.56,
-    attachment_id='voluptatem',
-    bulk_payable_batch_id='porro',
-    bulk_payable_item_merge_key='consequuntur',
-    bulk_payable_item_reference='blanditiis',
-    collaborator_email='error',
-    collaborator_external_id='eaque',
-    collaborator_id='occaecati',
-    due_date='rerum',
-    labels='asperiores',
-    line_item_description='earum',
-    line_item_detail='modi',
-    paid_date='iste',
-    payable_notes='dolorum',
+res = s.bulk_payable_batch_item.update(batch_id='deleniti', batch_item_id='facilis', bulk_payable_item_update=shared.BulkPayableItemUpdate(
+    amount=4479.26,
+    attachment_id='architecto',
+    bulk_payable_batch_id='architecto',
+    bulk_payable_item_merge_key='repudiandae',
+    bulk_payable_item_reference='ullam',
+    collaborator_email='expedita',
+    collaborator_external_id='nihil',
+    collaborator_id='repellat',
+    due_date='quibusdam',
+    labels='saepe',
+    line_item_description='pariatur',
+    line_item_detail='accusantium',
+    paid_date='consequuntur',
+    payable_notes='praesentium',
     payable_status=shared.PayableStatusBulkPayableItemUpdate.PAID,
-    reimbursable_expense=False,
+    reimbursable_expense='sunt',
     workflow_sub_status=shared.BulkPayableItemUpdateWorkflowSubStatus.LESS_THAN_NIL_GREATER_THAN_,
 ))
 

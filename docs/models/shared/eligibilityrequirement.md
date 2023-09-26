@@ -1,7 +1,5 @@
 # EligibilityRequirement
 
-Eligibility Requirement
-
 
 ## Fields
 

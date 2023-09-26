@@ -11,9 +11,12 @@ from typing import Optional
 @dataclasses.dataclass
 class GetLineItemsAgingGroupResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     line_items_aging_report_responses: Optional[list[shared_lineitemsagingreportresponse.LineItemsAgingReportResponse]] = dataclasses.field(default=None)
     r"""Line items list grouped by age"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

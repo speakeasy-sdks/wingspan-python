@@ -1,7 +1,5 @@
 # PayableSchema
 
-A payable
-
 
 ## Fields
 

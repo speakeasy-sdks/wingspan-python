@@ -7,6 +7,4 @@ import dataclasses
 
 @dataclasses.dataclass
 class Remail1099Response:
-    r"""Remail 1099 response"""
-    
-
+    pass

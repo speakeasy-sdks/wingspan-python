@@ -10,7 +10,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class BulkPayableImportSummary:
-    r"""Summary of the bulk payable import"""
     deduction_collaborators_count: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionCollaboratorsCount') }})
     net_import_amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('netImportAmount') }})
     payable_collaborators_count: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payableCollaboratorsCount') }})

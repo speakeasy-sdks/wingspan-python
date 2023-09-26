@@ -1,4 +1,4 @@
-# collaborator_deduction
+# CollaboratorDeduction
 
 ### Available Operations
 
@@ -20,14 +20,14 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.DeductionCreateRequest(
-    amount=978.44,
-    client_id='ex',
-    currency=shared.DeductionCreateRequestCurrency.CAD,
-    member_id='excepturi',
-    name='Gordon Willms',
-    priority=4113.72,
-    source_invoice_id='impedit',
-    start_date='corporis',
+    amount=9574.51,
+    client_id='totam',
+    currency=shared.DeductionCreateRequestCurrency.USD,
+    member_id='sit',
+    name='Luis Cremin',
+    priority=3741.7,
+    source_invoice_id='deserunt',
+    start_date='quam',
     type=shared.TypeDeductionCreateRequest.PRE_PAYMENT,
 )
 
@@ -62,7 +62,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.delete(id='aliquid')
+res = s.collaborator_deduction.delete(id='incidunt')
 
 if res.deduction_response is not None:
     # handle response
@@ -93,7 +93,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.get(id='inventore')
+res = s.collaborator_deduction.get(id='qui')
 
 if res.deduction_response is not None:
     # handle response
@@ -124,14 +124,14 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.update(id='magnam', deduction_update_request=shared.DeductionUpdateRequest(
-    amount=4072.41,
+res = s.collaborator_deduction.update(id='cupiditate', deduction_update_request=shared.DeductionUpdateRequest(
+    amount=8075.81,
     currency=shared.CurrencyDeductionUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
-    name='Kate Cole DVM',
-    priority=7255.95,
-    source_invoice_id='aut',
-    start_date='aut',
-    type=shared.TypeDeductionUpdateRequest.POST_PAYMENT,
+    name='Keith Padberg',
+    priority=1320.68,
+    source_invoice_id='dolores',
+    start_date='distinctio',
+    type=shared.TypeDeductionUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
 ))
 
 if res.deduction_response is not None:

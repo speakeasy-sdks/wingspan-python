@@ -1,4 +1,4 @@
-# cards
+# Cards
 
 ### Available Operations
 

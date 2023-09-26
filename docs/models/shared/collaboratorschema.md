@@ -1,7 +1,5 @@
 # CollaboratorSchema
 
-A collaborator is a contractor that can receive payments
-
 
 ## Fields
 

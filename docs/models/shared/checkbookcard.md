@@ -1,7 +1,5 @@
 # CheckbookCard
 
-A payout debit card
-
 
 ## Fields
 

@@ -10,7 +10,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class Ping:
-    r"""timestamp and name of service being pinged"""
     code: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code') }})
     message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message') }})
     status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})

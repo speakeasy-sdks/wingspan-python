@@ -1,4 +1,4 @@
-# client_invoice
+# ClientInvoice
 
 ### Available Operations
 
@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice.get(id='dolorum')
+res = s.client_invoice.get(id='minus')
 
 if res.client_invoice is not None:
     # handle response
@@ -49,9 +49,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice.update(id='iusto', client_invoice_update_request=shared.ClientInvoiceUpdateRequest(
-    credit_fee_handling='dolorum',
-    status=shared.StatusClientInvoiceUpdateRequest.PENDING,
+res = s.client_invoice.update(id='quam', client_invoice_update_request=shared.ClientInvoiceUpdateRequest(
+    credit_fee_handling='vero',
+    status=shared.StatusClientInvoiceUpdateRequest.OVERDUE,
 ))
 
 if res.client_invoice is not None:

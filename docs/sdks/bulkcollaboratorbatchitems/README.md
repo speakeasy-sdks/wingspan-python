@@ -1,4 +1,4 @@
-# bulk_collaborator_batch_items
+# BulkCollaboratorBatchItems
 
 ### Available Operations
 
@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_items.list(batch_id='nam')
+res = s.bulk_collaborator_batch_items.list(batch_id='quos')
 
 if res.bulk_collaborator_items is not None:
     # handle response

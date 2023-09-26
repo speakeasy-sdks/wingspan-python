@@ -25,7 +25,6 @@ class StatusBulkClientItem(str, Enum):
 
 @dataclasses.dataclass
 class BulkClientItem:
-    r"""An item that will be converted into a client"""
     bulk_client_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkClientBatchId') }})
     bulk_client_item_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkClientItemId') }})
     client_status: ClientStatusBulkClientItem = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientStatus') }})

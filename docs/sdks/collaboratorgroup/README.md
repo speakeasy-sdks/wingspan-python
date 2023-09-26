@@ -1,4 +1,4 @@
-# collaborator_group
+# CollaboratorGroup
 
 ### Available Operations
 
@@ -19,12 +19,12 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
-    collaborator_settings='fugit',
-    description='accusamus',
+    collaborator_settings='molestias',
+    description='temporibus',
     eligibility_requirements=[
-        'et',
+        'neque',
     ],
-    name='Neal Schroeder',
+    name='Mrs. Louise Kuhlman',
 )
 
 res = s.collaborator_group.create(req)
@@ -58,7 +58,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.get(id='autem')
+res = s.collaborator_group.get(id='hic')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -89,19 +89,17 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.update(id='nobis', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
+res = s.collaborator_group.update(id='voluptatem', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
     collaborator_settings={
-        "nulla": 'voluptas',
-        "libero": 'quasi',
-        "tempora": 'numquam',
-        "explicabo": 'provident',
+        "soluta": 'nobis',
     },
-    description='ipsa',
+    description='et',
     eligibility_requirements=[
-        'odio',
-        'esse',
+        shared.CollaboratorGroupRequirement(
+            eligibility_requirement_id='ipsum',
+        ),
     ],
-    name='Hilda Paucek',
+    name='Gayle Lueilwitz',
 ))
 
 if res.collaborator_group_response is not None:

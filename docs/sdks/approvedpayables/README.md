@@ -1,4 +1,4 @@
-# approved_payables
+# ApprovedPayables
 
 ### Available Operations
 

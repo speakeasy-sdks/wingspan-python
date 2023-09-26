@@ -1,7 +1,5 @@
 # BulkCollaboratorBatch
 
-A batch of items for importing as collaborators
-
 
 ## Fields
 

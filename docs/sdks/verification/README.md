@@ -1,4 +1,4 @@
-# verification
+# Verification
 
 ### Available Operations
 
@@ -17,8 +17,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.verification.send(id='fugiat', card_code_request=shared.CardCodeRequest(
-    channel='doloremque',
+res = s.verification.send(id='quidem', card_code_request=shared.CardCodeRequest(
+    channel='explicabo',
 ))
 
 if res.card_code_response is not None:

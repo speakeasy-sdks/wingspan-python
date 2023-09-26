@@ -1,7 +1,5 @@
 # BulkPayableBatch
 
-A batch of items for importing as payables
-
 
 ## Fields
 

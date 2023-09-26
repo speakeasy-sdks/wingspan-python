@@ -1,7 +1,5 @@
 # BulkClientBatch
 
-A batch of items for importing as clients
-
 
 ## Fields
 

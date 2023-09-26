@@ -22,9 +22,12 @@ class RemoveCollaboratorToGroupRequest:
 @dataclasses.dataclass
 class RemoveCollaboratorToGroupResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     collaborator_schema: Optional[shared_collaboratorschema.CollaboratorSchema] = dataclasses.field(default=None)
     r"""A collaborator is a contractor that can receive payments"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

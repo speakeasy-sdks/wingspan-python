@@ -1,4 +1,4 @@
-# client_deduction
+# ClientDeduction
 
 ### Available Operations
 
@@ -17,14 +17,14 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.DeductionCreateRequest(
-    amount=2187.49,
-    client_id='hic',
-    currency=shared.DeductionCreateRequestCurrency.CAD,
-    member_id='cum',
-    name='Marian Wisozk',
-    priority=2543.56,
-    source_invoice_id='veritatis',
-    start_date='ipsa',
+    amount=6974.29,
+    client_id='ipsam',
+    currency=shared.DeductionCreateRequestCurrency.USD,
+    member_id='autem',
+    name='Gary Streich',
+    priority=166.27,
+    source_invoice_id='fugiat',
+    start_date='amet',
     type=shared.TypeDeductionCreateRequest.PRE_PAYMENT,
 )
 

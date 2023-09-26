@@ -1,4 +1,4 @@
-# bulk_collaborator_batch_item
+# BulkCollaboratorBatchItem
 
 ### Available Operations
 
@@ -19,30 +19,32 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.create(batch_id='maiores', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
-    collaborator_group_id='dicta',
-    collaborator_id='corporis',
-    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemCreate.INACTIVE,
-    company='Carter - Pfeffer',
-    email='Shania.Jerde21@gmail.com',
-    external_id='quidem',
-    first_last_name='molestias',
+res = s.bulk_collaborator_batch_item.create(batch_id='id', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
+    collaborator_group_id='possimus',
+    collaborator_id='aut',
+    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemCreate.ACTIVE,
+    company='Smitham - Pacocha',
+    email='Wanda.Wolf50@gmail.com',
+    external_id='voluptatibus',
+    first_last_name='ipsa',
     form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='pariatur',
-        address_line2='modi',
-        city='Judahshire',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.NONE,
-        country='Turks and Caicos Islands',
-        dob='sint',
-        ein='veritatis',
-        first_name='Tobin',
-        last_name='Gottlieb',
-        legal_business_name='enim',
-        postal_code='68167',
-        ssn='quibusdam',
-        state='labore',
+        address_line1='voluptate',
+        address_line2='cum',
+        city='North Ilianaboro',
+        company_structure=shared.CompanyStructureMemberClientFormW9Info.PARTNERSHIP,
+        country='Brazil',
+        dob='corporis',
+        ein='dolore',
+        first_name='Jayden',
+        last_name='Carter',
+        legal_business_name='harum',
+        postal_code='84902',
+        ssn='quidem',
+        state='molestias',
     ),
-    labels='qui',
+    labels={
+        "pariatur": 'modi',
+    },
 ))
 
 if res.bulk_collaborator_item is not None:
@@ -75,7 +77,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.get(batch_id='aliquid', batch_item_id='cupiditate')
+res = s.bulk_collaborator_batch_item.get(batch_id='praesentium', batch_item_id='rem')
 
 if res.bulk_collaborator_item is not None:
     # handle response
@@ -107,33 +109,16 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.update(batch_id='quos', batch_item_id='perferendis', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
-    collaborator_group_id='magni',
-    collaborator_id='assumenda',
-    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemUpdate.INACTIVE,
-    company='Corkery LLC',
-    email='Dominique.Prosacco96@yahoo.com',
-    external_id='eum',
-    first_last_name='non',
-    form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='sint',
-        address_line2='aliquid',
-        city='Sonyastead',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.LLC_CORPORATION_C,
-        country='Cyprus',
-        dob='debitis',
-        ein='a',
-        first_name='Marilou',
-        last_name='King',
-        legal_business_name='in',
-        postal_code='96127-8436',
-        ssn='accusamus',
-        state='non',
-    ),
-    labels={
-        "accusamus": 'delectus',
-        "quidem": 'provident',
-    },
+res = s.bulk_collaborator_batch_item.update(batch_id='voluptates', batch_item_id='quasi', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
+    collaborator_group_id='repudiandae',
+    collaborator_id='sint',
+    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemUpdate.ACTIVE,
+    company='Gottlieb, Hamill and Altenwerth',
+    email='Roosevelt_Cole@hotmail.com',
+    external_id='quibusdam',
+    first_last_name='labore',
+    form_w9_data='qui',
+    labels='cupiditate',
 ))
 
 if res.bulk_collaborator_item is not None:

@@ -1,7 +1,5 @@
 # CollaboratorEvents
 
-List of events on collaborator
-
 
 ## Fields
 

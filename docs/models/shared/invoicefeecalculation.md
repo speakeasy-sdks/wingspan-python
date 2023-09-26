@@ -1,7 +1,5 @@
 # InvoiceFeeCalculation
 
-Fees on Invoice
-
 
 ## Fields
 

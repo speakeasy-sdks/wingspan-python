@@ -1,4 +1,4 @@
-# pay_client_invoice
+# PayClientInvoice
 
 ### Available Operations
 
@@ -17,10 +17,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.pay_client_invoice.post(invoice_id='error', pay_request=shared.PayRequest(
-    account_id='consequatur',
-    payment_method_id='incidunt',
-    plaid_public_token='reiciendis',
+res = s.pay_client_invoice.post(invoice_id='eius', pay_request=shared.PayRequest(
+    account_id='libero',
+    payment_method_id='illum',
+    plaid_public_token='soluta',
 ))
 
 if res.client_invoice is not None:

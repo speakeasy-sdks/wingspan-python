@@ -1,7 +1,5 @@
 # BulkInvoiceBatch
 
-A batch of items for importing as invoices
-
 
 ## Fields
 

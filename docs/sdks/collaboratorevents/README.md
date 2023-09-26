@@ -1,4 +1,4 @@
-# collaborator_events
+# CollaboratorEvents
 
 ### Available Operations
 
@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_events.get(id='impedit')
+res = s.collaborator_events.get(id='aliquid')
 
 if res.collaborator_events is not None:
     # handle response

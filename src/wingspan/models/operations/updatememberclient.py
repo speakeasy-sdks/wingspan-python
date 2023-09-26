@@ -22,9 +22,12 @@ class UpdateMemberClientRequest:
 @dataclasses.dataclass
 class UpdateMemberClientResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     member_client_schema: Optional[shared_memberclientschema.MemberClientSchema] = dataclasses.field(default=None)
     r"""Describes details of member and client"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -1,7 +1,5 @@
 # ClientInvoiceTemplate
 
-A client created invoiceTemplate (recurring Invoice)
-
 
 ## Fields
 

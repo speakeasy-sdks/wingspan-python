@@ -11,7 +11,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class CollaboratorGroupResponse:
-    r"""Collaborator Configuration Per Group"""
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     collaborator_group_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId') }})
     default_group: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultGroup') }})

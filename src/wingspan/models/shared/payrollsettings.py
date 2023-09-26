@@ -23,7 +23,6 @@ class PayrollSettingsWorkflow(str, Enum):
 
 @dataclasses.dataclass
 class PayrollSettings:
-    r"""The payroll settings for a member"""
     status: StatusPayrollSettings = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     calculation_settings1099: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationSettings1099'), 'exclude': lambda f: f is None }})
     enable_planned_payroll: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enablePlannedPayroll'), 'exclude': lambda f: f is None }})

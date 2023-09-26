@@ -1,4 +1,4 @@
-# payout_debit_cards
+# PayoutDebitCards
 
 ### Available Operations
 
@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_cards.list(member_id='cupiditate')
+res = s.payout_debit_cards.list(member_id='voluptas')
 
 if res.checkbook_cards is not None:
     # handle response

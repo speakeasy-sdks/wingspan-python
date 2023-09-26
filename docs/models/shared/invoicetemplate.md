@@ -1,7 +1,5 @@
 # InvoiceTemplate
 
-A recurring invoice
-
 
 ## Fields
 

@@ -1,4 +1,4 @@
-# payables_aging_group
+# PayablesAgingGroup
 
 ### Available Operations
 

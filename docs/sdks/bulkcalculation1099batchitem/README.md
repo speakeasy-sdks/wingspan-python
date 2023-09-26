@@ -1,4 +1,4 @@
-# bulk_calculation1099_batch_item
+# BulkCalculation1099BatchItem
 
 ### Available Operations
 
@@ -19,11 +19,11 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.create(batch_id='totam', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
-    calculation_type=shared.CalculationTypeBulkCalculation1099ItemCreate.BALANCES,
-    client_id='commodi',
-    labels='modi',
-    year=1863.32,
+res = s.bulk_calculation1099_batch_item.create(batch_id='optio', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
+    calculation_type=shared.CalculationTypeBulkCalculation1099ItemCreate.SUBMISSIONS,
+    client_id='beatae',
+    labels='molestiae',
+    year=2645.55,
 ))
 
 if res.bulk_calculation1099_item is not None:
@@ -56,7 +56,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.get(batch_id='impedit', batch_item_id='cum')
+res = s.bulk_calculation1099_batch_item.get(batch_id='qui', batch_item_id='impedit')
 
 if res.bulk_calculation1099_item is not None:
     # handle response
@@ -88,11 +88,11 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.update(batch_id='esse', batch_item_id='ipsum', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
-    calculation_type=shared.CalculationTypeBulkCalculation1099ItemUpdate.SUBMISSIONS,
-    client_id='aspernatur',
-    labels='ad',
-    year=6176.36,
+res = s.bulk_calculation1099_batch_item.update(batch_id='cum', batch_item_id='esse', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
+    calculation_type=shared.CalculationTypeBulkCalculation1099ItemUpdate.BALANCES,
+    client_id='excepturi',
+    labels='perferendis',
+    year=3241.41,
 ))
 
 if res.bulk_payable_item is not None:

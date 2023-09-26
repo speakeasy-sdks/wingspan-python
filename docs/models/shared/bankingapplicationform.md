@@ -1,7 +1,5 @@
 # BankingApplicationForm
 
-A Bank Application form
-
 
 ## Fields
 

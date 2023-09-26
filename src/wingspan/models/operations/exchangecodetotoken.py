@@ -22,9 +22,12 @@ class ExchangeCodeToTokenRequest:
 @dataclasses.dataclass
 class ExchangeCodeToTokenResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     card_token_response: Optional[shared_cardtokenresponse.CardTokenResponse] = dataclasses.field(default=None)
     r"""A card token response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

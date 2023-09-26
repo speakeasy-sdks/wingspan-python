@@ -1,7 +1,5 @@
 # Invoice
 
-An invoice
-
 
 ## Fields
 

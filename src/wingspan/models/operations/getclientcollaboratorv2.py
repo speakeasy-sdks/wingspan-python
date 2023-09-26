@@ -20,9 +20,12 @@ class GetClientCollaboratorV2Request:
 @dataclasses.dataclass
 class GetClientCollaboratorV2Response:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     collaborator_v2: Optional[shared_collaboratorv2.CollaboratorV2] = dataclasses.field(default=None)
     r"""A single V2 Collaborator"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

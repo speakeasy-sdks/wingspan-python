@@ -1,7 +1,5 @@
 # Ping
 
-timestamp and name of service being pinged
-
 
 ## Fields
 

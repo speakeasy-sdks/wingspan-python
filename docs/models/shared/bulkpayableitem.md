@@ -1,7 +1,5 @@
 # BulkPayableItem
 
-An item that will be converted into a payable
-
 
 ## Fields
 

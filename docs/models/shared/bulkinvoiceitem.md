@@ -1,7 +1,5 @@
 # BulkInvoiceItem
 
-An item that will be converted into a invoice
-
 
 ## Fields
 

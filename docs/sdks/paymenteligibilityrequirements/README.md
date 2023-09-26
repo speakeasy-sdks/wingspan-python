@@ -1,4 +1,4 @@
-# payment_eligibility_requirements
+# PaymentEligibilityRequirements
 
 ### Available Operations
 

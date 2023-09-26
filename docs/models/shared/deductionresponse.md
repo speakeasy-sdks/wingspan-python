@@ -1,7 +1,5 @@
 # DeductionResponse
 
-A deduction
-
 
 ## Fields
 

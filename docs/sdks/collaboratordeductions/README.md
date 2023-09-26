@@ -1,4 +1,4 @@
-# collaborator_deductions
+# CollaboratorDeductions
 
 ### Available Operations
 
