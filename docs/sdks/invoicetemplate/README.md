@@ -20,84 +20,63 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InvoiceTemplateCreateRequest(
-    due_in_days=4856.28,
-    frequency=shared.Frequency(
-        daily=False,
-        day_in_interval=7875.42,
-        end_date='vero',
-        every=6064.76,
-        interval=shared.IntervalFrequency.MONTH,
-        start_date='ipsum',
-        twice_per_month=False,
-    ),
+    due_in_days=8623.1,
+    frequency='porro',
     invoice_data=shared.InvoiceDataCreateRequest(
         accepted_payment_methods=[
-            shared.InvoiceDataCreateRequestAcceptedPaymentMethods.ACH,
+            shared.InvoiceDataCreateRequestAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
         ],
-        attachments='vero',
+        attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
+            custom_attachment_ids=[
+                'iusto',
+            ],
+        ),
         collaborators=[
             shared.InvoiceCollaboratorCreateRequest(
-                amount=4922.68,
-                currency=shared.CurrencyInvoiceCollaboratorCreateRequest.CAD,
-                description='distinctio',
-                member_client_id='quod',
+                amount=4973.91,
+                currency=shared.CurrencyInvoiceCollaboratorCreateRequest.USD,
+                description='officia',
+                member_client_id='tempora',
             ),
         ],
-        credit_fee_handling='similique',
-        currency=shared.CurrencyInvoiceDataCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
-        due_date='vero',
-        invoice_notes='ducimus',
-        labels='quibusdam',
-        late_fee_handling=shared.LateFeeConfig(
-            frequency=shared.Frequency(
-                daily='natus',
-                day_in_interval=7733.26,
-                end_date='aut',
-                every=9742.59,
-                interval=shared.IntervalFrequency.MONTH,
-                start_date='nulla',
-                twice_per_month='porro',
-            ),
-            late_fee_amount=9818.3,
-            late_fee_percentage=9850.33,
-        ),
+        credit_fee_handling='ea',
+        currency=shared.CurrencyInvoiceDataCreateRequest.USD,
+        due_date='vel',
+        invoice_notes='possimus',
+        labels='ratione',
+        late_fee_handling='laudantium',
         line_items=[
             shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=4783.7,
-                description='eligendi',
-                detail='ducimus',
-                discount='officia',
-                integration='ipsam',
-                labels='aspernatur',
-                quantity=4282.24,
+                cost_per_unit=1206.57,
+                description='dolor',
+                detail='maiores',
+                discount='ex',
+                integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                    quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
+                        expense_account_id='voluptatibus',
+                        item_id='nostrum',
+                    ),
+                ),
+                labels={
+                    "quisquam": 'saepe',
+                },
+                quantity=4113.72,
                 reimbursable_expense=False,
-                total_cost=2978.42,
-                unit='ratione',
+                total_cost=3592.71,
+                unit='veniam',
             ),
         ],
-        member_client_id='ex',
-        notification_preferences=shared.InvoiceNotificationPreferences(
-            send_invoice='dolor',
-            send_receipt=False,
-            send_reminders=False,
-        ),
-        status=shared.StatusInvoiceDataCreateRequest.DRAFT,
+        member_client_id='aliquid',
+        notification_preferences='magnam',
+        status=shared.StatusInvoiceDataCreateRequest.CANCELLED,
     ),
-    is_scheduling_only='nulla',
-    labels={
-        "voluptatibus": 'nostrum',
-    },
+    is_scheduling_only=False,
+    labels='recusandae',
     schedule_dates=[
-        shared.ScheduleDate(
-            cut_off_date='quisquam',
-            date_='saepe',
-            invoice_id='ea',
-            invoice_template_id='impedit',
-            status=shared.StatusScheduleDate.COMPLETED,
-        ),
+        'minima',
     ],
-    send_emails='aliquid',
-    status=shared.StatusInvoiceTemplateCreateRequest.ACTIVE,
+    send_emails='a',
+    status=shared.StatusInvoiceTemplateCreateRequest.EXPIRED,
 )
 
 res = s.invoice_template.create(req)
@@ -131,7 +110,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.delete(id='magnam')
+res = s.invoice_template.delete(id='aut')
 
 if res.invoice_template is not None:
     # handle response
@@ -162,7 +141,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.get(id='ea')
+res = s.invoice_template.get(id='aut')
 
 if res.invoice_template is not None:
     # handle response
@@ -193,80 +172,26 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.update(id='quo', invoice_template_update_request=shared.InvoiceTemplateUpdateRequest(
-    account_id='consectetur',
-    auto_payment_required=False,
-    due_in_days=1324.87,
-    frequency='eaque',
-    invoice_data=shared.InvoiceUpdateRequest(
-        accepted_payment_methods=[
-            shared.InvoiceUpdateRequestAcceptedPaymentMethods.MANUAL,
-        ],
-        attachments='aut',
-        charged_fees=shared.Fees(
-            late_fee=shared.Fee(
-                amount=3045.82,
-                calculated_at='fugit',
-            ),
-            processing_fee=shared.Fee(
-                amount=795.22,
-                calculated_at='non',
-            ),
-        ),
-        client='dolorum',
-        collaborators=[
-            shared.InvoiceCollaboratorUpdateRequest(
-                amount=8104.24,
-                description='velit',
-            ),
-        ],
-        credit_fee_handling='autem',
-        due_date='nobis',
-        integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-            quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                expense_account_id='nulla',
-                item_id='voluptas',
-            ),
-        ),
-        invoice_notes='libero',
-        labels='tempora',
-        late_fee_handling='explicabo',
-        line_items=[
-            shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=553.74,
-                description='molestiae',
-                detail='magnam',
-                discount='eius',
-                integration='esse',
-                labels={
-                    "fuga": 'reprehenderit',
-                },
-                quantity=6956.26,
-                reimbursable_expense=False,
-                total_cost=2835.19,
-                unit='eum',
-            ),
-        ],
-        member='assumenda',
-        member_client_id='eos',
-        metadata=shared.InvoiceMetadata(
-            purchase_order_number='quisquam',
-        ),
-        notification_preferences='ipsa',
-        status=shared.StatusInvoiceUpdateRequest.PAYMENT_IN_TRANSIT,
-    ),
+res = s.invoice_template.update(id='deleniti', invoice_template_update_request=shared.InvoiceTemplateUpdateRequest(
+    account_id='impedit',
+    auto_payment_required='fugit',
+    due_in_days=8828.6,
+    frequency='non',
+    invoice_data='dolorum',
     is_scheduling_only=False,
-    labels='quo',
-    payment_method_id='illum',
+    labels={
+        "velit": 'eum',
+    },
+    payment_method_id='autem',
     schedule_dates=[
         shared.ScheduleDateUpdate(
-            date_='fuga',
-            invoice_template_id='eius',
-            status=shared.StatusScheduleDateUpdate.PENDING,
+            date_='quas',
+            invoice_template_id='assumenda',
+            status=shared.StatusScheduleDateUpdate.LESS_THAN_NIL_GREATER_THAN_,
         ),
     ],
-    send_emails='ab',
-    status=shared.StatusInvoiceTemplateUpdateRequest.EXPIRED,
+    send_emails='libero',
+    status=shared.StatusInvoiceTemplateUpdateRequest.ACTIVE,
 ))
 
 if res.invoice_template is not None:

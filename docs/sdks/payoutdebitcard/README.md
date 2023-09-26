@@ -19,19 +19,19 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.create(member_id='nobis', checkbook_card_create=shared.CheckbookCardCreate(
+res = s.payout_debit_card.create(member_id='saepe', checkbook_card_create=shared.CheckbookCardCreate(
     address=shared.Address(
-        address_line1='adipisci',
-        address_line2='minus',
-        city='New Isomboro',
-        postal_code='88327',
-        state='blanditiis',
+        address_line1='dolore',
+        address_line2='sunt',
+        city='Deltona',
+        postal_code='21498',
+        state='consectetur',
     ),
-    card_number='quas',
-    cvv='hic',
-    exp_mm='nesciunt',
-    exp_yyyy='culpa',
-    name='Dewey Leannon',
+    card_number='corporis',
+    cvv='harum',
+    exp_mm='laboriosam',
+    exp_yyyy='ipsa',
+    name='Randolph Bruen',
 ))
 
 if res.checkbook_card is not None:
@@ -64,7 +64,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.delete(id='nobis', member_id='sit')
+res = s.payout_debit_card.delete(id='tempora', member_id='aspernatur')
 
 if res.checkbook_card is not None:
     # handle response
@@ -96,7 +96,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.get(id='rerum', member_id='sed')
+res = s.payout_debit_card.get(id='voluptas', member_id='voluptas')
 
 if res.checkbook_card is not None:
     # handle response

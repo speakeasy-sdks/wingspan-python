@@ -19,7 +19,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkBatchCreate(
-    labels='quod',
+    labels='nam',
 )
 
 res = s.bulk_calculation1099_batch.create(req)
@@ -53,7 +53,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch.get(batch_id='quod')
+res = s.bulk_calculation1099_batch.get(batch_id='officia')
 
 if res.bulk_calculation1099_batch is not None:
     # handle response
@@ -84,11 +84,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch.update(batch_id='esse', bulk_batch_update=shared.BulkBatchUpdate(
-    labels={
-        "porro": 'dolorum',
-    },
-    status=shared.StatusBulkBatchUpdate.OPEN,
+res = s.bulk_calculation1099_batch.update(batch_id='occaecati', bulk_batch_update=shared.BulkBatchUpdate(
+    labels='deleniti',
+    status=shared.StatusBulkBatchUpdate.LESS_THAN_NIL_GREATER_THAN_,
 ))
 
 if res.bulk_calculation1099_batch is not None:

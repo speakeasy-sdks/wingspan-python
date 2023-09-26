@@ -20,17 +20,42 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CollaboratorCreateRequest(
-    client_data='accusamus',
-    client_id='quidem',
-    collaborator_group_id='voluptatibus',
-    form_w9_data='natus',
-    integration='atque',
-    labels='fugiat',
-    member_company='ab',
-    member_email='soluta',
-    member_id='dolorum',
-    member_name='iusto',
-    status=shared.StatusCollaboratorCreateRequest.INACTIVE,
+    client_data=shared.ClientData(
+        auto_pay_strategy=shared.AutoPayStrategyClientData.ALL,
+        external_id='soluta',
+        verification_stratgy=shared.VerificationStratgyClientData.LESS_THAN_NIL_GREATER_THAN_,
+    ),
+    client_id='iusto',
+    collaborator_group_id='voluptate',
+    form_w9_data=shared.MemberClientFormW9Info(
+        address_line1='deleniti',
+        address_line2='omnis',
+        city='Portland',
+        company_structure=shared.CompanyStructureMemberClientFormW9Info.PARTNERSHIP,
+        country='Republic of Korea',
+        dob='ipsum',
+        ein='voluptate',
+        first_name='Makenzie',
+        last_name='Ullrich',
+        legal_business_name='eius',
+        postal_code='02783',
+        ssn='saepe',
+        state='suscipit',
+    ),
+    integration=shared.TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4(
+        quickbooks=shared.Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4(
+            expense_account_id='minima',
+            vendor_id='repellendus',
+        ),
+    ),
+    labels={
+        "similique": 'alias',
+    },
+    member_company='at',
+    member_email='quaerat',
+    member_id='tempora',
+    member_name='vel',
+    status=shared.StatusCollaboratorCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
 )
 
 res = s.collaborator.create(req)
@@ -64,7 +89,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.delete(id='dolorum')
+res = s.collaborator.delete(id='officiis')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -95,7 +120,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.get(id='deleniti')
+res = s.collaborator.get(id='qui')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -126,19 +151,19 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.update(id='omnis', collaborator_update_request=shared.CollaboratorUpdateRequest(
+res = s.collaborator.update(id='dolorum', collaborator_update_request=shared.CollaboratorUpdateRequest(
     client_data=shared.ClientData(
-        auto_pay_strategy=shared.AutoPayStrategyClientData.LESS_THAN_NIL_GREATER_THAN_,
-        external_id='asperiores',
+        auto_pay_strategy=shared.AutoPayStrategyClientData.NONE,
+        external_id='harum',
         verification_stratgy=shared.VerificationStratgyClientData.ALL,
     ),
-    form1099_balances='voluptate',
+    form1099_balances='quisquam',
     form_w9_data=shared.CollaboratorUpdateRequestFormW9Data2(),
-    integration=shared.TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4(
-        quickbooks='aspernatur',
-    ),
-    labels='amet',
-    status=shared.StatusCollaboratorUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
+    integration='tempore',
+    labels={
+        "numquam": 'enim',
+    },
+    status=shared.StatusCollaboratorUpdateRequest.ACTIVE,
 ))
 
 if res.collaborator_schema is not None:

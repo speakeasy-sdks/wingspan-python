@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.pa_payable_on_clientyable.delete(id='dicta')
+res = s.pa_payable_on_clientyable.delete(id='in')
 
 if res.payable_schema is not None:
     # handle response

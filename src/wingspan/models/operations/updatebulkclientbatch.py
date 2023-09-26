@@ -22,9 +22,12 @@ class UpdateBulkClientBatchRequest:
 @dataclasses.dataclass
 class UpdateBulkClientBatchResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     bulk_client_batch: Optional[shared_bulkclientbatch.BulkClientBatch] = dataclasses.field(default=None)
     r"""A batch of items for importing as clients"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

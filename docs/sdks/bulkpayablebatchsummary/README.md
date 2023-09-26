@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_summary.get(batch_id='praesentium')
+res = s.bulk_payable_batch_summary.get(batch_id='pariatur')
 
 if res.bulk_payable_import_summary is not None:
     # handle response

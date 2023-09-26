@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.get(id='explicabo')
+res = s.payout_settings.get(id='minima')
 
 if res.payout_settings_response is not None:
     # handle response
@@ -49,16 +49,16 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.update(id='asperiores', payout_settings_update=shared.PayoutSettingsUpdate(
+res = s.payout_settings.update(id='nobis', payout_settings_update=shared.PayoutSettingsUpdate(
     payout_destinations=[
         shared.PayoutDestinationUpdate(
-            destination_id='voluptate',
-            destination_type=shared.DestinationTypePayoutDestinationUpdate.WE_GIFT,
-            payout_method=shared.PayoutMethodPayoutDestinationUpdate.STANDARD,
-            percentage=6117.49,
+            destination_id='adipisci',
+            destination_type=shared.DestinationTypePayoutDestinationUpdate.LESS_THAN_NIL_GREATER_THAN_,
+            payout_method=shared.PayoutMethodPayoutDestinationUpdate.INSTANT,
+            percentage=5039.34,
         ),
     ],
-    payout_preferences=shared.PayoutPreferencesPayoutSettingsUpdate.INSTANT,
+    payout_preferences=shared.PayoutPreferencesPayoutSettingsUpdate.EXPEDITED,
 ))
 
 if res.payout_settings_response is not None:

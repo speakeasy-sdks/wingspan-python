@@ -20,9 +20,12 @@ class GetStatementRequest:
 @dataclasses.dataclass
 class GetStatementResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     bank_statements: Optional[list[shared_bankstatement.BankStatement]] = dataclasses.field(default=None)
     r"""A list of bank statements"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

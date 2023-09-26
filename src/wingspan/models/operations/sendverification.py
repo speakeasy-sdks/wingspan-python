@@ -22,9 +22,12 @@ class SendVerificationRequest:
 @dataclasses.dataclass
 class SendVerificationResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     card_code_response: Optional[shared_cardcoderesponse.CardCodeResponse] = dataclasses.field(default=None)
     r"""A card code response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

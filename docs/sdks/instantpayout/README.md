@@ -19,7 +19,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InstantPayoutRequest(
-    external_payout_account_token='voluptatem',
+    external_payout_account_token='quae',
 )
 
 res = s.instant_payout.create(req)

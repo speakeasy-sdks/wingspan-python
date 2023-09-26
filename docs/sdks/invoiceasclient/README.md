@@ -17,46 +17,40 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceCreateRequest(
-    client_company='et',
-    client_email='saepe',
+    client_company='voluptatibus',
+    client_email='quisquam',
     client_email_cc=[
-        'ipsum',
+        'vero',
     ],
-    client_first_name='veritatis',
-    client_last_name='nobis',
-    credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=7316.94,
-        client_pays=5844.76,
-        member_pays=456.14,
-    ),
-    currency=shared.CurrencyClientInvoiceCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
-    due_date='dolorem',
+    client_first_name='omnis',
+    client_last_name='quis',
+    credit_fee_handling='delectus',
+    currency=shared.CurrencyClientInvoiceCreateRequest.CAD,
+    due_date='consectetur',
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=2921.47,
-            description='labore',
-            detail='adipisci',
+            cost_per_unit=8788.7,
+            description='tenetur',
+            detail='dignissimos',
             discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                amount=1002.94,
-                description='quae',
-                percentage=164.29,
+                amount=7155.61,
+                description='quod',
+                percentage=4861.6,
             ),
             integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
                 quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                    expense_account_id='consequatur',
-                    item_id='est',
+                    expense_account_id='vero',
+                    item_id='ducimus',
                 ),
             ),
-            labels={
-                "porro": 'doloribus',
-            },
-            quantity=2817.3,
-            reimbursable_expense=False,
-            total_cost=5864.1,
-            unit='qui',
+            labels='quibusdam',
+            quantity=8489.44,
+            reimbursable_expense='natus',
+            total_cost=7733.26,
+            unit='aut',
         ),
     ],
-    member_id='quae',
+    member_id='voluptatibus',
 )
 
 res = s.invoice_as_client.create(req)

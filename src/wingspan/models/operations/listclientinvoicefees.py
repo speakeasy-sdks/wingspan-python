@@ -20,9 +20,12 @@ class ListClientInvoiceFeesRequest:
 @dataclasses.dataclass
 class ListClientInvoiceFeesResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     invoice_fee_calculation: Optional[shared_invoicefeecalculation.InvoiceFeeCalculation] = dataclasses.field(default=None)
     r"""Fees on Invoice"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -20,9 +20,12 @@ class GenerateInvoiceRequest:
 @dataclasses.dataclass
 class GenerateInvoiceResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     invoice_pdf_generation_response: Optional[shared_invoicepdfgenerationresponse.InvoicePdfGenerationResponse] = dataclasses.field(default=None)
     r"""Response from generation of invoice pdf"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -19,56 +19,58 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceTemplateCreateRequest(
-    account_id='hic',
-    client_company='recusandae',
-    client_email='omnis',
+    account_id='consequuntur',
+    client_company='blanditiis',
+    client_email='error',
     client_email_cc=[
-        'facilis',
+        'eaque',
     ],
-    client_first_name='perspiciatis',
-    client_last_name='voluptatem',
-    due_in_days=7836.45,
-    frequency='blanditiis',
+    client_first_name='occaecati',
+    client_last_name='rerum',
+    due_in_days=2378.93,
+    frequency=shared.Frequency(
+        daily=False,
+        day_in_interval=2672.62,
+        end_date='iste',
+        every=6790.91,
+        interval=shared.IntervalFrequency.MONTH,
+        start_date='pariatur',
+        twice_per_month=False,
+    ),
     invoice_data=shared.ClientInvoiceDataCreateRequest(
         credit_fee_handling=shared.FeeHandlingConfig(
-            client_absolute_percentage=503.7,
-            client_pays=5772.29,
-            member_pays=6990.98,
+            client_absolute_percentage=7301.22,
+            client_pays=9644.9,
+            member_pays=3119.45,
         ),
-        currency=shared.CurrencyClientInvoiceDataCreateRequest.USD,
-        due_date='asperiores',
+        currency=shared.CurrencyClientInvoiceDataCreateRequest.CAD,
+        due_date='aliquid',
         line_items=[
             shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=9342.14,
-                description='modi',
-                detail='iste',
-                discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                    amount=5356.33,
-                    description='pariatur',
-                    percentage=5899.1,
-                ),
+                cost_per_unit=2123.9,
+                description='dolorem',
+                detail='dolor',
+                discount='ipsum',
                 integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
                     quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                        expense_account_id='delectus',
-                        item_id='quaerat',
+                        expense_account_id='cum',
+                        item_id='voluptate',
                     ),
                 ),
-                labels={
-                    "aliquid": 'dolorem',
-                },
-                quantity=2098.43,
-                reimbursable_expense='qui',
-                total_cost=2187.49,
-                unit='hic',
+                labels='reiciendis',
+                quantity=2274.14,
+                reimbursable_expense=False,
+                total_cost=2543.56,
+                unit='veritatis',
             ),
         ],
     ),
-    member_id='excepturi',
-    payment_method_id='cum',
+    member_id='ipsa',
+    payment_method_id='ipsa',
     schedule_dates=[
-        'dignissimos',
+        'odio',
     ],
-    status=shared.StatusClientInvoiceTemplateCreateRequest.CANCELLED,
+    status=shared.StatusClientInvoiceTemplateCreateRequest.DRAFT,
 )
 
 res = s.client_invoice_template.create(req)
@@ -102,7 +104,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.get(id='amet')
+res = s.client_invoice_template.get(id='accusamus')
 
 if res.client_invoice_template is not None:
     # handle response
@@ -133,10 +135,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.update(id='dolorum', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
-    account_id='numquam',
-    client_id='veritatis',
-    payment_method_id='ipsa',
+res = s.client_invoice_template.update(id='quidem', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
+    account_id='voluptatibus',
+    client_id='voluptas',
+    payment_method_id='natus',
 ))
 
 if res.client_invoice_template is not None:

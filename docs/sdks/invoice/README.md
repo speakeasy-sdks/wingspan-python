@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice.generate(invoice_id='soluta')
+res = s.invoice.generate(invoice_id='odio')
 
 if res.invoice_pdf_generation_response is not None:
     # handle response
@@ -49,7 +49,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice.send(invoice_id='nobis')
+res = s.invoice.send(invoice_id='occaecati')
 
 if res.invoice is not None:
     # handle response

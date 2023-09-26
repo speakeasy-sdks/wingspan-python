@@ -17,7 +17,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_events.get(id='tempore')
+res = s.collaborator_events.get(id='aliquid')
 
 if res.collaborator_events is not None:
     # handle response

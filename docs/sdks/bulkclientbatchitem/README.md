@@ -19,21 +19,19 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.create(batch_id='iste', bulk_client_item_create=shared.BulkClientItemCreate(
-    client_status=shared.ClientStatusBulkClientItemCreate.ACTIVE,
-    company='Howe - Welch',
-    email='Marisa_Kirlin@hotmail.com',
-    external_id='iure',
-    first_last_name='saepe',
+res = s.bulk_client_batch_item.create(batch_id='fuga', bulk_client_item_create=shared.BulkClientItemCreate(
+    client_status=shared.ClientStatusBulkClientItemCreate.INACTIVE,
+    company='Moore - Kertzmann',
+    email='Maxie96@hotmail.com',
+    external_id='est',
+    first_last_name='mollitia',
     integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
-        quickbooks='ipsa',
+        quickbooks='dolorem',
     ),
-    labels={
-        "est": 'mollitia',
-    },
+    labels='explicabo',
     member_data=shared.MemberData(
         auto_pay_requirement=shared.AutoPayRequirementMemberData.ALL,
-        external_id='dolorem',
+        external_id='omnis',
         share_tax_document=shared.ShareTaxDocumentMemberData.DECLINE,
     ),
 ))
@@ -68,7 +66,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.get(batch_id='explicabo', batch_item_id='nobis')
+res = s.bulk_client_batch_item.get(batch_id='minima', batch_item_id='excepturi')
 
 if res.bulk_client_item is not None:
     # handle response
@@ -100,17 +98,15 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.update(batch_id='enim', batch_item_id='omnis', bulk_client_item_update=shared.BulkClientItemUpdate(
-    client_status=shared.ClientStatusBulkClientItemUpdate.INACTIVE,
-    company='Marks Inc',
-    email='Lorenza.Yundt65@yahoo.com',
-    external_id='dolorem',
-    first_last_name='culpa',
-    integration='repellat',
-    labels={
-        "occaecati": 'numquam',
-    },
-    member_data='quam',
+res = s.bulk_client_batch_item.update(batch_id='accusantium', batch_item_id='iure', bulk_client_item_update=shared.BulkClientItemUpdate(
+    client_status=shared.ClientStatusBulkClientItemUpdate.PENDING,
+    company='Williamson, Brakus and O'Hara',
+    email='Lorine_Crooks58@gmail.com',
+    external_id='numquam',
+    first_last_name='commodi',
+    integration='molestiae',
+    labels='error',
+    member_data='quis',
 ))
 
 if res.bulk_client_item is not None:
