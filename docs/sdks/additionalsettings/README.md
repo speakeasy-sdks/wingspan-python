@@ -1,4 +1,5 @@
 # AdditionalSettings
+(*additional_settings*)
 
 ### Available Operations
 
@@ -46,8 +47,8 @@ s = wingspan.Wingspan()
 res = s.additional_settings.update(id='at', additional_data_update_request=shared.AdditionalDataUpdateRequest(
     key='at',
     name='Javier Schmidt',
-    required=False,
-    type=shared.TypeAdditionalDataUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
+    required=[],
+    type=shared.TypeAdditionalDataUpdateRequest.STRING,
 ))
 
 if res.additional_data is not None:

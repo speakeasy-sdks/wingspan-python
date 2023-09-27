@@ -1,4 +1,5 @@
 # CollaboratorToGroup
+(*collaborator_to_group*)
 
 ### Available Operations
 
@@ -18,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.add(group_id='adipisci', id='dolorum')
+res = s.collaborator_to_group.add(group_id='dignissimos', id='eaque')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -50,7 +51,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.remove(group_id='architecto', id='quae')
+res = s.collaborator_to_group.remove(group_id='quis', id='nesciunt')
 
 if res.collaborator_schema is not None:
     # handle response

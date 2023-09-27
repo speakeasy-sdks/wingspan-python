@@ -2,15 +2,55 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import clientdata as shared_clientdata
+from ..shared import memberdata as shared_memberdata
+from ..shared import ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7 as shared_ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7
+from ..shared import threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f as shared_threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
 
 
 
 @dataclasses.dataclass
+class MemberClientUpdateRequestClientData:
+    pass
+
+
+
+@dataclasses.dataclass
+class MemberClientUpdateRequestForm1099Balances:
+    pass
+
+
+
+@dataclasses.dataclass
 class MemberClientUpdateRequestFormW9Data2:
+    pass
+
+
+
+@dataclasses.dataclass
+class MemberClientUpdateRequestFormW9Data:
+    pass
+
+
+
+@dataclasses.dataclass
+class MemberClientUpdateRequestIntegration:
+    pass
+
+
+
+@dataclasses.dataclass
+class MemberClientUpdateRequestLabels:
+    pass
+
+
+
+@dataclasses.dataclass
+class MemberClientUpdateRequestMemberData:
     pass
 
 class StatusMemberClientUpdateRequest(str, Enum):
@@ -24,16 +64,16 @@ class StatusMemberClientUpdateRequest(str, Enum):
 
 @dataclasses.dataclass
 class MemberClientUpdateRequest:
-    client_data: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData'), 'exclude': lambda f: f is None }})
+    client_data: Optional[Union[Any, shared_clientdata.ClientData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData'), 'exclude': lambda f: f is None }})
     client_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId'), 'exclude': lambda f: f is None }})
     company: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is None }})
     email_cc: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emailCC'), 'exclude': lambda f: f is None }})
     email_to: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emailTo'), 'exclude': lambda f: f is None }})
-    form1099_balances: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances'), 'exclude': lambda f: f is None }})
-    form_w9_data: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data'), 'exclude': lambda f: f is None }})
-    integration: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
-    labels: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    member_data: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData'), 'exclude': lambda f: f is None }})
+    form1099_balances: Optional[Union[Any, shared_ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7.Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances'), 'exclude': lambda f: f is None }})
+    form_w9_data: Optional[Union[Any, MemberClientUpdateRequestFormW9Data2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data'), 'exclude': lambda f: f is None }})
+    integration: Optional[Union[Any, shared_threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f.Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
+    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    member_data: Optional[Union[Any, shared_memberdata.MemberData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     status: Optional[StatusMemberClientUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     

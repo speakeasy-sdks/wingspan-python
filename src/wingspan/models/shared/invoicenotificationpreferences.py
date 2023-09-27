@@ -3,8 +3,20 @@
 from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class InvoiceNotificationPreferencesSendInvoice:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceNotificationPreferencesSendReceipt:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -12,7 +24,7 @@ from wingspan import utils
 @dataclasses.dataclass
 class InvoiceNotificationPreferences:
     send_reminders: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendReminders') }})
-    send_invoice: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendInvoice'), 'exclude': lambda f: f is None }})
-    send_receipt: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendReceipt'), 'exclude': lambda f: f is None }})
+    send_invoice: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendInvoice'), 'exclude': lambda f: f is None }})
+    send_receipt: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendReceipt'), 'exclude': lambda f: f is None }})
     
 

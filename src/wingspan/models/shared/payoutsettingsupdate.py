@@ -2,10 +2,17 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import payoutdestinationupdate as shared_payoutdestinationupdate
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class PayoutSettingsUpdatePayoutDestinations:
+    pass
 
 class PayoutPreferencesPayoutSettingsUpdate(str, Enum):
     STANDARD = 'Standard'
@@ -20,7 +27,7 @@ class PayoutPreferencesPayoutSettingsUpdate(str, Enum):
 
 @dataclasses.dataclass
 class PayoutSettingsUpdate:
-    payout_destinations: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations'), 'exclude': lambda f: f is None }})
+    payout_destinations: Optional[list[Union[Any, shared_payoutdestinationupdate.PayoutDestinationUpdate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations'), 'exclude': lambda f: f is None }})
     payout_preferences: Optional[PayoutPreferencesPayoutSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences'), 'exclude': lambda f: f is None }})
     
 

@@ -1,4 +1,5 @@
 # ClientInvoiceTemplate
+(*client_invoice_template*)
 
 ### Available Operations
 
@@ -19,58 +20,41 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceTemplateCreateRequest(
-    account_id='consequuntur',
-    client_company='blanditiis',
-    client_email='error',
+    account_id='id',
+    client_company='labore',
+    client_email='labore',
     client_email_cc=[
-        'eaque',
+        'suscipit',
     ],
-    client_first_name='occaecati',
-    client_last_name='rerum',
-    due_in_days=2378.93,
-    frequency=shared.Frequency(
-        daily=False,
-        day_in_interval=2672.62,
-        end_date='iste',
-        every=6790.91,
-        interval=shared.IntervalFrequency.MONTH,
-        start_date='pariatur',
-        twice_per_month=False,
-    ),
+    client_first_name='natus',
+    client_last_name='nobis',
+    due_in_days=4287.69,
+    frequency=[],
     invoice_data=shared.ClientInvoiceDataCreateRequest(
-        credit_fee_handling=shared.FeeHandlingConfig(
-            client_absolute_percentage=7301.22,
-            client_pays=9644.9,
-            member_pays=3119.45,
-        ),
-        currency=shared.CurrencyClientInvoiceDataCreateRequest.CAD,
-        due_date='aliquid',
+        credit_fee_handling=[],
+        currency=shared.CurrencyClientInvoiceDataCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
+        due_date='aspernatur',
         line_items=[
             shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=2123.9,
-                description='dolorem',
-                detail='dolor',
-                discount='ipsum',
-                integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                    quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                        expense_account_id='cum',
-                        item_id='voluptate',
-                    ),
-                ),
-                labels='reiciendis',
-                quantity=2274.14,
-                reimbursable_expense=False,
-                total_cost=2543.56,
-                unit='veritatis',
+                cost_per_unit=1028.63,
+                description='magnam',
+                detail='et',
+                discount=[],
+                integration=[],
+                labels=[],
+                quantity=5699.65,
+                reimbursable_expense=[],
+                total_cost=3540.47,
+                unit='provident',
             ),
         ],
     ),
-    member_id='ipsa',
-    payment_method_id='ipsa',
+    member_id='quos',
+    payment_method_id='sint',
     schedule_dates=[
-        'odio',
+        [],
     ],
-    status=shared.StatusClientInvoiceTemplateCreateRequest.DRAFT,
+    status=shared.StatusClientInvoiceTemplateCreateRequest.ACTIVE,
 )
 
 res = s.client_invoice_template.create(req)
@@ -104,7 +88,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.get(id='accusamus')
+res = s.client_invoice_template.get(id='mollitia')
 
 if res.client_invoice_template is not None:
     # handle response
@@ -135,10 +119,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.update(id='quidem', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
-    account_id='voluptatibus',
-    client_id='voluptas',
-    payment_method_id='natus',
+res = s.client_invoice_template.update(id='reiciendis', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
+    account_id='mollitia',
+    client_id='ad',
+    payment_method_id='eum',
 ))
 
 if res.client_invoice_template is not None:

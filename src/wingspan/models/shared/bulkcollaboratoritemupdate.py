@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import memberclientformw9info as shared_memberclientformw9info
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
 
 class CollaboratorStatusBulkCollaboratorItemUpdate(str, Enum):
@@ -12,6 +13,18 @@ class CollaboratorStatusBulkCollaboratorItemUpdate(str, Enum):
     INACTIVE = 'Inactive'
     PENDING = 'Pending'
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
+
+
+
+@dataclasses.dataclass
+class BulkCollaboratorItemUpdateFormW9Data:
+    pass
+
+
+
+@dataclasses.dataclass
+class BulkCollaboratorItemUpdateLabels:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -25,7 +38,7 @@ class BulkCollaboratorItemUpdate:
     email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }})
     external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is None }})
     first_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstLastName'), 'exclude': lambda f: f is None }})
-    form_w9_data: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data'), 'exclude': lambda f: f is None }})
-    labels: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    form_w9_data: Optional[Union[Any, shared_memberclientformw9info.MemberClientFormW9Info]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data'), 'exclude': lambda f: f is None }})
+    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     
 

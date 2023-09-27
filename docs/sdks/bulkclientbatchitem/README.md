@@ -1,4 +1,5 @@
 # BulkClientBatchItem
+(*bulk_client_batch_item*)
 
 ### Available Operations
 
@@ -19,21 +20,15 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.create(batch_id='fuga', bulk_client_item_create=shared.BulkClientItemCreate(
-    client_status=shared.ClientStatusBulkClientItemCreate.INACTIVE,
-    company='Moore - Kertzmann',
-    email='Maxie96@hotmail.com',
-    external_id='est',
-    first_last_name='mollitia',
-    integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
-        quickbooks='dolorem',
-    ),
-    labels='explicabo',
-    member_data=shared.MemberData(
-        auto_pay_requirement=shared.AutoPayRequirementMemberData.ALL,
-        external_id='omnis',
-        share_tax_document=shared.ShareTaxDocumentMemberData.DECLINE,
-    ),
+res = s.bulk_client_batch_item.create(batch_id='ipsum', bulk_client_item_create=shared.BulkClientItemCreate(
+    client_status=shared.ClientStatusBulkClientItemCreate.PENDING,
+    company='Auer and Sons',
+    email='Camden61@yahoo.com',
+    external_id='laboriosam',
+    first_last_name='hic',
+    integration=[],
+    labels=[],
+    member_data=[],
 ))
 
 if res.bulk_client_item is not None:
@@ -66,7 +61,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.get(batch_id='minima', batch_item_id='excepturi')
+res = s.bulk_client_batch_item.get(batch_id='saepe', batch_item_id='fuga')
 
 if res.bulk_client_item is not None:
     # handle response
@@ -98,15 +93,15 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.update(batch_id='accusantium', batch_item_id='iure', bulk_client_item_update=shared.BulkClientItemUpdate(
+res = s.bulk_client_batch_item.update(batch_id='in', batch_item_id='corporis', bulk_client_item_update=shared.BulkClientItemUpdate(
     client_status=shared.ClientStatusBulkClientItemUpdate.PENDING,
-    company='Williamson, Brakus and O'Hara',
-    email='Lorine_Crooks58@gmail.com',
-    external_id='numquam',
-    first_last_name='commodi',
-    integration='molestiae',
-    labels='error',
-    member_data='quis',
+    company='Turcotte - Predovic',
+    email='Andy_Wisozk67@gmail.com',
+    external_id='dolores',
+    first_last_name='dolorem',
+    integration=[],
+    labels=[],
+    member_data=[],
 ))
 
 if res.bulk_client_item is not None:

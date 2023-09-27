@@ -1,4 +1,5 @@
 # ClientDeductionID
+(*client_deduction_id*)
 
 ### Available Operations
 
@@ -19,7 +20,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.delete(id='cumque')
+res = s.client_deduction_id.delete(id='accusamus')
 
 if res.deduction_response is not None:
     # handle response
@@ -50,7 +51,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.get(id='corporis')
+res = s.client_deduction_id.get(id='non')
 
 if res.deduction_response is not None:
     # handle response
@@ -81,13 +82,13 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.update(id='hic', deduction_update_request=shared.DeductionUpdateRequest(
-    amount=7299.91,
+res = s.client_deduction_id.update(id='occaecati', deduction_update_request=shared.DeductionUpdateRequest(
+    amount=3132.18,
     currency=shared.CurrencyDeductionUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
-    name='Beatrice Lebsack II',
-    priority=1999.96,
-    source_invoice_id='eos',
-    start_date='perferendis',
+    name='Abraham McKenzie',
+    priority=5013.24,
+    source_invoice_id='deleniti',
+    start_date='sapiente',
     type=shared.TypeDeductionUpdateRequest.PRE_PAYMENT,
 ))
 

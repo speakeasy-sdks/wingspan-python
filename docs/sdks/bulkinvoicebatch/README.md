@@ -1,4 +1,5 @@
 # BulkInvoiceBatch
+(*bulk_invoice_batch*)
 
 ### Available Operations
 
@@ -19,7 +20,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkInvoiceBatchCreate(
-    labels='magni',
+    labels=[],
     processing_strategy=shared.BulkInvoiceBatchCreateProcessingStrategy.SINGLE,
 )
 
@@ -85,9 +86,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.update(batch_id='alias', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate(
-    labels='dolorum',
-    status=shared.StatusBulkInvoiceBatchUpdate.COMPLETE,
+res = s.bulk_invoice_batch.update(batch_id='id', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate(
+    labels=[],
+    status=shared.StatusBulkInvoiceBatchUpdate.FAILED,
 ))
 
 if res.bulk_invoice_batch is not None:

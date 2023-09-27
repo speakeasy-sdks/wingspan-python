@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0 as shared_d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0
+from ..shared import memberdata as shared_memberdata
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
 
 class ClientStatusBulkClientItemCreate(str, Enum):
@@ -12,6 +14,24 @@ class ClientStatusBulkClientItemCreate(str, Enum):
     INACTIVE = 'Inactive'
     PENDING = 'Pending'
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
+
+
+
+@dataclasses.dataclass
+class BulkClientItemCreateIntegration:
+    pass
+
+
+
+@dataclasses.dataclass
+class BulkClientItemCreateLabels:
+    pass
+
+
+
+@dataclasses.dataclass
+class BulkClientItemCreateMemberData:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -23,8 +43,8 @@ class BulkClientItemCreate:
     email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }})
     external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is None }})
     first_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstLastName'), 'exclude': lambda f: f is None }})
-    integration: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
-    labels: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    member_data: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData'), 'exclude': lambda f: f is None }})
+    integration: Optional[Union[Any, shared_d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
+    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    member_data: Optional[Union[Any, shared_memberdata.MemberData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData'), 'exclude': lambda f: f is None }})
     
 

@@ -3,10 +3,24 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import clientinvoicedatacreaterequest as shared_clientinvoicedatacreaterequest
+from ..shared import frequency as shared_frequency
+from ..shared import scheduledate as shared_scheduledate
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class ClientInvoiceTemplateCreateRequestFrequency:
+    pass
+
+
+
+@dataclasses.dataclass
+class ClientInvoiceTemplateCreateRequestScheduleDates:
+    pass
 
 class StatusClientInvoiceTemplateCreateRequest(str, Enum):
     ACTIVE = 'Active'
@@ -29,8 +43,8 @@ class ClientInvoiceTemplateCreateRequest:
     client_first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientFirstName'), 'exclude': lambda f: f is None }})
     client_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientLastName'), 'exclude': lambda f: f is None }})
     due_in_days: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueInDays'), 'exclude': lambda f: f is None }})
-    frequency: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
+    frequency: Optional[Union[Any, shared_frequency.Frequency]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
     payment_method_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethodId'), 'exclude': lambda f: f is None }})
-    schedule_dates: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates'), 'exclude': lambda f: f is None }})
+    schedule_dates: Optional[list[Union[Any, shared_scheduledate.ScheduleDate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates'), 'exclude': lambda f: f is None }})
     
 

@@ -1,4 +1,5 @@
 # Statement
+(*statement*)
 
 ### Available Operations
 
@@ -18,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.download(id='in')
+res = s.statement.download(id='saepe')
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +50,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.get(id='commodi')
+res = s.statement.get(id='ipsum')
 
 if res.bank_statements is not None:
     # handle response

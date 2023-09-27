@@ -3,9 +3,16 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import redacteduser as shared_redacteduser
+from ..shared import twenty_threed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb as shared_twenty_threed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class RedactedMemberProfile:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -13,6 +20,6 @@ from wingspan import utils
 @dataclasses.dataclass
 class RedactedMember:
     user: shared_redacteduser.RedactedUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user') }})
-    profile: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('profile'), 'exclude': lambda f: f is None }})
+    profile: Optional[Union[Any, shared_twenty_threed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb.TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('profile'), 'exclude': lambda f: f is None }})
     
 

@@ -1,4 +1,5 @@
 # PaPayableOnClientyable
+(*pa_payable_on_clientyable*)
 
 ### Available Operations
 
@@ -17,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.pa_payable_on_clientyable.delete(id='in')
+res = s.pa_payable_on_clientyable.delete(id='a')
 
 if res.payable_schema is not None:
     # handle response

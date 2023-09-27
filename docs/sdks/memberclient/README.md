@@ -1,4 +1,5 @@
 # MemberClient
+(*member_client*)
 
 ### Available Operations
 
@@ -20,18 +21,18 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.MemberClientCreateRequest(
-    client_id='tempora',
-    company='Cole LLC',
+    client_id='ipsa',
+    company='Kuhlman - Hahn',
     email_cc=[
-        'ipsa',
+        'accusamus',
     ],
-    email_to='molestiae',
-    integration='odio',
-    labels='esse',
-    member_data='rem',
-    member_id='fuga',
-    name='Yvette Stehr',
-    status=shared.StatusMemberClientCreateRequest.INACTIVE,
+    email_to='quidem',
+    integration=[],
+    labels=[],
+    member_data=[],
+    member_id='voluptatibus',
+    name='Faye Daugherty PhD',
+    status=shared.StatusMemberClientCreateRequest.ACTIVE,
 )
 
 res = s.member_client.create(req)
@@ -65,7 +66,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_client.delete(id='assumenda')
+res = s.member_client.delete(id='soluta')
 
 if res.member_client_schema is not None:
     # handle response
@@ -96,7 +97,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_client.get(id='eos')
+res = s.member_client.get(id='dolorum')
 
 if res.member_client_schema is not None:
     # handle response
@@ -127,28 +128,20 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.member_client.update(id='praesentium', member_client_update_request=shared.MemberClientUpdateRequest(
-    client_data=shared.ClientData(
-        auto_pay_strategy=shared.AutoPayStrategyClientData.ALL,
-        external_id='ipsa',
-        verification_stratgy=shared.VerificationStratgyClientData.ALL,
-    ),
-    client_id='quidem',
-    company='Satterfield Group',
+res = s.member_client.update(id='iusto', member_client_update_request=shared.MemberClientUpdateRequest(
+    client_data=[],
+    client_id='voluptate',
+    company='Leuschke, Mohr and Treutel',
     email_cc=[
-        'quo',
+        'distinctio',
     ],
-    email_to='fuga',
-    form1099_balances='eos',
-    form_w9_data='ab',
-    integration=shared.Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f(
-        quickbooks='tempora',
-    ),
-    labels={
-        "ipsam": 'aspernatur',
-    },
-    member_data='quo',
-    name='Sophie Bayer',
+    email_to='asperiores',
+    form1099_balances=[],
+    form_w9_data=[],
+    integration=[],
+    labels=[],
+    member_data=[],
+    name='Edna Klocko',
     status=shared.StatusMemberClientUpdateRequest.INACTIVE,
 ))
 

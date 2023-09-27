@@ -1,4 +1,5 @@
 # MemberInvoice
+(*member_invoice*)
 
 ### Available Operations
 
@@ -23,49 +24,41 @@ req = shared.InvoiceCreateRequest(
     accepted_payment_methods=[
         shared.InvoiceCreateRequestAcceptedPaymentMethods.CREDIT,
     ],
-    attachments='totam',
-    client=shared.InvoiceCreateRequestClient2(),
+    attachments=[],
+    client=[],
     collaborators=[
-        'odio',
+        [],
     ],
     credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=5775.43,
-        client_pays=4145.67,
-        member_pays=9594.34,
+        client_absolute_percentage=206.51,
+        client_pays=2292.19,
+        member_pays=7583.79,
     ),
-    currency=shared.CurrencyInvoiceCreateRequest.USD,
-    due_date='deserunt',
-    integration='accusantium',
-    invoice_notes='porro',
-    labels='quas',
-    late_fee_handling=shared.LateFeeConfigUpdate(
-        frequency='deleniti',
-        late_fee_amount=1438.29,
-        late_fee_percentage=6813.93,
-    ),
+    currency=shared.CurrencyInvoiceCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
+    due_date='ad',
+    integration=[],
+    invoice_notes='saepe',
+    labels=[],
+    late_fee_handling=[],
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=6494.63,
-            description='incidunt',
-            detail='atque',
-            discount='minima',
-            integration='fugit',
-            labels={
-                "consequuntur": 'ratione',
-            },
-            quantity=1294.12,
-            reimbursable_expense=False,
-            total_cost=5789.22,
-            unit='atque',
+            cost_per_unit=3834.64,
+            description='deserunt',
+            detail='provident',
+            discount=[],
+            integration=[],
+            labels=[],
+            quantity=3246.83,
+            reimbursable_expense=[],
+            total_cost=8310.49,
+            unit='totam',
         ),
     ],
-    member='esse',
-    member_client_id='eveniet',
-    metadata=shared.InvoiceMetadata(
-        purchase_order_number='veritatis',
-    ),
-    notification_preferences='quod',
-    status=shared.StatusInvoiceCreateRequest.PAYMENT_IN_TRANSIT,
+    member=[],
+    member_client_id='similique',
+    metadata=[],
+    notification_preferences=[],
+    status=shared.StatusInvoiceCreateRequest.DRAFT,
 )
 
 res = s.member_invoice.create(req)
@@ -99,7 +92,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.delete(id='vero')
+res = s.member_invoice.delete(id='at')
 
 if res.invoice is not None:
     # handle response
@@ -130,7 +123,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.get(id='aliquid')
+res = s.member_invoice.get(id='quaerat')
 
 if res.invoice is not None:
     # handle response
@@ -161,56 +154,30 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.update(id='quasi', invoice_update_request=shared.InvoiceUpdateRequest(
+res = s.member_invoice.update(id='tempora', invoice_update_request=shared.InvoiceUpdateRequest(
     accepted_payment_methods=[
-        shared.InvoiceUpdateRequestAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
+        shared.InvoiceUpdateRequestAcceptedPaymentMethods.ACH,
     ],
-    attachments='harum',
-    charged_fees='rerum',
-    client=shared.InvoiceUpdateRequestClient2(),
+    attachments=[],
+    charged_fees=[],
+    client=[],
     collaborators=[
-        'distinctio',
+        [],
     ],
-    credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=270.69,
-        client_pays=6360.61,
-        member_pays=7313.98,
-    ),
-    due_date='adipisci',
-    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-        quickbooks='consequatur',
-    ),
-    invoice_notes='minus',
-    labels='sapiente',
-    late_fee_handling='esse',
+    credit_fee_handling=[],
+    due_date='quod',
+    integration=[],
+    invoice_notes='officiis',
+    labels=[],
+    late_fee_handling=[],
     line_items=[
-        shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=5909.84,
-            description='a',
-            detail='nulla',
-            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                amount=4572.23,
-                description='quasi',
-                percentage=9518.75,
-            ),
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                    expense_account_id='pariatur',
-                    item_id='possimus',
-                ),
-            ),
-            labels='eveniet',
-            quantity=9924.3,
-            reimbursable_expense=False,
-            total_cost=850.01,
-            unit='consequuntur',
-        ),
+        [],
     ],
-    member='similique',
-    member_client_id='culpa',
-    metadata='tenetur',
-    notification_preferences='earum',
-    status=shared.StatusInvoiceUpdateRequest.CANCELLED,
+    member=[],
+    member_client_id='qui',
+    metadata=[],
+    notification_preferences=[],
+    status=shared.StatusInvoiceUpdateRequest.PAYMENT_IN_TRANSIT,
 ))
 
 if res.invoice is not None:

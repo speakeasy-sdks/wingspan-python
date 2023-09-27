@@ -2,10 +2,17 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import feehandlingconfig as shared_feehandlingconfig
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class ClientInvoiceUpdateRequestCreditFeeHandling:
+    pass
 
 class StatusClientInvoiceUpdateRequest(str, Enum):
     DRAFT = 'Draft'
@@ -22,7 +29,7 @@ class StatusClientInvoiceUpdateRequest(str, Enum):
 
 @dataclasses.dataclass
 class ClientInvoiceUpdateRequest:
-    credit_fee_handling: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling'), 'exclude': lambda f: f is None }})
+    credit_fee_handling: Optional[Union[Any, shared_feehandlingconfig.FeeHandlingConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling'), 'exclude': lambda f: f is None }})
     status: Optional[StatusClientInvoiceUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     
 

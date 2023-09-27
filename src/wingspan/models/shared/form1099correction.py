@@ -4,13 +4,19 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
 
 
 
 @dataclasses.dataclass
 class Form1099CorrectionAddress2:
+    pass
+
+
+
+@dataclasses.dataclass
+class Form1099CorrectionAddress:
     pass
 
 class CompanyStructureForm1099Correction(str, Enum):
@@ -31,7 +37,7 @@ class CompanyStructureForm1099Correction(str, Enum):
 
 @dataclasses.dataclass
 class Form1099Correction:
-    address: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
+    address: Optional[Union[Any, Form1099CorrectionAddress2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
     company_structure: Optional[CompanyStructureForm1099Correction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('companyStructure'), 'exclude': lambda f: f is None }})
     ein: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ein'), 'exclude': lambda f: f is None }})
     first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstName'), 'exclude': lambda f: f is None }})

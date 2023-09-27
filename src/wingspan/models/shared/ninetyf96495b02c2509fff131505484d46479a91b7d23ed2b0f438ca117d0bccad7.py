@@ -2,16 +2,29 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import collaboratorform1099balancesupdaterequest as shared_collaboratorform1099balancesupdaterequest
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad72021:
+    pass
+
+
+
+@dataclasses.dataclass
+class Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad72022:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 
 @dataclasses.dataclass
 class Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7:
-    two_thousand_and_twenty_one: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('2021'), 'exclude': lambda f: f is None }})
-    two_thousand_and_twenty_two: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('2022'), 'exclude': lambda f: f is None }})
+    two_thousand_and_twenty_one: Optional[Union[Any, shared_collaboratorform1099balancesupdaterequest.CollaboratorForm1099BalancesUpdateRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('2021'), 'exclude': lambda f: f is None }})
+    two_thousand_and_twenty_two: Optional[Union[Any, shared_collaboratorform1099balancesupdaterequest.CollaboratorForm1099BalancesUpdateRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('2022'), 'exclude': lambda f: f is None }})
     
 

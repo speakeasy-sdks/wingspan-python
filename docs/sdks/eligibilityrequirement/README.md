@@ -1,4 +1,5 @@
 # EligibilityRequirement
+(*eligibility_requirement*)
 
 ### Available Operations
 
@@ -21,8 +22,8 @@ s = wingspan.Wingspan()
 
 req = shared.EligibilityRequirementCreateRequest(
     requirement_type=shared.EligibilityRequirementCreateRequestRequirementType.SIGNATURE,
-    template_id='quas',
-    valid_for=9295.3,
+    template_id='perferendis',
+    valid_for=1709.86,
 )
 
 res = s.eligibility_requirement.create(req)
@@ -56,7 +57,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.delete(id='consequatur')
+res = s.eligibility_requirement.delete(id='minus')
 
 if res.eligibility_requirements is not None:
     # handle response
@@ -87,7 +88,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.get(id='est')
+res = s.eligibility_requirement.get(id='quam')
 
 if res.eligibility_requirements is not None:
     # handle response
@@ -118,10 +119,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.update(id='repellendus', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
+res = s.eligibility_requirement.update(id='dolor', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
     requirement_type=shared.EligibilityRequirementUpdateRequestRequirementType.SIGNATURE,
-    template_id='porro',
-    valid_for=9843.3,
+    template_id='vero',
+    valid_for=3453.52,
 ))
 
 if res.eligibility_requirements is not None:

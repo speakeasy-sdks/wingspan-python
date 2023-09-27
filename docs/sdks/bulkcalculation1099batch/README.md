@@ -1,4 +1,5 @@
 # BulkCalculation1099Batch
+(*bulk_calculation1099_batch*)
 
 ### Available Operations
 
@@ -19,7 +20,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkBatchCreate(
-    labels='nam',
+    labels=[],
 )
 
 res = s.bulk_calculation1099_batch.create(req)
@@ -53,7 +54,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch.get(batch_id='officia')
+res = s.bulk_calculation1099_batch.get(batch_id='dolorum')
 
 if res.bulk_calculation1099_batch is not None:
     # handle response
@@ -84,9 +85,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch.update(batch_id='occaecati', bulk_batch_update=shared.BulkBatchUpdate(
-    labels='deleniti',
-    status=shared.StatusBulkBatchUpdate.LESS_THAN_NIL_GREATER_THAN_,
+res = s.bulk_calculation1099_batch.update(batch_id='dicta', bulk_batch_update=shared.BulkBatchUpdate(
+    labels=[],
+    status=shared.StatusBulkBatchUpdate.FAILED,
 ))
 
 if res.bulk_calculation1099_batch is not None:

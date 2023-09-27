@@ -1,4 +1,5 @@
 # CollaboratorsDetailsV2
+(*collaborators_details_v2*)
 
 ### Available Operations
 

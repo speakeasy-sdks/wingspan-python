@@ -2,17 +2,31 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import address as shared_address
+from ..shared import company as shared_company
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74ebAddress:
+    pass
+
+
+
+@dataclasses.dataclass
+class TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74ebCompany:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 
 @dataclasses.dataclass
 class TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb:
-    address: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
-    company: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is None }})
+    address: Optional[Union[Any, shared_address.Address]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
+    company: Optional[Union[Any, shared_company.Company]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is None }})
     logo_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logoUrl'), 'exclude': lambda f: f is None }})
     ssn_last_four: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssnLastFour'), 'exclude': lambda f: f is None }})
     

@@ -1,4 +1,5 @@
 # InstantPayout
+(*instant_payout*)
 
 ### Available Operations
 
@@ -19,7 +20,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InstantPayoutRequest(
-    external_payout_account_token='quae',
+    external_payout_account_token='perspiciatis',
 )
 
 res = s.instant_payout.create(req)

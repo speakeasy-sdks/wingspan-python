@@ -4,13 +4,19 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
 
 class CalculationTypeBulkCalculation1099ItemCreate(str, Enum):
     BALANCES = 'Balances'
     SUBMISSIONS = 'Submissions'
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
+
+
+
+@dataclasses.dataclass
+class BulkCalculation1099ItemCreateLabels:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -20,6 +26,6 @@ class BulkCalculation1099ItemCreate:
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     year: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('year') }})
     calculation_type: Optional[CalculationTypeBulkCalculation1099ItemCreate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationType'), 'exclude': lambda f: f is None }})
-    labels: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     
 

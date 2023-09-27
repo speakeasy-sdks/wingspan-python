@@ -3,15 +3,30 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import address as shared_address
+from ..shared import bankaccount as shared_bankaccount
 from ..shared import clientoptions as shared_clientoptions
 from ..shared import externalids as shared_externalids
+from ..shared import feehandlingconfig as shared_feehandlingconfig
+from ..shared import fees as shared_fees
+from ..shared import invoiceamountdetails as shared_invoiceamountdetails
+from ..shared import invoiceapplieddeductions as shared_invoiceapplieddeductions
+from ..shared import invoiceattachments as shared_invoiceattachments
+from ..shared import invoicecollaborator as shared_invoicecollaborator
 from ..shared import invoiceevents as shared_invoiceevents
+from ..shared import invoiceintegrations as shared_invoiceintegrations
 from ..shared import invoicelineitem as shared_invoicelineitem
+from ..shared import invoicemetadata as shared_invoicemetadata
+from ..shared import invoicenotificationpreferences as shared_invoicenotificationpreferences
+from ..shared import invoicepayoutdestination as shared_invoicepayoutdestination
+from ..shared import invoicewithholdings as shared_invoicewithholdings
+from ..shared import latefeeconfig as shared_latefeeconfig
 from ..shared import memberoptions as shared_memberoptions
+from ..shared import paymentinfo as shared_paymentinfo
+from ..shared import processingfees as shared_processingfees
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
 
 class InvoiceAcceptedPaymentMethods(str, Enum):
@@ -20,9 +35,99 @@ class InvoiceAcceptedPaymentMethods(str, Enum):
     MANUAL = 'Manual'
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
+
+
+@dataclasses.dataclass
+class InvoiceAmountDetails1:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceAttachments1:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceBankTransferInfo:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceChargedFees:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceCollaborators:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceCreditFeeHandling:
+    pass
+
 class CurrencyInvoice(str, Enum):
     USD = 'USD'
     CAD = 'CAD'
+
+
+
+@dataclasses.dataclass
+class InvoiceDeductions:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceIntegration:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceInternationalBankTransferInfo:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceLateFeeHandling:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceMetadata1:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceNotificationPreferences1:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoicePaymentInfo:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoicePayoutDestinations:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceProcessingFees:
+    pass
 
 class StatusInvoice(str, Enum):
     DRAFT = 'Draft'
@@ -32,6 +137,12 @@ class StatusInvoice(str, Enum):
     PENDING = 'Pending'
     PAYMENT_IN_TRANSIT = 'PaymentInTransit'
     PAID = 'Paid'
+
+
+
+@dataclasses.dataclass
+class InvoiceWithholdings1:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -58,28 +169,28 @@ class Invoice:
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
     accepted_payment_methods: Optional[list[InvoiceAcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods'), 'exclude': lambda f: f is None }})
     account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId'), 'exclude': lambda f: f is None }})
-    amount_details: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amountDetails'), 'exclude': lambda f: f is None }})
-    attachments: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments'), 'exclude': lambda f: f is None }})
-    bank_transfer_info: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bankTransferInfo'), 'exclude': lambda f: f is None }})
-    charged_fees: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('chargedFees'), 'exclude': lambda f: f is None }})
+    amount_details: Optional[Union[Any, shared_invoiceamountdetails.InvoiceAmountDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amountDetails'), 'exclude': lambda f: f is None }})
+    attachments: Optional[Union[Any, shared_invoiceattachments.InvoiceAttachments]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments'), 'exclude': lambda f: f is None }})
+    bank_transfer_info: Optional[Union[Any, shared_bankaccount.BankAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bankTransferInfo'), 'exclude': lambda f: f is None }})
+    charged_fees: Optional[Union[Any, shared_fees.Fees]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('chargedFees'), 'exclude': lambda f: f is None }})
     client_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId'), 'exclude': lambda f: f is None }})
-    collaborators: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaborators'), 'exclude': lambda f: f is None }})
-    credit_fee_handling: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling'), 'exclude': lambda f: f is None }})
-    deductions: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductions'), 'exclude': lambda f: f is None }})
-    integration: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
-    international_bank_transfer_info: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internationalBankTransferInfo'), 'exclude': lambda f: f is None }})
+    collaborators: Optional[list[Union[Any, shared_invoicecollaborator.InvoiceCollaborator]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaborators'), 'exclude': lambda f: f is None }})
+    credit_fee_handling: Optional[Union[Any, shared_feehandlingconfig.FeeHandlingConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling'), 'exclude': lambda f: f is None }})
+    deductions: Optional[list[Union[Any, shared_invoiceapplieddeductions.InvoiceAppliedDeductions]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductions'), 'exclude': lambda f: f is None }})
+    integration: Optional[Union[Any, shared_invoiceintegrations.InvoiceIntegrations]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
+    international_bank_transfer_info: Optional[Union[Any, shared_bankaccount.BankAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internationalBankTransferInfo'), 'exclude': lambda f: f is None }})
     invoice_notes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceNotes'), 'exclude': lambda f: f is None }})
     invoice_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceTemplateId'), 'exclude': lambda f: f is None }})
-    late_fee_handling: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeHandling'), 'exclude': lambda f: f is None }})
+    late_fee_handling: Optional[Union[Any, shared_latefeeconfig.LateFeeConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeHandling'), 'exclude': lambda f: f is None }})
     member_formatted_address_lines: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberFormattedAddressLines'), 'exclude': lambda f: f is None }})
-    metadata: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
-    notification_preferences: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notificationPreferences'), 'exclude': lambda f: f is None }})
+    metadata: Optional[Union[Any, shared_invoicemetadata.InvoiceMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
+    notification_preferences: Optional[Union[Any, shared_invoicenotificationpreferences.InvoiceNotificationPreferences]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notificationPreferences'), 'exclude': lambda f: f is None }})
     parent_invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parentInvoiceId'), 'exclude': lambda f: f is None }})
-    payment_info: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentInfo'), 'exclude': lambda f: f is None }})
+    payment_info: Optional[Union[Any, shared_paymentinfo.PaymentInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentInfo'), 'exclude': lambda f: f is None }})
     payment_method_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethodId'), 'exclude': lambda f: f is None }})
-    payout_destinations: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations'), 'exclude': lambda f: f is None }})
-    processing_fees: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processingFees'), 'exclude': lambda f: f is None }})
+    payout_destinations: Optional[list[Union[Any, shared_invoicepayoutdestination.InvoicePayoutDestination]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations'), 'exclude': lambda f: f is None }})
+    processing_fees: Optional[Union[Any, shared_processingfees.ProcessingFees]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processingFees'), 'exclude': lambda f: f is None }})
     source_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceId'), 'exclude': lambda f: f is None }})
-    withholdings: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('withholdings'), 'exclude': lambda f: f is None }})
+    withholdings: Optional[Union[Any, shared_invoicewithholdings.InvoiceWithholdings]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('withholdings'), 'exclude': lambda f: f is None }})
     
 
