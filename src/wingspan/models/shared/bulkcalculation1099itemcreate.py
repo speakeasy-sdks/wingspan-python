@@ -25,7 +25,7 @@ class BulkCalculation1099ItemCreateLabels:
 class BulkCalculation1099ItemCreate:
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     year: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('year') }})
-    calculation_type: Optional[CalculationTypeBulkCalculation1099ItemCreate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationType'), 'exclude': lambda f: f is None }})
+    calculation_type: Optional[CalculationTypeBulkCalculation1099ItemCreate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationType') }})
     labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     
 

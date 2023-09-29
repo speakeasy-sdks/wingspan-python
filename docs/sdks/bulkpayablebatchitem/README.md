@@ -20,22 +20,22 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.create(batch_id='sint', bulk_payable_item_create=shared.BulkPayableItemCreate(
-    amount=831.12,
-    attachment_id='itaque',
-    bulk_payable_batch_id='incidunt',
-    bulk_payable_item_merge_key='enim',
-    bulk_payable_item_reference='consequatur',
-    collaborator_email='est',
-    collaborator_external_id='quibusdam',
-    collaborator_id='explicabo',
-    due_date='deserunt',
+res = s.bulk_payable_batch_item.create(batch_id='online', bulk_payable_item_create=shared.BulkPayableItemCreate(
+    amount=6384.24,
+    attachment_id='Money blue shred',
+    bulk_payable_batch_id='technology East',
+    bulk_payable_item_merge_key='evolve',
+    bulk_payable_item_reference='fuchsia Gasoline Screen',
+    collaborator_email='physical Ameliorated',
+    collaborator_external_id='after',
+    collaborator_id='Intelligent Fish',
+    due_date='Fiat',
     labels=[],
-    line_item_description='distinctio',
-    line_item_detail='quibusdam',
-    paid_date='labore',
-    payable_notes='modi',
-    payable_status=shared.PayableStatusBulkPayableItemCreate.DRAFT,
+    line_item_description='Grocery Borders Northwest',
+    line_item_detail='Kentucky animated',
+    paid_date='Interactions Senior Mouse',
+    payable_notes='or',
+    payable_status=shared.PayableStatusBulkPayableItemCreate.OPEN,
     reimbursable_expense=[],
     workflow_sub_status=shared.WorkflowSubStatusBulkPayableItemCreate.SUBMITTED,
 ))
@@ -70,7 +70,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.get(batch_id='cupiditate', batch_item_id='quos')
+res = s.bulk_payable_batch_item.get(batch_id='female', batch_item_id='program')
 
 if res.bulk_payable_item is not None:
     # handle response
@@ -102,22 +102,22 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.update(batch_id='perferendis', batch_item_id='magni', bulk_payable_item_update=shared.BulkPayableItemUpdate(
-    amount=8289.4,
-    attachment_id='ipsam',
-    bulk_payable_batch_id='alias',
-    bulk_payable_item_merge_key='fugit',
-    bulk_payable_item_reference='dolorum',
-    collaborator_email='excepturi',
-    collaborator_external_id='tempora',
-    collaborator_id='facilis',
-    due_date='tempore',
+res = s.bulk_payable_batch_item.update(batch_id='Van', batch_item_id='East', bulk_payable_item_update=shared.BulkPayableItemUpdate(
+    amount=7084.55,
+    attachment_id='Metal cheater Islands',
+    bulk_payable_batch_id='withdrawal extend',
+    bulk_payable_item_merge_key='bifurcated',
+    bulk_payable_item_reference='silver immediately',
+    collaborator_email='East',
+    collaborator_external_id='Bicycle guestbook',
+    collaborator_id='Galveston pascal',
+    due_date='Division Northeast Wooden',
     labels=[],
-    line_item_description='labore',
-    line_item_detail='delectus',
-    paid_date='eum',
-    payable_notes='non',
-    payable_status=shared.PayableStatusBulkPayableItemUpdate.CANCELLED,
+    line_item_description='Jaguar Dodge',
+    line_item_detail='Buckinghamshire frictionless haptic',
+    paid_date='possimus navigating Diesel',
+    payable_notes='Greens',
+    payable_status=shared.PayableStatusBulkPayableItemUpdate.PAID,
     reimbursable_expense=[],
     workflow_sub_status=shared.BulkPayableItemUpdateWorkflowSubStatus.LESS_THAN_NIL_GREATER_THAN_,
 ))

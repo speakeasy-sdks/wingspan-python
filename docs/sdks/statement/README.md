@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.download(id='saepe')
+res = s.statement.download(id='optical')
 
 if res.status_code == 200:
     # handle response
@@ -50,7 +50,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.get(id='ipsum')
+res = s.statement.get(id='female')
 
 if res.bank_statements is not None:
     # handle response

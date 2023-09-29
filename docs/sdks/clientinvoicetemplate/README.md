@@ -20,37 +20,37 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceTemplateCreateRequest(
-    account_id='id',
-    client_company='labore',
-    client_email='labore',
+    account_id='bluetooth Extended',
+    client_company='blue',
+    client_email='grey technology East',
     client_email_cc=[
-        'suscipit',
+        'orange',
     ],
-    client_first_name='natus',
-    client_last_name='nobis',
-    due_in_days=4287.69,
+    client_first_name='male',
+    client_last_name='Gasoline Screen mobile',
+    due_in_days=6562.56,
     frequency=[],
     invoice_data=shared.ClientInvoiceDataCreateRequest(
         credit_fee_handling=[],
-        currency=shared.CurrencyClientInvoiceDataCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
-        due_date='aspernatur',
+        currency=shared.CurrencyClientInvoiceDataCreateRequest.CAD,
+        due_date='Fresh',
         line_items=[
             shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=1028.63,
-                description='magnam',
-                detail='et',
+                cost_per_unit=177.59,
+                description='Open-architected contextually-based concept',
+                detail='female',
                 discount=[],
                 integration=[],
                 labels=[],
-                quantity=5699.65,
+                quantity=8291.42,
                 reimbursable_expense=[],
-                total_cost=3540.47,
-                unit='provident',
+                total_cost=3229.97,
+                unit='weber',
             ),
         ],
     ),
-    member_id='quos',
-    payment_method_id='sint',
+    member_id='Account',
+    payment_method_id='Profound',
     schedule_dates=[
         [],
     ],
@@ -88,7 +88,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.get(id='mollitia')
+res = s.client_invoice_template.get(id='female')
 
 if res.client_invoice_template is not None:
     # handle response
@@ -119,10 +119,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.update(id='reiciendis', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
-    account_id='mollitia',
-    client_id='ad',
-    payment_method_id='eum',
+res = s.client_invoice_template.update(id='Van', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
+    account_id='Reactive',
+    client_id='Metal cheater Islands',
+    payment_method_id='withdrawal extend',
 ))
 
 if res.client_invoice_template is not None:

@@ -21,7 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkInvoiceBatchCreate(
     labels=[],
-    processing_strategy=shared.BulkInvoiceBatchCreateProcessingStrategy.SINGLE,
+    processing_strategy=shared.BulkInvoiceBatchCreateProcessingStrategy.MERGE,
 )
 
 res = s.bulk_invoice_batch.create(req)
@@ -55,7 +55,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.get(batch_id='ipsam')
+res = s.bulk_invoice_batch.get(batch_id='female')
 
 if res.bulk_invoice_batch is not None:
     # handle response
@@ -86,9 +86,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.update(batch_id='id', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate(
+res = s.bulk_invoice_batch.update(batch_id='Van', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate(
     labels=[],
-    status=shared.StatusBulkInvoiceBatchUpdate.FAILED,
+    status=shared.StatusBulkInvoiceBatchUpdate.OPEN,
 ))
 
 if res.bulk_invoice_batch is not None:

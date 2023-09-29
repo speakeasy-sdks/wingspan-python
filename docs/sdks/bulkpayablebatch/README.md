@@ -22,7 +22,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkPayableBatchCreate(
     labels=[],
-    processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.SINGLE,
+    processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.MERGE,
 )
 
 res = s.bulk_payable_batch.create(req)
@@ -56,7 +56,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.delete(batch_id='rem')
+res = s.bulk_payable_batch.delete(batch_id='program')
 
 if res.bulk_payable_batch is not None:
     # handle response
@@ -87,7 +87,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.get(batch_id='voluptates')
+res = s.bulk_payable_batch.get(batch_id='female')
 
 if res.bulk_payable_batch is not None:
     # handle response
@@ -118,9 +118,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.update(batch_id='quasi', bulk_payable_batch_update=shared.BulkPayableBatchUpdate(
+res = s.bulk_payable_batch.update(batch_id='Van', bulk_payable_batch_update=shared.BulkPayableBatchUpdate(
     labels=[],
-    status=shared.StatusBulkPayableBatchUpdate.LESS_THAN_NIL_GREATER_THAN_,
+    status=shared.StatusBulkPayableBatchUpdate.OPEN,
 ))
 
 if res.bulk_payable_batch is not None:

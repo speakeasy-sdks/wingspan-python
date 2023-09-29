@@ -27,6 +27,6 @@ class StatusBulkPayableBatchUpdate(str, Enum):
 @dataclasses.dataclass
 class BulkPayableBatchUpdate:
     labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    status: Optional[StatusBulkPayableBatchUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[StatusBulkPayableBatchUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

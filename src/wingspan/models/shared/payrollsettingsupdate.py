@@ -76,9 +76,9 @@ class PayrollSettingsUpdate:
     frequency: Optional[Union[Any, shared_frequencyupdate.FrequencyUpdate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
     funding_source: Optional[Union[Any, shared_fundingsource.FundingSource]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fundingSource'), 'exclude': lambda f: f is None }})
     issue1099s: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('issue1099s'), 'exclude': lambda f: f is None }})
-    process_days_before_due: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processDaysBeforeDue'), 'exclude': lambda f: f is None }})
-    schedule_dates: Optional[list[Union[Any, shared_scheduledateupdate.ScheduleDateUpdate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates'), 'exclude': lambda f: f is None }})
-    status: Optional[StatusPayrollSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-    workflow: Optional[WorkflowPayrollSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflow'), 'exclude': lambda f: f is None }})
+    process_days_before_due: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processDaysBeforeDue') }})
+    schedule_dates: Optional[list[Union[Any, shared_scheduledateupdate.ScheduleDateUpdate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates') }})
+    status: Optional[StatusPayrollSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    workflow: Optional[WorkflowPayrollSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflow') }})
     
 

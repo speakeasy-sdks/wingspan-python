@@ -7,7 +7,7 @@ from ..shared import form1099correction as shared_form1099correction
 from ..shared import form1099events as shared_form1099events
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Any, Final, Optional, Union
 from wingspan import utils
 
 
@@ -58,9 +58,6 @@ class MemberClientForm1099BalancesTaxForm2:
 class MemberClientForm1099BalancesTaxForm:
     pass
 
-class TypeMemberClientForm1099Balances(str, Enum):
-    NEC = 'NEC'
-
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 
@@ -73,11 +70,11 @@ class MemberClientForm1099Balances:
     payment_processing_fees: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentProcessingFees') }})
     platform_income: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('platformIncome') }})
     status: StatusMemberClientForm1099Balances = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-    type: TypeMemberClientForm1099Balances = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    TYPE: Final[str] = dataclasses.field(default='NEC', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     correction: Optional[Union[Any, shared_form1099correction.Form1099Correction]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('correction'), 'exclude': lambda f: f is None }})
     dispute: Optional[Union[Any, shared_eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5.Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dispute'), 'exclude': lambda f: f is None }})
     events: Optional[Union[Any, shared_form1099events.Form1099Events]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events'), 'exclude': lambda f: f is None }})
     tax_form: Optional[Union[Any, MemberClientForm1099BalancesTaxForm2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxForm'), 'exclude': lambda f: f is None }})
-    tax_form_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxFormId'), 'exclude': lambda f: f is None }})
+    tax_form_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxFormId') }})
     
 

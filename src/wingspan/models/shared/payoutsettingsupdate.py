@@ -27,7 +27,7 @@ class PayoutPreferencesPayoutSettingsUpdate(str, Enum):
 
 @dataclasses.dataclass
 class PayoutSettingsUpdate:
-    payout_destinations: Optional[list[Union[Any, shared_payoutdestinationupdate.PayoutDestinationUpdate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations'), 'exclude': lambda f: f is None }})
-    payout_preferences: Optional[PayoutPreferencesPayoutSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences'), 'exclude': lambda f: f is None }})
+    payout_destinations: Optional[list[Union[Any, shared_payoutdestinationupdate.PayoutDestinationUpdate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations') }})
+    payout_preferences: Optional[PayoutPreferencesPayoutSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences') }})
     
 

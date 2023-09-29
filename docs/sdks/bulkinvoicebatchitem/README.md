@@ -20,28 +20,28 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.create(batch_id='aut', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
+res = s.bulk_invoice_batch_item.create(batch_id='online', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
     accepted_payment_methods=[
-        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.CREDIT,
+        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.MANUAL,
     ],
-    amount=6228.46,
-    bulk_invoice_batch_id='temporibus',
-    bulk_invoice_item_merge_key='laborum',
-    bulk_invoice_item_reference='quasi',
-    client_email='reiciendis',
-    client_external_id='voluptatibus',
+    amount=8592.13,
+    bulk_invoice_batch_id='innovative blue',
+    bulk_invoice_item_merge_key='grey technology East',
+    bulk_invoice_item_reference='evolve',
+    client_email='fuchsia Gasoline Screen',
+    client_external_id='physical Ameliorated',
     credit_fee_handling=[],
-    due_date='vero',
-    invoice_notes='nihil',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.APPROVED,
+    due_date='after',
+    invoice_notes='Intelligent Fish',
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.DRAFT,
     labels=[],
-    line_item_description='voluptatibus',
-    line_item_detail='ipsa',
-    member_client_id='omnis',
-    paid_date='voluptate',
-    project_name='cum',
+    line_item_description='functionalities Grocery Borders',
+    line_item_detail='Profound',
+    member_client_id='metrics',
+    paid_date='Minivan',
+    project_name='Senior Mouse West',
     reimbursable_expense=[],
-    send_date='perferendis',
+    send_date='Towels likewise',
 ))
 
 if res.bulk_invoice_item is not None:
@@ -74,7 +74,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.get(batch_id='doloremque', batch_item_id='reprehenderit')
+res = s.bulk_invoice_batch_item.get(batch_id='female', batch_item_id='program')
 
 if res.bulk_invoice_item is not None:
     # handle response
@@ -106,28 +106,28 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.update(batch_id='ut', batch_item_id='maiores', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
+res = s.bulk_invoice_batch_item.update(batch_id='Van', batch_item_id='East', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
     accepted_payment_methods=[
-        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.CREDIT,
+        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.MANUAL,
     ],
-    amount=3594.44,
-    bulk_invoice_batch_id='dolore',
-    bulk_invoice_item_merge_key='iusto',
-    bulk_invoice_item_reference='dicta',
-    client_email='harum',
-    client_external_id='enim',
+    amount=9914.64,
+    bulk_invoice_batch_id='Quality',
+    bulk_invoice_item_merge_key='invoice Arizona',
+    bulk_invoice_item_reference='mostly',
+    client_email='dynamic white',
+    client_external_id='Carolina syndicate',
     credit_fee_handling=[],
-    due_date='accusamus',
-    invoice_notes='commodi',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemUpdate.LESS_THAN_NIL_GREATER_THAN_,
+    due_date='implement JBOD',
+    invoice_notes='Quality guestbook driver',
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemUpdate.APPROVED,
     labels=[],
-    line_item_description='quae',
-    line_item_detail='ipsum',
-    member_client_id='quidem',
-    paid_date='molestias',
-    project_name='excepturi',
+    line_item_description='Sharable Division Northeast',
+    line_item_detail='Northwest Fantastic',
+    member_client_id='Internal invoice',
+    paid_date='brightly',
+    project_name='frictionless haptic modulo',
     reimbursable_expense=[],
-    send_date='pariatur',
+    send_date='navigating Diesel Avon',
 ))
 
 if res.bulk_invoice_item is not None:

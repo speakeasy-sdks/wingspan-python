@@ -60,7 +60,7 @@ class CollaboratorsReportResponse:
     status: StatusCollaboratorsReportResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     tax_status: TaxStatusCollaboratorsReportResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxStatus') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
-    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is None }})
+    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
     labels: Optional[Union[Any, CollaboratorsReportResponseLabels2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     member_events: Optional[Union[Any, shared_collaboratorevents.CollaboratorEvents]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberEvents'), 'exclude': lambda f: f is None }})
     tax_document_stared: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxDocumentStared'), 'exclude': lambda f: f is None }})

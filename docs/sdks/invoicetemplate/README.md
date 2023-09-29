@@ -21,39 +21,39 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InvoiceTemplateCreateRequest(
-    due_in_days=7301.22,
+    due_in_days=4865.89,
     frequency=[],
     invoice_data=shared.InvoiceDataCreateRequest(
         accepted_payment_methods=[
-            shared.InvoiceDataCreateRequestAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
+            shared.InvoiceDataCreateRequestAcceptedPaymentMethods.ACH,
         ],
         attachments=[],
         collaborators=[
             [],
         ],
         credit_fee_handling=[],
-        currency=shared.CurrencyInvoiceDataCreateRequest.USD,
-        due_date='quos',
-        invoice_notes='aliquid',
+        currency=shared.CurrencyInvoiceDataCreateRequest.CAD,
+        due_date='Money blue shred',
+        invoice_notes='technology East',
         labels=[],
         late_fee_handling=[],
         line_items=[
             shared.InvoiceLineItemsCreateRequest(
-                cost_per_unit=2123.9,
-                description='dolorem',
-                detail='dolor',
+                cost_per_unit=1697.27,
+                description='Front-line asynchronous paradigm',
+                detail='SUV quantify Polestar',
                 discount=[],
                 integration=[],
                 labels=[],
-                quantity=1861.93,
+                quantity=4915.7,
                 reimbursable_expense=[],
-                total_cost=2187.49,
-                unit='hic',
+                total_cost=9574.09,
+                unit='becquerel',
             ),
         ],
-        member_client_id='excepturi',
+        member_client_id='Durham after',
         notification_preferences=[],
-        status=shared.StatusInvoiceDataCreateRequest.PAYMENT_IN_TRANSIT,
+        status=shared.StatusInvoiceDataCreateRequest.PENDING,
     ),
     is_scheduling_only=[],
     labels=[],
@@ -61,7 +61,7 @@ req = shared.InvoiceTemplateCreateRequest(
         [],
     ],
     send_emails=[],
-    status=shared.StatusInvoiceTemplateCreateRequest.DRAFT,
+    status=shared.StatusInvoiceTemplateCreateRequest.ACTIVE,
 )
 
 res = s.invoice_template.create(req)
@@ -95,7 +95,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.delete(id='dignissimos')
+res = s.invoice_template.delete(id='program')
 
 if res.invoice_template is not None:
     # handle response
@@ -126,7 +126,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.get(id='reiciendis')
+res = s.invoice_template.get(id='female')
 
 if res.invoice_template is not None:
     # handle response
@@ -157,20 +157,20 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.update(id='amet', invoice_template_update_request=shared.InvoiceTemplateUpdateRequest(
-    account_id='dolorum',
+res = s.invoice_template.update(id='Van', invoice_template_update_request=shared.InvoiceTemplateUpdateRequest(
+    account_id='Reactive',
     auto_payment_required=[],
-    due_in_days=2543.56,
+    due_in_days=9914.64,
     frequency=[],
     invoice_data=[],
     is_scheduling_only=[],
     labels=[],
-    payment_method_id='veritatis',
+    payment_method_id='Quality',
     schedule_dates=[
         [],
     ],
     send_emails=[],
-    status=shared.StatusInvoiceTemplateUpdateRequest.ACTIVE,
+    status=shared.StatusInvoiceTemplateUpdateRequest.EXPIRED,
 ))
 
 if res.invoice_template is not None:

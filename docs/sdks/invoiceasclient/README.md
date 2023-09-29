@@ -18,31 +18,31 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceCreateRequest(
-    client_company='blanditiis',
-    client_email='error',
+    client_company='bluetooth Extended',
+    client_email='blue',
     client_email_cc=[
-        'eaque',
+        'shred',
     ],
-    client_first_name='occaecati',
-    client_last_name='rerum',
+    client_first_name='technology East',
+    client_last_name='evolve',
     credit_fee_handling=[],
-    currency=shared.CurrencyClientInvoiceCreateRequest.USD,
-    due_date='asperiores',
+    currency=shared.CurrencyClientInvoiceCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
+    due_date='SUV quantify Polestar',
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=9342.14,
-            description='modi',
-            detail='iste',
+            cost_per_unit=4915.7,
+            description='User-friendly multi-state frame',
+            detail='Fresh',
             discount=[],
             integration=[],
             labels=[],
-            quantity=6790.91,
+            quantity=177.59,
             reimbursable_expense=[],
-            total_cost=5356.33,
-            unit='pariatur',
+            total_cost=5190.28,
+            unit='kilogram',
         ),
     ],
-    member_id='provident',
+    member_id='Fish',
 )
 
 res = s.invoice_as_client.create(req)

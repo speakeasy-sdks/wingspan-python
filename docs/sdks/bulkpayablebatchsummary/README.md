@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_summary.get(batch_id='provident')
+res = s.bulk_payable_batch_summary.get(batch_id='female')
 
 if res.bulk_payable_import_summary is not None:
     # handle response

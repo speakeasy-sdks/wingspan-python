@@ -27,7 +27,7 @@ class CurrencyClientInvoiceDataCreateRequest(str, Enum):
 class ClientInvoiceDataCreateRequest:
     line_items: list[shared_invoicelineitemscreaterequest.InvoiceLineItemsCreateRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
     credit_fee_handling: Optional[Union[Any, shared_feehandlingconfig.FeeHandlingConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling'), 'exclude': lambda f: f is None }})
-    currency: Optional[CurrencyClientInvoiceDataCreateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency'), 'exclude': lambda f: f is None }})
-    due_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueDate'), 'exclude': lambda f: f is None }})
+    currency: Optional[CurrencyClientInvoiceDataCreateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency') }})
+    due_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueDate') }})
     
 

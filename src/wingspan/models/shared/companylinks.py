@@ -11,10 +11,10 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class CompanyLinks:
-    instagram_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instagramUrl'), 'exclude': lambda f: f is None }})
-    linked_in_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('linkedInUrl'), 'exclude': lambda f: f is None }})
-    other_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('otherUrl'), 'exclude': lambda f: f is None }})
-    twitter_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twitterUrl'), 'exclude': lambda f: f is None }})
-    website_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('websiteUrl'), 'exclude': lambda f: f is None }})
+    instagram_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instagramUrl') }})
+    linked_in_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('linkedInUrl') }})
+    other_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('otherUrl') }})
+    twitter_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twitterUrl') }})
+    website_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('websiteUrl') }})
     
 

@@ -11,6 +11,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class ExternalIdsBulkImport:
-    bulk_item_merge_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkItemMergeKey'), 'exclude': lambda f: f is None }})
+    bulk_item_merge_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkItemMergeKey') }})
     
 

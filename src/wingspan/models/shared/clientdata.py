@@ -22,8 +22,8 @@ class VerificationStratgyClientData(str, Enum):
 
 @dataclasses.dataclass
 class ClientData:
-    auto_pay_strategy: Optional[AutoPayStrategyClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPayStrategy'), 'exclude': lambda f: f is None }})
-    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is None }})
-    verification_stratgy: Optional[VerificationStratgyClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('verificationStratgy'), 'exclude': lambda f: f is None }})
+    auto_pay_strategy: Optional[AutoPayStrategyClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPayStrategy') }})
+    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
+    verification_stratgy: Optional[VerificationStratgyClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('verificationStratgy') }})
     
 

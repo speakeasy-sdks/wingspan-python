@@ -22,8 +22,8 @@ class ShareTaxDocumentMemberData(str, Enum):
 
 @dataclasses.dataclass
 class MemberData:
-    auto_pay_requirement: Optional[AutoPayRequirementMemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPayRequirement'), 'exclude': lambda f: f is None }})
-    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is None }})
-    share_tax_document: Optional[ShareTaxDocumentMemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shareTaxDocument'), 'exclude': lambda f: f is None }})
+    auto_pay_requirement: Optional[AutoPayRequirementMemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPayRequirement') }})
+    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
+    share_tax_document: Optional[ShareTaxDocumentMemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shareTaxDocument') }})
     
 

@@ -23,7 +23,7 @@ class Invoice:
         url = utils.generate_url(operations.GenerateInvoiceRequest, base_url, '/payments/invoice/{invoice_id}/generate', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         
@@ -53,7 +53,7 @@ class Invoice:
         url = utils.generate_url(operations.SendInvoiceRequest, base_url, '/payments/invoice/{invoice_id}/send', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         

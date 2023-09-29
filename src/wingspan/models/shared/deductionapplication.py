@@ -13,6 +13,6 @@ from wingspan import utils
 class DeductionApplication:
     amount_deducted: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amountDeducted') }})
     payable_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payableId') }})
-    disbursement_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursementId'), 'exclude': lambda f: f is None }})
+    disbursement_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursementId') }})
     
 

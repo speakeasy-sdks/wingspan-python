@@ -29,6 +29,6 @@ class PayoutDestinationResponse:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     payout_method: PayoutMethodPayoutDestinationResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutMethod') }})
     percentage: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage') }})
-    last4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last4'), 'exclude': lambda f: f is None }})
+    last4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last4') }})
     
 

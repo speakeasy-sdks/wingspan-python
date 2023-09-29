@@ -17,9 +17,9 @@ class MeansTypePaymentInfo(str, Enum):
 @dataclasses.dataclass
 class PaymentInfo:
     means_type: MeansTypePaymentInfo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansType') }})
-    brand_image_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brandImageUrl'), 'exclude': lambda f: f is None }})
-    card_brand: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardBrand'), 'exclude': lambda f: f is None }})
-    means_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansDescription'), 'exclude': lambda f: f is None }})
-    means_last4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansLast4'), 'exclude': lambda f: f is None }})
+    brand_image_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brandImageUrl') }})
+    card_brand: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardBrand') }})
+    means_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansDescription') }})
+    means_last4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansLast4') }})
     
 

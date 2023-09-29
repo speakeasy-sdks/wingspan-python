@@ -8,8 +8,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Calculate1099Request(
-    member_client_id='corrupti',
-    year=5928.45,
+    member_client_id='green Practical',
+    year=7783.47,
 )
 
 res = s.one_thousand_and_ninety_nine.calculate(req)

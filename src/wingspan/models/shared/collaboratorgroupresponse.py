@@ -30,6 +30,6 @@ class CollaboratorGroupResponse:
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     collaborator_settings: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings'), 'exclude': lambda f: f is None }})
-    eligibility_requirements: Optional[list[Union[Any, shared_eligibilityrequirement.EligibilityRequirement]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements'), 'exclude': lambda f: f is None }})
+    eligibility_requirements: Optional[list[Union[Any, shared_eligibilityrequirement.EligibilityRequirement]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
     
 

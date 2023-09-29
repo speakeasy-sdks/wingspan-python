@@ -21,18 +21,18 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.MemberClientCreateRequest(
-    client_id='ipsa',
-    company='Kuhlman - Hahn',
+    client_id='bluetooth Extended',
+    company='Schaefer Inc',
     email_cc=[
-        'accusamus',
+        'shred',
     ],
-    email_to='quidem',
+    email_to='technology East',
     integration=[],
     labels=[],
     member_data=[],
-    member_id='voluptatibus',
-    name='Faye Daugherty PhD',
-    status=shared.StatusMemberClientCreateRequest.ACTIVE,
+    member_id='evolve',
+    name='fuchsia Gasoline Screen',
+    status=shared.StatusMemberClientCreateRequest.INACTIVE,
 )
 
 res = s.member_client.create(req)
@@ -66,7 +66,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_client.delete(id='soluta')
+res = s.member_client.delete(id='program')
 
 if res.member_client_schema is not None:
     # handle response
@@ -97,7 +97,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_client.get(id='dolorum')
+res = s.member_client.get(id='female')
 
 if res.member_client_schema is not None:
     # handle response
@@ -128,21 +128,21 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.member_client.update(id='iusto', member_client_update_request=shared.MemberClientUpdateRequest(
+res = s.member_client.update(id='Van', member_client_update_request=shared.MemberClientUpdateRequest(
     client_data=[],
-    client_id='voluptate',
-    company='Leuschke, Mohr and Treutel',
+    client_id='Reactive',
+    company='Glover, Murazik and Paucek',
     email_cc=[
-        'distinctio',
+        'redundant',
     ],
-    email_to='asperiores',
+    email_to='Arizona Cotton extend',
     form1099_balances=[],
     form_w9_data=[],
     integration=[],
     labels=[],
     member_data=[],
-    name='Edna Klocko',
-    status=shared.StatusMemberClientUpdateRequest.INACTIVE,
+    name='bifurcated',
+    status=shared.StatusMemberClientUpdateRequest.PENDING,
 ))
 
 if res.member_client_schema is not None:

@@ -26,9 +26,9 @@ class PayoutMethodPayoutDestinationUpdate(str, Enum):
 
 @dataclasses.dataclass
 class PayoutDestinationUpdate:
-    destination_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationId'), 'exclude': lambda f: f is None }})
-    destination_type: Optional[DestinationTypePayoutDestinationUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationType'), 'exclude': lambda f: f is None }})
-    payout_method: Optional[PayoutMethodPayoutDestinationUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutMethod'), 'exclude': lambda f: f is None }})
-    percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage'), 'exclude': lambda f: f is None }})
+    destination_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationId') }})
+    destination_type: Optional[DestinationTypePayoutDestinationUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationType') }})
+    payout_method: Optional[PayoutMethodPayoutDestinationUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutMethod') }})
+    percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage') }})
     
 

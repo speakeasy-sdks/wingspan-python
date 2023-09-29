@@ -22,16 +22,16 @@ s = wingspan.Wingspan()
 
 req = shared.CollaboratorCreateRequest(
     client_data=[],
-    client_id='nemo',
-    collaborator_group_id='quasi',
+    client_id='bluetooth Extended',
+    collaborator_group_id='blue',
     form_w9_data=[],
     integration=[],
     labels=[],
-    member_company='iure',
-    member_email='doloribus',
-    member_id='debitis',
-    member_name='eius',
-    status=shared.StatusCollaboratorCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
+    member_company='grey technology East',
+    member_email='evolve',
+    member_id='fuchsia Gasoline Screen',
+    member_name='physical Ameliorated',
+    status=shared.StatusCollaboratorCreateRequest.INACTIVE,
 )
 
 res = s.collaborator.create(req)
@@ -65,7 +65,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.delete(id='deleniti')
+res = s.collaborator.delete(id='program')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -96,7 +96,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.get(id='facilis')
+res = s.collaborator.get(id='female')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -127,7 +127,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.update(id='in', collaborator_update_request=shared.CollaboratorUpdateRequest(
+res = s.collaborator.update(id='Van', collaborator_update_request=shared.CollaboratorUpdateRequest(
     client_data=[],
     form1099_balances=[],
     form_w9_data=[],

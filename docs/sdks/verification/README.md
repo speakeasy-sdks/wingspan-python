@@ -18,8 +18,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.verification.send(id='veritatis', card_code_request=shared.CardCodeRequest(
-    channel='nobis',
+res = s.verification.send(id='hacking', card_code_request=shared.CardCodeRequest(
+    channel='bluetooth Boynton',
 ))
 
 if res.card_code_response is not None:

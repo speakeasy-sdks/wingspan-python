@@ -12,6 +12,6 @@ from wingspan import utils
 @dataclasses.dataclass
 class CompanyPerson:
     member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})
-    ownership_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ownershipPercentage'), 'exclude': lambda f: f is None }})
+    ownership_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ownershipPercentage') }})
     
 

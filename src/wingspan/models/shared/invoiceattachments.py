@@ -18,10 +18,10 @@ class InvoiceAttachmentsCustomAttachmentInfo:
 
 @dataclasses.dataclass
 class InvoiceAttachments:
-    custom_attachment_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds'), 'exclude': lambda f: f is None }})
-    custom_attachment_info: Optional[list[Union[Any, shared_invoiceattachmentfile.InvoiceAttachmentFile]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentInfo'), 'exclude': lambda f: f is None }})
-    invoice_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceLink'), 'exclude': lambda f: f is None }})
-    invoice_pdf: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicePdf'), 'exclude': lambda f: f is None }})
-    receipt_pdf: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('receiptPdf'), 'exclude': lambda f: f is None }})
+    custom_attachment_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds') }})
+    custom_attachment_info: Optional[list[Union[Any, shared_invoiceattachmentfile.InvoiceAttachmentFile]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentInfo') }})
+    invoice_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceLink') }})
+    invoice_pdf: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicePdf') }})
+    receipt_pdf: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('receiptPdf') }})
     
 

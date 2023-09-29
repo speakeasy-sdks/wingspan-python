@@ -12,6 +12,6 @@ from wingspan import utils
 @dataclasses.dataclass
 class Fee:
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
-    calculated_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculatedAt'), 'exclude': lambda f: f is None }})
+    calculated_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculatedAt') }})
     
 

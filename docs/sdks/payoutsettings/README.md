@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.get(id='ullam')
+res = s.payout_settings.get(id='female')
 
 if res.payout_settings_response is not None:
     # handle response
@@ -50,11 +50,11 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.update(id='nam', payout_settings_update=shared.PayoutSettingsUpdate(
+res = s.payout_settings.update(id='Van', payout_settings_update=shared.PayoutSettingsUpdate(
     payout_destinations=[
         [],
     ],
-    payout_preferences=shared.PayoutPreferencesPayoutSettingsUpdate.LESS_THAN_NIL_GREATER_THAN_,
+    payout_preferences=shared.PayoutPreferencesPayoutSettingsUpdate.STANDARD,
 ))
 
 if res.payout_settings_response is not None:

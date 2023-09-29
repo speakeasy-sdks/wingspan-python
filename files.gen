@@ -764,7 +764,6 @@ docs/models/shared/exclusionreasonmemberclientform1099balances.md
 docs/models/shared/statusmemberclientform1099balances.md
 docs/models/shared/memberclientform1099balancestaxform2.md
 docs/models/shared/memberclientform1099balancestaxform.md
-docs/models/shared/typememberclientform1099balances.md
 docs/models/shared/memberclientform1099balances.md
 docs/models/shared/form1099events.md
 docs/models/shared/status8a9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5.md
@@ -782,7 +781,6 @@ docs/models/shared/externalidsquickbooksdatadoupdate.md
 docs/models/shared/externalidsquickbooksdata.md
 docs/models/shared/externalidsbulkimport.md
 docs/models/shared/memberclientrequirementresponsedocument.md
-docs/models/shared/memberclientrequirementresponserequirementtype.md
 docs/models/shared/statusmemberclientrequirementresponse.md
 docs/models/shared/memberclientrequirementresponse.md
 docs/models/shared/documentresponseevents.md
@@ -1102,7 +1100,6 @@ docs/models/shared/ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a
 docs/models/shared/collaboratorgroupresponsecollaboratorsettings.md
 docs/models/shared/collaboratorgroupresponseeligibilityrequirements.md
 docs/models/shared/collaboratorgroupresponse.md
-docs/models/shared/eligibilityrequirementrequirementtype.md
 docs/models/shared/eligibilityrequirement.md
 docs/models/shared/collaboratorgroupcreaterequestcollaboratorsettings.md
 docs/models/shared/collaboratorgroupcreaterequesteligibilityrequirements.md
@@ -1120,9 +1117,7 @@ docs/models/shared/collaboratorsreportresponsetaxdocumentstared.md
 docs/models/shared/taxstatuscollaboratorsreportresponse.md
 docs/models/shared/collaboratorsreportresponse.md
 docs/models/shared/sixtysixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d.md
-docs/models/shared/eligibilityrequirementcreaterequestrequirementtype.md
 docs/models/shared/eligibilityrequirementcreaterequest.md
-docs/models/shared/eligibilityrequirementupdaterequestrequirementtype.md
 docs/models/shared/eligibilityrequirementupdaterequest.md
 docs/models/shared/download1099response.md
 docs/models/shared/downloadw9response.md

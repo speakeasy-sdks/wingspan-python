@@ -49,8 +49,8 @@ class DeductionResponse:
     type: TypeDeductionResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    deduction_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionTemplateId'), 'exclude': lambda f: f is None }})
+    deduction_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionTemplateId') }})
     disbursement: Optional[Union[Any, shared_postpaymentdeductiondisbursement.PostPaymentDeductionDisbursement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursement'), 'exclude': lambda f: f is None }})
-    source_invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId'), 'exclude': lambda f: f is None }})
+    source_invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId') }})
     
 

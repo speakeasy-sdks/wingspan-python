@@ -20,12 +20,12 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.create(batch_id='ipsum', bulk_client_item_create=shared.BulkClientItemCreate(
+res = s.bulk_client_batch_item.create(batch_id='online', bulk_client_item_create=shared.BulkClientItemCreate(
     client_status=shared.ClientStatusBulkClientItemCreate.PENDING,
-    company='Auer and Sons',
-    email='Camden61@yahoo.com',
-    external_id='laboriosam',
-    first_last_name='hic',
+    company='Johnson, Green and Collier',
+    email='Annie.Zieme95@hotmail.com',
+    external_id='East orange Northwest',
+    first_last_name='SUV quantify Polestar',
     integration=[],
     labels=[],
     member_data=[],
@@ -61,7 +61,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.get(batch_id='saepe', batch_item_id='fuga')
+res = s.bulk_client_batch_item.get(batch_id='female', batch_item_id='program')
 
 if res.bulk_client_item is not None:
     # handle response
@@ -93,12 +93,12 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.update(batch_id='in', batch_item_id='corporis', bulk_client_item_update=shared.BulkClientItemUpdate(
+res = s.bulk_client_batch_item.update(batch_id='Van', batch_item_id='East', bulk_client_item_update=shared.BulkClientItemUpdate(
     client_status=shared.ClientStatusBulkClientItemUpdate.PENDING,
-    company='Turcotte - Predovic',
-    email='Andy_Wisozk67@gmail.com',
-    external_id='dolores',
-    first_last_name='dolorem',
+    company='Glover, Murazik and Paucek',
+    email='Immanuel5@yahoo.com',
+    external_id='mostly',
+    first_last_name='dynamic white',
     integration=[],
     labels=[],
     member_data=[],

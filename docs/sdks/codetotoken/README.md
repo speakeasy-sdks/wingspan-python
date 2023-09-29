@@ -18,9 +18,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.code_to_token.exchange(id='dolor', card_token_request=shared.CardTokenRequest(
-    verification_code='necessitatibus',
-    verification_token='odit',
+res = s.code_to_token.exchange(id='between', card_token_request=shared.CardTokenRequest(
+    verification_code='Canada Southwest panel',
+    verification_token='North Pickup noisily',
 ))
 
 if res.card_token_response is not None:

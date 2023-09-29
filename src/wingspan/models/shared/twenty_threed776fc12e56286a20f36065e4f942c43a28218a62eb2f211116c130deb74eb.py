@@ -27,7 +27,7 @@ class TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74ebC
 class TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb:
     address: Optional[Union[Any, shared_address.Address]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
     company: Optional[Union[Any, shared_company.Company]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is None }})
-    logo_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logoUrl'), 'exclude': lambda f: f is None }})
-    ssn_last_four: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssnLastFour'), 'exclude': lambda f: f is None }})
+    logo_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logoUrl') }})
+    ssn_last_four: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssnLastFour') }})
     
 

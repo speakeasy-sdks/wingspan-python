@@ -21,11 +21,11 @@ s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
     collaborator_settings=[],
-    description='ipsam',
+    description='Multi-tiered human-resource model',
     eligibility_requirements=[
         [],
     ],
-    name='Dr. Stacey Reichert',
+    name='Money blue shred',
 )
 
 res = s.collaborator_group.create(req)
@@ -59,7 +59,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.get(id='voluptatibus')
+res = s.collaborator_group.get(id='female')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -90,13 +90,13 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.update(id='perferendis', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
+res = s.collaborator_group.update(id='Van', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
     collaborator_settings=[],
-    description='fugiat',
+    description='Advanced encompassing orchestration',
     eligibility_requirements=[
         [],
     ],
-    name='Jennifer Runolfsdottir',
+    name='Metal cheater Islands',
 ))
 
 if res.collaborator_group_response is not None:

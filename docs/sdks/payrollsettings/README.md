@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payroll_settings.get(id='voluptatem')
+res = s.payroll_settings.get(id='female')
 
 if res.payroll_settings is not None:
     # handle response
@@ -50,19 +50,19 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payroll_settings.update(id='cumque', payroll_settings_update=shared.PayrollSettingsUpdate(
+res = s.payroll_settings.update(id='Van', payroll_settings_update=shared.PayrollSettingsUpdate(
     calculation_settings1099=[],
     enable_planned_payroll=[],
     enable_process_days_before_due=[],
     frequency=[],
     funding_source=[],
     issue1099s=[],
-    process_days_before_due=7469.94,
+    process_days_before_due=156.52,
     schedule_dates=[
         [],
     ],
-    status=shared.StatusPayrollSettingsUpdate.CANCELLED,
-    workflow=shared.WorkflowPayrollSettingsUpdate.SINGLE_STAGE,
+    status=shared.StatusPayrollSettingsUpdate.DRAFT,
+    workflow=shared.WorkflowPayrollSettingsUpdate.LESS_THAN_NIL_GREATER_THAN_,
 ))
 
 if res.payroll_settings is not None:

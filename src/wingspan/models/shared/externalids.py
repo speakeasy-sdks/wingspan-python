@@ -27,6 +27,6 @@ class ExternalIdsQuickbooks:
 class ExternalIds:
     bulk: Optional[Union[Any, shared_externalidsbulkimport.ExternalIdsBulkImport]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulk'), 'exclude': lambda f: f is None }})
     quickbooks: Optional[Union[Any, dict[str, shared_externalidsquickbooksdata.ExternalIdsQuickbooksData]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks'), 'exclude': lambda f: f is None }})
-    stripe: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stripe'), 'exclude': lambda f: f is None }})
+    stripe: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stripe') }})
     
 

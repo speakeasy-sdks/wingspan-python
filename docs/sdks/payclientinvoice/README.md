@@ -18,10 +18,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.pay_client_invoice.post(invoice_id='esse', pay_request=shared.PayRequest(
-    account_id='harum',
-    payment_method_id='iusto',
-    plaid_public_token='ipsum',
+res = s.pay_client_invoice.post(invoice_id='payment', pay_request=shared.PayRequest(
+    account_id='base mealy Metrics',
+    payment_method_id='Market',
+    plaid_public_token='Grenada',
 ))
 
 if res.client_invoice is not None:

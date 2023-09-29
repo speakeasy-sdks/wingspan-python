@@ -56,7 +56,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.card.delete(id='necessitatibus')
+res = s.card.delete(id='program')
 
 if res.card is not None:
     # handle response
@@ -87,7 +87,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.card.get(id='sint')
+res = s.card.get(id='female')
 
 if res.card_details is not None:
     # handle response
@@ -118,8 +118,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.card.update(id='officia', card_update_request=shared.CardUpdateRequest(
-    status=shared.PropertiesCardUpdateRequest.INACTIVE,
+res = s.card.update(id='Van', card_update_request=shared.CardUpdateRequest(
+    status=shared.PropertiesCardUpdateRequest.ACTIVE,
 ))
 
 if res.card is not None:

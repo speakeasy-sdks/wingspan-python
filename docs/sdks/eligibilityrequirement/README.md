@@ -21,9 +21,9 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.EligibilityRequirementCreateRequest(
-    requirement_type=shared.EligibilityRequirementCreateRequestRequirementType.SIGNATURE,
-    template_id='perferendis',
-    valid_for=1709.86,
+    requirement_type='bluetooth Extended',
+    template_id='blue',
+    valid_for=9967.06,
 )
 
 res = s.eligibility_requirement.create(req)
@@ -57,7 +57,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.delete(id='minus')
+res = s.eligibility_requirement.delete(id='program')
 
 if res.eligibility_requirements is not None:
     # handle response
@@ -88,7 +88,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.get(id='quam')
+res = s.eligibility_requirement.get(id='female')
 
 if res.eligibility_requirements is not None:
     # handle response
@@ -119,10 +119,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.update(id='dolor', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
-    requirement_type=shared.EligibilityRequirementUpdateRequestRequirementType.SIGNATURE,
-    template_id='vero',
-    valid_for=3453.52,
+res = s.eligibility_requirement.update(id='Van', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
+    requirement_type='Reactive',
+    template_id='Metal cheater Islands',
+    valid_for=4995.57,
 ))
 
 if res.eligibility_requirements is not None:

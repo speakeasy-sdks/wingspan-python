@@ -25,9 +25,9 @@ class WorkflowSubStatusClientOptions(str, Enum):
 
 @dataclasses.dataclass
 class ClientOptions:
-    comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment'), 'exclude': lambda f: f is None }})
-    pay_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payDate'), 'exclude': lambda f: f is None }})
-    workflow_status: Optional[WorkflowStatusClientOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowStatus'), 'exclude': lambda f: f is None }})
-    workflow_sub_status: Optional[WorkflowSubStatusClientOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowSubStatus'), 'exclude': lambda f: f is None }})
+    comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment') }})
+    pay_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payDate') }})
+    workflow_status: Optional[WorkflowStatusClientOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowStatus') }})
+    workflow_sub_status: Optional[WorkflowSubStatusClientOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowSubStatus') }})
     
 

@@ -22,7 +22,7 @@ s = wingspan.Wingspan()
 
 req = shared.InvoiceCreateRequest(
     accepted_payment_methods=[
-        shared.InvoiceCreateRequestAcceptedPaymentMethods.CREDIT,
+        shared.InvoiceCreateRequestAcceptedPaymentMethods.ACH,
     ],
     attachments=[],
     client=[],
@@ -30,35 +30,35 @@ req = shared.InvoiceCreateRequest(
         [],
     ],
     credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=206.51,
-        client_pays=2292.19,
-        member_pays=7583.79,
+        client_absolute_percentage=4893.82,
+        client_pays=6384.24,
+        member_pays=8592.13,
     ),
-    currency=shared.CurrencyInvoiceCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
-    due_date='ad',
+    currency=shared.CurrencyInvoiceCreateRequest.CAD,
+    due_date='South',
     integration=[],
-    invoice_notes='saepe',
+    invoice_notes='grey technology East',
     labels=[],
     late_fee_handling=[],
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=3834.64,
-            description='deserunt',
-            detail='provident',
+            cost_per_unit=1697.27,
+            description='Front-line asynchronous paradigm',
+            detail='SUV quantify Polestar',
             discount=[],
             integration=[],
             labels=[],
-            quantity=3246.83,
+            quantity=4915.7,
             reimbursable_expense=[],
-            total_cost=8310.49,
-            unit='totam',
+            total_cost=9574.09,
+            unit='becquerel',
         ),
     ],
     member=[],
-    member_client_id='similique',
+    member_client_id='Durham after',
     metadata=[],
     notification_preferences=[],
-    status=shared.StatusInvoiceCreateRequest.DRAFT,
+    status=shared.StatusInvoiceCreateRequest.PENDING,
 )
 
 res = s.member_invoice.create(req)
@@ -92,7 +92,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.delete(id='at')
+res = s.member_invoice.delete(id='program')
 
 if res.invoice is not None:
     # handle response
@@ -123,7 +123,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.get(id='quaerat')
+res = s.member_invoice.get(id='female')
 
 if res.invoice is not None:
     # handle response
@@ -154,9 +154,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.update(id='tempora', invoice_update_request=shared.InvoiceUpdateRequest(
+res = s.member_invoice.update(id='Van', invoice_update_request=shared.InvoiceUpdateRequest(
     accepted_payment_methods=[
-        shared.InvoiceUpdateRequestAcceptedPaymentMethods.ACH,
+        shared.InvoiceUpdateRequestAcceptedPaymentMethods.CREDIT,
     ],
     attachments=[],
     charged_fees=[],
@@ -165,16 +165,16 @@ res = s.member_invoice.update(id='tempora', invoice_update_request=shared.Invoic
         [],
     ],
     credit_fee_handling=[],
-    due_date='quod',
+    due_date='male Metal',
     integration=[],
-    invoice_notes='officiis',
+    invoice_notes='Arizona Cotton extend',
     labels=[],
     late_fee_handling=[],
     line_items=[
         [],
     ],
     member=[],
-    member_client_id='qui',
+    member_client_id='bifurcated',
     metadata=[],
     notification_preferences=[],
     status=shared.StatusInvoiceUpdateRequest.PAYMENT_IN_TRANSIT,

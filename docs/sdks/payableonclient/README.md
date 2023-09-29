@@ -20,41 +20,41 @@ s = wingspan.Wingspan()
 
 req = shared.PayableCreateRequest(
     accepted_payment_methods=[
-        shared.PayableCreateRequestAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
+        shared.PayableCreateRequestAcceptedPaymentMethods.ACH,
     ],
     attachments=[],
     client=[],
-    collaborator_id='tenetur',
+    collaborator_id='Configuration Money',
     credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=2294.42,
-        client_pays=7308.56,
-        member_pays=8802.98,
+        client_absolute_percentage=7865.46,
+        client_pays=690.25,
+        member_pays=9967.06,
     ),
-    currency=shared.CurrencyPayableCreateRequest.USD,
-    due_date='enim',
+    currency=shared.CurrencyPayableCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
+    due_date='technology East',
     integration=[],
-    invoice_notes='dolorem',
+    invoice_notes='evolve',
     labels=[],
     late_fee_handling=[],
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=9574.51,
-            description='totam',
-            detail='nihil',
+            cost_per_unit=7150.4,
+            description='Secured systematic protocol',
+            detail='Screen mobile',
             discount=[],
             integration=[],
             labels=[],
-            quantity=256.62,
+            quantity=6562.56,
             reimbursable_expense=[],
-            total_cost=7115.84,
-            unit='neque',
+            total_cost=3570.21,
+            unit='meter',
         ),
     ],
     member=[],
-    member_client_id='sed',
+    member_client_id='after',
     metadata=[],
     notification_preferences=[],
-    status=shared.StatusPayableCreateRequest.CANCELLED,
+    status=shared.StatusPayableCreateRequest.PENDING,
 )
 
 res = s.payable_on_client.create(req)
@@ -88,9 +88,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payable_on_client.update(id='libero', payable_update_request=shared.PayableUpdateRequest(
+res = s.payable_on_client.update(id='Van', payable_update_request=shared.PayableUpdateRequest(
     accepted_payment_methods=[
-        shared.PayableUpdateRequestAcceptedPaymentMethods.ACH,
+        shared.PayableUpdateRequestAcceptedPaymentMethods.CREDIT,
     ],
     attachments=[],
     charged_fees=[],
@@ -99,22 +99,22 @@ res = s.payable_on_client.update(id='libero', payable_update_request=shared.Paya
         [],
     ],
     credit_fee_handling=[],
-    due_date='deserunt',
+    due_date='male Metal',
     integration=[],
-    invoice_notes='quam',
+    invoice_notes='Arizona Cotton extend',
     labels=[],
     late_fee_handling=[],
     line_items=[
         [],
     ],
     member=[],
-    member_client_id='ipsum',
+    member_client_id='bifurcated',
     metadata=[],
     notification_preferences=[],
     payment_methods=[
-        shared.PayableUpdateRequestPaymentMethods.ACH,
+        shared.PayableUpdateRequestPaymentMethods.MANUAL,
     ],
-    status=shared.StatusPayableUpdateRequest.OPEN,
+    status=shared.StatusPayableUpdateRequest.PAID,
 ))
 
 if res.payable_schema is not None:

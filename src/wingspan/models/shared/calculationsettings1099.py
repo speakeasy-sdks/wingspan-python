@@ -33,10 +33,10 @@ class CalculationSettings1099StateTaxID:
 
 @dataclasses.dataclass
 class CalculationSettings1099:
-    card_processing_fees: Optional[CardProcessingFeesCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardProcessingFees'), 'exclude': lambda f: f is None }})
-    off_platform_payments: Optional[OffPlatformPaymentsCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offPlatformPayments'), 'exclude': lambda f: f is None }})
-    reimbursable_expenses: Optional[ReimbursableExpensesCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpenses'), 'exclude': lambda f: f is None }})
+    card_processing_fees: Optional[CardProcessingFeesCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardProcessingFees') }})
+    off_platform_payments: Optional[OffPlatformPaymentsCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offPlatformPayments') }})
+    reimbursable_expenses: Optional[ReimbursableExpensesCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpenses') }})
     state_tax_id: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stateTaxId'), 'exclude': lambda f: f is None }})
-    threshold_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('thresholdAmount'), 'exclude': lambda f: f is None }})
+    threshold_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('thresholdAmount') }})
     
 

@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `amount_withheld`  | *float*            | :heavy_check_mark: | N/A                |
-| `rate`             | *float*            | :heavy_check_mark: | N/A                |
+| `amount_withheld`  | *Optional[float]*  | :heavy_check_mark: | N/A                |
+| `rate`             | *Optional[float]*  | :heavy_check_mark: | N/A                |
