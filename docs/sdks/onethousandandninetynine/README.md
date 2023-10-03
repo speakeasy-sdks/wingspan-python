@@ -1,4 +1,5 @@
 # OneThousandAndNinetyNine
+(*one_thousand_and_ninety_nine*)
 
 ### Available Operations
 
@@ -19,8 +20,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Calculate1099Request(
-    member_client_id='unde',
-    year=8579.46,
+    member_client_id='green Practical',
+    year=7783.47,
 )
 
 res = s.one_thousand_and_ninety_nine.calculate(req)
@@ -54,9 +55,9 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Mark1099AsUndeliveredRequest(
-    member_id='corrupti',
-    submission_index=8472.52,
-    year=4236.55,
+    member_id='Avon',
+    submission_index=3695.9,
+    year=3706.5,
 )
 
 res = s.one_thousand_and_ninety_nine.mark(req)
@@ -91,15 +92,15 @@ s = wingspan.Wingspan()
 
 req = shared.Remail1099Request(
     address=shared.Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56(
-        address_line1='error',
-        address_line2='deserunt',
-        city='South Eli',
-        postal_code='09234-7854',
-        state='excepturi',
+        address_line1='purple',
+        address_line2='Dell Incredible',
+        city='West Teresaton',
+        postal_code='13750',
+        state='hmph why architectures',
     ),
-    document_index=3927.85,
-    member_id='recusandae',
-    year=8360.79,
+    document_index=4391.23,
+    member_id='firmware Other Rubber',
+    year=7578.67,
 )
 
 res = s.one_thousand_and_ninety_nine.remail(req)

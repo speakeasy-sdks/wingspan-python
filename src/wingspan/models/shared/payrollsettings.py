@@ -2,10 +2,56 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import calculationsettings1099 as shared_calculationsettings1099
+from ..shared import frequency as shared_frequency
+from ..shared import fundingsource as shared_fundingsource
+from ..shared import scheduledate as shared_scheduledate
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class PayrollSettingsCalculationSettings1099:
+    pass
+
+
+
+@dataclasses.dataclass
+class PayrollSettingsEnablePlannedPayroll:
+    pass
+
+
+
+@dataclasses.dataclass
+class PayrollSettingsEnableProcessDaysBeforeDue:
+    pass
+
+
+
+@dataclasses.dataclass
+class PayrollSettingsFrequency:
+    pass
+
+
+
+@dataclasses.dataclass
+class PayrollSettingsFundingSource:
+    pass
+
+
+
+@dataclasses.dataclass
+class PayrollSettingsIssue1099s:
+    pass
+
+
+
+@dataclasses.dataclass
+class PayrollSettingsScheduleDates:
+    pass
 
 class StatusPayrollSettings(str, Enum):
     ACTIVE = 'Active'
@@ -24,14 +70,14 @@ class PayrollSettingsWorkflow(str, Enum):
 @dataclasses.dataclass
 class PayrollSettings:
     status: StatusPayrollSettings = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-    calculation_settings1099: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationSettings1099'), 'exclude': lambda f: f is None }})
-    enable_planned_payroll: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enablePlannedPayroll'), 'exclude': lambda f: f is None }})
-    enable_process_days_before_due: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enableProcessDaysBeforeDue'), 'exclude': lambda f: f is None }})
-    frequency: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
-    funding_source: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fundingSource'), 'exclude': lambda f: f is None }})
-    issue1099s: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('issue1099s'), 'exclude': lambda f: f is None }})
-    process_days_before_due: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processDaysBeforeDue'), 'exclude': lambda f: f is None }})
-    schedule_dates: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates'), 'exclude': lambda f: f is None }})
-    workflow: Optional[PayrollSettingsWorkflow] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflow'), 'exclude': lambda f: f is None }})
+    calculation_settings1099: Optional[Union[Any, shared_calculationsettings1099.CalculationSettings1099]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationSettings1099'), 'exclude': lambda f: f is None }})
+    enable_planned_payroll: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enablePlannedPayroll'), 'exclude': lambda f: f is None }})
+    enable_process_days_before_due: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enableProcessDaysBeforeDue'), 'exclude': lambda f: f is None }})
+    frequency: Optional[Union[Any, shared_frequency.Frequency]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
+    funding_source: Optional[Union[Any, shared_fundingsource.FundingSource]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fundingSource'), 'exclude': lambda f: f is None }})
+    issue1099s: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('issue1099s'), 'exclude': lambda f: f is None }})
+    process_days_before_due: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processDaysBeforeDue') }})
+    schedule_dates: Optional[list[Union[Any, shared_scheduledate.ScheduleDate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates') }})
+    workflow: Optional[PayrollSettingsWorkflow] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflow') }})
     
 

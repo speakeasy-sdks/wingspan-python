@@ -3,15 +3,22 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import deductionapplication as shared_deductionapplication
+from ..shared import postpaymentdeductiondisbursement as shared_postpaymentdeductiondisbursement
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
 
 class CurrencyDeductionResponse(str, Enum):
     USD = 'USD'
     CAD = 'CAD'
+
+
+
+@dataclasses.dataclass
+class DeductionResponseDisbursement:
+    pass
 
 class DeductionResponseStatus(str, Enum):
     PENDING = 'Pending'
@@ -42,8 +49,8 @@ class DeductionResponse:
     type: TypeDeductionResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    deduction_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionTemplateId'), 'exclude': lambda f: f is None }})
-    disbursement: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursement'), 'exclude': lambda f: f is None }})
-    source_invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId'), 'exclude': lambda f: f is None }})
+    deduction_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionTemplateId') }})
+    disbursement: Optional[Union[Any, shared_postpaymentdeductiondisbursement.PostPaymentDeductionDisbursement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursement'), 'exclude': lambda f: f is None }})
+    source_invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId') }})
     
 

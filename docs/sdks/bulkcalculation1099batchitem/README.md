@@ -1,4 +1,5 @@
 # BulkCalculation1099BatchItem
+(*bulk_calculation1099_batch_item*)
 
 ### Available Operations
 
@@ -19,11 +20,11 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.create(batch_id='optio', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
+res = s.bulk_calculation1099_batch_item.create(batch_id='online', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
     calculation_type=shared.CalculationTypeBulkCalculation1099ItemCreate.SUBMISSIONS,
-    client_id='beatae',
-    labels='molestiae',
-    year=2645.55,
+    client_id='Money blue shred',
+    labels=[],
+    year=3768.44,
 ))
 
 if res.bulk_calculation1099_item is not None:
@@ -56,7 +57,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.get(batch_id='qui', batch_item_id='impedit')
+res = s.bulk_calculation1099_batch_item.get(batch_id='female', batch_item_id='program')
 
 if res.bulk_calculation1099_item is not None:
     # handle response
@@ -88,11 +89,11 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.update(batch_id='cum', batch_item_id='esse', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
-    calculation_type=shared.CalculationTypeBulkCalculation1099ItemUpdate.BALANCES,
-    client_id='excepturi',
-    labels='perferendis',
-    year=3241.41,
+res = s.bulk_calculation1099_batch_item.update(batch_id='Van', batch_item_id='East', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
+    calculation_type=shared.CalculationTypeBulkCalculation1099ItemUpdate.LESS_THAN_NIL_GREATER_THAN_,
+    client_id='Metal cheater Islands',
+    labels=[],
+    year=4995.57,
 ))
 
 if res.bulk_payable_item is not None:

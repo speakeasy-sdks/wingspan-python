@@ -1,4 +1,5 @@
 # CollaboratorDeduction
+(*collaborator_deduction*)
 
 ### Available Operations
 
@@ -20,14 +21,14 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.DeductionCreateRequest(
-    amount=9574.51,
-    client_id='totam',
-    currency=shared.DeductionCreateRequestCurrency.USD,
-    member_id='sit',
-    name='Luis Cremin',
-    priority=3741.7,
-    source_invoice_id='deserunt',
-    start_date='quam',
+    amount=4865.89,
+    client_id='Configuration Money',
+    currency=shared.DeductionCreateRequestCurrency.CAD,
+    member_id='shred',
+    name='technology East',
+    priority=1697.27,
+    source_invoice_id='Northwest',
+    start_date='SUV quantify Polestar',
     type=shared.TypeDeductionCreateRequest.PRE_PAYMENT,
 )
 
@@ -62,7 +63,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.delete(id='incidunt')
+res = s.collaborator_deduction.delete(id='program')
 
 if res.deduction_response is not None:
     # handle response
@@ -93,7 +94,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.get(id='qui')
+res = s.collaborator_deduction.get(id='female')
 
 if res.deduction_response is not None:
     # handle response
@@ -124,14 +125,14 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.update(id='cupiditate', deduction_update_request=shared.DeductionUpdateRequest(
-    amount=8075.81,
-    currency=shared.CurrencyDeductionUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
-    name='Keith Padberg',
-    priority=1320.68,
-    source_invoice_id='dolores',
-    start_date='distinctio',
-    type=shared.TypeDeductionUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
+res = s.collaborator_deduction.update(id='Van', deduction_update_request=shared.DeductionUpdateRequest(
+    amount=156.52,
+    currency=shared.CurrencyDeductionUpdateRequest.CAD,
+    name='dock Quality redundant',
+    priority=9840.08,
+    source_invoice_id='Islands',
+    start_date='withdrawal extend',
+    type=shared.TypeDeductionUpdateRequest.PRE_PAYMENT,
 ))
 
 if res.deduction_response is not None:

@@ -30,9 +30,9 @@ class WorkflowSubStatusMemberOptions(str, Enum):
 
 @dataclasses.dataclass
 class MemberOptions:
-    comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment'), 'exclude': lambda f: f is None }})
-    payout_preferences: Optional[PayoutPreferencesMemberOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences'), 'exclude': lambda f: f is None }})
-    workflow_status: Optional[WorkflowStatusMemberOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowStatus'), 'exclude': lambda f: f is None }})
-    workflow_sub_status: Optional[WorkflowSubStatusMemberOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowSubStatus'), 'exclude': lambda f: f is None }})
+    comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment') }})
+    payout_preferences: Optional[PayoutPreferencesMemberOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences') }})
+    workflow_status: Optional[WorkflowStatusMemberOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowStatus') }})
+    workflow_sub_status: Optional[WorkflowSubStatusMemberOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowSubStatus') }})
     
 

@@ -1,4 +1,5 @@
 # Card
+(*card*)
 
 ### Available Operations
 
@@ -20,8 +21,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CardCreateRequest(
-    request_physical_card=False,
-    shipping_address='excepturi',
+    request_physical_card=[],
+    shipping_address=[],
 )
 
 res = s.card.create(req)
@@ -55,7 +56,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.card.delete(id='odit')
+res = s.card.delete(id='program')
 
 if res.card is not None:
     # handle response
@@ -86,7 +87,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.card.get(id='ea')
+res = s.card.get(id='female')
 
 if res.card_details is not None:
     # handle response
@@ -117,7 +118,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.card.update(id='accusantium', card_update_request=shared.CardUpdateRequest(
+res = s.card.update(id='Van', card_update_request=shared.CardUpdateRequest(
     status=shared.PropertiesCardUpdateRequest.ACTIVE,
 ))
 

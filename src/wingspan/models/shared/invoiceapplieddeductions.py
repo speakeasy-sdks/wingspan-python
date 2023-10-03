@@ -14,6 +14,6 @@ class InvoiceAppliedDeductions:
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     deduction_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionId') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    transfer_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transferId'), 'exclude': lambda f: f is None }})
+    transfer_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transferId') }})
     
 

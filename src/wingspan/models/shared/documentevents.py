@@ -11,7 +11,7 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class DocumentEvents:
-    client_signed_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientSignedAt'), 'exclude': lambda f: f is None }})
-    member_signed_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberSignedAt'), 'exclude': lambda f: f is None }})
+    client_signed_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientSignedAt') }})
+    member_signed_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberSignedAt') }})
     
 

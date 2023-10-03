@@ -4,8 +4,14 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class BulkInvoiceBatchCreateLabels:
+    pass
 
 class BulkInvoiceBatchCreateProcessingStrategy(str, Enum):
     MERGE = 'Merge'
@@ -17,6 +23,6 @@ class BulkInvoiceBatchCreateProcessingStrategy(str, Enum):
 @dataclasses.dataclass
 class BulkInvoiceBatchCreate:
     processing_strategy: BulkInvoiceBatchCreateProcessingStrategy = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processingStrategy') }})
-    labels: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     
 

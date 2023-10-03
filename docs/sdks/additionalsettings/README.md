@@ -1,4 +1,5 @@
 # AdditionalSettings
+(*additional_settings*)
 
 ### Available Operations
 
@@ -43,10 +44,10 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.additional_settings.update(id='at', additional_data_update_request=shared.AdditionalDataUpdateRequest(
-    key='at',
-    name='Javier Schmidt',
-    required=False,
+res = s.additional_settings.update(id='Van', additional_data_update_request=shared.AdditionalDataUpdateRequest(
+    key='<key>',
+    name='Reactive',
+    required=[],
     type=shared.TypeAdditionalDataUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
 ))
 

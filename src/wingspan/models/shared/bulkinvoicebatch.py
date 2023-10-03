@@ -2,15 +2,22 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import seven_hundred_and_fifty_sevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2 as shared_seven_hundred_and_fifty_sevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
 
 class BulkInvoiceBatchProcessingStrategy(str, Enum):
     MERGE = 'Merge'
     SINGLE = 'Single'
+
+
+
+@dataclasses.dataclass
+class BulkInvoiceBatchStatistics:
+    pass
 
 class StatusBulkInvoiceBatch(str, Enum):
     OPEN = 'Open'
@@ -32,6 +39,6 @@ class BulkInvoiceBatch:
     status: StatusBulkInvoiceBatch = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    statistics: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('statistics'), 'exclude': lambda f: f is None }})
+    statistics: Optional[Union[Any, shared_seven_hundred_and_fifty_sevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2.SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('statistics'), 'exclude': lambda f: f is None }})
     
 

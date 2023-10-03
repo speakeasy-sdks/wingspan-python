@@ -13,7 +13,7 @@ from wingspan import utils
 class BankAccount:
     account_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountNumber') }})
     bank_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bankName') }})
-    routing_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('routingNumber'), 'exclude': lambda f: f is None }})
-    swift_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('swiftCode'), 'exclude': lambda f: f is None }})
+    routing_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('routingNumber') }})
+    swift_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('swiftCode') }})
     
 

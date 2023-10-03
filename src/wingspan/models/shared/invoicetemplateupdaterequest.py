@@ -2,10 +2,55 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import frequencyupdate as shared_frequencyupdate
+from ..shared import invoiceupdaterequest as shared_invoiceupdaterequest
+from ..shared import scheduledateupdate as shared_scheduledateupdate
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class InvoiceTemplateUpdateRequestAutoPaymentRequired:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceTemplateUpdateRequestFrequency:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceTemplateUpdateRequestInvoiceData:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceTemplateUpdateRequestIsSchedulingOnly:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceTemplateUpdateRequestLabels:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceTemplateUpdateRequestScheduleDates:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceTemplateUpdateRequestSendEmails:
+    pass
 
 class StatusInvoiceTemplateUpdateRequest(str, Enum):
     ACTIVE = 'Active'
@@ -19,16 +64,16 @@ class StatusInvoiceTemplateUpdateRequest(str, Enum):
 
 @dataclasses.dataclass
 class InvoiceTemplateUpdateRequest:
-    account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId'), 'exclude': lambda f: f is None }})
-    auto_payment_required: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPaymentRequired'), 'exclude': lambda f: f is None }})
-    due_in_days: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueInDays'), 'exclude': lambda f: f is None }})
-    frequency: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
-    invoice_data: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceData'), 'exclude': lambda f: f is None }})
-    is_scheduling_only: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSchedulingOnly'), 'exclude': lambda f: f is None }})
-    labels: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    payment_method_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethodId'), 'exclude': lambda f: f is None }})
-    schedule_dates: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates'), 'exclude': lambda f: f is None }})
-    send_emails: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendEmails'), 'exclude': lambda f: f is None }})
-    status: Optional[StatusInvoiceTemplateUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId') }})
+    auto_payment_required: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPaymentRequired'), 'exclude': lambda f: f is None }})
+    due_in_days: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueInDays') }})
+    frequency: Optional[Union[Any, shared_frequencyupdate.FrequencyUpdate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
+    invoice_data: Optional[Union[Any, shared_invoiceupdaterequest.InvoiceUpdateRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceData'), 'exclude': lambda f: f is None }})
+    is_scheduling_only: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSchedulingOnly'), 'exclude': lambda f: f is None }})
+    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    payment_method_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethodId') }})
+    schedule_dates: Optional[list[Union[Any, shared_scheduledateupdate.ScheduleDateUpdate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates') }})
+    send_emails: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendEmails'), 'exclude': lambda f: f is None }})
+    status: Optional[StatusInvoiceTemplateUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

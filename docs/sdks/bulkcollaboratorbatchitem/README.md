@@ -1,4 +1,5 @@
 # BulkCollaboratorBatchItem
+(*bulk_collaborator_batch_item*)
 
 ### Available Operations
 
@@ -19,32 +20,16 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.create(batch_id='id', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
-    collaborator_group_id='possimus',
-    collaborator_id='aut',
+res = s.bulk_collaborator_batch_item.create(batch_id='online', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
+    collaborator_group_id='Extended South',
+    collaborator_id='grey technology East',
     collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemCreate.ACTIVE,
-    company='Smitham - Pacocha',
-    email='Wanda.Wolf50@gmail.com',
-    external_id='voluptatibus',
-    first_last_name='ipsa',
-    form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='voluptate',
-        address_line2='cum',
-        city='North Ilianaboro',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.PARTNERSHIP,
-        country='Brazil',
-        dob='corporis',
-        ein='dolore',
-        first_name='Jayden',
-        last_name='Carter',
-        legal_business_name='harum',
-        postal_code='84902',
-        ssn='quidem',
-        state='molestias',
-    ),
-    labels={
-        "pariatur": 'modi',
-    },
+    company='Borer LLC',
+    email='Russel_Schumm@hotmail.com',
+    external_id='volt physical Ameliorated',
+    first_last_name='after',
+    form_w9_data=[],
+    labels=[],
 ))
 
 if res.bulk_collaborator_item is not None:
@@ -77,7 +62,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.get(batch_id='praesentium', batch_item_id='rem')
+res = s.bulk_collaborator_batch_item.get(batch_id='female', batch_item_id='program')
 
 if res.bulk_collaborator_item is not None:
     # handle response
@@ -109,16 +94,16 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.update(batch_id='voluptates', batch_item_id='quasi', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
-    collaborator_group_id='repudiandae',
-    collaborator_id='sint',
+res = s.bulk_collaborator_batch_item.update(batch_id='Van', batch_item_id='East', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
+    collaborator_group_id='dock Quality redundant',
+    collaborator_id='Arizona Cotton extend',
     collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemUpdate.ACTIVE,
-    company='Gottlieb, Hamill and Altenwerth',
-    email='Roosevelt_Cole@hotmail.com',
-    external_id='quibusdam',
-    first_last_name='labore',
-    form_w9_data='qui',
-    labels='cupiditate',
+    company='Connelly - Nolan',
+    email='Zakary.Towne@hotmail.com',
+    external_id='JBOD',
+    first_last_name='Quality guestbook driver',
+    form_w9_data=[],
+    labels=[],
 ))
 
 if res.bulk_collaborator_item is not None:

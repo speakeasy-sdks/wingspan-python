@@ -11,8 +11,8 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class FeeHandlingConfig:
-    client_absolute_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientAbsolutePercentage'), 'exclude': lambda f: f is None }})
-    client_pays: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientPays'), 'exclude': lambda f: f is None }})
-    member_pays: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberPays'), 'exclude': lambda f: f is None }})
+    client_absolute_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientAbsolutePercentage') }})
+    client_pays: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientPays') }})
+    member_pays: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberPays') }})
     
 

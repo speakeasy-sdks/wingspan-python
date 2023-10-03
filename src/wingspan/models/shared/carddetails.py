@@ -6,8 +6,14 @@ from ..shared import address as shared_address
 from ..shared import c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 as shared_c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class CardDetailsPinSet:
+    pass
 
 class StatusCardDetails(str, Enum):
     ACTIVE = 'Active'
@@ -38,6 +44,6 @@ class CardDetails:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     status: StatusCardDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     type: TypeCardDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-    pin_set: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pinSet'), 'exclude': lambda f: f is None }})
+    pin_set: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pinSet'), 'exclude': lambda f: f is None }})
     
 

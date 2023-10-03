@@ -3,16 +3,37 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c as shared_b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c
+from ..shared import clientdata as shared_clientdata
 from ..shared import collaboration as shared_collaboration
+from ..shared import collaboratorevents as shared_collaboratorevents
 from ..shared import collaboratorv2formw9info as shared_collaboratorv2formw9info
 from ..shared import memberclientwireaccount as shared_memberclientwireaccount
+from ..shared import memberdata as shared_memberdata
 from ..shared import ninecd48bf78a297540b0ec6f45365beb8d6ce0ee88e6d244115ad226e6701011a3 as shared_ninecd48bf78a297540b0ec6f45365beb8d6ce0ee88e6d244115ad226e6701011a3
 from ..shared import redactedmember as shared_redactedmember
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class CollaboratorV2ClientData:
+    pass
+
+
+
+@dataclasses.dataclass
+class CollaboratorV2MemberData:
+    pass
+
+
+
+@dataclasses.dataclass
+class CollaboratorV2MemberEvents:
+    pass
 
 class StatusCollaboratorV2(str, Enum):
     ACTIVE = 'Active'
@@ -47,8 +68,8 @@ class CollaboratorV2:
     tax_status: TaxStatusCollaboratorV2 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxStatus') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    client_data: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData'), 'exclude': lambda f: f is None }})
-    member_data: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData'), 'exclude': lambda f: f is None }})
-    member_events: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberEvents'), 'exclude': lambda f: f is None }})
+    client_data: Optional[Union[Any, shared_clientdata.ClientData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData'), 'exclude': lambda f: f is None }})
+    member_data: Optional[Union[Any, shared_memberdata.MemberData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData'), 'exclude': lambda f: f is None }})
+    member_events: Optional[Union[Any, shared_collaboratorevents.CollaboratorEvents]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberEvents'), 'exclude': lambda f: f is None }})
     
 

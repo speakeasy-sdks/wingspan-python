@@ -1,4 +1,5 @@
 # Institution
+(*institution*)
 
 ### Available Operations
 
@@ -17,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.institution.get(routing_number='laudantium')
+res = s.institution.get(routing_number='female')
 
 if res.institution_response is not None:
     # handle response

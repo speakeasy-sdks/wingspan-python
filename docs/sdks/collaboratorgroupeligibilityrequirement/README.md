@@ -1,4 +1,5 @@
 # CollaboratorGroupEligibilityRequirement
+(*collaborator_group_eligibility_requirement*)
 
 ### Available Operations
 
@@ -18,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group_eligibility_requirement.delete(eligibility_requirement_id='aperiam', id='delectus')
+res = s.collaborator_group_eligibility_requirement.delete(eligibility_requirement_id='program', id='Designer')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -50,8 +51,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group_eligibility_requirement.replace(eligibility_requirement_id='dolorem', id='dolore', collaborator_group_requirement_update=shared.CollaboratorGroupRequirementUpdate(
-    new_eligibility_requirement_id='labore',
+res = s.collaborator_group_eligibility_requirement.replace(eligibility_requirement_id='Cruiser', id='Tandem', collaborator_group_requirement_update=shared.CollaboratorGroupRequirementUpdate(
+    new_eligibility_requirement_id='Bicycle',
 ))
 
 if res.collaborator_group_response is not None:

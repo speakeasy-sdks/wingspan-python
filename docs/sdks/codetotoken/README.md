@@ -1,4 +1,5 @@
 # CodeToToken
+(*code_to_token*)
 
 ### Available Operations
 
@@ -17,9 +18,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.code_to_token.exchange(id='eos', card_token_request=shared.CardTokenRequest(
-    verification_code='atque',
-    verification_token='sit',
+res = s.code_to_token.exchange(id='between', card_token_request=shared.CardTokenRequest(
+    verification_code='Canada Southwest panel',
+    verification_token='North Pickup noisily',
 ))
 
 if res.card_token_response is not None:

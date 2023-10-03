@@ -1,4 +1,5 @@
 # Form1099
+(*form1099*)
 
 ### Available Operations
 
@@ -17,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.form1099.download(id='ut', index='facilis', year='cupiditate')
+res = s.form1099.download(id='optical', index='Dakota', year='infrastructures')
 
 if res.download1099_response is not None:
     # handle response

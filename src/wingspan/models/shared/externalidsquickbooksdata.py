@@ -3,8 +3,26 @@
 from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class ExternalIdsQuickbooksDataDoCreate:
+    pass
+
+
+
+@dataclasses.dataclass
+class ExternalIdsQuickbooksDataDoDelete:
+    pass
+
+
+
+@dataclasses.dataclass
+class ExternalIdsQuickbooksDataDoUpdate:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -13,8 +31,8 @@ from wingspan import utils
 class ExternalIdsQuickbooksData:
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     sync_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncToken') }})
-    do_create: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doCreate'), 'exclude': lambda f: f is None }})
-    do_delete: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doDelete'), 'exclude': lambda f: f is None }})
-    do_update: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doUpdate'), 'exclude': lambda f: f is None }})
+    do_create: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doCreate'), 'exclude': lambda f: f is None }})
+    do_delete: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doDelete'), 'exclude': lambda f: f is None }})
+    do_update: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doUpdate'), 'exclude': lambda f: f is None }})
     
 

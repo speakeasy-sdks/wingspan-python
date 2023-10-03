@@ -1,4 +1,5 @@
 # MemberClient
+(*member_client*)
 
 ### Available Operations
 
@@ -20,17 +21,17 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.MemberClientCreateRequest(
-    client_id='tempora',
-    company='Cole LLC',
+    client_id='bluetooth Extended',
+    company='Schaefer Inc',
     email_cc=[
-        'ipsa',
+        'shred',
     ],
-    email_to='molestiae',
-    integration='odio',
-    labels='esse',
-    member_data='rem',
-    member_id='fuga',
-    name='Yvette Stehr',
+    email_to='technology East',
+    integration=[],
+    labels=[],
+    member_data=[],
+    member_id='evolve',
+    name='fuchsia Gasoline Screen',
     status=shared.StatusMemberClientCreateRequest.INACTIVE,
 )
 
@@ -65,7 +66,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_client.delete(id='assumenda')
+res = s.member_client.delete(id='program')
 
 if res.member_client_schema is not None:
     # handle response
@@ -96,7 +97,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_client.get(id='eos')
+res = s.member_client.get(id='female')
 
 if res.member_client_schema is not None:
     # handle response
@@ -127,29 +128,21 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.member_client.update(id='praesentium', member_client_update_request=shared.MemberClientUpdateRequest(
-    client_data=shared.ClientData(
-        auto_pay_strategy=shared.AutoPayStrategyClientData.ALL,
-        external_id='ipsa',
-        verification_stratgy=shared.VerificationStratgyClientData.ALL,
-    ),
-    client_id='quidem',
-    company='Satterfield Group',
+res = s.member_client.update(id='Van', member_client_update_request=shared.MemberClientUpdateRequest(
+    client_data=[],
+    client_id='Reactive',
+    company='Glover, Murazik and Paucek',
     email_cc=[
-        'quo',
+        'redundant',
     ],
-    email_to='fuga',
-    form1099_balances='eos',
-    form_w9_data='ab',
-    integration=shared.Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f(
-        quickbooks='tempora',
-    ),
-    labels={
-        "ipsam": 'aspernatur',
-    },
-    member_data='quo',
-    name='Sophie Bayer',
-    status=shared.StatusMemberClientUpdateRequest.INACTIVE,
+    email_to='Arizona Cotton extend',
+    form1099_balances=[],
+    form_w9_data=[],
+    integration=[],
+    labels=[],
+    member_data=[],
+    name='bifurcated',
+    status=shared.StatusMemberClientUpdateRequest.PENDING,
 ))
 
 if res.member_client_schema is not None:

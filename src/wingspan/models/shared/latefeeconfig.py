@@ -13,7 +13,7 @@ from wingspan import utils
 @dataclasses.dataclass
 class LateFeeConfig:
     frequency: shared_frequency.Frequency = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency') }})
-    late_fee_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeAmount'), 'exclude': lambda f: f is None }})
-    late_fee_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeePercentage'), 'exclude': lambda f: f is None }})
+    late_fee_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeAmount') }})
+    late_fee_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeePercentage') }})
     
 

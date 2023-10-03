@@ -1,4 +1,5 @@
 # BulkInvoiceBatchItem
+(*bulk_invoice_batch_item*)
 
 ### Available Operations
 
@@ -19,34 +20,28 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.create(batch_id='tempora', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
+res = s.bulk_invoice_batch_item.create(batch_id='online', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
     accepted_payment_methods=[
         shared.BulkInvoiceItemCreateAcceptedPaymentMethods.MANUAL,
     ],
-    amount=7351.94,
-    bulk_invoice_batch_id='labore',
-    bulk_invoice_item_merge_key='delectus',
-    bulk_invoice_item_reference='eum',
-    client_email='non',
-    client_external_id='eligendi',
-    credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=3960.98,
-        client_pays=5920.42,
-        member_pays=8960.39,
-    ),
-    due_date='sint',
-    invoice_notes='officia',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.OPEN,
-    labels={
-        "a": 'dolorum',
-    },
-    line_item_description='in',
-    line_item_detail='in',
-    member_client_id='illum',
-    paid_date='maiores',
-    project_name='rerum',
-    reimbursable_expense='magnam',
-    send_date='cumque',
+    amount=8592.13,
+    bulk_invoice_batch_id='innovative blue',
+    bulk_invoice_item_merge_key='grey technology East',
+    bulk_invoice_item_reference='evolve',
+    client_email='fuchsia Gasoline Screen',
+    client_external_id='physical Ameliorated',
+    credit_fee_handling=[],
+    due_date='after',
+    invoice_notes='Intelligent Fish',
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.DRAFT,
+    labels=[],
+    line_item_description='functionalities Grocery Borders',
+    line_item_detail='Profound',
+    member_client_id='metrics',
+    paid_date='Minivan',
+    project_name='Senior Mouse West',
+    reimbursable_expense=[],
+    send_date='Towels likewise',
 ))
 
 if res.bulk_invoice_item is not None:
@@ -79,7 +74,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.get(batch_id='facere', batch_item_id='ea')
+res = s.bulk_invoice_batch_item.get(batch_id='female', batch_item_id='program')
 
 if res.bulk_invoice_item is not None:
     # handle response
@@ -111,34 +106,28 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.update(batch_id='aliquid', batch_item_id='laborum', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
+res = s.bulk_invoice_batch_item.update(batch_id='Van', batch_item_id='East', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
     accepted_payment_methods=[
-        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
+        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.MANUAL,
     ],
-    amount=2497.96,
-    bulk_invoice_batch_id='occaecati',
-    bulk_invoice_item_merge_key='enim',
-    bulk_invoice_item_reference='accusamus',
-    client_email='delectus',
-    client_external_id='quidem',
-    credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=7252.55,
-        client_pays=6596.69,
-        member_pays=5013.24,
-    ),
-    due_date='deleniti',
-    invoice_notes='sapiente',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemUpdate.OPEN,
-    labels={
-        "nisi": 'vel',
-    },
-    line_item_description='natus',
-    line_item_detail='omnis',
-    member_client_id='molestiae',
-    paid_date='perferendis',
-    project_name='nihil',
-    reimbursable_expense='distinctio',
-    send_date='id',
+    amount=9914.64,
+    bulk_invoice_batch_id='Quality',
+    bulk_invoice_item_merge_key='invoice Arizona',
+    bulk_invoice_item_reference='mostly',
+    client_email='dynamic white',
+    client_external_id='Carolina syndicate',
+    credit_fee_handling=[],
+    due_date='implement JBOD',
+    invoice_notes='Quality guestbook driver',
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemUpdate.APPROVED,
+    labels=[],
+    line_item_description='Sharable Division Northeast',
+    line_item_detail='Northwest Fantastic',
+    member_client_id='Internal invoice',
+    paid_date='brightly',
+    project_name='frictionless haptic modulo',
+    reimbursable_expense=[],
+    send_date='navigating Diesel Avon',
 ))
 
 if res.bulk_invoice_item is not None:

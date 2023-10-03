@@ -2,11 +2,25 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import documentevents as shared_documentevents
+from ..shared import documentfiles as shared_documentfiles
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class DocumentResponseEvents:
+    pass
+
+
+
+@dataclasses.dataclass
+class DocumentResponseFiles:
+    pass
 
 class StatusDocumentResponse(str, Enum):
     REQUIRED = 'Required'
@@ -28,7 +42,7 @@ class DocumentResponse:
     template_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('templateId') }})
     title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('title') }})
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    events: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events'), 'exclude': lambda f: f is None }})
-    files: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('files'), 'exclude': lambda f: f is None }})
+    events: Optional[Union[Any, shared_documentevents.DocumentEvents]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events'), 'exclude': lambda f: f is None }})
+    files: Optional[Union[Any, shared_documentfiles.DocumentFiles]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('files'), 'exclude': lambda f: f is None }})
     
 

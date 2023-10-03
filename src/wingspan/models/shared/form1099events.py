@@ -11,13 +11,13 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class Form1099Events:
-    accepted_by_collaborator_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedByCollaboratorAt'), 'exclude': lambda f: f is None }})
-    created_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt'), 'exclude': lambda f: f is None }})
-    post_filing_suggestion_made_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postFilingSuggestionMadeAt'), 'exclude': lambda f: f is None }})
-    post_filing_suggestion_resolved_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postFilingSuggestionResolvedAt'), 'exclude': lambda f: f is None }})
-    submitted_for_collaborator_review_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('submittedForCollaboratorReviewAt'), 'exclude': lambda f: f is None }})
-    suggestion_made_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suggestionMadeAt'), 'exclude': lambda f: f is None }})
-    suggestion_resolved_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suggestionResolvedAt'), 'exclude': lambda f: f is None }})
-    updated_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt'), 'exclude': lambda f: f is None }})
+    accepted_by_collaborator_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedByCollaboratorAt') }})
+    created_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
+    post_filing_suggestion_made_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postFilingSuggestionMadeAt') }})
+    post_filing_suggestion_resolved_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postFilingSuggestionResolvedAt') }})
+    submitted_for_collaborator_review_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('submittedForCollaboratorReviewAt') }})
+    suggestion_made_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suggestionMadeAt') }})
+    suggestion_resolved_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suggestionResolvedAt') }})
+    updated_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     
 

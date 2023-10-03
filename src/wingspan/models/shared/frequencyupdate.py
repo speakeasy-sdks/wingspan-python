@@ -4,8 +4,14 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class FrequencyUpdateDaily:
+    pass
 
 class IntervalFrequencyUpdate(str, Enum):
     WEEK = 'Week'
@@ -13,16 +19,22 @@ class IntervalFrequencyUpdate(str, Enum):
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
+
+@dataclasses.dataclass
+class FrequencyUpdateTwicePerMonth:
+    pass
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
 
 @dataclasses.dataclass
 class FrequencyUpdate:
-    daily: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('daily'), 'exclude': lambda f: f is None }})
-    day_in_interval: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dayInInterval'), 'exclude': lambda f: f is None }})
-    end_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endDate'), 'exclude': lambda f: f is None }})
-    every: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('every'), 'exclude': lambda f: f is None }})
-    interval: Optional[IntervalFrequencyUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval'), 'exclude': lambda f: f is None }})
-    start_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startDate'), 'exclude': lambda f: f is None }})
-    twice_per_month: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twicePerMonth'), 'exclude': lambda f: f is None }})
+    daily: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('daily'), 'exclude': lambda f: f is None }})
+    day_in_interval: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dayInInterval') }})
+    end_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endDate') }})
+    every: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('every') }})
+    interval: Optional[IntervalFrequencyUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval') }})
+    start_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startDate') }})
+    twice_per_month: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twicePerMonth'), 'exclude': lambda f: f is None }})
     
 

@@ -3,8 +3,8 @@
 
 ## Fields
 
-| Field                 | Type                  | Required              | Description           |
-| --------------------- | --------------------- | --------------------- | --------------------- |
-| `frequency`           | *Optional[Any]*       | :heavy_minus_sign:    | N/A                   |
-| `late_fee_amount`     | *Optional[float]*     | :heavy_minus_sign:    | N/A                   |
-| `late_fee_percentage` | *Optional[float]*     | :heavy_minus_sign:    | N/A                   |
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `frequency`                                                                                             | [Optional[Union[Any, shared.FrequencyUpdate]]](undefined/models/shared/latefeeconfigupdatefrequency.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `late_fee_amount`                                                                                       | *Optional[float]*                                                                                       | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `late_fee_percentage`                                                                                   | *Optional[float]*                                                                                       | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |

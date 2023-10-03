@@ -1,4 +1,5 @@
 # PayableOnClient
+(*payable_on_client*)
 
 ### Available Operations
 
@@ -19,60 +20,41 @@ s = wingspan.Wingspan()
 
 req = shared.PayableCreateRequest(
     accepted_payment_methods=[
-        shared.PayableCreateRequestAcceptedPaymentMethods.CREDIT,
+        shared.PayableCreateRequestAcceptedPaymentMethods.ACH,
     ],
-    attachments='sapiente',
-    client='ullam',
-    collaborator_id='reprehenderit',
+    attachments=[],
+    client=[],
+    collaborator_id='Configuration Money',
     credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=3567.07,
-        client_pays=3917.74,
-        member_pays=163.28,
+        client_absolute_percentage=7865.46,
+        client_pays=690.25,
+        member_pays=9967.06,
     ),
-    currency=shared.CurrencyPayableCreateRequest.CAD,
-    due_date='qui',
-    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-        quickbooks='deleniti',
-    ),
-    invoice_notes='itaque',
-    labels={
-        "architecto": 'omnis',
-    },
-    late_fee_handling=shared.LateFeeConfigUpdate(
-        frequency='at',
-        late_fee_amount=920.27,
-        late_fee_percentage=4541.62,
-    ),
+    currency=shared.CurrencyPayableCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
+    due_date='technology East',
+    integration=[],
+    invoice_notes='evolve',
+    labels=[],
+    late_fee_handling=[],
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=559.65,
-            description='minima',
-            detail='veritatis',
-            discount='adipisci',
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(
-                    expense_account_id='accusantium',
-                    item_id='rem',
-                ),
-            ),
-            labels='laudantium',
-            quantity=4287.96,
-            reimbursable_expense=False,
-            total_cost=680.74,
-            unit='corrupti',
+            cost_per_unit=7150.4,
+            description='Secured systematic protocol',
+            detail='Screen mobile',
+            discount=[],
+            integration=[],
+            labels=[],
+            quantity=6562.56,
+            reimbursable_expense=[],
+            total_cost=3570.21,
+            unit='meter',
         ),
     ],
-    member='voluptatem',
-    member_client_id='dolor',
-    metadata=shared.InvoiceMetadata(
-        purchase_order_number='numquam',
-    ),
-    notification_preferences=shared.InvoiceNotificationPreferences(
-        send_invoice='voluptas',
-        send_receipt='dignissimos',
-        send_reminders=False,
-    ),
-    status=shared.StatusPayableCreateRequest.DRAFT,
+    member=[],
+    member_client_id='after',
+    metadata=[],
+    notification_preferences=[],
+    status=shared.StatusPayableCreateRequest.PENDING,
 )
 
 res = s.payable_on_client.create(req)
@@ -106,66 +88,33 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payable_on_client.update(id='maiores', payable_update_request=shared.PayableUpdateRequest(
+res = s.payable_on_client.update(id='Van', payable_update_request=shared.PayableUpdateRequest(
     accepted_payment_methods=[
-        shared.PayableUpdateRequestAcceptedPaymentMethods.MANUAL,
+        shared.PayableUpdateRequestAcceptedPaymentMethods.CREDIT,
     ],
-    attachments='voluptatibus',
-    charged_fees='asperiores',
-    client='ea',
+    attachments=[],
+    charged_fees=[],
+    client=[],
     collaborators=[
-        'consequuntur',
+        [],
     ],
-    credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=6387.62,
-        client_pays=8070.23,
-        member_pays=4903.05,
-    ),
-    due_date='officia',
-    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-        quickbooks='quae',
-    ),
-    invoice_notes='quaerat',
-    labels={
-        "quod": 'labore',
-    },
-    late_fee_handling='adipisci',
+    credit_fee_handling=[],
+    due_date='male Metal',
+    integration=[],
+    invoice_notes='Arizona Cotton extend',
+    labels=[],
+    late_fee_handling=[],
     line_items=[
-        shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=6625.05,
-            description='suscipit',
-            detail='velit',
-            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(
-                amount=6658.59,
-                description='recusandae',
-                percentage=5173.09,
-            ),
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks='ducimus',
-            ),
-            labels={
-                "vel": 'labore',
-            },
-            quantity=8225.6,
-            reimbursable_expense=False,
-            total_cost=7382.27,
-            unit='commodi',
-        ),
+        [],
     ],
-    member='corporis',
-    member_client_id='reiciendis',
-    metadata=shared.InvoiceMetadata(
-        purchase_order_number='nemo',
-    ),
-    notification_preferences=shared.InvoiceNotificationPreferences(
-        send_invoice='aperiam',
-        send_receipt=False,
-        send_reminders=False,
-    ),
+    member=[],
+    member_client_id='bifurcated',
+    metadata=[],
+    notification_preferences=[],
     payment_methods=[
-        shared.PayableUpdateRequestPaymentMethods.CREDIT,
+        shared.PayableUpdateRequestPaymentMethods.MANUAL,
     ],
-    status=shared.StatusPayableUpdateRequest.CANCELLED,
+    status=shared.StatusPayableUpdateRequest.PAID,
 ))
 
 if res.payable_schema is not None:

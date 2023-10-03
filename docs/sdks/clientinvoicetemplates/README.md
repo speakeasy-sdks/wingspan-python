@@ -1,4 +1,5 @@
 # ClientInvoiceTemplates
+(*client_invoice_templates*)
 
 ### Available Operations
 

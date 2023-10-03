@@ -2,24 +2,50 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b as shared_facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
+from ..shared import three_billion_one_hundred_and_ninety_million_six_hundred_and_eighty_five_thousand_eight_hundred_and_thirty_twoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461 as shared_three_billion_one_hundred_and_ninety_million_six_hundred_and_eighty_five_thousand_eight_hundred_and_thirty_twoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from wingspan import utils
+
+
+
+@dataclasses.dataclass
+class InvoiceLineItemsCreateRequestDiscount:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceLineItemsCreateRequestIntegration:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceLineItemsCreateRequestLabels:
+    pass
+
+
+
+@dataclasses.dataclass
+class InvoiceLineItemsCreateRequestReimbursableExpense:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 
 @dataclasses.dataclass
 class InvoiceLineItemsCreateRequest:
-    cost_per_unit: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('costPerUnit'), 'exclude': lambda f: f is None }})
-    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-    detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detail'), 'exclude': lambda f: f is None }})
-    discount: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount'), 'exclude': lambda f: f is None }})
-    integration: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
-    labels: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    quantity: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantity'), 'exclude': lambda f: f is None }})
-    reimbursable_expense: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpense'), 'exclude': lambda f: f is None }})
-    total_cost: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalCost'), 'exclude': lambda f: f is None }})
-    unit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit'), 'exclude': lambda f: f is None }})
+    cost_per_unit: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('costPerUnit') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
+    detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detail') }})
+    discount: Optional[Union[Any, shared_facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount'), 'exclude': lambda f: f is None }})
+    integration: Optional[Union[Any, shared_three_billion_one_hundred_and_ninety_million_six_hundred_and_eighty_five_thousand_eight_hundred_and_thirty_twoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
+    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    quantity: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantity') }})
+    reimbursable_expense: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpense'), 'exclude': lambda f: f is None }})
+    total_cost: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalCost') }})
+    unit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit') }})
     
 

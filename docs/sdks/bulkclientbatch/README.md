@@ -1,4 +1,5 @@
 # BulkClientBatch
+(*bulk_client_batch*)
 
 ### Available Operations
 
@@ -19,7 +20,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkBatchCreate(
-    labels='iste',
+    labels=[],
 )
 
 res = s.bulk_client_batch.create(req)
@@ -53,7 +54,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch.get(batch_id='dolor')
+res = s.bulk_client_batch.get(batch_id='female')
 
 if res.bulk_client_batch is not None:
     # handle response
@@ -84,9 +85,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch.update(batch_id='natus', bulk_batch_update=shared.BulkBatchUpdate(
-    labels='hic',
-    status=shared.StatusBulkBatchUpdate.LESS_THAN_NIL_GREATER_THAN_,
+res = s.bulk_client_batch.update(batch_id='Van', bulk_batch_update=shared.BulkBatchUpdate(
+    labels=[],
+    status=shared.StatusBulkBatchUpdate.OPEN,
 ))
 
 if res.bulk_client_batch is not None:

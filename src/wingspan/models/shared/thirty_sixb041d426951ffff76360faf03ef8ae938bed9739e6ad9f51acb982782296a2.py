@@ -11,6 +11,6 @@ from wingspan import utils
 
 @dataclasses.dataclass
 class ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2:
-    custom_attachment_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds'), 'exclude': lambda f: f is None }})
+    custom_attachment_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds') }})
     
 

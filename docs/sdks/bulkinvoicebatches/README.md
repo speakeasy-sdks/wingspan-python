@@ -1,4 +1,5 @@
 # BulkInvoiceBatches
+(*bulk_invoice_batches*)
 
 ### Available Operations
 

@@ -1,4 +1,5 @@
 # CollaboratorV2
+(*collaborator_v2*)
 
 ### Available Operations
 
@@ -17,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_v2.get(member_id='aut')
+res = s.collaborator_v2.get(member_id='female')
 
 if res.collaborator_v2 is not None:
     # handle response

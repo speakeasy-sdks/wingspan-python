@@ -5,5 +5,5 @@
 
 | Field                | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `phone_number`       | *str*                | :heavy_check_mark:   | N/A                  |
-| `verification_token` | *str*                | :heavy_check_mark:   | N/A                  |
+| `phone_number`       | *Optional[str]*      | :heavy_check_mark:   | N/A                  |
+| `verification_token` | *Optional[str]*      | :heavy_check_mark:   | N/A                  |

@@ -1,4 +1,5 @@
 # AdditionalData
+(*additional_data*)
 
 ### Available Operations
 
@@ -19,10 +20,10 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.AdditionalData(
-    key='ab',
-    name='Mrs. Marie O'Connell',
+    key='<key>',
+    name='bluetooth Extended',
     required=False,
-    type=shared.AdditionalDataType.STRING,
+    type=shared.AdditionalDataType.BOOLEAN,
 )
 
 res = s.additional_data.create(req)
@@ -56,7 +57,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.delete(id='quo')
+res = s.additional_data.delete(id='program')
 
 if res.additional_data is not None:
     # handle response
@@ -87,7 +88,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.get(id='odit')
+res = s.additional_data.get(id='female')
 
 if res.additional_data is not None:
     # handle response
