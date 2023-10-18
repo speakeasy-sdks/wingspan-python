@@ -7,13 +7,11 @@ from ..shared import collaboratorschema as shared_collaboratorschema
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetCollaboratorRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

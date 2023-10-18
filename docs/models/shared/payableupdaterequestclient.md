@@ -1,17 +1,7 @@
 # PayableUpdateRequestClient
 
 
-## Supported Types
+## Fields
 
-### 
-
-```python
-payableUpdateRequestClient: Any = /* values here */
-```
-
-### PayableUpdateRequestClient2
-
-```python
-payableUpdateRequestClient: shared.PayableUpdateRequestClient2 = /* values here */
-```
-
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

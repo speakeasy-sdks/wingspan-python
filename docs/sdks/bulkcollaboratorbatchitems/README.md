@@ -22,6 +22,7 @@ res = s.bulk_collaborator_batch_items.list(batch_id='Bicycle')
 
 if res.bulk_collaborator_items is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

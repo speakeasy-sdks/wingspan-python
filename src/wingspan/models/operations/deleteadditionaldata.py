@@ -7,13 +7,11 @@ from ..shared import additionaldata as shared_additionaldata
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteAdditionalDataRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

@@ -7,30 +7,12 @@ from ..shared import form1099correction as shared_form1099correction
 from ..shared import form1099events as shared_form1099events
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Final, Optional, Union
+from typing import Optional
 from wingspan import utils
-
-
-
-@dataclasses.dataclass
-class MemberClientForm1099BalancesCorrection:
-    pass
 
 class DeliveryMethodMemberClientForm1099Balances(str, Enum):
     ELECTRONIC = 'Electronic'
     MAIL = 'Mail'
-
-
-
-@dataclasses.dataclass
-class MemberClientForm1099BalancesDispute:
-    pass
-
-
-
-@dataclasses.dataclass
-class MemberClientForm1099BalancesEvents:
-    pass
 
 class ExclusionReasonMemberClientForm1099Balances(str, Enum):
     BELOW_THRESHOLD = 'BelowThreshold'
@@ -47,20 +29,15 @@ class StatusMemberClientForm1099Balances(str, Enum):
     EXCLUDED = 'Excluded'
 
 
-
-@dataclasses.dataclass
-class MemberClientForm1099BalancesTaxForm2:
-    pass
-
-
-
 @dataclasses.dataclass
 class MemberClientForm1099BalancesTaxForm:
     pass
 
+class TypeMemberClientForm1099Balances(str, Enum):
+    NEC = 'NEC'
+
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MemberClientForm1099Balances:
     adjustments: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('adjustments') }})
@@ -70,11 +47,11 @@ class MemberClientForm1099Balances:
     payment_processing_fees: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentProcessingFees') }})
     platform_income: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('platformIncome') }})
     status: StatusMemberClientForm1099Balances = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-    TYPE: Final[str] = dataclasses.field(default='NEC', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-    correction: Optional[Union[Any, shared_form1099correction.Form1099Correction]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('correction'), 'exclude': lambda f: f is None }})
-    dispute: Optional[Union[Any, shared_eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5.Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dispute'), 'exclude': lambda f: f is None }})
-    events: Optional[Union[Any, shared_form1099events.Form1099Events]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events'), 'exclude': lambda f: f is None }})
-    tax_form: Optional[Union[Any, MemberClientForm1099BalancesTaxForm2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxForm'), 'exclude': lambda f: f is None }})
+    type: TypeMemberClientForm1099Balances = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    correction: Optional[shared_form1099correction.Form1099Correction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('correction') }})
+    dispute: Optional[shared_eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5.Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dispute') }})
+    events: Optional[shared_form1099events.Form1099Events] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
+    tax_form: Optional[MemberClientForm1099BalancesTaxForm] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxForm') }})
     tax_form_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxFormId') }})
     
 

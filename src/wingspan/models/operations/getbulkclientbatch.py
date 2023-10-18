@@ -7,13 +7,11 @@ from ..shared import bulkclientbatch as shared_bulkclientbatch
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetBulkClientBatchRequest:
     batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier for a batch"""
     
-
 
 
 

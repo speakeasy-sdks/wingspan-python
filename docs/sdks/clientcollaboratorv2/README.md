@@ -22,6 +22,7 @@ res = s.client_collaborator_v2.get(client_id='female')
 
 if res.collaborator_v2 is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

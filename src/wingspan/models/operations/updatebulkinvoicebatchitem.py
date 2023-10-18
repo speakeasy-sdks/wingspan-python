@@ -8,7 +8,6 @@ from ..shared import bulkinvoiceitemupdate as shared_bulkinvoiceitemupdate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateBulkInvoiceBatchItemRequest:
     batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class UpdateBulkInvoiceBatchItemRequest:
     r"""Unique identifier for an item in a batch"""
     bulk_invoice_item_update: Optional[shared_bulkinvoiceitemupdate.BulkInvoiceItemUpdate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

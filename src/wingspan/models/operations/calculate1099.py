@@ -7,7 +7,6 @@ from ..shared import calculate1099response as shared_calculate1099response
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class Calculate1099Response:
     content_type: str = dataclasses.field()

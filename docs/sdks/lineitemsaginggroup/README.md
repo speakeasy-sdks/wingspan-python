@@ -22,6 +22,7 @@ res = s.line_items_aging_group.get()
 
 if res.line_items_aging_report_responses is not None:
     # handle response
+    pass
 ```
 
 

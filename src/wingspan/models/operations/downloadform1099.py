@@ -7,7 +7,6 @@ from ..shared import download1099response as shared_download1099response
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DownloadForm1099Request:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class DownloadForm1099Request:
     year: str = dataclasses.field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
     r"""Year"""
     
-
 
 
 

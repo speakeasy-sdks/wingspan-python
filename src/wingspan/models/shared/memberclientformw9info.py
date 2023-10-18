@@ -21,7 +21,6 @@ class CompanyStructureMemberClientFormW9Info(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MemberClientFormW9Info:
     address_line1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addressLine1') }})

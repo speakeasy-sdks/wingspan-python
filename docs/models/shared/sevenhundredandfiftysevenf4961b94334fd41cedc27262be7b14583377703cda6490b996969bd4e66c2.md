@@ -5,6 +5,6 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `items_failed`     | *Optional[float]*  | :heavy_check_mark: | N/A                |
-| `items_processed`  | *Optional[float]*  | :heavy_check_mark: | N/A                |
-| `items_total`      | *Optional[float]*  | :heavy_check_mark: | N/A                |
+| `items_failed`     | *float*            | :heavy_check_mark: | N/A                |
+| `items_processed`  | *float*            | :heavy_check_mark: | N/A                |
+| `items_total`      | *float*            | :heavy_check_mark: | N/A                |

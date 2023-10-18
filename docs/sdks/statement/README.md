@@ -23,6 +23,7 @@ res = s.statement.download(id='optical')
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -54,6 +55,7 @@ res = s.statement.get(id='female')
 
 if res.bank_statements is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

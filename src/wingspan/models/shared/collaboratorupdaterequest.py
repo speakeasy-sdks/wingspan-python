@@ -7,43 +7,12 @@ from ..shared import ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca11
 from ..shared import twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4 as shared_twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, Optional
 from wingspan import utils
-
-
-
-@dataclasses.dataclass
-class CollaboratorUpdateRequestClientData:
-    pass
-
-
-
-@dataclasses.dataclass
-class CollaboratorUpdateRequestForm1099Balances:
-    pass
-
-
-
-@dataclasses.dataclass
-class CollaboratorUpdateRequestFormW9Data2:
-    pass
-
 
 
 @dataclasses.dataclass
 class CollaboratorUpdateRequestFormW9Data:
-    pass
-
-
-
-@dataclasses.dataclass
-class CollaboratorUpdateRequestIntegration:
-    pass
-
-
-
-@dataclasses.dataclass
-class CollaboratorUpdateRequestLabels:
     pass
 
 class StatusCollaboratorUpdateRequest(str, Enum):
@@ -54,14 +23,13 @@ class StatusCollaboratorUpdateRequest(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CollaboratorUpdateRequest:
-    client_data: Optional[Union[Any, shared_clientdata.ClientData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData'), 'exclude': lambda f: f is None }})
-    form1099_balances: Optional[Union[Any, shared_ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7.Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances'), 'exclude': lambda f: f is None }})
-    form_w9_data: Optional[Union[Any, CollaboratorUpdateRequestFormW9Data2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data'), 'exclude': lambda f: f is None }})
-    integration: Optional[Union[Any, shared_twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4.TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
-    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    client_data: Optional[shared_clientdata.ClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData') }})
+    form1099_balances: Optional[shared_ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7.Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances') }})
+    form_w9_data: Optional[CollaboratorUpdateRequestFormW9Data] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
+    integration: Optional[shared_twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4.TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     status: Optional[StatusCollaboratorUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import bulkclientitem as shared_bulkclientitem
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,14 +15,13 @@ class ListBulkClientBatchItemsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListBulkClientBatchItemsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    bulk_client_items: Optional[list[shared_bulkclientitem.BulkClientItem]] = dataclasses.field(default=None)
+    bulk_client_items: Optional[List[shared_bulkclientitem.BulkClientItem]] = dataclasses.field(default=None)
     r"""A list of bulk client items"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

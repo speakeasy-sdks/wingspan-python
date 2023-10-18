@@ -8,14 +8,12 @@ from ..shared import payableupdaterequest as shared_payableupdaterequest
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdatePayableOnClientRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     payable_update_request: Optional[shared_payableupdaterequest.PayableUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

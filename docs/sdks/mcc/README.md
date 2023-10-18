@@ -22,6 +22,7 @@ res = s.mcc.list()
 
 if res.mcc_responses is not None:
     # handle response
+    pass
 ```
 
 

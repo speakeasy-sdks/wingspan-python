@@ -1,17 +1,7 @@
 # InvoiceCreateRequestClient
 
 
-## Supported Types
+## Fields
 
-### 
-
-```python
-invoiceCreateRequestClient: Any = /* values here */
-```
-
-### InvoiceCreateRequestClient2
-
-```python
-invoiceCreateRequestClient: shared.InvoiceCreateRequestClient2 = /* values here */
-```
-
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

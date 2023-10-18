@@ -20,18 +20,21 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
-    collaborator_settings=[],
-    description='Multi-tiered human-resource model',
+    collaborator_settings={
+        "online": 'Configuration',
+    },
+    description='Inverse discrete benchmark',
     eligibility_requirements=[
-        [],
+        shared.CollaboratorGroupRequirement(),
     ],
-    name='Money blue shred',
+    name='blue',
 )
 
 res = s.collaborator_group.create(req)
 
 if res.collaborator_group_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -63,6 +66,7 @@ res = s.collaborator_group.get(id='female')
 
 if res.collaborator_group_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -91,16 +95,17 @@ s = wingspan.Wingspan()
 
 
 res = s.collaborator_group.update(id='Van', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
-    collaborator_settings=[],
-    description='Advanced encompassing orchestration',
+    collaborator_settings={
+        "East": 'male',
+    },
     eligibility_requirements=[
-        [],
+        shared.CollaboratorGroupRequirement(),
     ],
-    name='Metal cheater Islands',
 ))
 
 if res.collaborator_group_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

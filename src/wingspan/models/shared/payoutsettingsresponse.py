@@ -5,6 +5,7 @@ import dataclasses
 from ..shared import payoutdestinationresponse as shared_payoutdestinationresponse
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
+from typing import List
 from wingspan import utils
 
 class PayoutPreferencesPayoutSettingsResponse(str, Enum):
@@ -16,10 +17,9 @@ class PayoutPreferencesPayoutSettingsResponse(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PayoutSettingsResponse:
-    payout_destinations: list[shared_payoutdestinationresponse.PayoutDestinationResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations') }})
+    payout_destinations: List[shared_payoutdestinationresponse.PayoutDestinationResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations') }})
     payout_preferences: PayoutPreferencesPayoutSettingsResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences') }})
     
 

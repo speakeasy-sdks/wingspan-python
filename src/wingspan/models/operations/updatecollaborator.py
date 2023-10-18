@@ -8,14 +8,12 @@ from ..shared import collaboratorupdaterequest as shared_collaboratorupdatereque
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateCollaboratorRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     collaborator_update_request: Optional[shared_collaboratorupdaterequest.CollaboratorUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

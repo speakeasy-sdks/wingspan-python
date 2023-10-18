@@ -7,7 +7,6 @@ from ..shared import additionaldata as shared_additionaldata
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateAdditionalDataResponse:
     content_type: str = dataclasses.field()

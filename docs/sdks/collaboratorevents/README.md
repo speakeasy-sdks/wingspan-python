@@ -22,6 +22,7 @@ res = s.collaborator_events.get(id='female')
 
 if res.collaborator_events is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

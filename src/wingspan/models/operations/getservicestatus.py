@@ -7,7 +7,6 @@ from ..shared import ping as shared_ping
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetServiceStatusResponse:
     content_type: str = dataclasses.field()

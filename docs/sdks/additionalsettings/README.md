@@ -23,6 +23,7 @@ res = s.additional_settings.list()
 
 if res.additional_data is not None:
     # handle response
+    pass
 ```
 
 
@@ -44,15 +45,11 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.additional_settings.update(id='Van', additional_data_update_request=shared.AdditionalDataUpdateRequest(
-    key='<key>',
-    name='Reactive',
-    required=[],
-    type=shared.TypeAdditionalDataUpdateRequest.LESS_THAN_NIL_GREATER_THAN_,
-))
+res = s.additional_settings.update(id='Van', additional_data_update_request=shared.AdditionalDataUpdateRequest())
 
 if res.additional_data is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -7,20 +7,8 @@ from ..shared import frequency as shared_frequency
 from ..shared import scheduledate as shared_scheduledate
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import List, Optional
 from wingspan import utils
-
-
-
-@dataclasses.dataclass
-class ClientInvoiceTemplateCreateRequestFrequency:
-    pass
-
-
-
-@dataclasses.dataclass
-class ClientInvoiceTemplateCreateRequestScheduleDates:
-    pass
 
 class StatusClientInvoiceTemplateCreateRequest(str, Enum):
     ACTIVE = 'Active'
@@ -30,7 +18,6 @@ class StatusClientInvoiceTemplateCreateRequest(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientInvoiceTemplateCreateRequest:
     client_email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientEmail') }})
@@ -39,12 +26,12 @@ class ClientInvoiceTemplateCreateRequest:
     status: StatusClientInvoiceTemplateCreateRequest = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId') }})
     client_company: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientCompany') }})
-    client_email_cc: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientEmailCC') }})
+    client_email_cc: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientEmailCC') }})
     client_first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientFirstName') }})
     client_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientLastName') }})
     due_in_days: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueInDays') }})
-    frequency: Optional[Union[Any, shared_frequency.Frequency]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
+    frequency: Optional[shared_frequency.Frequency] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency') }})
     payment_method_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethodId') }})
-    schedule_dates: Optional[list[Union[Any, shared_scheduledate.ScheduleDate]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates') }})
+    schedule_dates: Optional[List[shared_scheduledate.ScheduleDate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates') }})
     
 

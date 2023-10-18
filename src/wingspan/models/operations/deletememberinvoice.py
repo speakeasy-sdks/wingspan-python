@@ -7,13 +7,11 @@ from ..shared import invoice as shared_invoice
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteMemberInvoiceRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

@@ -21,14 +21,19 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CardCreateRequest(
-    request_physical_card=[],
-    shipping_address=[],
+    shipping_address=shared.Address(
+        address_line1='online',
+        city='Stokesview',
+        postal_code='17097',
+        state='abnormally',
+    ),
 )
 
 res = s.card.create(req)
 
 if res.card is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -60,6 +65,7 @@ res = s.card.delete(id='program')
 
 if res.card is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -91,6 +97,7 @@ res = s.card.get(id='female')
 
 if res.card_details is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -124,6 +131,7 @@ res = s.card.update(id='Van', card_update_request=shared.CardUpdateRequest(
 
 if res.card is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

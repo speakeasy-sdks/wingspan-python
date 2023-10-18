@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import checkbookcard as shared_checkbookcard
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,14 +15,13 @@ class ListPayoutDebitCardsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListPayoutDebitCardsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    checkbook_cards: Optional[list[shared_checkbookcard.CheckbookCard]] = dataclasses.field(default=None)
+    checkbook_cards: Optional[List[shared_checkbookcard.CheckbookCard]] = dataclasses.field(default=None)
     r"""A list of payout debit cards"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

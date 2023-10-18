@@ -23,6 +23,7 @@ res = s.payroll_settings.get(id='female')
 
 if res.payroll_settings is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -51,22 +52,25 @@ s = wingspan.Wingspan()
 
 
 res = s.payroll_settings.update(id='Van', payroll_settings_update=shared.PayrollSettingsUpdate(
-    calculation_settings1099=[],
-    enable_planned_payroll=[],
-    enable_process_days_before_due=[],
-    frequency=[],
-    funding_source=[],
-    issue1099s=[],
-    process_days_before_due=156.52,
+    calculation_settings1099=shared.CalculationSettings1099(
+        state_tax_id={
+            "East": 'male',
+        },
+    ),
+    frequency=shared.FrequencyUpdate(),
+    funding_source=shared.FundingSource(
+        funding_source_currency=shared.FundingSourceCurrency.USD,
+        funding_source_id='Quality',
+        funding_source_type=shared.TypeFundingSource.ACCOUNT,
+    ),
     schedule_dates=[
-        [],
+        shared.ScheduleDateUpdate(),
     ],
-    status=shared.StatusPayrollSettingsUpdate.DRAFT,
-    workflow=shared.WorkflowPayrollSettingsUpdate.LESS_THAN_NIL_GREATER_THAN_,
 ))
 
 if res.payroll_settings is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -22,6 +22,7 @@ res = s.member_clients.list()
 
 if res.member_client_schemas is not None:
     # handle response
+    pass
 ```
 
 

@@ -22,6 +22,7 @@ res = s.eligibility_requirements.list()
 
 if res.eligibility_requirements is not None:
     # handle response
+    pass
 ```
 
 

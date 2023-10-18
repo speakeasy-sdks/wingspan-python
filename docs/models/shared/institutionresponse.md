@@ -5,9 +5,9 @@
 
 | Field               | Type                | Required            | Description         |
 | ------------------- | ------------------- | ------------------- | ------------------- |
-| `address`           | *Optional[str]*     | :heavy_check_mark:  | N/A                 |
-| `is_ach_supported`  | *Optional[bool]*    | :heavy_check_mark:  | N/A                 |
-| `is_rtp_supported`  | *Optional[bool]*    | :heavy_check_mark:  | N/A                 |
-| `is_wire_supported` | *Optional[bool]*    | :heavy_check_mark:  | N/A                 |
-| `name`              | *Optional[str]*     | :heavy_check_mark:  | N/A                 |
-| `routing_number`    | *Optional[str]*     | :heavy_check_mark:  | N/A                 |
+| `address`           | *str*               | :heavy_check_mark:  | N/A                 |
+| `is_ach_supported`  | *bool*              | :heavy_check_mark:  | N/A                 |
+| `is_rtp_supported`  | *bool*              | :heavy_check_mark:  | N/A                 |
+| `is_wire_supported` | *bool*              | :heavy_check_mark:  | N/A                 |
+| `name`              | *str*               | :heavy_check_mark:  | N/A                 |
+| `routing_number`    | *str*               | :heavy_check_mark:  | N/A                 |

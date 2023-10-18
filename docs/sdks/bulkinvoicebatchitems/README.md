@@ -22,6 +22,7 @@ res = s.bulk_invoice_batch_items.list(batch_id='Bicycle')
 
 if res.bulk_invoice_items is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

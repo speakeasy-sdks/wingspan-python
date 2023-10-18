@@ -8,14 +8,12 @@ from ..shared import cardtokenresponse as shared_cardtokenresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ExchangeCodeToTokenRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     card_token_request: Optional[shared_cardtokenrequest.CardTokenRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

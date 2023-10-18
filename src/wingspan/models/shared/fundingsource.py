@@ -17,7 +17,6 @@ class TypeFundingSource(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FundingSource:
     funding_source_currency: FundingSourceCurrency = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fundingSourceCurrency') }})

@@ -20,13 +20,16 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkBatchCreate(
-    labels=[],
+    labels={
+        "online": 'Configuration',
+    },
 )
 
 res = s.bulk_collaborator_batch.create(req)
 
 if res.bulk_collaborator_batch is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -58,6 +61,7 @@ res = s.bulk_collaborator_batch.get(batch_id='female')
 
 if res.bulk_collaborator_batch is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -86,12 +90,14 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_collaborator_batch.update(batch_id='Van', bulk_batch_update=shared.BulkBatchUpdate(
-    labels=[],
-    status=shared.StatusBulkBatchUpdate.OPEN,
+    labels={
+        "East": 'male',
+    },
 ))
 
 if res.bulk_collaborator_batch is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

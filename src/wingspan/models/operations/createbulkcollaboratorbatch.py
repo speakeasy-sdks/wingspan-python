@@ -7,7 +7,6 @@ from ..shared import bulkcollaboratorbatch as shared_bulkcollaboratorbatch
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateBulkCollaboratorBatchResponse:
     content_type: str = dataclasses.field()

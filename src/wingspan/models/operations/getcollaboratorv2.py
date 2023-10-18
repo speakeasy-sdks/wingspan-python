@@ -7,13 +7,11 @@ from ..shared import collaboratorv2 as shared_collaboratorv2
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetCollaboratorV2Request:
     member_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'memberId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier of a member"""
     
-
 
 
 

@@ -4,14 +4,8 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, Optional
 from wingspan import utils
-
-
-
-@dataclasses.dataclass
-class BulkInvoiceBatchUpdateLabels:
-    pass
 
 class StatusBulkInvoiceBatchUpdate(str, Enum):
     OPEN = 'Open'
@@ -23,10 +17,9 @@ class StatusBulkInvoiceBatchUpdate(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class BulkInvoiceBatchUpdate:
-    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     status: Optional[StatusBulkInvoiceBatchUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

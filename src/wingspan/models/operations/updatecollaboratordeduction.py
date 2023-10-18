@@ -8,14 +8,12 @@ from ..shared import deductionupdaterequest as shared_deductionupdaterequest
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateCollaboratorDeductionRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     deduction_update_request: Optional[shared_deductionupdaterequest.DeductionUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

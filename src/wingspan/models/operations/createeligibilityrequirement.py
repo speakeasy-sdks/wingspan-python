@@ -7,7 +7,6 @@ from ..shared import eligibilityrequirement as shared_eligibilityrequirement
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateEligibilityRequirementResponse:
     content_type: str = dataclasses.field()

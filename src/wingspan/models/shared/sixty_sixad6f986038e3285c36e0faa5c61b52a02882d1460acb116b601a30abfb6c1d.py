@@ -7,7 +7,6 @@ from wingspan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class SixtySixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d:
     collaborator_group_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId') }})

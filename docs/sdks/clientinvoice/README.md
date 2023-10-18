@@ -23,6 +23,7 @@ res = s.client_invoice.get(id='female')
 
 if res.client_invoice is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -51,12 +52,12 @@ s = wingspan.Wingspan()
 
 
 res = s.client_invoice.update(id='Van', client_invoice_update_request=shared.ClientInvoiceUpdateRequest(
-    credit_fee_handling=[],
-    status=shared.StatusClientInvoiceUpdateRequest.DRAFT,
+    credit_fee_handling=shared.FeeHandlingConfig(),
 ))
 
 if res.client_invoice is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

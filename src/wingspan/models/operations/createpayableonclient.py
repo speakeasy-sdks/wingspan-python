@@ -7,7 +7,6 @@ from ..shared import payableschema as shared_payableschema
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreatePayableOnClientResponse:
     content_type: str = dataclasses.field()

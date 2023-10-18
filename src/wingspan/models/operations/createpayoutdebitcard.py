@@ -8,14 +8,12 @@ from ..shared import checkbookcardcreate as shared_checkbookcardcreate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreatePayoutDebitCardRequest:
     member_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'memberId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier of a member"""
     checkbook_card_create: Optional[shared_checkbookcardcreate.CheckbookCardCreate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

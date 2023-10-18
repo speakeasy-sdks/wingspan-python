@@ -1,17 +1,7 @@
 # InvoiceCreateRequestMember
 
 
-## Supported Types
+## Fields
 
-### 
-
-```python
-invoiceCreateRequestMember: Any = /* values here */
-```
-
-### InvoiceCreateRequestMember2
-
-```python
-invoiceCreateRequestMember: shared.InvoiceCreateRequestMember2 = /* values here */
-```
-
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

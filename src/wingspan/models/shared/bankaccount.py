@@ -8,7 +8,6 @@ from wingspan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class BankAccount:
     account_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountNumber') }})

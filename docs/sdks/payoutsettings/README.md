@@ -23,6 +23,7 @@ res = s.payout_settings.get(id='female')
 
 if res.payout_settings_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -52,13 +53,13 @@ s = wingspan.Wingspan()
 
 res = s.payout_settings.update(id='Van', payout_settings_update=shared.PayoutSettingsUpdate(
     payout_destinations=[
-        [],
+        shared.PayoutDestinationUpdate(),
     ],
-    payout_preferences=shared.PayoutPreferencesPayoutSettingsUpdate.STANDARD,
 ))
 
 if res.payout_settings_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

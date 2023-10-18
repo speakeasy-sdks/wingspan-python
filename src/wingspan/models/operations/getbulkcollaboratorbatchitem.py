@@ -7,7 +7,6 @@ from ..shared import bulkcollaboratoritem as shared_bulkcollaboratoritem
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetBulkCollaboratorBatchItemRequest:
     batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class GetBulkCollaboratorBatchItemRequest:
     batch_item_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchItemId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier for an item in a batch"""
     
-
 
 
 

@@ -7,13 +7,11 @@ from ..shared import memberclientschema as shared_memberclientschema
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetMemberClientRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

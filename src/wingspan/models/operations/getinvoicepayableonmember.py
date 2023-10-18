@@ -7,13 +7,11 @@ from ..shared import payableschema as shared_payableschema
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetInvoicePayableOnMemberRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

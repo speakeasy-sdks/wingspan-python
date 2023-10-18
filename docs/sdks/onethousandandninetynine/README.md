@@ -20,14 +20,15 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Calculate1099Request(
-    member_client_id='green Practical',
-    year=7783.47,
+    member_client_id='Program',
+    year=9615.59,
 )
 
 res = s.one_thousand_and_ninety_nine.calculate(req)
 
 if res.calculate1099_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -55,15 +56,16 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Mark1099AsUndeliveredRequest(
-    member_id='Avon',
-    submission_index=3695.9,
-    year=3706.5,
+    member_id='Bronze',
+    submission_index=5411.01,
+    year=7928.06,
 )
 
 res = s.one_thousand_and_ninety_nine.mark(req)
 
 if res.mark1099_as_undelivered_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -92,21 +94,20 @@ s = wingspan.Wingspan()
 
 req = shared.Remail1099Request(
     address=shared.Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56(
-        address_line1='purple',
-        address_line2='Dell Incredible',
-        city='West Teresaton',
-        postal_code='13750',
-        state='hmph why architectures',
+        address_line1='schemas',
+        city='Lake Brycebury',
+        postal_code='81222',
+        state='South',
     ),
-    document_index=4391.23,
-    member_id='firmware Other Rubber',
-    year=7578.67,
+    member_id='as',
+    year=3622.81,
 )
 
 res = s.one_thousand_and_ninety_nine.remail(req)
 
 if res.remail1099_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -7,7 +7,6 @@ from ..shared import remail1099response as shared_remail1099response
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class Remail1099Response:
     content_type: str = dataclasses.field()

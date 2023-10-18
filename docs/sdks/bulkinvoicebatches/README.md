@@ -22,6 +22,7 @@ res = s.bulk_invoice_batches.list()
 
 if res.bulk_invoice_batches is not None:
     # handle response
+    pass
 ```
 
 

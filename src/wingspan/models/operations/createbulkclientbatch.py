@@ -7,7 +7,6 @@ from ..shared import bulkclientbatch as shared_bulkclientbatch
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateBulkClientBatchResponse:
     content_type: str = dataclasses.field()

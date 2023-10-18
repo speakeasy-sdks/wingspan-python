@@ -7,13 +7,11 @@ from ..shared import payrollsettings as shared_payrollsettings
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetPayrollSettingsRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

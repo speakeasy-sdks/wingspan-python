@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `id`               | *Optional[str]*    | :heavy_check_mark: | Unique identifier  |
+| `id`               | *str*              | :heavy_check_mark: | Unique identifier  |

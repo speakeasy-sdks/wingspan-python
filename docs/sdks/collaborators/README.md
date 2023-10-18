@@ -22,6 +22,7 @@ res = s.collaborators.list()
 
 if res.collaborator_schemas is not None:
     # handle response
+    pass
 ```
 
 

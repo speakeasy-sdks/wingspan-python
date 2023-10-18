@@ -1,17 +1,7 @@
 # CollaboratorsReportResponseLabels
 
 
-## Supported Types
+## Fields
 
-### 
-
-```python
-collaboratorsReportResponseLabels: Any = /* values here */
-```
-
-### CollaboratorsReportResponseLabels2
-
-```python
-collaboratorsReportResponseLabels: shared.CollaboratorsReportResponseLabels2 = /* values here */
-```
-
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

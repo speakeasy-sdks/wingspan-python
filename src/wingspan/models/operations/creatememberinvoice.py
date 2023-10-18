@@ -7,7 +7,6 @@ from ..shared import invoice as shared_invoice
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateMemberInvoiceResponse:
     content_type: str = dataclasses.field()

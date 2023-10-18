@@ -7,7 +7,6 @@ from ..shared import deductionresponse as shared_deductionresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateCollaboratorDeductionResponse:
     content_type: str = dataclasses.field()

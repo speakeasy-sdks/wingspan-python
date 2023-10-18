@@ -7,7 +7,6 @@ from ..shared import collaboratorgroupresponse as shared_collaboratorgrouprespon
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteCollaboratorGroupEligibilityRequirementRequest:
     eligibility_requirement_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eligibilityRequirementId', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class DeleteCollaboratorGroupEligibilityRequirementRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

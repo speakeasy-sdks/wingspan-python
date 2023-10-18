@@ -4,24 +4,11 @@ from __future__ import annotations
 import dataclasses
 from ..shared import eligibilityrequirement as shared_eligibilityrequirement
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional, Union
+from typing import Dict, List, Optional
 from wingspan import utils
 
 
-
-@dataclasses.dataclass
-class CollaboratorGroupResponseCollaboratorSettings:
-    pass
-
-
-
-@dataclasses.dataclass
-class CollaboratorGroupResponseEligibilityRequirements:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CollaboratorGroupResponse:
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
@@ -29,7 +16,7 @@ class CollaboratorGroupResponse:
     default_group: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultGroup') }})
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    collaborator_settings: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings'), 'exclude': lambda f: f is None }})
-    eligibility_requirements: Optional[list[Union[Any, shared_eligibilityrequirement.EligibilityRequirement]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
+    collaborator_settings: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings') }})
+    eligibility_requirements: Optional[List[shared_eligibilityrequirement.EligibilityRequirement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
     
 

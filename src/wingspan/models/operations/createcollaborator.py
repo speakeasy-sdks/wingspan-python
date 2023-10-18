@@ -7,7 +7,6 @@ from ..shared import collaboratorschema as shared_collaboratorschema
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateCollaboratorResponse:
     content_type: str = dataclasses.field()

@@ -7,7 +7,6 @@ from ..shared import collaboratorschema as shared_collaboratorschema
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class RemoveCollaboratorToGroupRequest:
     group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class RemoveCollaboratorToGroupRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

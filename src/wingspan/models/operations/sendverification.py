@@ -8,14 +8,12 @@ from ..shared import cardcoderesponse as shared_cardcoderesponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SendVerificationRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     card_code_request: Optional[shared_cardcoderequest.CardCodeRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

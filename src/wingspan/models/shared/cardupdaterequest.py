@@ -16,7 +16,6 @@ class PropertiesCardUpdateRequest(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CardUpdateRequest:
     status: PropertiesCardUpdateRequest = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})

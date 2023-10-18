@@ -1,17 +1,7 @@
 # CollaboratorUpdateRequestFormW9Data
 
 
-## Supported Types
+## Fields
 
-### 
-
-```python
-collaboratorUpdateRequestFormW9Data: Any = /* values here */
-```
-
-### CollaboratorUpdateRequestFormW9Data2
-
-```python
-collaboratorUpdateRequestFormW9Data: shared.CollaboratorUpdateRequestFormW9Data2 = /* values here */
-```
-
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

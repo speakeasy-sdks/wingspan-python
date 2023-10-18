@@ -7,13 +7,11 @@ from ..shared import carddetails as shared_carddetails
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetCardRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

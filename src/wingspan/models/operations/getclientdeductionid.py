@@ -7,13 +7,11 @@ from ..shared import deductionresponse as shared_deductionresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetClientDeductionIDRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

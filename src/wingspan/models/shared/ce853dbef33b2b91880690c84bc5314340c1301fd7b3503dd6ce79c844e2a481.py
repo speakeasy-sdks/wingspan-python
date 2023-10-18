@@ -4,15 +4,8 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Optional
 from wingspan import utils
-
-
-
-@dataclasses.dataclass
-class Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address2:
-    pass
-
 
 
 @dataclasses.dataclass
@@ -34,10 +27,9 @@ class CompanyStructurece853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481:
-    address: Optional[Union[Any, Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
+    address: Optional[Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
     company_structure: Optional[CompanyStructurece853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('companyStructure') }})
     ein: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ein') }})
     first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstName') }})

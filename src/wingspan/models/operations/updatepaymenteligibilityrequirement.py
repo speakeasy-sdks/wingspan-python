@@ -8,14 +8,12 @@ from ..shared import paymenteligibilityupdaterequest as shared_paymenteligibilit
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdatePaymentEligibilityRequirementRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     payment_eligibility_update_request: Optional[shared_paymenteligibilityupdaterequest.PaymentEligibilityUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import collaboratorgroupresponse as shared_collaboratorgroupresponse
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class ListCollaboratorGroupsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    collaborator_group_responses: Optional[list[shared_collaboratorgroupresponse.CollaboratorGroupResponse]] = dataclasses.field(default=None)
+    collaborator_group_responses: Optional[List[shared_collaboratorgroupresponse.CollaboratorGroupResponse]] = dataclasses.field(default=None)
     r"""A list of Collaborator Configurations created by client"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

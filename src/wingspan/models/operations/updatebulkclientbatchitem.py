@@ -8,7 +8,6 @@ from ..shared import bulkclientitemupdate as shared_bulkclientitemupdate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateBulkClientBatchItemRequest:
     batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class UpdateBulkClientBatchItemRequest:
     r"""Unique identifier for an item in a batch"""
     bulk_client_item_update: Optional[shared_bulkclientitemupdate.BulkClientItemUpdate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

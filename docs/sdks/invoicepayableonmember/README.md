@@ -22,6 +22,7 @@ res = s.invoice_payable_on_member.get(id='female')
 
 if res.payable_schema is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

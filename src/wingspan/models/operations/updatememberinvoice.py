@@ -8,14 +8,12 @@ from ..shared import invoiceupdaterequest as shared_invoiceupdaterequest
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateMemberInvoiceRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     invoice_update_request: Optional[shared_invoiceupdaterequest.InvoiceUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

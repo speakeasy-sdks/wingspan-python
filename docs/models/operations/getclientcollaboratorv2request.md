@@ -5,4 +5,4 @@
 
 | Field                         | Type                          | Required                      | Description                   |
 | ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
-| `client_id`                   | *Optional[str]*               | :heavy_check_mark:            | Unique identifier of a client |
+| `client_id`                   | *str*                         | :heavy_check_mark:            | Unique identifier of a client |

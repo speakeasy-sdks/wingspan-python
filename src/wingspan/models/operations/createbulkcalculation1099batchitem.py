@@ -8,14 +8,12 @@ from ..shared import bulkcalculation1099itemcreate as shared_bulkcalculation1099
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateBulkCalculation1099BatchItemRequest:
     batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier for a batch"""
     bulk_calculation1099_item_create: Optional[shared_bulkcalculation1099itemcreate.BulkCalculation1099ItemCreate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

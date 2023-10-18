@@ -25,27 +25,19 @@ res = s.bulk_invoice_batch_item.create(batch_id='online', bulk_invoice_item_crea
         shared.BulkInvoiceItemCreateAcceptedPaymentMethods.MANUAL,
     ],
     amount=8592.13,
-    bulk_invoice_batch_id='innovative blue',
-    bulk_invoice_item_merge_key='grey technology East',
-    bulk_invoice_item_reference='evolve',
-    client_email='fuchsia Gasoline Screen',
-    client_external_id='physical Ameliorated',
-    credit_fee_handling=[],
-    due_date='after',
-    invoice_notes='Intelligent Fish',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.DRAFT,
-    labels=[],
-    line_item_description='functionalities Grocery Borders',
-    line_item_detail='Profound',
-    member_client_id='metrics',
-    paid_date='Minivan',
-    project_name='Senior Mouse West',
-    reimbursable_expense=[],
-    send_date='Towels likewise',
+    bulk_invoice_batch_id='Money',
+    credit_fee_handling=shared.FeeHandlingConfig(),
+    due_date='blue',
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.CANCELLED,
+    labels={
+        "grey": 'technology',
+    },
+    line_item_description='East',
 ))
 
 if res.bulk_invoice_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -78,6 +70,7 @@ res = s.bulk_invoice_batch_item.get(batch_id='female', batch_item_id='program')
 
 if res.bulk_invoice_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -110,28 +103,15 @@ res = s.bulk_invoice_batch_item.update(batch_id='Van', batch_item_id='East', bul
     accepted_payment_methods=[
         shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.MANUAL,
     ],
-    amount=9914.64,
-    bulk_invoice_batch_id='Quality',
-    bulk_invoice_item_merge_key='invoice Arizona',
-    bulk_invoice_item_reference='mostly',
-    client_email='dynamic white',
-    client_external_id='Carolina syndicate',
-    credit_fee_handling=[],
-    due_date='implement JBOD',
-    invoice_notes='Quality guestbook driver',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemUpdate.APPROVED,
-    labels=[],
-    line_item_description='Sharable Division Northeast',
-    line_item_detail='Northwest Fantastic',
-    member_client_id='Internal invoice',
-    paid_date='brightly',
-    project_name='frictionless haptic modulo',
-    reimbursable_expense=[],
-    send_date='navigating Diesel Avon',
+    credit_fee_handling=shared.FeeHandlingConfig(),
+    labels={
+        "dock": 'Quality',
+    },
 ))
 
 if res.bulk_invoice_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

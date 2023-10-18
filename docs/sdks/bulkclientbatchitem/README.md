@@ -21,18 +21,18 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_client_batch_item.create(batch_id='online', bulk_client_item_create=shared.BulkClientItemCreate(
-    client_status=shared.ClientStatusBulkClientItemCreate.PENDING,
-    company='Johnson, Green and Collier',
-    email='Annie.Zieme95@hotmail.com',
-    external_id='East orange Northwest',
-    first_last_name='SUV quantify Polestar',
-    integration=[],
-    labels=[],
-    member_data=[],
+    integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
+        quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
+    ),
+    labels={
+        "Configuration": 'Money',
+    },
+    member_data=shared.MemberData(),
 ))
 
 if res.bulk_client_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -65,6 +65,7 @@ res = s.bulk_client_batch_item.get(batch_id='female', batch_item_id='program')
 
 if res.bulk_client_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -94,18 +95,18 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_client_batch_item.update(batch_id='Van', batch_item_id='East', bulk_client_item_update=shared.BulkClientItemUpdate(
-    client_status=shared.ClientStatusBulkClientItemUpdate.PENDING,
-    company='Glover, Murazik and Paucek',
-    email='Immanuel5@yahoo.com',
-    external_id='mostly',
-    first_last_name='dynamic white',
-    integration=[],
-    labels=[],
-    member_data=[],
+    integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
+        quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
+    ),
+    labels={
+        "male": 'Metal',
+    },
+    member_data=shared.MemberData(),
 ))
 
 if res.bulk_client_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
