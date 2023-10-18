@@ -126,15 +126,15 @@ components:
             - string
             - 'null'
         bankTransferInfo:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/BankAccount'
         chargedFees:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fees'
         internationalBankTransferInfo:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/BankAccount'
         memberFormattedAddressLines:
@@ -146,11 +146,11 @@ components:
               - string
               - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceMetadata'
         nextPayrollExecutionDate:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ScheduleDate'
         paymentMethodId:
@@ -215,12 +215,12 @@ components:
               - string
               - 'null'
         attachments:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/36b041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2
         client:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         currency:
@@ -233,7 +233,7 @@ components:
             - CAD
             - null
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/3190685832a4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461
@@ -242,15 +242,15 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lateFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LateFeeConfigUpdate'
         member:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         memberClientId:
@@ -258,11 +258,11 @@ components:
             - string
             - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceMetadata'
         notificationPreferences:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceNotificationPreferences'
         status:
@@ -302,16 +302,16 @@ components:
               - string
               - 'null'
         attachments:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/36b041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2
         chargedFees:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fees'
         client:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         collaborators:
@@ -323,7 +323,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/InvoiceCollaboratorUpdateRequest'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         dueDate:
@@ -331,7 +331,7 @@ components:
             - string
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/3190685832a4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461
@@ -340,11 +340,11 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lateFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LateFeeConfigUpdate'
         lineItems:
@@ -356,7 +356,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/InvoiceLineItemsCreateRequest'
         member:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         memberClientId:
@@ -364,11 +364,11 @@ components:
             - string
             - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceMetadata'
         notificationPreferences:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceNotificationPreferences'
         paymentMethods:
@@ -472,19 +472,19 @@ components:
             - string
             - 'null'
         amountDetails:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceAmountDetails'
         attachments:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceAttachments'
         bankTransferInfo:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/BankAccount'
         chargedFees:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fees'
         clientId:
@@ -500,7 +500,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/InvoiceCollaborator'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         deductions:
@@ -512,11 +512,11 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/InvoiceAppliedDeductions'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceIntegrations'
         internationalBankTransferInfo:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/BankAccount'
         invoiceNotes:
@@ -528,7 +528,7 @@ components:
             - string
             - 'null'
         lateFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LateFeeConfig'
         memberFormattedAddressLines:
@@ -540,11 +540,11 @@ components:
               - string
               - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceMetadata'
         notificationPreferences:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceNotificationPreferences'
         parentInvoiceId:
@@ -552,7 +552,7 @@ components:
             - string
             - 'null'
         paymentInfo:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/PaymentInfo'
         paymentMethodId:
@@ -568,7 +568,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/InvoicePayoutDestination'
         processingFees:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ProcessingFees'
         sourceId:
@@ -576,7 +576,7 @@ components:
             - string
             - 'null'
         withholdings:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceWithholdings'
       required:
@@ -626,12 +626,12 @@ components:
               - string
               - 'null'
         attachments:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/36b041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2
         client:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         collaborators:
@@ -652,7 +652,7 @@ components:
             - CAD
             - null
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/3190685832a4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461
@@ -661,23 +661,23 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lateFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LateFeeConfigUpdate'
         member:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceMetadata'
         notificationPreferences:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceNotificationPreferences'
         status:
@@ -717,16 +717,16 @@ components:
               - string
               - 'null'
         attachments:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/36b041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2
         chargedFees:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fees'
         client:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         collaborators:
@@ -738,7 +738,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/InvoiceCollaboratorUpdateRequest'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         dueDate:
@@ -746,7 +746,7 @@ components:
             - string
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/3190685832a4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461
@@ -755,11 +755,11 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lateFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LateFeeConfigUpdate'
         lineItems:
@@ -771,7 +771,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/InvoiceLineItemsCreateRequest'
         member:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         memberClientId:
@@ -779,11 +779,11 @@ components:
             - string
             - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceMetadata'
         notificationPreferences:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceNotificationPreferences'
         status:
@@ -884,27 +884,27 @@ components:
             - string
             - 'null'
         attachments:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceAttachments'
         bankTransferInfo:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/BankAccount'
         chargedFees:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fees'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceIntegrations'
         internationalBankTransferInfo:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/BankAccount'
         invoiceNotes:
@@ -916,7 +916,7 @@ components:
             - string
             - 'null'
         lateFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LateFeeConfig'
         memberFormattedAddressLines:
@@ -928,11 +928,11 @@ components:
               - string
               - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceMetadata'
         paymentInfo:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/PaymentInfo'
         paymentMethodId:
@@ -940,7 +940,7 @@ components:
             - string
             - 'null'
         processingFees:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ProcessingFees'
         sourceId:
@@ -1005,7 +1005,7 @@ components:
             - string
             - 'null'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         currency:
@@ -1026,7 +1026,7 @@ components:
       type: object
       properties:
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         status:
@@ -1100,7 +1100,7 @@ components:
             - number
             - 'null'
         frequency:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Frequency'
         isSchedulingOnly:
@@ -1154,7 +1154,7 @@ components:
             - number
             - 'null'
         frequency:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Frequency'
         isSchedulingOnly:
@@ -1196,11 +1196,11 @@ components:
             - number
             - 'null'
         frequency:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FrequencyUpdate'
         invoiceData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceUpdateRequest'
         isSchedulingOnly:
@@ -1208,7 +1208,7 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         paymentMethodId:
@@ -1280,7 +1280,7 @@ components:
             - number
             - 'null'
         frequency:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Frequency'
         paymentMethodId:
@@ -1343,7 +1343,7 @@ components:
             - number
             - 'null'
         frequency:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Frequency'
         paymentMethodId:
@@ -1460,7 +1460,7 @@ components:
               - string
               - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/3d33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f
@@ -1505,16 +1505,16 @@ components:
             - string
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         memberData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberData'
         memberId:
@@ -1539,7 +1539,7 @@ components:
       type: object
       properties:
         clientData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ClientData'
         clientId:
@@ -1563,25 +1563,25 @@ components:
             - string
             - 'null'
         form1099Balances:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/90f96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7
         formW9Data:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/3d33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         memberData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberData'
         name:
@@ -1611,13 +1611,6 @@ components:
         - code
         - message
         - status
-    ServiceUpdateRequest:
-      type: object
-      properties:
-        verifications:
-          anyOf:
-            - $ref: '#/components/schemas/NullObject'
-            - type: object
     InvoiceFeeCalculation:
       type: object
       properties:
@@ -1684,7 +1677,7 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         shippingAddress:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Address'
     CardDetails:
@@ -1908,7 +1901,7 @@ components:
             - string
             - 'null'
         value:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
     AdditionalData:
@@ -2047,7 +2040,7 @@ components:
             - string
             - 'null'
         disbursement:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/PostPaymentDeductionDisbursement'
         sourceInvoiceId:
@@ -2123,7 +2116,7 @@ components:
             - Expired
             - Cancelled
         calculationSettings1099:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CalculationSettings1099'
         enablePlannedPayroll:
@@ -2135,11 +2128,11 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         frequency:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Frequency'
         fundingSource:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FundingSource'
         issue1099s:
@@ -2172,7 +2165,7 @@ components:
       type: object
       properties:
         calculationSettings1099:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CalculationSettings1099'
         enablePlannedPayroll:
@@ -2184,11 +2177,11 @@ components:
             - $ref: '#/components/schemas/NullObject'
             - type: boolean
         frequency:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FrequencyUpdate'
         fundingSource:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FundingSource'
         issue1099s:
@@ -2286,7 +2279,7 @@ components:
         userRoles:
           $ref: '#/components/schemas/UserRoles'
         clientData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ClientData'
         collaboratorGroupIds:
@@ -2306,16 +2299,16 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/MemberClientRequirementResponse'
         formW9Data:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberClientFormW9Info'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/26e8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
         memberData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberData'
       required:
@@ -2336,25 +2329,25 @@ components:
       type: object
       properties:
         clientData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ClientData'
         form1099Balances:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/90f96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7
         formW9Data:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/26e8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         status:
@@ -2373,7 +2366,7 @@ components:
         clientId:
           type: string
         clientData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ClientData'
         collaboratorGroupId:
@@ -2381,16 +2374,16 @@ components:
             - string
             - 'null'
         formW9Data:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberClientFormW9Info'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/26e8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         memberCompany:
@@ -2435,7 +2428,7 @@ components:
         name:
           type: string
         collaboratorSettings:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         eligibilityRequirements:
@@ -2460,7 +2453,7 @@ components:
         name:
           type: string
         collaboratorSettings:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         eligibilityRequirements:
@@ -2485,7 +2478,7 @@ components:
       type: object
       properties:
         collaboratorSettings:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         description:
@@ -2627,7 +2620,7 @@ components:
         name:
           type: string
         address:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Address'
         cvv:
@@ -2713,7 +2706,7 @@ components:
         userRoles:
           $ref: '#/components/schemas/UserRoles'
         statistics:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/757f4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2
@@ -2736,7 +2729,7 @@ components:
             - Merge
             - Single
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
       required:
@@ -2745,7 +2738,7 @@ components:
       type: object
       properties:
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         status:
@@ -2828,7 +2821,7 @@ components:
             - string
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceIntegrations'
         lineItemDetail:
@@ -2836,7 +2829,7 @@ components:
             - string
             - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/a7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14
@@ -2914,7 +2907,7 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lineItemDetail:
@@ -3021,7 +3014,7 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lineItemDescription:
@@ -3093,7 +3086,7 @@ components:
         userRoles:
           $ref: '#/components/schemas/UserRoles'
         statistics:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/757f4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2
@@ -3115,7 +3108,7 @@ components:
             - Merge
             - Single
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
       required:
@@ -3124,7 +3117,7 @@ components:
       type: object
       properties:
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         status:
@@ -3213,11 +3206,11 @@ components:
             - string
             - 'null'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceIntegrations'
         invoiceNotes:
@@ -3233,7 +3226,7 @@ components:
             - string
             - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/c1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a
@@ -3314,7 +3307,7 @@ components:
             - string
             - 'null'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         invoiceNotes:
@@ -3322,7 +3315,7 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lineItemDetail:
@@ -3397,7 +3390,7 @@ components:
             - string
             - 'null'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         dueDate:
@@ -3421,7 +3414,7 @@ components:
             - Cancelled
             - null
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lineItemDescription:
@@ -3477,7 +3470,7 @@ components:
         userRoles:
           $ref: '#/components/schemas/UserRoles'
         statistics:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/757f4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2
@@ -3493,14 +3486,14 @@ components:
       type: object
       properties:
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
     BulkBatchUpdate:
       type: object
       properties:
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         status:
@@ -3573,7 +3566,7 @@ components:
             - string
             - 'null'
         formW9Data:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberClientFormW9Info'
         memberId:
@@ -3581,7 +3574,7 @@ components:
             - string
             - 'null'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/8cf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1
@@ -3633,11 +3626,11 @@ components:
             - string
             - 'null'
         formW9Data:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberClientFormW9Info'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
     BulkCollaboratorItemUpdate:
@@ -3678,11 +3671,11 @@ components:
             - string
             - 'null'
         formW9Data:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberClientFormW9Info'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
     BulkClientBatch:
@@ -3710,7 +3703,7 @@ components:
         userRoles:
           $ref: '#/components/schemas/UserRoles'
         statistics:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/757f4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2
@@ -3772,7 +3765,7 @@ components:
             - string
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0
@@ -3781,11 +3774,11 @@ components:
             - string
             - 'null'
         memberData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberData'
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/4091c2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac
@@ -3829,16 +3822,16 @@ components:
             - string
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         memberData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberData'
     BulkClientItemUpdate:
@@ -3871,16 +3864,16 @@ components:
             - string
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         memberData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberData'
     BulkCalculation1099Batch:
@@ -3908,7 +3901,7 @@ components:
         userRoles:
           $ref: '#/components/schemas/UserRoles'
         statistics:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/757f4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2
@@ -3955,7 +3948,7 @@ components:
         year:
           type: number
         metadata:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/865969bc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14
@@ -3987,7 +3980,7 @@ components:
             - Submissions
             - null
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
       required:
@@ -4010,7 +4003,7 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         year:
@@ -4070,15 +4063,15 @@ components:
         userRoles:
           $ref: '#/components/schemas/UserRoles'
         clientData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ClientData'
         memberData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberData'
         memberEvents:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CollaboratorEvents'
       required:
@@ -4141,11 +4134,11 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         memberEvents:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CollaboratorEvents'
         taxDocumentStared:
@@ -4354,13 +4347,6 @@ components:
             - type: boolean
       required:
         - sendReminders
-    PaymentMethod:
-      type: string
-      $anchor:  PaymentMethod
-      enum:
-        - Credit
-        - ACH
-        - Manual
     InvoiceAttachments:
       type: object
       properties:
@@ -4414,11 +4400,11 @@ components:
       type: object
       properties:
         lateFee:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fee'
         processingFee:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fee'
     ClientOptions:
@@ -4505,12 +4491,6 @@ components:
           type:
             - number
             - 'null'
-    Currency:
-      type: string
-      $anchor:  Currency
-      enum:
-        - USD
-        - CAD
     InvoiceEvents:
       type: object
       properties:
@@ -4697,7 +4677,7 @@ components:
       type: object
       properties:
         quickbooks:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/6b786d9a2229f84822749ed0e086e50a931cc189f3b1bfff2c851fae29b07879
@@ -4731,12 +4711,12 @@ components:
             - string
             - 'null'
         discount:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceIntegrations'
       required:
@@ -4769,17 +4749,6 @@ components:
         - city
         - postalCode
         - state
-    InvoiceStatus:
-      type: string
-      $anchor:  InvoiceStatus
-      enum:
-        - Draft
-        - Open
-        - Overdue
-        - Cancelled
-        - Pending
-        - PaymentInTransit
-        - Paid
     InvoiceMetadata:
       type: object
       properties:
@@ -4849,17 +4818,17 @@ components:
             - string
             - 'null'
         discount:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/3190685832a4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         quantity:
@@ -4893,7 +4862,7 @@ components:
       type: object
       properties:
         frequency:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FrequencyUpdate'
         lateFeeAmount:
@@ -4908,7 +4877,7 @@ components:
       type: object
       properties:
         quickbooks:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/6ad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d
@@ -4955,7 +4924,7 @@ components:
       type: object
       properties:
         tax:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/14abbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01
@@ -5052,11 +5021,11 @@ components:
       type: object
       properties:
         creditCardFee:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fee'
         instantPayoutFee:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Fee'
     PaymentInfo:
@@ -5090,7 +5059,7 @@ components:
       type: object
       properties:
         quickbooks:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/6a889960fef25bc170d22a40a86ac4d6889f536685dd9369ec52d3df36732601
@@ -5098,11 +5067,11 @@ components:
       type: object
       properties:
         bulk:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ExternalIdsBulkImport'
         quickbooks:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ExternalIdsQuickbooks'
         stripe:
@@ -5218,7 +5187,7 @@ components:
               - string
               - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/3d33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f
@@ -5283,14 +5252,6 @@ components:
             - type: boolean
       required:
         - startDate
-    FrequencyAndScheduleStatus:
-      type: string
-      $anchor: FrequencyAndScheduleStatus
-      enum:
-        - Active
-        - Draft
-        - Expired
-        - Cancelled
     InvoiceDataCreateRequest:
       type: object
       properties:
@@ -5315,7 +5276,7 @@ components:
               - string
               - 'null'
         attachments:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/36b041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2
@@ -5328,7 +5289,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/InvoiceCollaboratorCreateRequest'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         currency:
@@ -5349,15 +5310,15 @@ components:
             - string
             - 'null'
         labels:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LabelsDictionary'
         lateFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/LateFeeConfig'
         notificationPreferences:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceNotificationPreferences'
         status:
@@ -5443,7 +5404,7 @@ components:
           items:
             $ref: '#/components/schemas/InvoiceLineItemsCreateRequest'
         creditFeeHandling:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/FeeHandlingConfig'
         currency:
@@ -5467,7 +5428,7 @@ components:
         user:
           $ref: '#/components/schemas/RedactedUser'
         profile:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/23d776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb
@@ -5495,7 +5456,7 @@ components:
       type: object
       properties:
         quickbooks:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863
@@ -5513,7 +5474,7 @@ components:
           enum:
             - Signature
         document:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/DocumentResponse'
         documentId:
@@ -5544,29 +5505,22 @@ components:
         - collaboratorGroupId
         - eligibilityRequirementId
         - requirementType
-    MemberClientStatus:
-      type: string
-      $anchor: MemberClientStatus
-      enum:
-        - Active
-        - Inactive
-        - Pending
     b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c:
       type: object
       properties:
         '2021':
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberClientForm1099Balances'
         '2022':
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/MemberClientForm1099Balances'
     d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0:
       type: object
       properties:
         quickbooks:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/64846136a354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc
@@ -5599,11 +5553,11 @@ components:
       type: object
       properties:
         '2021':
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CollaboratorForm1099BalancesUpdateRequest'
         '2022':
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CollaboratorForm1099BalancesUpdateRequest'
     ClientData:
@@ -5631,66 +5585,6 @@ components:
             - None
             - All
             - null
-    DepositProduct:
-      type: string
-      $anchor: DepositProduct
-      enum:
-        - Member1
-        - Member2
-        - Member3
-        - Enterprise1
-        - Enterprise2
-        - Enterprise3
-    Verifications:
-      type: object
-      properties:
-        banking:
-          type: string
-          $anchor: PropertiesVerifications
-          enum:
-            - None
-            - Pending
-            - Failed
-            - Verified
-        cardPayments:
-          type: string
-          $anchor: CardPaymentsVerifications
-          enum:
-            - None
-            - Pending
-            - Failed
-            - Verified
-        taxDocumentation:
-          type: string
-          $anchor: TaxDocumentationVerifications
-          enum:
-            - None
-            - Pending
-            - Failed
-            - Verified
-      required:
-        - banking
-        - cardPayments
-        - taxDocumentation
-    CardType:
-      type: string
-      $anchor: CardType
-      enum:
-        - individualDebitCard
-        - businessDebitCard
-        - individualVirtualDebitCard
-        - businessVirtualDebitCard
-    CardStatus:
-      type: string
-      $anchor: CardStatus
-      enum:
-        - Active
-        - Inactive
-        - Stolen
-        - Lost
-        - Frozen
-        - ClosedByCustomer
-        - SuspectedFraud
     c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875:
       type: object
       properties:
@@ -5698,16 +5592,6 @@ components:
           type: string
       required:
         - unitCardId
-    CardStatusUpdate:
-      type: string
-      $anchor: CardStatusUpdate
-      enum:
-        - Active
-        - Inactive
-        - Stolen
-        - Lost
-        - Frozen
-        - ClosedByCustomer
     FundsTransferAccount:
       type: object
       properties:
@@ -5746,23 +5630,6 @@ components:
         - internal
         - numbers
         - type
-    RequirementType:
-      type: string
-      $anchor: RequirementType
-      enum:
-        - Signature
-    WSDataTypes:
-      type: string
-      $anchor: WSDataTypes
-      enum:
-        - Boolean
-        - String
-    DeductionType:
-      type: string
-      $anchor: DeductionType
-      enum:
-        - PrePayment
-        - PostPayment
     DeductionApplication:
       type: object
       properties:
@@ -5788,19 +5655,6 @@ components:
       required:
         - inputs
         - strategy
-    DeductionStatus:
-      type: string
-      $anchor: DeductionStatus
-      enum:
-        - Pending
-        - PartiallyApplied
-        - Complete
-    PayrollWorkflowStrategy:
-      type: string
-      $anchor: PayrollWorkflowStrategy
-      enum:
-        - SingleStage
-        - DualStage
     FundingSource:
       type: object
       properties:
@@ -5854,7 +5708,7 @@ components:
             - Exclude
             - null
         stateTaxId:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/87539cb97aa7616e350fc0d23c5a49177ea4c4a8bd00ec2a2cfd2a9a5c4e648a
@@ -5866,7 +5720,7 @@ components:
       type: object
       properties:
         quickbooks:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/6a65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4
@@ -5932,14 +5786,6 @@ components:
         - country
         - postalCode
         - state
-    MemberClientTaxStatus:
-      type: string
-      $anchor: MemberClientTaxStatus
-      enum:
-        - Complete
-        - Failed
-        - Pending
-        - Incomplete
     CollaboratorGroupRequirement:
       type: object
       properties:
@@ -5967,16 +5813,6 @@ components:
         - city
         - postalCode
         - state
-    CardBrand:
-      type: string
-      $anchor: CardBrand
-      enum:
-        - AmericanExpress
-        - Visa
-        - Mastercard
-        - Discover
-        - DinersClub
-        - JCB
     PayoutDestinationResponse:
       type: object
       properties:
@@ -6012,15 +5848,6 @@ components:
         - name
         - payoutMethod
         - percentage
-    PayoutPreferences:
-      type: string
-      $anchor: PayoutPreferences
-      enum:
-        - Standard
-        - Instant
-        - Expedited
-        - Check
-        - ECheck
     PayoutDestinationUpdate:
       type: object
       properties:
@@ -6054,21 +5881,6 @@ components:
           type:
             - number
             - 'null'
-    BatchProcessingStrategy:
-      type: string
-      $anchor: BatchProcessingStrategy
-      enum:
-        - Merge
-        - Single
-    BulkStatus:
-      type: string
-      $anchor: BulkStatus
-      enum:
-        - Open
-        - Pending
-        - Processing
-        - Complete
-        - Failed
     757f4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2:
       type: object
       properties:
@@ -6082,19 +5894,6 @@ components:
         - itemsFailed
         - itemsProcessed
         - itemsTotal
-    BulkPayableStatus:
-      type: string
-      $anchor: BulkPayableStatus
-      enum:
-        - Draft
-        - Open
-        - Approved
-        - Paid
-        - Cancelled
-    WorkFlowSubStatus:
-      type: string
-      enum:
-        - Submitted
     a7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14:
       type: object
       properties:
@@ -6159,12 +5958,6 @@ components:
           type:
             - string
             - 'null'
-    BulkCalculation1099Type:
-      type: string
-      $anchor: BulkCalculation1099Type
-      enum:
-        - Balances
-        - Submissions
     865969bc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14:
       type: object
       properties:
@@ -6262,7 +6055,7 @@ components:
             - Inactive
             - Pending
         clientData:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/ClientData'
         collaboratorGroupIds:
@@ -6282,7 +6075,7 @@ components:
               - $ref: '#/components/schemas/NullObject'
               - $ref: '#/components/schemas/MemberClientRequirementResponse'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/26e8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
@@ -6462,7 +6255,7 @@ components:
             - string
             - 'null'
         discount:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
@@ -6471,7 +6264,7 @@ components:
             - number
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceIntegrations'
       required:
@@ -6506,23 +6299,6 @@ components:
             - 'null'
       required:
         - amount
-    ClientWorkFlowStatus:
-      type: string
-      $anchor: ClientWorkFlowStatus
-      enum:
-        - Pending
-        - PreApproved
-        - Approved
-        - PaymentInitiated
-        - Funded
-        - Declined
-    MemberWorkFlowStatus:
-      type: string
-      $anchor: MemberWorkFlowStatus
-      enum:
-        - Disputed
-        - Accepted
-        - Resubmitted
     6b786d9a2229f84822749ed0e086e50a931cc189f3b1bfff2c851fae29b07879:
       type: object
       properties:
@@ -6545,14 +6321,6 @@ components:
           type:
             - number
             - 'null'
-    ScheduleStatus:
-      type: string
-      $anchor: ScheduleStatus
-      enum:
-        - Pending
-        - Completed
-        - Skipped
-        - Modified
     6ad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d:
       type: object
       properties:
@@ -6574,21 +6342,6 @@ components:
       required:
         - amountWithheld
         - rate
-    InvoicePayoutDestinationType:
-      type: string
-      $anchor: InvoicePayoutDestinationType
-      enum:
-        - Account
-        - Card
-        - InternalAccount
-        - PaperCheck
-        - WeGift
-    TransferType:
-      type: string
-      $anchor: TransferType
-      enum:
-        - Card
-        - Account
     6a889960fef25bc170d22a40a86ac4d6889f536685dd9369ec52d3df36732601:
       type: object
       properties:
@@ -6623,30 +6376,24 @@ components:
       type: object
       properties:
         track:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/12d9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915
         unit:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/87539cb97aa7616e350fc0d23c5a49177ea4c4a8bd00ec2a2cfd2a9a5c4e648a
-    Intervals:
-      type: string
-      $anchor: Intervals
-      enum:
-        - Week
-        - Month
     23d776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb:
       type: object
       properties:
         address:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Address'
         company:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Company'
         logoUrl:
@@ -6665,12 +6412,12 @@ components:
             - string
             - 'null'
         phone:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/7996a6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051
         profile:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/f6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef
@@ -6723,11 +6470,11 @@ components:
         userRoles:
           $ref: '#/components/schemas/UserRoles'
         events:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/DocumentEvents'
         files:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/DocumentFiles'
       required:
@@ -6738,14 +6485,6 @@ components:
         - templateId
         - title
         - userRoles
-    RequirementStatus:
-      type: string
-      $anchor: RequirementStatus
-      enum:
-        - New
-        - Sent
-        - Pending
-        - Complete
     MemberClientForm1099Balances:
       type: object
       properties:
@@ -6787,20 +6526,20 @@ components:
           enum:
             - NEC
         correction:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Form1099Correction'
         dispute:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/8a9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5
         events:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/Form1099Events'
         taxForm:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         taxFormId:
@@ -6827,18 +6566,6 @@ components:
           type:
             - string
             - 'null'
-    MemberTaxDocumentSharePermission:
-      type: string
-      $anchor: MemberTaxDocumentSharePermission
-      enum:
-        - Allow
-        - Decline
-    AutoPayRequirement:
-      type: string
-      $anchor: AutoPayRequirement
-      enum:
-        - All
-        - None
     CollaboratorForm1099BalancesUpdateRequest:
       type: object
       properties:
@@ -6847,7 +6574,7 @@ components:
             - number
             - 'null'
         correction:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481
@@ -6862,12 +6589,12 @@ components:
             - Both
             - null
         dispute:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/8a9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5
         events:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         status:
@@ -6884,34 +6611,6 @@ components:
             - Accepted
             - Excluded
             - null
-    MemberVerificationStrategy:
-      type: string
-      $anchor: MemberVerificationStrategy
-      enum:
-        - None
-        - All
-    AutoPayStrategy:
-      type: string
-      $anchor: AutoPayStrategy
-      enum:
-        - All
-        - None
-    VerificationStatus:
-      type: string
-      $anchor: VerificationStatus
-      enum:
-        - None
-        - Pending
-        - Failed
-        - Verified
-    FundsTransferAccountType:
-      type: string
-      $anchor: FundsTransferAccountType
-      enum:
-        - Card
-        - BankAccount
-        - InternalAccount
-        - StripeAccount
     8212ee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f:
       type: object
       properties:
@@ -6965,19 +6664,6 @@ components:
       type: object
       additionalProperties:
         type: string
-    FundingSourceType:
-      type: string
-      $anchor: FundingSourceType
-      enum:
-        - InternalAccount
-        - Account
-        - PaymentCard
-    CalculationSettings1099Toggle:
-      type: string
-      $anchor: CalculationSettings1099Toggle
-      enum:
-        - Include
-        - Exclude
     6a65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4:
       type: object
       properties:
@@ -6989,27 +6675,6 @@ components:
           type:
             - string
             - 'null'
-    CompanyStructure:
-      type: string
-      $anchor: CompanyStructure
-      enum:
-        - None
-        - SoleProprietorship
-        - LlcSingleMember
-        - LlcMultiMember
-        - CorporationS
-        - LLCCorporationS
-        - LLCCorporationC
-        - LLCPartnership
-        - CorporationC
-        - Partnership
-    PayoutDestinationType:
-      type: string
-      $anchor: PayoutDestinationType
-      enum:
-        - Account
-        - Card
-        - WeGift
     PayrollReportLineItem:
       type: object
       properties:
@@ -7046,7 +6711,7 @@ components:
             - string
             - 'null'
         discount:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
@@ -7055,7 +6720,7 @@ components:
             - number
             - 'null'
         integration:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/InvoiceIntegrations'
       required:
@@ -7095,7 +6760,7 @@ components:
       type: object
       properties:
         form1099Filings:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: >-
                 #/components/schemas/ba1d4c38921e9c7af45d17223c51562cb69a815c6bf72f6cf959d800ee59afdb
@@ -7139,7 +6804,7 @@ components:
             - string
             - 'null'
         links:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - $ref: '#/components/schemas/CompanyLinks'
         name:
@@ -7197,16 +6862,6 @@ components:
           type:
             - string
             - 'null'
-    DocumentStatus:
-      type: string
-      $anchor: DocumentStatus
-      enum:
-        - Required
-        - Approved
-        - Invalid
-        - ReceivedFront
-        - ReceivedBack
-        - PendingReview
     DocumentFiles:
       type: object
       properties:
@@ -7229,24 +6884,6 @@ components:
           type:
             - string
             - 'null'
-    Form1099Status:
-      type: string
-      $anchor: Form1099Status
-      enum:
-        - Ready
-        - NeedsActionInfo
-        - NeedsActionDispute
-        - Submitted
-        - Rejected
-        - Accepted
-        - Excluded
-    ExclusionReason:
-      type: string
-      $anchor: ExclusionReason
-      enum:
-        - BelowThreshold
-        - CompanyStructure
-        - NonUsEntity
     Form1099Events:
       type: object
       properties:
@@ -7307,7 +6944,7 @@ components:
       type: object
       properties:
         address:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         companyStructure:
@@ -7351,22 +6988,11 @@ components:
           type:
             - number
             - 'null'
-    Form1099Type:
-      type: string
-      $anchor: Form1099Type
-      enum:
-        - NEC
-    TaxFormDeliveryMethod:
-      type: string
-      $anchor: TaxFormDeliveryMethod
-      enum:
-        - Electronic
-        - Mail
     ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481:
       type: object
       properties:
         address:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/NullObject'
             - type: object
         companyStructure:
@@ -7410,19 +7036,6 @@ components:
           type:
             - number
             - 'null'
-    Form1099DeliveryMethod:
-      type: string
-      $anchor: Form1099DeliveryMethod
-      enum:
-        - Electronic
-        - Mail
-        - Both
-    FundsTransferProvider:
-      type: string
-      $anchor: FundsTransferProvider
-      enum:
-        - Unit
-        - Stripe
     ba1d4c38921e9c7af45d17223c51562cb69a815c6bf72f6cf959d800ee59afdb:
       type: object
       properties:
@@ -7464,18 +7077,11 @@ components:
             - 'null'
       required:
         - memberId
-    Form1099DisputeStatus:
-      type: string
-      $anchor: Form1099DisputeStatus
-      enum:
-        - Open
-        - Accepted
-        - Rejected
     NullObject:
       description: >-
         This is a schema for representing null. It should be passed explicitly
         when listed as an option in an array
-      type: null
+      type: 'null'
       required: []
 info:
   title: Wingspan Payments API
