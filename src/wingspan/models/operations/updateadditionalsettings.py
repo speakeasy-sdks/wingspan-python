@@ -8,14 +8,12 @@ from ..shared import additionaldataupdaterequest as shared_additionaldataupdater
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateAdditionalSettingsRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     additional_data_update_request: Optional[shared_additionaldataupdaterequest.AdditionalDataUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

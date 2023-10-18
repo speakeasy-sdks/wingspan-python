@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 24a5ff4b5e33679ef9adf23ba062cf16
+  docChecksum: 213e6692a623ef7a4c2e2fbeb0e17e0f
   docVersion: 1.0.0
-  speakeasyVersion: 1.91.3
-  generationVersion: 2.139.1
+  speakeasyVersion: 1.101.0
+  generationVersion: 2.161.0
 generation:
   comments:
     disableComments: false
@@ -15,15 +15,16 @@ generation:
   telemetryEnabled: false
 features:
   python:
-    core: 2.87.0
+    core: 3.0.2
     flattening: 2.81.1
     globalServerURLs: 2.82.0
-    groups: 2.81.1
+    groups: 2.81.2
     nameOverrides: 2.81.1
 python:
-  version: 1.30.0
+  version: 2.0.0
   author: Speakeasy
   description: Python Client SDK for the Wingspan Payments API
+  flattenGlobalSecurity: true
   maxMethodParams: 4
   maxPathParams: 4
   packageName: wingspan

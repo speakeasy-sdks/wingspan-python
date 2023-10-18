@@ -7,7 +7,6 @@ from ..shared import collaboratorgroupresponse as shared_collaboratorgrouprespon
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateCollaboratorGroupResponse:
     content_type: str = dataclasses.field()

@@ -21,14 +21,15 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.PaymentEligibility(
-    field='bluetooth Extended',
-    value='blue',
+    field='online',
+    value='Configuration',
 )
 
 res = s.payment_eligibility_requirement.create(req)
 
 if res.payment_eligibility is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -60,6 +61,7 @@ res = s.payment_eligibility_requirement.delete(id='program')
 
 if res.payment_eligibility is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -91,6 +93,7 @@ res = s.payment_eligibility_requirement.get(id='female')
 
 if res.payment_eligibility is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -119,12 +122,12 @@ s = wingspan.Wingspan()
 
 
 res = s.payment_eligibility_requirement.update(id='Van', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest(
-    field='Reactive',
-    value=[],
+    value=shared.PaymentEligibilityUpdateRequestValue(),
 ))
 
 if res.payment_eligibility is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

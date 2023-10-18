@@ -8,7 +8,6 @@ from wingspan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14:
     deduction_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionId') }})

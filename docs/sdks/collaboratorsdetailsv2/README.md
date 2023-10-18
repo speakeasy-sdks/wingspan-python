@@ -22,6 +22,7 @@ res = s.collaborators_details_v2.get()
 
 if res.collaborators_report_responses is not None:
     # handle response
+    pass
 ```
 
 

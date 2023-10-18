@@ -22,6 +22,7 @@ res = s.collaborator_v2.get(member_id='female')
 
 if res.collaborator_v2 is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

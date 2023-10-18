@@ -5,6 +5,6 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `member_id`        | *Optional[str]*    | :heavy_check_mark: | N/A                |
-| `submission_index` | *Optional[float]*  | :heavy_check_mark: | N/A                |
-| `year`             | *Optional[float]*  | :heavy_check_mark: | N/A                |
+| `member_id`        | *str*              | :heavy_check_mark: | N/A                |
+| `submission_index` | *float*            | :heavy_check_mark: | N/A                |
+| `year`             | *float*            | :heavy_check_mark: | N/A                |

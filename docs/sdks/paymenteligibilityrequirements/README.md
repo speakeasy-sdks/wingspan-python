@@ -22,6 +22,7 @@ res = s.payment_eligibility_requirements.list()
 
 if res.payment_eligibilities is not None:
     # handle response
+    pass
 ```
 
 

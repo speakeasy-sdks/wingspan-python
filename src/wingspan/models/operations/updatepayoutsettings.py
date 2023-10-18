@@ -8,14 +8,12 @@ from ..shared import payoutsettingsupdate as shared_payoutsettingsupdate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdatePayoutSettingsRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     payout_settings_update: Optional[shared_payoutsettingsupdate.PayoutSettingsUpdate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

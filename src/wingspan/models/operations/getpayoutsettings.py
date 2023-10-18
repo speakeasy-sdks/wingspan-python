@@ -7,13 +7,11 @@ from ..shared import payoutsettingsresponse as shared_payoutsettingsresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetPayoutSettingsRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

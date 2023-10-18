@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `member_client_id` | *Optional[str]*    | :heavy_check_mark: | N/A                |
-| `year`             | *Optional[float]*  | :heavy_check_mark: | N/A                |
+| `member_client_id` | *str*              | :heavy_check_mark: | N/A                |
+| `year`             | *float*            | :heavy_check_mark: | N/A                |

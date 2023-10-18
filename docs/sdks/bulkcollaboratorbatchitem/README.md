@@ -21,19 +21,22 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_collaborator_batch_item.create(batch_id='online', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
-    collaborator_group_id='Extended South',
-    collaborator_id='grey technology East',
-    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemCreate.ACTIVE,
-    company='Borer LLC',
-    email='Russel_Schumm@hotmail.com',
-    external_id='volt physical Ameliorated',
-    first_last_name='after',
-    form_w9_data=[],
-    labels=[],
+    form_w9_data=shared.MemberClientFormW9Info(
+        address_line1='Configuration',
+        city='Edwardoville',
+        company_structure=shared.CompanyStructureMemberClientFormW9Info.LLC_PARTNERSHIP,
+        country='Bahrain',
+        postal_code='73980-4130',
+        state='male',
+    ),
+    labels={
+        "SUV": 'quantify',
+    },
 ))
 
 if res.bulk_collaborator_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -66,6 +69,7 @@ res = s.bulk_collaborator_batch_item.get(batch_id='female', batch_item_id='progr
 
 if res.bulk_collaborator_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -95,19 +99,22 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_collaborator_batch_item.update(batch_id='Van', batch_item_id='East', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
-    collaborator_group_id='dock Quality redundant',
-    collaborator_id='Arizona Cotton extend',
-    collaborator_status=shared.CollaboratorStatusBulkCollaboratorItemUpdate.ACTIVE,
-    company='Connelly - Nolan',
-    email='Zakary.Towne@hotmail.com',
-    external_id='JBOD',
-    first_last_name='Quality guestbook driver',
-    form_w9_data=[],
-    labels=[],
+    form_w9_data=shared.MemberClientFormW9Info(
+        address_line1='male',
+        city='Lake Marlee',
+        company_structure=shared.CompanyStructureMemberClientFormW9Info.CORPORATION_S,
+        country='Jersey',
+        postal_code='10284-4337',
+        state='Plastic',
+    ),
+    labels={
+        "Carolina": 'syndicate',
+    },
 ))
 
 if res.bulk_collaborator_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

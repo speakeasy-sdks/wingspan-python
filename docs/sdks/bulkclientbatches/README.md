@@ -22,6 +22,7 @@ res = s.bulk_client_batches.list()
 
 if res.bulk_client_batches is not None:
     # handle response
+    pass
 ```
 
 

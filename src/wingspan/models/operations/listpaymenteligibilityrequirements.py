@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import paymenteligibility as shared_paymenteligibility
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class ListPaymentEligibilityRequirementsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    payment_eligibilities: Optional[list[shared_paymenteligibility.PaymentEligibility]] = dataclasses.field(default=None)
+    payment_eligibilities: Optional[List[shared_paymenteligibility.PaymentEligibility]] = dataclasses.field(default=None)
     r"""See payment eligibility requirements on member"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

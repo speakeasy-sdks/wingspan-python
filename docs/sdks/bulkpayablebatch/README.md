@@ -21,7 +21,9 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkPayableBatchCreate(
-    labels=[],
+    labels={
+        "online": 'Configuration',
+    },
     processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.MERGE,
 )
 
@@ -29,6 +31,7 @@ res = s.bulk_payable_batch.create(req)
 
 if res.bulk_payable_batch is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -60,6 +63,7 @@ res = s.bulk_payable_batch.delete(batch_id='program')
 
 if res.bulk_payable_batch is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -91,6 +95,7 @@ res = s.bulk_payable_batch.get(batch_id='female')
 
 if res.bulk_payable_batch is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -119,12 +124,14 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_payable_batch.update(batch_id='Van', bulk_payable_batch_update=shared.BulkPayableBatchUpdate(
-    labels=[],
-    status=shared.StatusBulkPayableBatchUpdate.OPEN,
+    labels={
+        "East": 'male',
+    },
 ))
 
 if res.bulk_payable_batch is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

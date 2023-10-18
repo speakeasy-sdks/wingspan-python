@@ -22,20 +22,18 @@ s = wingspan.Wingspan()
 
 req = shared.DeductionCreateRequest(
     amount=4865.89,
-    client_id='Configuration Money',
+    client_id='bluetooth',
     currency=shared.DeductionCreateRequestCurrency.CAD,
-    member_id='shred',
-    name='technology East',
-    priority=1697.27,
-    source_invoice_id='Northwest',
-    start_date='SUV quantify Polestar',
-    type=shared.TypeDeductionCreateRequest.PRE_PAYMENT,
+    member_id='Money',
+    name='blue',
+    type=shared.TypeDeductionCreateRequest.POST_PAYMENT,
 )
 
 res = s.collaborator_deduction.create(req)
 
 if res.deduction_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -67,6 +65,7 @@ res = s.collaborator_deduction.delete(id='program')
 
 if res.deduction_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -98,6 +97,7 @@ res = s.collaborator_deduction.get(id='female')
 
 if res.deduction_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -125,18 +125,11 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.update(id='Van', deduction_update_request=shared.DeductionUpdateRequest(
-    amount=156.52,
-    currency=shared.CurrencyDeductionUpdateRequest.CAD,
-    name='dock Quality redundant',
-    priority=9840.08,
-    source_invoice_id='Islands',
-    start_date='withdrawal extend',
-    type=shared.TypeDeductionUpdateRequest.PRE_PAYMENT,
-))
+res = s.collaborator_deduction.update(id='Van', deduction_update_request=shared.DeductionUpdateRequest())
 
 if res.deduction_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

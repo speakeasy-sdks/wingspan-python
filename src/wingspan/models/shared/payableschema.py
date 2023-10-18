@@ -19,7 +19,7 @@ from ..shared import sixb94b58d661f3eabc1444a7a43ac4b99580f0d050123b7bf38184e2f0
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, List, Optional
 from wingspan import utils
 
 class PayableSchemaAcceptedPaymentMethods(str, Enum):
@@ -28,39 +28,9 @@ class PayableSchemaAcceptedPaymentMethods(str, Enum):
     MANUAL = 'Manual'
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
-
-
-@dataclasses.dataclass
-class PayableSchemaBankTransferInfo:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableSchemaChargedFees:
-    pass
-
 class CurrencyPayableSchema(str, Enum):
     USD = 'USD'
     CAD = 'CAD'
-
-
-
-@dataclasses.dataclass
-class PayableSchemaInternationalBankTransferInfo:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableSchemaMetadata:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableSchemaNextPayrollExecutionDate:
-    pass
 
 class StatusPayableSchema(str, Enum):
     DRAFT = 'Draft'
@@ -73,7 +43,6 @@ class StatusPayableSchema(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PayableSchema:
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
@@ -90,9 +59,9 @@ class PayableSchema:
     invoice_notes: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceNotes') }})
     invoice_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceNumber') }})
     invoice_template_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceTemplateId') }})
-    labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    labels: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     late_fee_handling: shared_latefeeconfig.LateFeeConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeHandling') }})
-    line_items: list[shared_invoicelineitem.InvoiceLineItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
+    line_items: List[shared_invoicelineitem.InvoiceLineItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
     member: shared_memberoptions.MemberOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member') }})
     member_address: shared_address.Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberAddress') }})
     member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})
@@ -101,14 +70,14 @@ class PayableSchema:
     status: StatusPayableSchema = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    accepted_payment_methods: Optional[list[PayableSchemaAcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods') }})
+    accepted_payment_methods: Optional[List[PayableSchemaAcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods') }})
     account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId') }})
-    bank_transfer_info: Optional[Union[Any, shared_bankaccount.BankAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bankTransferInfo'), 'exclude': lambda f: f is None }})
-    charged_fees: Optional[Union[Any, shared_fees.Fees]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('chargedFees'), 'exclude': lambda f: f is None }})
-    international_bank_transfer_info: Optional[Union[Any, shared_bankaccount.BankAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internationalBankTransferInfo'), 'exclude': lambda f: f is None }})
-    member_formatted_address_lines: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberFormattedAddressLines') }})
-    metadata: Optional[Union[Any, shared_invoicemetadata.InvoiceMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
-    next_payroll_execution_date: Optional[Union[Any, shared_scheduledate.ScheduleDate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nextPayrollExecutionDate'), 'exclude': lambda f: f is None }})
+    bank_transfer_info: Optional[shared_bankaccount.BankAccount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bankTransferInfo') }})
+    charged_fees: Optional[shared_fees.Fees] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('chargedFees') }})
+    international_bank_transfer_info: Optional[shared_bankaccount.BankAccount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internationalBankTransferInfo') }})
+    member_formatted_address_lines: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberFormattedAddressLines') }})
+    metadata: Optional[shared_invoicemetadata.InvoiceMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
+    next_payroll_execution_date: Optional[shared_scheduledate.ScheduleDate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nextPayrollExecutionDate') }})
     payment_method_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethodId') }})
     source_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceId') }})
     

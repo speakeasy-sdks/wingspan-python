@@ -1,17 +1,7 @@
 # PaymentEligibilityUpdateRequestValue
 
 
-## Supported Types
+## Fields
 
-### 
-
-```python
-paymentEligibilityUpdateRequestValue: Any = /* values here */
-```
-
-### PaymentEligibilityUpdateRequestValue2
-
-```python
-paymentEligibilityUpdateRequestValue: shared.PaymentEligibilityUpdateRequestValue2 = /* values here */
-```
-
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

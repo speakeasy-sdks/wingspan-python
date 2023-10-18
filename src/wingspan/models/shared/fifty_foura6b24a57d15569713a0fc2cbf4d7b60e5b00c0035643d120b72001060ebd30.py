@@ -4,27 +4,14 @@ from __future__ import annotations
 import dataclasses
 from ..shared import twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915 as shared_twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional, Union
+from typing import Dict, Optional
 from wingspan import utils
 
 
-
-@dataclasses.dataclass
-class FiftyFoura6b24a57d15569713a0fc2cbf4d7b60e5b00c0035643d120b72001060ebd30Track:
-    pass
-
-
-
-@dataclasses.dataclass
-class FiftyFoura6b24a57d15569713a0fc2cbf4d7b60e5b00c0035643d120b72001060ebd30Unit:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FiftyFoura6b24a57d15569713a0fc2cbf4d7b60e5b00c0035643d120b72001060ebd30:
-    track: Optional[Union[Any, shared_twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915.Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('track'), 'exclude': lambda f: f is None }})
-    unit: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit'), 'exclude': lambda f: f is None }})
+    track: Optional[shared_twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915.Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('track') }})
+    unit: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit') }})
     
 

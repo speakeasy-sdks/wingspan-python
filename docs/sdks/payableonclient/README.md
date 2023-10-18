@@ -22,45 +22,47 @@ req = shared.PayableCreateRequest(
     accepted_payment_methods=[
         shared.PayableCreateRequestAcceptedPaymentMethods.ACH,
     ],
-    attachments=[],
-    client=[],
-    collaborator_id='Configuration Money',
-    credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=7865.46,
-        client_pays=690.25,
-        member_pays=9967.06,
+    attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
+        custom_attachment_ids=[
+            'bluetooth',
+        ],
     ),
-    currency=shared.CurrencyPayableCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
-    due_date='technology East',
-    integration=[],
-    invoice_notes='evolve',
-    labels=[],
-    late_fee_handling=[],
+    client=shared.PayableCreateRequestClient(),
+    collaborator_id='Extended',
+    credit_fee_handling=shared.FeeHandlingConfig(),
+    due_date='South',
+    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+        quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+    ),
+    labels={
+        "shred": 'abnormally',
+    },
+    late_fee_handling=shared.LateFeeConfigUpdate(
+        frequency=shared.FrequencyUpdate(),
+    ),
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=7150.4,
-            description='Secured systematic protocol',
-            detail='Screen mobile',
-            discount=[],
-            integration=[],
-            labels=[],
-            quantity=6562.56,
-            reimbursable_expense=[],
-            total_cost=3570.21,
-            unit='meter',
+            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
+            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+            ),
+            labels={
+                "deposit": 'evolve',
+            },
         ),
     ],
-    member=[],
-    member_client_id='after',
-    metadata=[],
-    notification_preferences=[],
-    status=shared.StatusPayableCreateRequest.PENDING,
+    member=shared.PayableCreateRequestMember(),
+    metadata=shared.InvoiceMetadata(),
+    notification_preferences=shared.InvoiceNotificationPreferences(
+        send_reminders=False,
+    ),
 )
 
 res = s.payable_on_client.create(req)
 
 if res.payable_schema is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -92,33 +94,57 @@ res = s.payable_on_client.update(id='Van', payable_update_request=shared.Payable
     accepted_payment_methods=[
         shared.PayableUpdateRequestAcceptedPaymentMethods.CREDIT,
     ],
-    attachments=[],
-    charged_fees=[],
-    client=[],
+    attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
+        custom_attachment_ids=[
+            'Reactive',
+        ],
+    ),
+    charged_fees=shared.Fees(
+        late_fee=shared.Fee(
+            amount=9914.64,
+        ),
+        processing_fee=shared.Fee(
+            amount=2703.24,
+        ),
+    ),
+    client=shared.PayableUpdateRequestClient(),
     collaborators=[
-        [],
+        shared.InvoiceCollaboratorUpdateRequest(),
     ],
-    credit_fee_handling=[],
-    due_date='male Metal',
-    integration=[],
-    invoice_notes='Arizona Cotton extend',
-    labels=[],
-    late_fee_handling=[],
+    credit_fee_handling=shared.FeeHandlingConfig(),
+    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+        quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+    ),
+    labels={
+        "Quality": 'redundant',
+    },
+    late_fee_handling=shared.LateFeeConfigUpdate(
+        frequency=shared.FrequencyUpdate(),
+    ),
     line_items=[
-        [],
+        shared.InvoiceLineItemsCreateRequest(
+            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
+            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+            ),
+            labels={
+                "cheater": 'Islands',
+            },
+        ),
     ],
-    member=[],
-    member_client_id='bifurcated',
-    metadata=[],
-    notification_preferences=[],
+    member=shared.PayableUpdateRequestMember(),
+    metadata=shared.InvoiceMetadata(),
+    notification_preferences=shared.InvoiceNotificationPreferences(
+        send_reminders=False,
+    ),
     payment_methods=[
-        shared.PayableUpdateRequestPaymentMethods.MANUAL,
+        shared.PayableUpdateRequestPaymentMethods.ACH,
     ],
-    status=shared.StatusPayableUpdateRequest.PAID,
 ))
 
 if res.payable_schema is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

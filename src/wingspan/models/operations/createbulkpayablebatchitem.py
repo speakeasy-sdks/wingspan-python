@@ -8,14 +8,12 @@ from ..shared import bulkpayableitemcreate as shared_bulkpayableitemcreate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateBulkPayableBatchItemRequest:
     batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier for a batch"""
     bulk_payable_item_create: Optional[shared_bulkpayableitemcreate.BulkPayableItemCreate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

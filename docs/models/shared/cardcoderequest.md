@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `channel`          | *Optional[str]*    | :heavy_check_mark: | N/A                |
+| `channel`          | *str*              | :heavy_check_mark: | N/A                |

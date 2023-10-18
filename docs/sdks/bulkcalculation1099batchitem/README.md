@@ -21,14 +21,16 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_calculation1099_batch_item.create(batch_id='online', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
-    calculation_type=shared.CalculationTypeBulkCalculation1099ItemCreate.SUBMISSIONS,
-    client_id='Money blue shred',
-    labels=[],
-    year=3768.44,
+    client_id='Configuration',
+    labels={
+        "Money": 'blue',
+    },
+    year=9967.06,
 ))
 
 if res.bulk_calculation1099_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -61,6 +63,7 @@ res = s.bulk_calculation1099_batch_item.get(batch_id='female', batch_item_id='pr
 
 if res.bulk_calculation1099_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -90,14 +93,14 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_calculation1099_batch_item.update(batch_id='Van', batch_item_id='East', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
-    calculation_type=shared.CalculationTypeBulkCalculation1099ItemUpdate.LESS_THAN_NIL_GREATER_THAN_,
-    client_id='Metal cheater Islands',
-    labels=[],
-    year=4995.57,
+    labels={
+        "male": 'Metal',
+    },
 ))
 
 if res.bulk_payable_item is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

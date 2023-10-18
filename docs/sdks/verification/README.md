@@ -19,11 +19,12 @@ s = wingspan.Wingspan()
 
 
 res = s.verification.send(id='hacking', card_code_request=shared.CardCodeRequest(
-    channel='bluetooth Boynton',
+    channel='withdrawal',
 ))
 
 if res.card_code_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

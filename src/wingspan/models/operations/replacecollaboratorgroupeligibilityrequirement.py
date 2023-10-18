@@ -8,7 +8,6 @@ from ..shared import collaboratorgroupresponse as shared_collaboratorgrouprespon
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ReplaceCollaboratorGroupEligibilityRequirementRequest:
     eligibility_requirement_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eligibilityRequirementId', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class ReplaceCollaboratorGroupEligibilityRequirementRequest:
     r"""Unique identifier"""
     collaborator_group_requirement_update: Optional[shared_collaboratorgrouprequirementupdate.CollaboratorGroupRequirementUpdate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

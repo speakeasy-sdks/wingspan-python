@@ -22,6 +22,7 @@ res = s.client_collaborators_v2.list()
 
 if res.collaborator_v2s is not None:
     # handle response
+    pass
 ```
 
 

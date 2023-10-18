@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import mccresponse as shared_mccresponse
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class ListMCCResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    mcc_responses: Optional[list[shared_mccresponse.MccResponse]] = dataclasses.field(default=None)
+    mcc_responses: Optional[List[shared_mccresponse.MccResponse]] = dataclasses.field(default=None)
     r"""A list of MCC"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

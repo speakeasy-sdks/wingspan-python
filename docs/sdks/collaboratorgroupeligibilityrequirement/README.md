@@ -23,6 +23,7 @@ res = s.collaborator_group_eligibility_requirement.delete(eligibility_requiremen
 
 if res.collaborator_group_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -52,11 +53,12 @@ s = wingspan.Wingspan()
 
 
 res = s.collaborator_group_eligibility_requirement.replace(eligibility_requirement_id='Cruiser', id='Tandem', collaborator_group_requirement_update=shared.CollaboratorGroupRequirementUpdate(
-    new_eligibility_requirement_id='Bicycle',
+    new_eligibility_requirement_id='Wooden',
 ))
 
 if res.collaborator_group_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

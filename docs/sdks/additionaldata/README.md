@@ -21,15 +21,16 @@ s = wingspan.Wingspan()
 
 req = shared.AdditionalData(
     key='<key>',
-    name='bluetooth Extended',
+    name='online',
     required=False,
-    type=shared.AdditionalDataType.BOOLEAN,
+    type=shared.AdditionalDataType.STRING,
 )
 
 res = s.additional_data.create(req)
 
 if res.additional_data is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -61,6 +62,7 @@ res = s.additional_data.delete(id='program')
 
 if res.additional_data is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -92,6 +94,7 @@ res = s.additional_data.get(id='female')
 
 if res.additional_data is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

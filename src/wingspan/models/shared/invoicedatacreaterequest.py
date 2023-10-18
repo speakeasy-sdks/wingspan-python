@@ -10,7 +10,7 @@ from ..shared import latefeeconfig as shared_latefeeconfig
 from ..shared import thirty_sixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2 as shared_thirty_sixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, List, Optional
 from wingspan import utils
 
 class InvoiceDataCreateRequestAcceptedPaymentMethods(str, Enum):
@@ -19,46 +19,10 @@ class InvoiceDataCreateRequestAcceptedPaymentMethods(str, Enum):
     MANUAL = 'Manual'
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
-
-
-@dataclasses.dataclass
-class InvoiceDataCreateRequestAttachments:
-    pass
-
-
-
-@dataclasses.dataclass
-class InvoiceDataCreateRequestCollaborators:
-    pass
-
-
-
-@dataclasses.dataclass
-class InvoiceDataCreateRequestCreditFeeHandling:
-    pass
-
 class CurrencyInvoiceDataCreateRequest(str, Enum):
     USD = 'USD'
     CAD = 'CAD'
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
-
-
-
-@dataclasses.dataclass
-class InvoiceDataCreateRequestLabels:
-    pass
-
-
-
-@dataclasses.dataclass
-class InvoiceDataCreateRequestLateFeeHandling:
-    pass
-
-
-
-@dataclasses.dataclass
-class InvoiceDataCreateRequestNotificationPreferences:
-    pass
 
 class StatusInvoiceDataCreateRequest(str, Enum):
     DRAFT = 'Draft'
@@ -72,21 +36,20 @@ class StatusInvoiceDataCreateRequest(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class InvoiceDataCreateRequest:
-    line_items: list[shared_invoicelineitemscreaterequest.InvoiceLineItemsCreateRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
+    line_items: List[shared_invoicelineitemscreaterequest.InvoiceLineItemsCreateRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
     member_client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClientId') }})
-    accepted_payment_methods: Optional[list[InvoiceDataCreateRequestAcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods') }})
-    attachments: Optional[Union[Any, shared_thirty_sixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments'), 'exclude': lambda f: f is None }})
-    collaborators: Optional[list[Union[Any, shared_invoicecollaboratorcreaterequest.InvoiceCollaboratorCreateRequest]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaborators') }})
-    credit_fee_handling: Optional[Union[Any, shared_feehandlingconfig.FeeHandlingConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling'), 'exclude': lambda f: f is None }})
+    accepted_payment_methods: Optional[List[InvoiceDataCreateRequestAcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods') }})
+    attachments: Optional[shared_thirty_sixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments') }})
+    collaborators: Optional[List[shared_invoicecollaboratorcreaterequest.InvoiceCollaboratorCreateRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaborators') }})
+    credit_fee_handling: Optional[shared_feehandlingconfig.FeeHandlingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling') }})
     currency: Optional[CurrencyInvoiceDataCreateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency') }})
     due_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueDate') }})
     invoice_notes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceNotes') }})
-    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    late_fee_handling: Optional[Union[Any, shared_latefeeconfig.LateFeeConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeHandling'), 'exclude': lambda f: f is None }})
-    notification_preferences: Optional[Union[Any, shared_invoicenotificationpreferences.InvoiceNotificationPreferences]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notificationPreferences'), 'exclude': lambda f: f is None }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    late_fee_handling: Optional[shared_latefeeconfig.LateFeeConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeHandling') }})
+    notification_preferences: Optional[shared_invoicenotificationpreferences.InvoiceNotificationPreferences] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notificationPreferences') }})
     status: Optional[StatusInvoiceDataCreateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

@@ -13,7 +13,6 @@ class MeansTypePaymentInfo(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PaymentInfo:
     means_type: MeansTypePaymentInfo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansType') }})

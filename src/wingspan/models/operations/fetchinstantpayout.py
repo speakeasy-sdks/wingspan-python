@@ -7,7 +7,6 @@ from ..shared import instantpayoutresponse as shared_instantpayoutresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class FetchInstantPayoutResponse:
     content_type: str = dataclasses.field()

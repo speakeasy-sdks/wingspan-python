@@ -18,37 +18,31 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceCreateRequest(
-    client_company='bluetooth Extended',
-    client_email='blue',
+    client_email='online',
     client_email_cc=[
-        'shred',
+        'Configuration',
     ],
-    client_first_name='technology East',
-    client_last_name='evolve',
-    credit_fee_handling=[],
-    currency=shared.CurrencyClientInvoiceCreateRequest.LESS_THAN_NIL_GREATER_THAN_,
-    due_date='SUV quantify Polestar',
+    credit_fee_handling=shared.FeeHandlingConfig(),
+    due_date='Money',
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=4915.7,
-            description='User-friendly multi-state frame',
-            detail='Fresh',
-            discount=[],
-            integration=[],
-            labels=[],
-            quantity=177.59,
-            reimbursable_expense=[],
-            total_cost=5190.28,
-            unit='kilogram',
+            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
+            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+            ),
+            labels={
+                "blue": 'shred',
+            },
         ),
     ],
-    member_id='Fish',
+    member_id='abnormally',
 )
 
 res = s.invoice_as_client.create(req)
 
 if res.client_invoice is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

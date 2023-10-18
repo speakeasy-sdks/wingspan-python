@@ -7,7 +7,6 @@ from ..shared import bulkinvoicebatch as shared_bulkinvoicebatch
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateBulkInvoiceBatchResponse:
     content_type: str = dataclasses.field()

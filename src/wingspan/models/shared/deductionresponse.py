@@ -7,18 +7,12 @@ from ..shared import postpaymentdeductiondisbursement as shared_postpaymentdeduc
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, List, Optional
 from wingspan import utils
 
 class CurrencyDeductionResponse(str, Enum):
     USD = 'USD'
     CAD = 'CAD'
-
-
-
-@dataclasses.dataclass
-class DeductionResponseDisbursement:
-    pass
 
 class DeductionResponseStatus(str, Enum):
     PENDING = 'Pending'
@@ -31,16 +25,15 @@ class TypeDeductionResponse(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DeductionResponse:
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
-    application: list[shared_deductionapplication.DeductionApplication] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('application') }})
+    application: List[shared_deductionapplication.DeductionApplication] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('application') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     currency: CurrencyDeductionResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency') }})
     deduction_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionId') }})
-    labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    labels: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     priority: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priority') }})
@@ -50,7 +43,7 @@ class DeductionResponse:
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
     deduction_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionTemplateId') }})
-    disbursement: Optional[Union[Any, shared_postpaymentdeductiondisbursement.PostPaymentDeductionDisbursement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursement'), 'exclude': lambda f: f is None }})
+    disbursement: Optional[shared_postpaymentdeductiondisbursement.PostPaymentDeductionDisbursement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursement') }})
     source_invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId') }})
     
 

@@ -21,15 +21,14 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.EligibilityRequirementCreateRequest(
-    requirement_type='bluetooth Extended',
-    template_id='blue',
-    valid_for=9967.06,
+    requirement_type=shared.EligibilityRequirementCreateRequestRequirementType.SIGNATURE,
 )
 
 res = s.eligibility_requirement.create(req)
 
 if res.eligibility_requirement is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -61,6 +60,7 @@ res = s.eligibility_requirement.delete(id='program')
 
 if res.eligibility_requirements is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -92,6 +92,7 @@ res = s.eligibility_requirement.get(id='female')
 
 if res.eligibility_requirements is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -120,13 +121,12 @@ s = wingspan.Wingspan()
 
 
 res = s.eligibility_requirement.update(id='Van', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
-    requirement_type='Reactive',
-    template_id='Metal cheater Islands',
-    valid_for=4995.57,
+    requirement_type=shared.EligibilityRequirementUpdateRequestRequirementType.SIGNATURE,
 ))
 
 if res.eligibility_requirements is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

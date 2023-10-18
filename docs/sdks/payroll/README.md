@@ -22,6 +22,7 @@ res = s.payroll.execute()
 
 if res.invoice is not None:
     # handle response
+    pass
 ```
 
 

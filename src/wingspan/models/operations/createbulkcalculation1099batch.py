@@ -7,7 +7,6 @@ from ..shared import bulkcalculation1099batch as shared_bulkcalculation1099batch
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateBulkCalculation1099BatchResponse:
     content_type: str = dataclasses.field()

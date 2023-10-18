@@ -7,7 +7,6 @@ from wingspan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Ninecd48bf78a297540b0ec6f45365beb8d6ce0ee88e6d244115ad226e6701011a3:
     generated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('generatedAt') }})

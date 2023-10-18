@@ -13,7 +13,6 @@ class Provider35e19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc(s
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ThirtyFivee19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc:
     provider: Provider35e19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})

@@ -8,7 +8,6 @@ from wingspan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Calculate1099Response:
     member_client: shared_memberclient.MemberClient = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClient') }})

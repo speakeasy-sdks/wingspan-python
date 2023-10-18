@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, Optional
 from wingspan import utils
 
 class CardProcessingFeesCalculationSettings1099(str, Enum):
@@ -23,20 +23,13 @@ class ReimbursableExpensesCalculationSettings1099(str, Enum):
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
-
-@dataclasses.dataclass
-class CalculationSettings1099StateTaxID:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CalculationSettings1099:
     card_processing_fees: Optional[CardProcessingFeesCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardProcessingFees') }})
     off_platform_payments: Optional[OffPlatformPaymentsCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offPlatformPayments') }})
     reimbursable_expenses: Optional[ReimbursableExpensesCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpenses') }})
-    state_tax_id: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stateTaxId'), 'exclude': lambda f: f is None }})
+    state_tax_id: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stateTaxId') }})
     threshold_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('thresholdAmount') }})
     
 

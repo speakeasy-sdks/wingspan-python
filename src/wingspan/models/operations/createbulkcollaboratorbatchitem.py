@@ -8,14 +8,12 @@ from ..shared import bulkcollaboratoritemcreate as shared_bulkcollaboratoritemcr
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateBulkCollaboratorBatchItemRequest:
     batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier for a batch"""
     bulk_collaborator_item_create: Optional[shared_bulkcollaboratoritemcreate.BulkCollaboratorItemCreate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

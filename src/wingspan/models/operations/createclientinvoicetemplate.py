@@ -7,7 +7,6 @@ from ..shared import clientinvoicetemplate as shared_clientinvoicetemplate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateClientInvoiceTemplateResponse:
     content_type: str = dataclasses.field()

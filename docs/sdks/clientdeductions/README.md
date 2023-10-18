@@ -22,6 +22,7 @@ res = s.client_deductions.list()
 
 if res.deduction_responses is not None:
     # handle response
+    pass
 ```
 
 

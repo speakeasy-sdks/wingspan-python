@@ -6,30 +6,17 @@ from ..shared import facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698
 from ..shared import invoiceintegrations as shared_invoiceintegrations
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional, Union
+from typing import Dict, Optional
 from wingspan import utils
 
 
-
-@dataclasses.dataclass
-class PayrollReportLineItemDiscount:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayrollReportLineItemIntegration:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PayrollReportLineItem:
     cost_per_unit: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('costPerUnit') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     index: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index') }})
-    labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    labels: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     quantity: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantity') }})
     reimbursable_expense: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpense') }})
     total_cost: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalCost') }})
@@ -39,8 +26,8 @@ class PayrollReportLineItem:
     amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detail') }})
-    discount: Optional[Union[Any, shared_facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount'), 'exclude': lambda f: f is None }})
+    discount: Optional[shared_facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount') }})
     discount_total: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discountTotal') }})
-    integration: Optional[Union[Any, shared_invoiceintegrations.InvoiceIntegrations]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
+    integration: Optional[shared_invoiceintegrations.InvoiceIntegrations] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
     
 

@@ -22,6 +22,7 @@ res = s.form1099.download(id='optical', index='Dakota', year='infrastructures')
 
 if res.download1099_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

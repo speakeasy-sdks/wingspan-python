@@ -7,13 +7,11 @@ from ..shared import invoicetemplate as shared_invoicetemplate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteInvoiceTemplateRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

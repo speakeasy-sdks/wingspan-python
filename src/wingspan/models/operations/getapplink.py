@@ -7,13 +7,11 @@ from ..shared import bankingapplicationform as shared_bankingapplicationform
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAppLinkRequest:
     member_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'memberId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier of a member"""
     
-
 
 
 

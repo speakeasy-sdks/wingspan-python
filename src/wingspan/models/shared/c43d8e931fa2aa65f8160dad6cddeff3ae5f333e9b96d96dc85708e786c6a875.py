@@ -7,7 +7,6 @@ from wingspan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class C43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875:
     unit_card_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unitCardId') }})

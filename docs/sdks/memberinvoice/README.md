@@ -24,47 +24,55 @@ req = shared.InvoiceCreateRequest(
     accepted_payment_methods=[
         shared.InvoiceCreateRequestAcceptedPaymentMethods.ACH,
     ],
-    attachments=[],
-    client=[],
-    collaborators=[
-        [],
-    ],
-    credit_fee_handling=shared.FeeHandlingConfig(
-        client_absolute_percentage=4893.82,
-        client_pays=6384.24,
-        member_pays=8592.13,
+    attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
+        custom_attachment_ids=[
+            'bluetooth',
+        ],
     ),
-    currency=shared.CurrencyInvoiceCreateRequest.CAD,
-    due_date='South',
-    integration=[],
-    invoice_notes='grey technology East',
-    labels=[],
-    late_fee_handling=[],
-    line_items=[
-        shared.InvoiceLineItemsCreateRequest(
-            cost_per_unit=1697.27,
-            description='Front-line asynchronous paradigm',
-            detail='SUV quantify Polestar',
-            discount=[],
-            integration=[],
-            labels=[],
-            quantity=4915.7,
-            reimbursable_expense=[],
-            total_cost=9574.09,
-            unit='becquerel',
+    client=shared.InvoiceCreateRequestClient(),
+    collaborators=[
+        shared.InvoiceCollaboratorCreateRequest(
+            amount=8592.13,
+            currency=shared.CurrencyInvoiceCollaboratorCreateRequest.USD,
+            description='Face to face bi-directional productivity',
+            member_client_id='Cambridgeshire',
         ),
     ],
-    member=[],
-    member_client_id='Durham after',
-    metadata=[],
-    notification_preferences=[],
-    status=shared.StatusInvoiceCreateRequest.PENDING,
+    credit_fee_handling=shared.FeeHandlingConfig(),
+    due_date='grey',
+    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+        quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+    ),
+    labels={
+        "technology": 'East',
+    },
+    late_fee_handling=shared.LateFeeConfigUpdate(
+        frequency=shared.FrequencyUpdate(),
+    ),
+    line_items=[
+        shared.InvoiceLineItemsCreateRequest(
+            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
+            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+            ),
+            labels={
+                "orange": 'Northwest',
+            },
+        ),
+    ],
+    member=shared.InvoiceCreateRequestMember(),
+    member_client_id='fuchsia',
+    metadata=shared.InvoiceMetadata(),
+    notification_preferences=shared.InvoiceNotificationPreferences(
+        send_reminders=False,
+    ),
 )
 
 res = s.member_invoice.create(req)
 
 if res.invoice is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -96,6 +104,7 @@ res = s.member_invoice.delete(id='program')
 
 if res.invoice is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -127,6 +136,7 @@ res = s.member_invoice.get(id='female')
 
 if res.invoice is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -158,30 +168,54 @@ res = s.member_invoice.update(id='Van', invoice_update_request=shared.InvoiceUpd
     accepted_payment_methods=[
         shared.InvoiceUpdateRequestAcceptedPaymentMethods.CREDIT,
     ],
-    attachments=[],
-    charged_fees=[],
-    client=[],
+    attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
+        custom_attachment_ids=[
+            'Reactive',
+        ],
+    ),
+    charged_fees=shared.Fees(
+        late_fee=shared.Fee(
+            amount=9914.64,
+        ),
+        processing_fee=shared.Fee(
+            amount=2703.24,
+        ),
+    ),
+    client=shared.InvoiceUpdateRequestClient(),
     collaborators=[
-        [],
+        shared.InvoiceCollaboratorUpdateRequest(),
     ],
-    credit_fee_handling=[],
-    due_date='male Metal',
-    integration=[],
-    invoice_notes='Arizona Cotton extend',
-    labels=[],
-    late_fee_handling=[],
+    credit_fee_handling=shared.FeeHandlingConfig(),
+    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+        quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+    ),
+    labels={
+        "Quality": 'redundant',
+    },
+    late_fee_handling=shared.LateFeeConfigUpdate(
+        frequency=shared.FrequencyUpdate(),
+    ),
     line_items=[
-        [],
+        shared.InvoiceLineItemsCreateRequest(
+            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
+            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+            ),
+            labels={
+                "cheater": 'Islands',
+            },
+        ),
     ],
-    member=[],
-    member_client_id='bifurcated',
-    metadata=[],
-    notification_preferences=[],
-    status=shared.StatusInvoiceUpdateRequest.PAYMENT_IN_TRANSIT,
+    member=shared.InvoiceUpdateRequestMember(),
+    metadata=shared.InvoiceMetadata(),
+    notification_preferences=shared.InvoiceNotificationPreferences(
+        send_reminders=False,
+    ),
 ))
 
 if res.invoice is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

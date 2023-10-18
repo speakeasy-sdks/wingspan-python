@@ -7,13 +7,11 @@ from ..shared import collaboratorevents as shared_collaboratorevents
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetCollaboratorEventsRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

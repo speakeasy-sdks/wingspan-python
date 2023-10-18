@@ -7,7 +7,6 @@ from ..shared import mark1099asundeliveredresponse as shared_mark1099asundeliver
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class Mark1099Response:
     content_type: str = dataclasses.field()

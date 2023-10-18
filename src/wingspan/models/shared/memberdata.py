@@ -19,7 +19,6 @@ class ShareTaxDocumentMemberData(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MemberData:
     auto_pay_requirement: Optional[AutoPayRequirementMemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPayRequirement') }})

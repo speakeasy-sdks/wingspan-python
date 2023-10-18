@@ -21,16 +21,21 @@ s = wingspan.Wingspan()
 
 
 res = s.payout_debit_card.create(member_id='online', checkbook_card_create=shared.CheckbookCardCreate(
-    address=[],
-    card_number='Extended South',
-    cvv='grey technology East',
-    exp_mm='evolve',
-    exp_yyyy='fuchsia Gasoline Screen',
-    name='physical Ameliorated',
+    address=shared.Address(
+        address_line1='Configuration',
+        city='Edwardoville',
+        postal_code='09739-8041',
+        state='evolve',
+    ),
+    card_number='male',
+    exp_mm='SUV',
+    exp_yyyy='quantify',
+    name='Polestar',
 ))
 
 if res.checkbook_card is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -63,6 +68,7 @@ res = s.payout_debit_card.delete(id='program', member_id='Designer')
 
 if res.checkbook_card is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -95,6 +101,7 @@ res = s.payout_debit_card.get(id='female', member_id='program')
 
 if res.checkbook_card is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

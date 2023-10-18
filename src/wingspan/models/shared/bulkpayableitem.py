@@ -7,20 +7,8 @@ from ..shared import invoiceintegrations as shared_invoiceintegrations
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, Optional
 from wingspan import utils
-
-
-
-@dataclasses.dataclass
-class BulkPayableItemIntegration:
-    pass
-
-
-
-@dataclasses.dataclass
-class BulkPayableItemMetadata:
-    pass
 
 class PayableStatusBulkPayableItem(str, Enum):
     DRAFT = 'Draft'
@@ -28,12 +16,6 @@ class PayableStatusBulkPayableItem(str, Enum):
     APPROVED = 'Approved'
     PAID = 'Paid'
     CANCELLED = 'Cancelled'
-
-
-
-@dataclasses.dataclass
-class BulkPayableItemReimbursableExpense:
-    pass
 
 class StatusBulkPayableItem(str, Enum):
     OPEN = 'Open'
@@ -48,7 +30,6 @@ class BulkPayableItemWorkflowSubStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class BulkPayableItem:
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
@@ -57,7 +38,7 @@ class BulkPayableItem:
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     due_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueDate') }})
-    labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    labels: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     line_item_description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItemDescription') }})
     paid_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paidDate') }})
     payable_status: PayableStatusBulkPayableItem = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payableStatus') }})
@@ -70,11 +51,11 @@ class BulkPayableItem:
     collaborator_email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorEmail') }})
     collaborator_external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorExternalId') }})
     collaborator_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorId') }})
-    integration: Optional[Union[Any, shared_invoiceintegrations.InvoiceIntegrations]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
+    integration: Optional[shared_invoiceintegrations.InvoiceIntegrations] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
     line_item_detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItemDetail') }})
-    metadata: Optional[Union[Any, shared_a7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
+    metadata: Optional[shared_a7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
     payable_notes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payableNotes') }})
-    reimbursable_expense: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpense'), 'exclude': lambda f: f is None }})
+    reimbursable_expense: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpense') }})
     workflow_sub_status: Optional[BulkPayableItemWorkflowSubStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowSubStatus') }})
     
 

@@ -22,6 +22,7 @@ res = s.payables.get()
 
 if res.payables_summary is not None:
     # handle response
+    pass
 ```
 
 

@@ -4,27 +4,14 @@ from __future__ import annotations
 import dataclasses
 from ..shared import address as shared_address
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional, Union
+from typing import Optional
 from wingspan import utils
 
 
-
-@dataclasses.dataclass
-class CardCreateRequestRequestPhysicalCard:
-    pass
-
-
-
-@dataclasses.dataclass
-class CardCreateRequestShippingAddress:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CardCreateRequest:
-    request_physical_card: Optional[Union[Any, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requestPhysicalCard'), 'exclude': lambda f: f is None }})
-    shipping_address: Optional[Union[Any, shared_address.Address]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shippingAddress'), 'exclude': lambda f: f is None }})
+    request_physical_card: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requestPhysicalCard') }})
+    shipping_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shippingAddress') }})
     
 

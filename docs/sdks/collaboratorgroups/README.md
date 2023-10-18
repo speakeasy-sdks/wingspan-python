@@ -22,6 +22,7 @@ res = s.collaborator_groups.list()
 
 if res.collaborator_group_responses is not None:
     # handle response
+    pass
 ```
 
 

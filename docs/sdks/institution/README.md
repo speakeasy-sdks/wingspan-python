@@ -22,6 +22,7 @@ res = s.institution.get(routing_number='female')
 
 if res.institution_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

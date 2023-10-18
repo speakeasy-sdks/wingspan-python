@@ -7,13 +7,11 @@ from ..shared import downloadw9response as shared_downloadw9response
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DownloadFormW9Request:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

@@ -7,13 +7,11 @@ from ..shared import invoicefeecalculation as shared_invoicefeecalculation
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ListClientInvoiceFeesRequest:
     invoice_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'invoice_id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier of an invoice"""
     
-
 
 
 

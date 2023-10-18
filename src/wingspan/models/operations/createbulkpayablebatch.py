@@ -7,7 +7,6 @@ from ..shared import bulkpayablebatch as shared_bulkpayablebatch
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateBulkPayableBatchResponse:
     content_type: str = dataclasses.field()

@@ -8,7 +8,6 @@ from wingspan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1:
     error_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('errorMessage') }})

@@ -8,14 +8,12 @@ from ..shared import memberclientupdaterequest as shared_memberclientupdatereque
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateMemberClientRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     member_client_update_request: Optional[shared_memberclientupdaterequest.MemberClientUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

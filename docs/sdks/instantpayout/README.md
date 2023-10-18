@@ -20,13 +20,14 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InstantPayoutRequest(
-    external_payout_account_token='bluetooth Extended',
+    external_payout_account_token='online',
 )
 
 res = s.instant_payout.create(req)
 
 if res.instant_payout_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -58,6 +59,7 @@ res = s.instant_payout.delete()
 
 if res.instant_payout_response is not None:
     # handle response
+    pass
 ```
 
 
@@ -83,6 +85,7 @@ res = s.instant_payout.fetch()
 
 if res.instant_payout_response is not None:
     # handle response
+    pass
 ```
 
 

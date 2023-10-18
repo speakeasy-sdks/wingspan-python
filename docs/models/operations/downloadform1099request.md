@@ -5,6 +5,6 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `id`               | *Optional[str]*    | :heavy_check_mark: | Unique identifier  |
-| `index`            | *Optional[str]*    | :heavy_check_mark: | Index              |
-| `year`             | *Optional[str]*    | :heavy_check_mark: | Year               |
+| `id`               | *str*              | :heavy_check_mark: | Unique identifier  |
+| `index`            | *str*              | :heavy_check_mark: | Index              |
+| `year`             | *str*              | :heavy_check_mark: | Year               |

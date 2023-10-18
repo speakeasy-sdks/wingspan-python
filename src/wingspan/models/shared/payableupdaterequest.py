@@ -13,7 +13,7 @@ from ..shared import thirty_sixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51a
 from ..shared import three_billion_one_hundred_and_ninety_million_six_hundred_and_eighty_five_thousand_eight_hundred_and_thirty_twoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461 as shared_three_billion_one_hundred_and_ninety_million_six_hundred_and_eighty_five_thousand_eight_hundred_and_thirty_twoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, List, Optional
 from wingspan import utils
 
 class PayableUpdateRequestAcceptedPaymentMethods(str, Enum):
@@ -23,87 +23,13 @@ class PayableUpdateRequestAcceptedPaymentMethods(str, Enum):
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
-
-@dataclasses.dataclass
-class PayableUpdateRequestAttachments:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestChargedFees:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestClient2:
-    pass
-
-
-
 @dataclasses.dataclass
 class PayableUpdateRequestClient:
     pass
 
 
-
-@dataclasses.dataclass
-class PayableUpdateRequestCollaborators:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestCreditFeeHandling:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestIntegration:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestLabels:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestLateFeeHandling:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestLineItems:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestMember2:
-    pass
-
-
-
 @dataclasses.dataclass
 class PayableUpdateRequestMember:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestMetadata:
-    pass
-
-
-
-@dataclasses.dataclass
-class PayableUpdateRequestNotificationPreferences:
     pass
 
 class PayableUpdateRequestPaymentMethods(str, Enum):
@@ -124,26 +50,25 @@ class StatusPayableUpdateRequest(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PayableUpdateRequest:
-    accepted_payment_methods: Optional[list[PayableUpdateRequestAcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods') }})
-    attachments: Optional[Union[Any, shared_thirty_sixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments'), 'exclude': lambda f: f is None }})
-    charged_fees: Optional[Union[Any, shared_fees.Fees]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('chargedFees'), 'exclude': lambda f: f is None }})
-    client: Optional[Union[Any, PayableUpdateRequestClient2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client'), 'exclude': lambda f: f is None }})
-    collaborators: Optional[list[Union[Any, shared_invoicecollaboratorupdaterequest.InvoiceCollaboratorUpdateRequest]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaborators') }})
-    credit_fee_handling: Optional[Union[Any, shared_feehandlingconfig.FeeHandlingConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling'), 'exclude': lambda f: f is None }})
+    accepted_payment_methods: Optional[List[PayableUpdateRequestAcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods') }})
+    attachments: Optional[shared_thirty_sixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments') }})
+    charged_fees: Optional[shared_fees.Fees] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('chargedFees') }})
+    client: Optional[PayableUpdateRequestClient] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client') }})
+    collaborators: Optional[List[shared_invoicecollaboratorupdaterequest.InvoiceCollaboratorUpdateRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaborators') }})
+    credit_fee_handling: Optional[shared_feehandlingconfig.FeeHandlingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling') }})
     due_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueDate') }})
-    integration: Optional[Union[Any, shared_three_billion_one_hundred_and_ninety_million_six_hundred_and_eighty_five_thousand_eight_hundred_and_thirty_twoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is None }})
+    integration: Optional[shared_three_billion_one_hundred_and_ninety_million_six_hundred_and_eighty_five_thousand_eight_hundred_and_thirty_twoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
     invoice_notes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceNotes') }})
-    labels: Optional[Union[Any, dict[str, str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    late_fee_handling: Optional[Union[Any, shared_latefeeconfigupdate.LateFeeConfigUpdate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeHandling'), 'exclude': lambda f: f is None }})
-    line_items: Optional[list[Union[Any, shared_invoicelineitemscreaterequest.InvoiceLineItemsCreateRequest]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
-    member: Optional[Union[Any, PayableUpdateRequestMember2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member'), 'exclude': lambda f: f is None }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    late_fee_handling: Optional[shared_latefeeconfigupdate.LateFeeConfigUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeHandling') }})
+    line_items: Optional[List[shared_invoicelineitemscreaterequest.InvoiceLineItemsCreateRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
+    member: Optional[PayableUpdateRequestMember] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member') }})
     member_client_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClientId') }})
-    metadata: Optional[Union[Any, shared_invoicemetadata.InvoiceMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
-    notification_preferences: Optional[Union[Any, shared_invoicenotificationpreferences.InvoiceNotificationPreferences]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notificationPreferences'), 'exclude': lambda f: f is None }})
-    payment_methods: Optional[list[PayableUpdateRequestPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethods') }})
+    metadata: Optional[shared_invoicemetadata.InvoiceMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
+    notification_preferences: Optional[shared_invoicenotificationpreferences.InvoiceNotificationPreferences] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notificationPreferences') }})
+    payment_methods: Optional[List[PayableUpdateRequestPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethods') }})
     status: Optional[StatusPayableUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

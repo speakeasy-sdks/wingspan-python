@@ -19,12 +19,13 @@ s = wingspan.Wingspan()
 
 
 res = s.code_to_token.exchange(id='between', card_token_request=shared.CardTokenRequest(
-    verification_code='Canada Southwest panel',
-    verification_token='North Pickup noisily',
+    verification_code='female',
+    verification_token='Vince',
 ))
 
 if res.card_token_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

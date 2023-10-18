@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import bulkcollaboratorbatch as shared_bulkcollaboratorbatch
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class ListBulkCollaboratorBatchesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    bulk_collaborator_batches: Optional[list[shared_bulkcollaboratorbatch.BulkCollaboratorBatch]] = dataclasses.field(default=None)
+    bulk_collaborator_batches: Optional[List[shared_bulkcollaboratorbatch.BulkCollaboratorBatch]] = dataclasses.field(default=None)
     r"""A list of bulk collaborator batches"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

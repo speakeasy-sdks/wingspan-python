@@ -22,6 +22,7 @@ res = s.payout_debit_cards.list(member_id='Bicycle')
 
 if res.checkbook_cards is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

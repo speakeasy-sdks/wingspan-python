@@ -7,7 +7,6 @@ from ..shared import memberclientschema as shared_memberclientschema
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateMemberClientResponse:
     content_type: str = dataclasses.field()

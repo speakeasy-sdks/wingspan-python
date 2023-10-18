@@ -7,7 +7,6 @@ from ..shared import payablessummary as shared_payablessummary
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetPayablesResponse:
     content_type: str = dataclasses.field()

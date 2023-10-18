@@ -7,13 +7,11 @@ from ..shared import bulkcalculation1099batch as shared_bulkcalculation1099batch
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetBulkCalculation1099BatchRequest:
     batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
     r"""Unique identifier for a batch"""
     
-
 
 
 

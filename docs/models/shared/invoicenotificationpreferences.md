@@ -3,8 +3,8 @@
 
 ## Fields
 
-| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `send_invoice`                                                                                     | [Optional[Union[Any, bool]]](undefined/models/shared/invoicenotificationpreferencessendinvoice.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `send_receipt`                                                                                     | [Optional[Union[Any, bool]]](undefined/models/shared/invoicenotificationpreferencessendreceipt.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `send_reminders`                                                                                   | *Optional[bool]*                                                                                   | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `send_invoice`     | *Optional[bool]*   | :heavy_minus_sign: | N/A                |
+| `send_receipt`     | *Optional[bool]*   | :heavy_minus_sign: | N/A                |
+| `send_reminders`   | *bool*             | :heavy_check_mark: | N/A                |

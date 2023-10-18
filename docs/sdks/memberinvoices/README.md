@@ -22,6 +22,7 @@ res = s.member_invoices.list()
 
 if res.invoices is not None:
     # handle response
+    pass
 ```
 
 

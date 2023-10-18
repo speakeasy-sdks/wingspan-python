@@ -6,18 +6,12 @@ from ..shared import eight_hundred_and_sixty_five_thousand_nine_hundred_and_sixt
 from ..shared import userroles as shared_userroles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Any, Optional, Union
+from typing import Dict, Optional
 from wingspan import utils
 
 class CalculationTypeBulkCalculation1099Item(str, Enum):
     BALANCES = 'Balances'
     SUBMISSIONS = 'Submissions'
-
-
-
-@dataclasses.dataclass
-class BulkCalculation1099ItemMetadata:
-    pass
 
 class StatusBulkCalculation1099Item(str, Enum):
     OPEN = 'Open'
@@ -28,7 +22,6 @@ class StatusBulkCalculation1099Item(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class BulkCalculation1099Item:
     bulk_calculation1099_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkCalculation1099BatchId') }})
@@ -36,11 +29,11 @@ class BulkCalculation1099Item:
     calculation_type: CalculationTypeBulkCalculation1099Item = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationType') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
-    labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    labels: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     status: StatusBulkCalculation1099Item = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
     year: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('year') }})
-    metadata: Optional[Union[Any, shared_eight_hundred_and_sixty_five_thousand_nine_hundred_and_sixty_ninebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14.EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
+    metadata: Optional[shared_eight_hundred_and_sixty_five_thousand_nine_hundred_and_sixty_ninebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14.EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
     
 

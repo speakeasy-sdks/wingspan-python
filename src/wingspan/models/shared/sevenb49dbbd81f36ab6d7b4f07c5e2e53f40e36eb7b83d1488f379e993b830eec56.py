@@ -8,7 +8,6 @@ from wingspan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56:
     address_line1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addressLine1') }})

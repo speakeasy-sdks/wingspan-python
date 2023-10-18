@@ -22,6 +22,7 @@ res = s.payables_aging_group.get()
 
 if res.payable_aging_report_responses is not None:
     # handle response
+    pass
 ```
 
 

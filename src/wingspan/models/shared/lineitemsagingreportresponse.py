@@ -6,7 +6,7 @@ from ..shared import lineitemsagingreportlineitem as shared_lineitemsagingreport
 from ..shared import redactedmember as shared_redactedmember
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 from wingspan import utils
 
 class StatusLineItemsAgingReportResponse(str, Enum):
@@ -20,7 +20,6 @@ class StatusLineItemsAgingReportResponse(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class LineItemsAgingReportResponse:
     age_group: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ageGroup') }})
@@ -31,7 +30,7 @@ class LineItemsAgingReportResponse:
     invoice_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceId') }})
     invoice_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceNumber') }})
     invoice_pdf: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicePdf') }})
-    line_items: list[shared_lineitemsagingreportlineitem.LineItemsAgingReportLineItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
+    line_items: List[shared_lineitemsagingreportlineitem.LineItemsAgingReportLineItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
     member: shared_redactedmember.RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member') }})
     member_client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClientId') }})
     member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})

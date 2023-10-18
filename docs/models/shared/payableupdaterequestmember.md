@@ -1,17 +1,7 @@
 # PayableUpdateRequestMember
 
 
-## Supported Types
+## Fields
 
-### 
-
-```python
-payableUpdateRequestMember: Any = /* values here */
-```
-
-### PayableUpdateRequestMember2
-
-```python
-payableUpdateRequestMember: shared.PayableUpdateRequestMember2 = /* values here */
-```
-
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

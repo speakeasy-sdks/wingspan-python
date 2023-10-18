@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import memberclientschema as shared_memberclientschema
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class ListMemberClientsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    member_client_schemas: Optional[list[shared_memberclientschema.MemberClientSchema]] = dataclasses.field(default=None)
+    member_client_schemas: Optional[List[shared_memberclientschema.MemberClientSchema]] = dataclasses.field(default=None)
     r"""A list of memberClient objects"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

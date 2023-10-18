@@ -7,7 +7,6 @@ from ..shared import paymenteligibility as shared_paymenteligibility
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreatePaymentEligibilityRequirementResponse:
     content_type: str = dataclasses.field()

@@ -22,6 +22,7 @@ res = s.bulk_calculation1099_batch_items.list(batch_id='Bicycle')
 
 if res.bulk_calculation1099_items is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

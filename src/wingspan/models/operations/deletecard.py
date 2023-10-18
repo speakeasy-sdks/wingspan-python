@@ -7,13 +7,11 @@ from ..shared import card as shared_card
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteCardRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Unique identifier"""
     
-
 
 
 

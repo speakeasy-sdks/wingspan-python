@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import invoice as shared_invoice
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class ListMemberInvoicesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    invoices: Optional[list[shared_invoice.Invoice]] = dataclasses.field(default=None)
+    invoices: Optional[List[shared_invoice.Invoice]] = dataclasses.field(default=None)
     r"""A list of invoices"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

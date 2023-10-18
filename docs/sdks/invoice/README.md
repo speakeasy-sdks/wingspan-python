@@ -23,6 +23,7 @@ res = s.invoice.generate(invoice_id='ohm')
 
 if res.invoice_pdf_generation_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -54,6 +55,7 @@ res = s.invoice.send(invoice_id='hacking')
 
 if res.invoice is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

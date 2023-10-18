@@ -7,7 +7,6 @@ from ..shared import card as shared_card
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateCardResponse:
     content_type: str = dataclasses.field()
