@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.add(group_id='transmit', id='calculate')
+res = s.collaborator_to_group.add(group_id='string', id='string')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -52,7 +52,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.remove(group_id='Usability', id='Southwest')
+res = s.collaborator_to_group.remove(group_id='string', id='string')
 
 if res.collaborator_schema is not None:
     # handle response

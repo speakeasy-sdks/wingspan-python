@@ -26,25 +26,25 @@ req = shared.InvoiceCreateRequest(
     ],
     attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
         custom_attachment_ids=[
-            'bluetooth',
+            'string',
         ],
     ),
     client=shared.InvoiceCreateRequestClient(),
     collaborators=[
         shared.InvoiceCollaboratorCreateRequest(
-            amount=8592.13,
-            currency=shared.CurrencyInvoiceCollaboratorCreateRequest.USD,
-            description='Face to face bi-directional productivity',
-            member_client_id='Cambridgeshire',
+            amount=4893.82,
+            currency=shared.CurrencyInvoiceCollaboratorCreateRequest.CAD,
+            description='Synchronised full-range emulation',
+            member_client_id='string',
         ),
     ],
     credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='grey',
+    due_date='string',
     integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
         quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
     ),
     labels={
-        "technology": 'East',
+        "key": 'string',
     },
     late_fee_handling=shared.LateFeeConfigUpdate(
         frequency=shared.FrequencyUpdate(),
@@ -56,12 +56,12 @@ req = shared.InvoiceCreateRequest(
                 quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
             ),
             labels={
-                "orange": 'Northwest',
+                "key": 'string',
             },
         ),
     ],
     member=shared.InvoiceCreateRequestMember(),
-    member_client_id='fuchsia',
+    member_client_id='string',
     metadata=shared.InvoiceMetadata(),
     notification_preferences=shared.InvoiceNotificationPreferences(
         send_reminders=False,
@@ -100,7 +100,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.delete(id='program')
+res = s.member_invoice.delete(id='string')
 
 if res.invoice is not None:
     # handle response
@@ -132,7 +132,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.get(id='female')
+res = s.member_invoice.get(id='string')
 
 if res.invoice is not None:
     # handle response
@@ -164,21 +164,21 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.update(id='Van', invoice_update_request=shared.InvoiceUpdateRequest(
+res = s.member_invoice.update(id='string', invoice_update_request=shared.InvoiceUpdateRequest(
     accepted_payment_methods=[
-        shared.InvoiceUpdateRequestAcceptedPaymentMethods.CREDIT,
+        shared.InvoiceUpdateRequestAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
     ],
     attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
         custom_attachment_ids=[
-            'Reactive',
+            'string',
         ],
     ),
     charged_fees=shared.Fees(
         late_fee=shared.Fee(
-            amount=9914.64,
+            amount=245.55,
         ),
         processing_fee=shared.Fee(
-            amount=2703.24,
+            amount=5971.29,
         ),
     ),
     client=shared.InvoiceUpdateRequestClient(),
@@ -190,7 +190,7 @@ res = s.member_invoice.update(id='Van', invoice_update_request=shared.InvoiceUpd
         quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
     ),
     labels={
-        "Quality": 'redundant',
+        "key": 'string',
     },
     late_fee_handling=shared.LateFeeConfigUpdate(
         frequency=shared.FrequencyUpdate(),
@@ -202,7 +202,7 @@ res = s.member_invoice.update(id='Van', invoice_update_request=shared.InvoiceUpd
                 quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
             ),
             labels={
-                "cheater": 'Islands',
+                "key": 'string',
             },
         ),
     ],

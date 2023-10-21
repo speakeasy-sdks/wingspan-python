@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_items.list(batch_id='Bicycle')
+res = s.bulk_calculation1099_batch_items.list(batch_id='string')
 
 if res.bulk_calculation1099_items is not None:
     # handle response

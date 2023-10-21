@@ -24,18 +24,18 @@ req = shared.PayableCreateRequest(
     ],
     attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
         custom_attachment_ids=[
-            'bluetooth',
+            'string',
         ],
     ),
     client=shared.PayableCreateRequestClient(),
-    collaborator_id='Extended',
+    collaborator_id='string',
     credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='South',
+    due_date='string',
     integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
         quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
     ),
     labels={
-        "shred": 'abnormally',
+        "key": 'string',
     },
     late_fee_handling=shared.LateFeeConfigUpdate(
         frequency=shared.FrequencyUpdate(),
@@ -47,7 +47,7 @@ req = shared.PayableCreateRequest(
                 quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
             ),
             labels={
-                "deposit": 'evolve',
+                "key": 'string',
             },
         ),
     ],
@@ -90,21 +90,21 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payable_on_client.update(id='Van', payable_update_request=shared.PayableUpdateRequest(
+res = s.payable_on_client.update(id='string', payable_update_request=shared.PayableUpdateRequest(
     accepted_payment_methods=[
-        shared.PayableUpdateRequestAcceptedPaymentMethods.CREDIT,
+        shared.PayableUpdateRequestAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
     ],
     attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
         custom_attachment_ids=[
-            'Reactive',
+            'string',
         ],
     ),
     charged_fees=shared.Fees(
         late_fee=shared.Fee(
-            amount=9914.64,
+            amount=245.55,
         ),
         processing_fee=shared.Fee(
-            amount=2703.24,
+            amount=5971.29,
         ),
     ),
     client=shared.PayableUpdateRequestClient(),
@@ -116,7 +116,7 @@ res = s.payable_on_client.update(id='Van', payable_update_request=shared.Payable
         quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
     ),
     labels={
-        "Quality": 'redundant',
+        "key": 'string',
     },
     late_fee_handling=shared.LateFeeConfigUpdate(
         frequency=shared.FrequencyUpdate(),
@@ -128,7 +128,7 @@ res = s.payable_on_client.update(id='Van', payable_update_request=shared.Payable
                 quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
             ),
             labels={
-                "cheater": 'Islands',
+                "key": 'string',
             },
         ),
     ],
@@ -138,7 +138,7 @@ res = s.payable_on_client.update(id='Van', payable_update_request=shared.Payable
         send_reminders=False,
     ),
     payment_methods=[
-        shared.PayableUpdateRequestPaymentMethods.ACH,
+        shared.PayableUpdateRequestPaymentMethods.CREDIT,
     ],
 ))
 

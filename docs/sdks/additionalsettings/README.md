@@ -45,7 +45,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.additional_settings.update(id='Van', additional_data_update_request=shared.AdditionalDataUpdateRequest())
+res = s.additional_settings.update(id='string', additional_data_update_request=shared.AdditionalDataUpdateRequest())
 
 if res.additional_data is not None:
     # handle response

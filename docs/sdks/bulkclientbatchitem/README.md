@@ -20,12 +20,12 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.create(batch_id='online', bulk_client_item_create=shared.BulkClientItemCreate(
+res = s.bulk_client_batch_item.create(batch_id='string', bulk_client_item_create=shared.BulkClientItemCreate(
     integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
         quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
     ),
     labels={
-        "Configuration": 'Money',
+        "key": 'string',
     },
     member_data=shared.MemberData(),
 ))
@@ -61,7 +61,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.get(batch_id='female', batch_item_id='program')
+res = s.bulk_client_batch_item.get(batch_id='string', batch_item_id='string')
 
 if res.bulk_client_item is not None:
     # handle response
@@ -94,12 +94,12 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.update(batch_id='Van', batch_item_id='East', bulk_client_item_update=shared.BulkClientItemUpdate(
+res = s.bulk_client_batch_item.update(batch_id='string', batch_item_id='string', bulk_client_item_update=shared.BulkClientItemUpdate(
     integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
         quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
     ),
     labels={
-        "male": 'Metal',
+        "key": 'string',
     },
     member_data=shared.MemberData(),
 ))

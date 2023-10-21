@@ -56,7 +56,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.delete(id='program')
+res = s.eligibility_requirement.delete(id='string')
 
 if res.eligibility_requirements is not None:
     # handle response
@@ -88,7 +88,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.get(id='female')
+res = s.eligibility_requirement.get(id='string')
 
 if res.eligibility_requirements is not None:
     # handle response
@@ -120,7 +120,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.update(id='Van', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
+res = s.eligibility_requirement.update(id='string', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
     requirement_type=shared.EligibilityRequirementUpdateRequestRequirementType.SIGNATURE,
 ))
 

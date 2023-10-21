@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_v2.get(member_id='female')
+res = s.collaborator_v2.get(member_id='string')
 
 if res.collaborator_v2 is not None:
     # handle response
