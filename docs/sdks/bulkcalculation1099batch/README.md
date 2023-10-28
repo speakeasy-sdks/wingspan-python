@@ -21,7 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkBatchCreate(
     labels={
-        "online": 'Configuration',
+        "key": 'string',
     },
 )
 
@@ -57,7 +57,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch.get(batch_id='female')
+res = s.bulk_calculation1099_batch.get(batch_id='string')
 
 if res.bulk_calculation1099_batch is not None:
     # handle response
@@ -89,9 +89,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch.update(batch_id='Van', bulk_batch_update=shared.BulkBatchUpdate(
+res = s.bulk_calculation1099_batch.update(batch_id='string', bulk_batch_update=shared.BulkBatchUpdate(
     labels={
-        "East": 'male',
+        "key": 'string',
     },
 ))
 

@@ -22,10 +22,10 @@ s = wingspan.Wingspan()
 
 req = shared.CardCreateRequest(
     shipping_address=shared.Address(
-        address_line1='online',
-        city='Stokesview',
-        postal_code='17097',
-        state='abnormally',
+        address_line1='string',
+        city='Jenafurt',
+        postal_code='42170-9739',
+        state='string',
     ),
 )
 
@@ -61,7 +61,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.card.delete(id='program')
+res = s.card.delete(id='string')
 
 if res.card is not None:
     # handle response
@@ -93,7 +93,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.card.get(id='female')
+res = s.card.get(id='string')
 
 if res.card_details is not None:
     # handle response
@@ -125,8 +125,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.card.update(id='Van', card_update_request=shared.CardUpdateRequest(
-    status=shared.PropertiesCardUpdateRequest.ACTIVE,
+res = s.card.update(id='string', card_update_request=shared.CardUpdateRequest(
+    status=shared.PropertiesCardUpdateRequest.CLOSED_BY_CUSTOMER,
 ))
 
 if res.card is not None:

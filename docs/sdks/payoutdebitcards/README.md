@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_cards.list(member_id='Bicycle')
+res = s.payout_debit_cards.list(member_id='string')
 
 if res.checkbook_cards is not None:
     # handle response

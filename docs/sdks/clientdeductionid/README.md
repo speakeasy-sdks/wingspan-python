@@ -20,7 +20,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.delete(id='program')
+res = s.client_deduction_id.delete(id='string')
 
 if res.deduction_response is not None:
     # handle response
@@ -52,7 +52,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.get(id='female')
+res = s.client_deduction_id.get(id='string')
 
 if res.deduction_response is not None:
     # handle response
@@ -84,7 +84,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.update(id='Van', deduction_update_request=shared.DeductionUpdateRequest())
+res = s.client_deduction_id.update(id='string', deduction_update_request=shared.DeductionUpdateRequest())
 
 if res.deduction_response is not None:
     # handle response
