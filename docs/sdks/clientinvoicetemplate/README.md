@@ -20,12 +20,12 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceTemplateCreateRequest(
-    client_email='online',
+    client_email='string',
     client_email_cc=[
-        'Configuration',
+        'string',
     ],
     frequency=shared.Frequency(
-        start_date='Money',
+        start_date='string',
     ),
     invoice_data=shared.ClientInvoiceDataCreateRequest(
         credit_fee_handling=shared.FeeHandlingConfig(),
@@ -36,19 +36,19 @@ req = shared.ClientInvoiceTemplateCreateRequest(
                     quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
                 ),
                 labels={
-                    "blue": 'shred',
+                    "key": 'string',
                 },
             ),
         ],
     ),
-    member_id='abnormally',
+    member_id='string',
     schedule_dates=[
         shared.ScheduleDate(
-            date_='deposit',
+            date_='string',
             status=shared.StatusScheduleDate.COMPLETED,
         ),
     ],
-    status=shared.StatusClientInvoiceTemplateCreateRequest.ACTIVE,
+    status=shared.StatusClientInvoiceTemplateCreateRequest.DRAFT,
 )
 
 res = s.client_invoice_template.create(req)
@@ -83,7 +83,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.get(id='female')
+res = s.client_invoice_template.get(id='string')
 
 if res.client_invoice_template is not None:
     # handle response
@@ -115,8 +115,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.update(id='Van', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
-    client_id='East',
+res = s.client_invoice_template.update(id='string', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
+    client_id='string',
 ))
 
 if res.client_invoice_template is not None:

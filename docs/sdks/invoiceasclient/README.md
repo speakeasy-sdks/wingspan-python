@@ -18,12 +18,12 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceCreateRequest(
-    client_email='online',
+    client_email='string',
     client_email_cc=[
-        'Configuration',
+        'string',
     ],
     credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='Money',
+    due_date='string',
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
             discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
@@ -31,11 +31,11 @@ req = shared.ClientInvoiceCreateRequest(
                 quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
             ),
             labels={
-                "blue": 'shred',
+                "key": 'string',
             },
         ),
     ],
-    member_id='abnormally',
+    member_id='string',
 )
 
 res = s.invoice_as_client.create(req)

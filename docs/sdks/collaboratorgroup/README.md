@@ -21,13 +21,13 @@ s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
     collaborator_settings={
-        "online": 'Configuration',
+        "key": 'string',
     },
-    description='Inverse discrete benchmark',
+    description='Multi-tiered human-resource model',
     eligibility_requirements=[
         shared.CollaboratorGroupRequirement(),
     ],
-    name='blue',
+    name='string',
 )
 
 res = s.collaborator_group.create(req)
@@ -62,7 +62,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.get(id='female')
+res = s.collaborator_group.get(id='string')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -94,9 +94,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.update(id='Van', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
+res = s.collaborator_group.update(id='string', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
     collaborator_settings={
-        "East": 'male',
+        "key": 'string',
     },
     eligibility_requirements=[
         shared.CollaboratorGroupRequirement(),

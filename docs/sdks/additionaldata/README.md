@@ -21,9 +21,9 @@ s = wingspan.Wingspan()
 
 req = shared.AdditionalData(
     key='<key>',
-    name='online',
+    name='string',
     required=False,
-    type=shared.AdditionalDataType.STRING,
+    type=shared.AdditionalDataType.BOOLEAN,
 )
 
 res = s.additional_data.create(req)
@@ -58,7 +58,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.delete(id='program')
+res = s.additional_data.delete(id='string')
 
 if res.additional_data is not None:
     # handle response
@@ -90,7 +90,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.get(id='female')
+res = s.additional_data.get(id='string')
 
 if res.additional_data is not None:
     # handle response

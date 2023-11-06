@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.institution.get(routing_number='female')
+res = s.institution.get(routing_number='string')
 
 if res.institution_response is not None:
     # handle response

@@ -20,12 +20,12 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.create(batch_id='online', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
-    client_id='Configuration',
+res = s.bulk_calculation1099_batch_item.create(batch_id='string', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
+    client_id='string',
     labels={
-        "Money": 'blue',
+        "key": 'string',
     },
-    year=9967.06,
+    year=4865.89,
 ))
 
 if res.bulk_calculation1099_item is not None:
@@ -59,7 +59,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.get(batch_id='female', batch_item_id='program')
+res = s.bulk_calculation1099_batch_item.get(batch_id='string', batch_item_id='string')
 
 if res.bulk_calculation1099_item is not None:
     # handle response
@@ -92,9 +92,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.update(batch_id='Van', batch_item_id='East', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
+res = s.bulk_calculation1099_batch_item.update(batch_id='string', batch_item_id='string', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
     labels={
-        "male": 'Metal',
+        "key": 'string',
     },
 ))
 

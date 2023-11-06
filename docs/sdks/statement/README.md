@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.download(id='optical')
+res = s.statement.download(id='string')
 
 if res.status_code == 200:
     # handle response
@@ -51,7 +51,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.get(id='female')
+res = s.statement.get(id='string')
 
 if res.bank_statements is not None:
     # handle response

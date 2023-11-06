@@ -22,32 +22,32 @@ s = wingspan.Wingspan()
 
 req = shared.InvoiceTemplateCreateRequest(
     frequency=shared.Frequency(
-        start_date='online',
+        start_date='string',
     ),
     invoice_data=shared.InvoiceDataCreateRequest(
         accepted_payment_methods=[
-            shared.InvoiceDataCreateRequestAcceptedPaymentMethods.MANUAL,
+            shared.InvoiceDataCreateRequestAcceptedPaymentMethods.ACH,
         ],
         attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
             custom_attachment_ids=[
-                'Extended',
+                'string',
             ],
         ),
         collaborators=[
             shared.InvoiceCollaboratorCreateRequest(
-                amount=1343.65,
+                amount=4893.82,
                 currency=shared.CurrencyInvoiceCollaboratorCreateRequest.CAD,
-                description='Business-focused zero tolerance project',
-                member_client_id='abnormally',
+                description='Synchronised full-range emulation',
+                member_client_id='string',
             ),
         ],
         credit_fee_handling=shared.FeeHandlingConfig(),
         labels={
-            "deposit": 'evolve',
+            "key": 'string',
         },
         late_fee_handling=shared.LateFeeConfig(
             frequency=shared.Frequency(
-                start_date='male',
+                start_date='string',
             ),
         ),
         line_items=[
@@ -57,25 +57,25 @@ req = shared.InvoiceTemplateCreateRequest(
                     quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
                 ),
                 labels={
-                    "SUV": 'quantify',
+                    "key": 'string',
                 },
             ),
         ],
-        member_client_id='Polestar',
+        member_client_id='string',
         notification_preferences=shared.InvoiceNotificationPreferences(
             send_reminders=False,
         ),
     ),
     labels={
-        "mobile": 'National',
+        "key": 'string',
     },
     schedule_dates=[
         shared.ScheduleDate(
-            date_='Durham',
-            status=shared.StatusScheduleDate.MODIFIED,
+            date_='string',
+            status=shared.StatusScheduleDate.PENDING,
         ),
     ],
-    status=shared.StatusInvoiceTemplateCreateRequest.ACTIVE,
+    status=shared.StatusInvoiceTemplateCreateRequest.CANCELLED,
 )
 
 res = s.invoice_template.create(req)
@@ -110,7 +110,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.delete(id='program')
+res = s.invoice_template.delete(id='string')
 
 if res.invoice_template is not None:
     # handle response
@@ -142,7 +142,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.get(id='female')
+res = s.invoice_template.get(id='string')
 
 if res.invoice_template is not None:
     # handle response
@@ -174,23 +174,23 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.invoice_template.update(id='Van', invoice_template_update_request=shared.InvoiceTemplateUpdateRequest(
+res = s.invoice_template.update(id='string', invoice_template_update_request=shared.InvoiceTemplateUpdateRequest(
     frequency=shared.FrequencyUpdate(),
     invoice_data=shared.InvoiceUpdateRequest(
         accepted_payment_methods=[
-            shared.InvoiceUpdateRequestAcceptedPaymentMethods.CREDIT,
+            shared.InvoiceUpdateRequestAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
         ],
         attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
             custom_attachment_ids=[
-                'Reactive',
+                'string',
             ],
         ),
         charged_fees=shared.Fees(
             late_fee=shared.Fee(
-                amount=9914.64,
+                amount=245.55,
             ),
             processing_fee=shared.Fee(
-                amount=2703.24,
+                amount=5971.29,
             ),
         ),
         client=shared.InvoiceUpdateRequestClient(),
@@ -202,7 +202,7 @@ res = s.invoice_template.update(id='Van', invoice_template_update_request=shared
             quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
         ),
         labels={
-            "Quality": 'redundant',
+            "key": 'string',
         },
         late_fee_handling=shared.LateFeeConfigUpdate(
             frequency=shared.FrequencyUpdate(),
@@ -214,7 +214,7 @@ res = s.invoice_template.update(id='Van', invoice_template_update_request=shared
                     quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
                 ),
                 labels={
-                    "cheater": 'Islands',
+                    "key": 'string',
                 },
             ),
         ],
@@ -225,7 +225,7 @@ res = s.invoice_template.update(id='Van', invoice_template_update_request=shared
         ),
     ),
     labels={
-        "online": 'dynamic',
+        "key": 'string',
     },
     schedule_dates=[
         shared.ScheduleDateUpdate(),

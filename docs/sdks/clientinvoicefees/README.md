@@ -19,8 +19,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.TestInvoiceCreate(
-    contact_name='online',
-    email='Rylan13@yahoo.com',
+    contact_name='string',
+    email='Jena.Nienow28@yahoo.com',
 )
 
 res = s.client_invoice_fees.create(req)
@@ -55,7 +55,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_fees.list(invoice_id='Bicycle')
+res = s.client_invoice_fees.list(invoice_id='string')
 
 if res.invoice_fee_calculation is not None:
     # handle response
