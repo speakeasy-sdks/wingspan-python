@@ -1,5 +1,5 @@
 # ApprovedPayables
-(*approved_payables*)
+(*.approved_payables*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List approved payables for payroll
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.approved_payables.list()
 
-if res.payable_schemas is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

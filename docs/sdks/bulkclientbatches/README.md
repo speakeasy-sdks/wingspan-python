@@ -1,5 +1,5 @@
 # BulkClientBatches
-(*bulk_client_batches*)
+(*.bulk_client_batches*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List bulk client batches
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.bulk_client_batches.list()
 
-if res.bulk_client_batches is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

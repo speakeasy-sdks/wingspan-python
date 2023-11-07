@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import invoicepdfgenerationresponse as shared_invoicepdfgenerationresponse
+from ...models.shared import invoicepdfgenerationresponse as shared_invoicepdfgenerationresponse
 from typing import Optional
 
 

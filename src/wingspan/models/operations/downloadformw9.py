@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import downloadw9response as shared_downloadw9response
+from ...models.shared import downloadw9response as shared_downloadw9response
 from typing import Optional
 
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import institutionresponse as shared_institutionresponse
+from ...models.shared import institutionresponse as shared_institutionresponse
 from typing import Optional
 
 

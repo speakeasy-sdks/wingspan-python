@@ -1,5 +1,5 @@
 # InvoiceTemplates
-(*invoice_templates*)
+(*.invoice_templates*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List invoiceTemplates
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.invoice_templates.list()
 
-if res.invoice_templates is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

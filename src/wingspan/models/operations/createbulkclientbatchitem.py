@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkclientitem as shared_bulkclientitem
-from ..shared import bulkclientitemcreate as shared_bulkclientitemcreate
+from ...models.shared import bulkclientitem as shared_bulkclientitem
+from ...models.shared import bulkclientitemcreate as shared_bulkclientitemcreate
 from typing import Optional
 
 

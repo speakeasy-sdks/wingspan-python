@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import ping as shared_ping
+from ...models.shared import ping as shared_ping
 from typing import Optional
 
 

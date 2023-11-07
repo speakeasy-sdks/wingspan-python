@@ -1,5 +1,5 @@
 # PayableOnClient
-(*payable_on_client*)
+(*.payable_on_client*)
 
 ### Available Operations
 
@@ -138,7 +138,7 @@ res = s.payable_on_client.update(id='string', payable_update_request=shared.Paya
         send_reminders=False,
     ),
     payment_methods=[
-        shared.PayableUpdateRequestPaymentMethods.CREDIT,
+        shared.PaymentMethods.CREDIT,
     ],
 ))
 

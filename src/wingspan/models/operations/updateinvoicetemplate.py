@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import invoicetemplate as shared_invoicetemplate
-from ..shared import invoicetemplateupdaterequest as shared_invoicetemplateupdaterequest
+from ...models.shared import invoicetemplate as shared_invoicetemplate
+from ...models.shared import invoicetemplateupdaterequest as shared_invoicetemplateupdaterequest
 from typing import Optional
 
 

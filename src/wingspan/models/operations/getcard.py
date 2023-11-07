@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import carddetails as shared_carddetails
+from ...models.shared import carddetails as shared_carddetails
 from typing import Optional
 
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import invoicetemplate as shared_invoicetemplate
+from ...models.shared import invoicetemplate as shared_invoicetemplate
 from typing import List, Optional
 
 
@@ -13,7 +13,7 @@ class ListInvoiceTemplatesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    invoice_templates: Optional[List[shared_invoicetemplate.InvoiceTemplate]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_invoicetemplate.InvoiceTemplate]] = dataclasses.field(default=None)
     r"""At list of invoice templates"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

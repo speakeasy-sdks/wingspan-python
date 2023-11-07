@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import download1099response as shared_download1099response
+from ...models.shared import download1099response as shared_download1099response
 from typing import Optional
 
 

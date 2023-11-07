@@ -1,5 +1,5 @@
 # InstantPayout
-(*instant_payout*)
+(*.instant_payout*)
 
 ### Available Operations
 
@@ -51,7 +51,6 @@ Delete instant payout
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
@@ -76,7 +75,6 @@ Fetch instant payout details
 
 ```python
 import wingspan
-
 
 s = wingspan.Wingspan()
 

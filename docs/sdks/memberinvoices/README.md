@@ -1,5 +1,5 @@
 # MemberInvoices
-(*member_invoices*)
+(*.member_invoices*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List invoices on member
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.member_invoices.list()
 
-if res.invoices is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

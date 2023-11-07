@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import additionaldata as shared_additionaldata
+from ...models.shared import additionaldata as shared_additionaldata
 from typing import List, Optional
 
 
@@ -13,7 +13,7 @@ class ListAdditionalSettingsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    additional_data: Optional[List[shared_additionaldata.AdditionalData]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_additionaldata.AdditionalData]] = dataclasses.field(default=None)
     r"""A list of custom data-points"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

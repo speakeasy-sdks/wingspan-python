@@ -1,5 +1,5 @@
 # CreatedInvoicesByClient
-(*created_invoices_by_client*)
+(*.created_invoices_by_client*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List invoices created by client
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.created_invoices_by_client.list()
 
-if res.client_invoices is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

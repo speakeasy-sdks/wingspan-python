@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import eligibilityrequirement as shared_eligibilityrequirement
+from ...models.shared import eligibilityrequirement as shared_eligibilityrequirement
 from typing import Optional
 
 

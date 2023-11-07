@@ -1,5 +1,5 @@
 # CollaboratorV2
-(*collaborator_v2*)
+(*.collaborator_v2*)
 
 ### Available Operations
 

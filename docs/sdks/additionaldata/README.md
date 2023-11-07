@@ -1,5 +1,5 @@
 # AdditionalData
-(*additional_data*)
+(*.additional_data*)
 
 ### Available Operations
 
@@ -23,7 +23,7 @@ req = shared.AdditionalData(
     key='<key>',
     name='string',
     required=False,
-    type=shared.AdditionalDataType.BOOLEAN,
+    type=shared.Type.BOOLEAN,
 )
 
 res = s.additional_data.create(req)

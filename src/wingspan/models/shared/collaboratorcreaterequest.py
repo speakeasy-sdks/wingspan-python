@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientdata as shared_clientdata
-from ..shared import memberclientformw9info as shared_memberclientformw9info
-from ..shared import twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4 as shared_twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
+from .clientdata import ClientData
+from .memberclientformw9info import MemberClientFormW9Info
+from .twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4 import TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Dict, Optional
@@ -21,10 +21,10 @@ class StatusCollaboratorCreateRequest(str, Enum):
 @dataclasses.dataclass
 class CollaboratorCreateRequest:
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
-    client_data: Optional[shared_clientdata.ClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData') }})
+    client_data: Optional[ClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData') }})
     collaborator_group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId') }})
-    form_w9_data: Optional[shared_memberclientformw9info.MemberClientFormW9Info] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
-    integration: Optional[shared_twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4.TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
+    form_w9_data: Optional[MemberClientFormW9Info] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
+    integration: Optional[TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
     labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     member_company: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberCompany') }})
     member_email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberEmail') }})

@@ -1,5 +1,5 @@
 # PaymentEligibilityRequirement
-(*payment_eligibility_requirement*)
+(*.payment_eligibility_requirement*)
 
 ### Available Operations
 
@@ -122,7 +122,7 @@ s = wingspan.Wingspan()
 
 
 res = s.payment_eligibility_requirement.update(id='string', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest(
-    value=shared.PaymentEligibilityUpdateRequestValue(),
+    value=shared.Value(),
 ))
 
 if res.payment_eligibility is not None:

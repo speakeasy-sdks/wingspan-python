@@ -1,5 +1,5 @@
 # AdditionalSettings
-(*additional_settings*)
+(*.additional_settings*)
 
 ### Available Operations
 
@@ -15,13 +15,12 @@ List additional settings
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.additional_settings.list()
 
-if res.additional_data is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

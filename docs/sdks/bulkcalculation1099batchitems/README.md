@@ -1,5 +1,5 @@
 # BulkCalculation1099BatchItems
-(*bulk_calculation1099_batch_items*)
+(*.bulk_calculation1099_batch_items*)
 
 ### Available Operations
 
@@ -20,7 +20,7 @@ s = wingspan.Wingspan()
 
 res = s.bulk_calculation1099_batch_items.list(batch_id='string')
 
-if res.bulk_calculation1099_items is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

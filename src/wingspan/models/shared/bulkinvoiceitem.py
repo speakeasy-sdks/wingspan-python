@@ -2,16 +2,16 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import c1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a as shared_c1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a
-from ..shared import feehandlingconfig as shared_feehandlingconfig
-from ..shared import invoiceintegrations as shared_invoiceintegrations
-from ..shared import userroles as shared_userroles
+from .c1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a import C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a
+from .feehandlingconfig import FeeHandlingConfig
+from .invoiceintegrations import InvoiceIntegrations
+from .userroles import UserRoles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Dict, List, Optional
 from wingspan import utils
 
-class BulkInvoiceItemAcceptedPaymentMethods(str, Enum):
+class AcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
@@ -47,18 +47,18 @@ class BulkInvoiceItem:
     paid_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paidDate') }})
     status: StatusBulkInvoiceItem = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
-    user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    accepted_payment_methods: Optional[List[BulkInvoiceItemAcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods') }})
+    user_roles: UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
+    accepted_payment_methods: Optional[List[AcceptedPaymentMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('acceptedPaymentMethods') }})
     bulk_invoice_item_merge_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkInvoiceItemMergeKey') }})
     bulk_invoice_item_reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkInvoiceItemReference') }})
     client_email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientEmail') }})
     client_external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientExternalId') }})
-    credit_fee_handling: Optional[shared_feehandlingconfig.FeeHandlingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling') }})
-    integration: Optional[shared_invoiceintegrations.InvoiceIntegrations] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
+    credit_fee_handling: Optional[FeeHandlingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling') }})
+    integration: Optional[InvoiceIntegrations] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
     invoice_notes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceNotes') }})
     line_item_detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItemDetail') }})
     member_client_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClientId') }})
-    metadata: Optional[shared_c1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a.C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
+    metadata: Optional[C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
     project_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('projectName') }})
     reimbursable_expense: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpense') }})
     send_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendDate') }})

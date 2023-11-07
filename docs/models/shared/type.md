@@ -1,4 +1,4 @@
-# AdditionalDataType
+# Type
 
 
 ## Values

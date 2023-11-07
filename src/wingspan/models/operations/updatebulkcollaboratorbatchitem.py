@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkcollaboratoritem as shared_bulkcollaboratoritem
-from ..shared import bulkcollaboratoritemupdate as shared_bulkcollaboratoritemupdate
+from ...models.shared import bulkcollaboratoritem as shared_bulkcollaboratoritem
+from ...models.shared import bulkcollaboratoritemupdate as shared_bulkcollaboratoritemupdate
 from typing import Optional
 
 

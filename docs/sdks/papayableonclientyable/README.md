@@ -1,5 +1,5 @@
 # PaPayableOnClientyable
-(*pa_payable_on_clientyable*)
+(*.pa_payable_on_clientyable*)
 
 ### Available Operations
 

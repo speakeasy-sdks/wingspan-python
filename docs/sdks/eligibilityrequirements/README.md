@@ -1,5 +1,5 @@
 # EligibilityRequirements
-(*eligibility_requirements*)
+(*.eligibility_requirements*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List Eligibility Requirements
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.eligibility_requirements.list()
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

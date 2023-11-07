@@ -1,5 +1,5 @@
 # PayoutSettings
-(*payout_settings*)
+(*.payout_settings*)
 
 ### Available Operations
 

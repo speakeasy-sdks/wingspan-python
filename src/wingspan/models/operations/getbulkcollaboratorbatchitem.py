@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkcollaboratoritem as shared_bulkcollaboratoritem
+from ...models.shared import bulkcollaboratoritem as shared_bulkcollaboratoritem
 from typing import Optional
 
 

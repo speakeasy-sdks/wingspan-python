@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkinvoicebatch as shared_bulkinvoicebatch
+from ...models.shared import bulkinvoicebatch as shared_bulkinvoicebatch
 from typing import Optional
 
 

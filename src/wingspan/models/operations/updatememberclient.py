@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import memberclientschema as shared_memberclientschema
-from ..shared import memberclientupdaterequest as shared_memberclientupdaterequest
+from ...models.shared import memberclientschema as shared_memberclientschema
+from ...models.shared import memberclientupdaterequest as shared_memberclientupdaterequest
 from typing import Optional
 
 

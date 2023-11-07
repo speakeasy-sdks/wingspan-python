@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import memberclientschema as shared_memberclientschema
+from ...models.shared import memberclientschema as shared_memberclientschema
 from typing import Optional
 
 

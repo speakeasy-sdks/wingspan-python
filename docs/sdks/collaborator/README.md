@@ -1,5 +1,5 @@
 # Collaborator
-(*collaborator*)
+(*.collaborator*)
 
 ### Available Operations
 
@@ -143,17 +143,17 @@ res = s.collaborator.update(id='string', collaborator_update_request=shared.Coll
                 address=shared.Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address(),
             ),
             dispute=shared.Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5(),
-            events=shared.CollaboratorForm1099BalancesUpdateRequestEvents(),
+            events=shared.Events(),
         ),
         two_thousand_and_twenty_two=shared.CollaboratorForm1099BalancesUpdateRequest(
             correction=shared.Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481(
                 address=shared.Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address(),
             ),
             dispute=shared.Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5(),
-            events=shared.CollaboratorForm1099BalancesUpdateRequestEvents(),
+            events=shared.Events(),
         ),
     ),
-    form_w9_data=shared.CollaboratorUpdateRequestFormW9Data(),
+    form_w9_data=shared.FormW9Data(),
     integration=shared.TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4(
         quickbooks=shared.Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4(),
     ),

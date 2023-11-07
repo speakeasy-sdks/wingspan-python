@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bankingapplicationform as shared_bankingapplicationform
+from ...models.shared import bankingapplicationform as shared_bankingapplicationform
 from typing import Optional
 
 

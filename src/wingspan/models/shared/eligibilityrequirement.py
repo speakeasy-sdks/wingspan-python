@@ -7,7 +7,7 @@ from enum import Enum
 from typing import Optional
 from wingspan import utils
 
-class EligibilityRequirementRequirementType(str, Enum):
+class RequirementType(str, Enum):
     SIGNATURE = 'Signature'
 
 
@@ -16,7 +16,7 @@ class EligibilityRequirementRequirementType(str, Enum):
 class EligibilityRequirement:
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     eligibility_requirement_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirementId') }})
-    requirement_type: EligibilityRequirementRequirementType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requirementType') }})
+    requirement_type: RequirementType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requirementType') }})
     template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('templateId') }})
     valid_for: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('validFor') }})
     

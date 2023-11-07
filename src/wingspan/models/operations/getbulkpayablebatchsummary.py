@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkpayableimportsummary as shared_bulkpayableimportsummary
+from ...models.shared import bulkpayableimportsummary as shared_bulkpayableimportsummary
 from typing import Optional
 
 

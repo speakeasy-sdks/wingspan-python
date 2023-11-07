@@ -1,5 +1,5 @@
 # CollaboratorGroupEligibilityRequirement
-(*collaborator_group_eligibility_requirement*)
+(*.collaborator_group_eligibility_requirement*)
 
 ### Available Operations
 

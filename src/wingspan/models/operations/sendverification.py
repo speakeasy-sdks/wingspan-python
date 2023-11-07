@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import cardcoderequest as shared_cardcoderequest
-from ..shared import cardcoderesponse as shared_cardcoderesponse
+from ...models.shared import cardcoderequest as shared_cardcoderequest
+from ...models.shared import cardcoderesponse as shared_cardcoderesponse
 from typing import Optional
 
 

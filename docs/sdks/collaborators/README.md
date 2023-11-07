@@ -1,5 +1,5 @@
 # Collaborators
-(*collaborators*)
+(*.collaborators*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List all collaborators
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.collaborators.list()
 
-if res.collaborator_schemas is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

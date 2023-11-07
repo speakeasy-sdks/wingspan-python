@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import feehandlingconfig as shared_feehandlingconfig
-from ..shared import invoicelineitemscreaterequest as shared_invoicelineitemscreaterequest
+from .feehandlingconfig import FeeHandlingConfig
+from .invoicelineitemscreaterequest import InvoiceLineItemsCreateRequest
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import List, Optional
@@ -18,8 +18,8 @@ class CurrencyClientInvoiceDataCreateRequest(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientInvoiceDataCreateRequest:
-    line_items: List[shared_invoicelineitemscreaterequest.InvoiceLineItemsCreateRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
-    credit_fee_handling: Optional[shared_feehandlingconfig.FeeHandlingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling') }})
+    line_items: List[InvoiceLineItemsCreateRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItems') }})
+    credit_fee_handling: Optional[FeeHandlingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling') }})
     currency: Optional[CurrencyClientInvoiceDataCreateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency') }})
     due_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueDate') }})
     

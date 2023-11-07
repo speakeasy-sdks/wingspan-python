@@ -1,5 +1,5 @@
 # ClientCollaboratorV2
-(*client_collaborator_v2*)
+(*.client_collaborator_v2*)
 
 ### Available Operations
 

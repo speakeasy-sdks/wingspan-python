@@ -1,5 +1,5 @@
 # PaymentEligibilityRequirements
-(*payment_eligibility_requirements*)
+(*.payment_eligibility_requirements*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List Payment Eligigbility Requirements
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.payment_eligibility_requirements.list()
 
-if res.payment_eligibilities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

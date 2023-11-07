@@ -1,5 +1,5 @@
 # EligibilityRequirement
-(*eligibility_requirement*)
+(*.eligibility_requirement*)
 
 ### Available Operations
 
@@ -58,7 +58,7 @@ s = wingspan.Wingspan()
 
 res = s.eligibility_requirement.delete(id='string')
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -90,7 +90,7 @@ s = wingspan.Wingspan()
 
 res = s.eligibility_requirement.get(id='string')
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -124,7 +124,7 @@ res = s.eligibility_requirement.update(id='string', eligibility_requirement_upda
     requirement_type=shared.EligibilityRequirementUpdateRequestRequirementType.SIGNATURE,
 ))
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

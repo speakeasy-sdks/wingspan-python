@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import remail1099response as shared_remail1099response
+from ...models.shared import remail1099response as shared_remail1099response
 from typing import Optional
 
 

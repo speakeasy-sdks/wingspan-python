@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import paymenteligibility as shared_paymenteligibility
+from ...models.shared import paymenteligibility as shared_paymenteligibility
 from typing import Optional
 
 

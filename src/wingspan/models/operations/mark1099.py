@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import mark1099asundeliveredresponse as shared_mark1099asundeliveredresponse
+from ...models.shared import mark1099asundeliveredresponse as shared_mark1099asundeliveredresponse
 from typing import Optional
 
 

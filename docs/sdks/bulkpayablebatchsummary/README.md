@@ -1,5 +1,5 @@
 # BulkPayableBatchSummary
-(*bulk_payable_batch_summary*)
+(*.bulk_payable_batch_summary*)
 
 ### Available Operations
 

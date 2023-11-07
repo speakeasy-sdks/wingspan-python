@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkbatchupdate as shared_bulkbatchupdate
-from ..shared import bulkclientbatch as shared_bulkclientbatch
+from ...models.shared import bulkbatchupdate as shared_bulkbatchupdate
+from ...models.shared import bulkclientbatch as shared_bulkclientbatch
 from typing import Optional
 
 

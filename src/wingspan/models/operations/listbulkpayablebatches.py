@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkpayablebatch as shared_bulkpayablebatch
+from ...models.shared import bulkpayablebatch as shared_bulkpayablebatch
 from typing import List, Optional
 
 
@@ -13,7 +13,7 @@ class ListBulkPayableBatchesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    bulk_payable_batches: Optional[List[shared_bulkpayablebatch.BulkPayableBatch]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_bulkpayablebatch.BulkPayableBatch]] = dataclasses.field(default=None)
     r"""A list of bulk payable batches"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

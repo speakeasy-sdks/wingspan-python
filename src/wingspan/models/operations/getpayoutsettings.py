@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import payoutsettingsresponse as shared_payoutsettingsresponse
+from ...models.shared import payoutsettingsresponse as shared_payoutsettingsresponse
 from typing import Optional
 
 

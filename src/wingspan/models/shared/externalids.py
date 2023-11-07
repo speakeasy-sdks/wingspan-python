@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import externalidsbulkimport as shared_externalidsbulkimport
-from ..shared import externalidsquickbooksdata as shared_externalidsquickbooksdata
+from .externalidsbulkimport import ExternalIdsBulkImport
+from .externalidsquickbooksdata import ExternalIdsQuickbooksData
 from dataclasses_json import Undefined, dataclass_json
 from typing import Dict, Optional
 from wingspan import utils
@@ -12,8 +12,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ExternalIds:
-    bulk: Optional[shared_externalidsbulkimport.ExternalIdsBulkImport] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulk') }})
-    quickbooks: Optional[Dict[str, shared_externalidsquickbooksdata.ExternalIdsQuickbooksData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks') }})
+    bulk: Optional[ExternalIdsBulkImport] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulk') }})
+    quickbooks: Optional[Dict[str, ExternalIdsQuickbooksData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks') }})
     stripe: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stripe') }})
     
 

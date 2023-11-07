@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import payableschema as shared_payableschema
+from ...models.shared import payableschema as shared_payableschema
 from typing import List, Optional
 
 
@@ -13,7 +13,7 @@ class ListApprovedPayablesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    payable_schemas: Optional[List[shared_payableschema.PayableSchema]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_payableschema.PayableSchema]] = dataclasses.field(default=None)
     r"""A list of payables"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

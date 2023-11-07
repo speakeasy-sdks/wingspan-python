@@ -1,5 +1,5 @@
 # Institution
-(*institution*)
+(*.institution*)
 
 ### Available Operations
 

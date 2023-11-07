@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import collaboratorschema as shared_collaboratorschema
+from ...models.shared import collaboratorschema as shared_collaboratorschema
 from typing import List, Optional
 
 
@@ -13,7 +13,7 @@ class ListCollaboratorsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    collaborator_schemas: Optional[List[shared_collaboratorschema.CollaboratorSchema]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_collaboratorschema.CollaboratorSchema]] = dataclasses.field(default=None)
     r"""A list of collaborators"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

@@ -1,5 +1,5 @@
 # Payables
-(*payables*)
+(*.payables*)
 
 ### Available Operations
 
@@ -13,7 +13,6 @@ Get payables summary
 
 ```python
 import wingspan
-
 
 s = wingspan.Wingspan()
 

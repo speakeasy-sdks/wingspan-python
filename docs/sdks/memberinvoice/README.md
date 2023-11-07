@@ -1,5 +1,5 @@
 # MemberInvoice
-(*member_invoice*)
+(*.member_invoice*)
 
 ### Available Operations
 
@@ -29,7 +29,7 @@ req = shared.InvoiceCreateRequest(
             'string',
         ],
     ),
-    client=shared.InvoiceCreateRequestClient(),
+    client=shared.Client(),
     collaborators=[
         shared.InvoiceCollaboratorCreateRequest(
             amount=4893.82,
@@ -60,7 +60,7 @@ req = shared.InvoiceCreateRequest(
             },
         ),
     ],
-    member=shared.InvoiceCreateRequestMember(),
+    member=shared.Member(),
     member_client_id='string',
     metadata=shared.InvoiceMetadata(),
     notification_preferences=shared.InvoiceNotificationPreferences(

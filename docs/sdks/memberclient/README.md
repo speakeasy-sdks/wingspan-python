@@ -1,5 +1,5 @@
 # MemberClient
-(*member_client*)
+(*.member_client*)
 
 ### Available Operations
 
@@ -140,14 +140,14 @@ res = s.member_client.update(id='string', member_client_update_request=shared.Me
                 address=shared.Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address(),
             ),
             dispute=shared.Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5(),
-            events=shared.CollaboratorForm1099BalancesUpdateRequestEvents(),
+            events=shared.Events(),
         ),
         two_thousand_and_twenty_two=shared.CollaboratorForm1099BalancesUpdateRequest(
             correction=shared.Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481(
                 address=shared.Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address(),
             ),
             dispute=shared.Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5(),
-            events=shared.CollaboratorForm1099BalancesUpdateRequestEvents(),
+            events=shared.Events(),
         ),
     ),
     form_w9_data=shared.MemberClientUpdateRequestFormW9Data(),

@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import deductionresponse as shared_deductionresponse
-from ..shared import deductionupdaterequest as shared_deductionupdaterequest
+from ...models.shared import deductionresponse as shared_deductionresponse
+from ...models.shared import deductionupdaterequest as shared_deductionupdaterequest
 from typing import Optional
 
 

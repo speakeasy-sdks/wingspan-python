@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import payableschema as shared_payableschema
-from ..shared import payableupdaterequest as shared_payableupdaterequest
+from ...models.shared import payableschema as shared_payableschema
+from ...models.shared import payableupdaterequest as shared_payableupdaterequest
 from typing import Optional
 
 

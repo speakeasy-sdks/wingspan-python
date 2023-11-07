@@ -1,5 +1,5 @@
 # Statement
-(*statement*)
+(*.statement*)
 
 ### Available Operations
 
@@ -53,7 +53,7 @@ s = wingspan.Wingspan()
 
 res = s.statement.get(id='string')
 
-if res.bank_statements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

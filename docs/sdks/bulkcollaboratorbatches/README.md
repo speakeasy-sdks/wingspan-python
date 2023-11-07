@@ -1,5 +1,5 @@
 # BulkCollaboratorBatches
-(*bulk_collaborator_batches*)
+(*.bulk_collaborator_batches*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List bulk collaborator batches
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.bulk_collaborator_batches.list()
 
-if res.bulk_collaborator_batches is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

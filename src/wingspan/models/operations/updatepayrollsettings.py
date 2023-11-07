@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import payrollsettings as shared_payrollsettings
-from ..shared import payrollsettingsupdate as shared_payrollsettingsupdate
+from ...models.shared import payrollsettings as shared_payrollsettings
+from ...models.shared import payrollsettingsupdate as shared_payrollsettingsupdate
 from typing import Optional
 
 

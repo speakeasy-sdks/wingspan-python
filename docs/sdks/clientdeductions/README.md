@@ -1,5 +1,5 @@
 # ClientDeductions
-(*client_deductions*)
+(*.client_deductions*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List deductions
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.client_deductions.list()
 
-if res.deduction_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

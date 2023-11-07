@@ -6,7 +6,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from wingspan import utils
 
-class AdditionalDataType(str, Enum):
+class Type(str, Enum):
     BOOLEAN = 'Boolean'
     STRING = 'String'
 
@@ -17,6 +17,6 @@ class AdditionalData:
     key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     required: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('required') }})
-    type: AdditionalDataType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
 

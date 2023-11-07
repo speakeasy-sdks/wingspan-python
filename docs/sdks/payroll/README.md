@@ -1,5 +1,5 @@
 # Payroll
-(*payroll*)
+(*.payroll*)
 
 ### Available Operations
 
@@ -13,7 +13,6 @@ Execute payroll
 
 ```python
 import wingspan
-
 
 s = wingspan.Wingspan()
 

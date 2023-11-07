@@ -1,5 +1,5 @@
 # ServiceStatus
-(*service_status*)
+(*.service_status*)
 
 ### Available Operations
 
@@ -13,7 +13,6 @@ Get Service Status
 
 ```python
 import wingspan
-
 
 s = wingspan.Wingspan()
 

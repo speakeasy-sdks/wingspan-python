@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkinvoiceitem as shared_bulkinvoiceitem
-from ..shared import bulkinvoiceitemupdate as shared_bulkinvoiceitemupdate
+from ...models.shared import bulkinvoiceitem as shared_bulkinvoiceitem
+from ...models.shared import bulkinvoiceitemupdate as shared_bulkinvoiceitemupdate
 from typing import Optional
 
 

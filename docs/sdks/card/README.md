@@ -1,5 +1,5 @@
 # Card
-(*card*)
+(*.card*)
 
 ### Available Operations
 

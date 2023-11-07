@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import payablessummary as shared_payablessummary
+from ...models.shared import payablessummary as shared_payablessummary
 from typing import Optional
 
 

@@ -1,5 +1,5 @@
 # PayoutDebitCards
-(*payout_debit_cards*)
+(*.payout_debit_cards*)
 
 ### Available Operations
 
@@ -20,7 +20,7 @@ s = wingspan.Wingspan()
 
 res = s.payout_debit_cards.list(member_id='string')
 
-if res.checkbook_cards is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import documentresponse as shared_documentresponse
+from .documentresponse import DocumentResponse
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
@@ -26,7 +26,7 @@ class MemberClientRequirementResponse:
     collaborator_group_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId') }})
     eligibility_requirement_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirementId') }})
     requirement_type: MemberClientRequirementResponseRequirementType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requirementType') }})
-    document: Optional[shared_documentresponse.DocumentResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('document') }})
+    document: Optional[DocumentResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('document') }})
     document_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documentId') }})
     status: Optional[StatusMemberClientRequirementResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('templateId') }})

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import invoicefeecalculation as shared_invoicefeecalculation
+from ...models.shared import invoicefeecalculation as shared_invoicefeecalculation
 from typing import Optional
 
 

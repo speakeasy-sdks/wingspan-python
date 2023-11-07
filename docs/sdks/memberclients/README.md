@@ -1,5 +1,5 @@
 # MemberClients
-(*member_clients*)
+(*.member_clients*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List memberClients
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.member_clients.list()
 
-if res.member_client_schemas is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

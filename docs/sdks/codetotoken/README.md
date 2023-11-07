@@ -1,5 +1,5 @@
 # CodeToToken
-(*code_to_token*)
+(*.code_to_token*)
 
 ### Available Operations
 

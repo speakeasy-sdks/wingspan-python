@@ -1,5 +1,5 @@
 # ClientDeductionID
-(*client_deduction_id*)
+(*.client_deduction_id*)
 
 ### Available Operations
 

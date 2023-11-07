@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkcollaboratorbatch as shared_bulkcollaboratorbatch
+from ...models.shared import bulkcollaboratorbatch as shared_bulkcollaboratorbatch
 from typing import Optional
 
 

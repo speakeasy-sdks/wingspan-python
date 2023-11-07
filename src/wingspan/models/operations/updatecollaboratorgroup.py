@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import collaboratorgroupresponse as shared_collaboratorgroupresponse
-from ..shared import collaboratorgroupupdaterequest as shared_collaboratorgroupupdaterequest
+from ...models.shared import collaboratorgroupresponse as shared_collaboratorgroupresponse
+from ...models.shared import collaboratorgroupupdaterequest as shared_collaboratorgroupupdaterequest
 from typing import Optional
 
 

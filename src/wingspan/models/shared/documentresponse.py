@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import documentevents as shared_documentevents
-from ..shared import documentfiles as shared_documentfiles
-from ..shared import userroles as shared_userroles
+from .documentevents import DocumentEvents
+from .documentfiles import DocumentFiles
+from .userroles import UserRoles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
@@ -28,8 +28,8 @@ class DocumentResponse:
     status: StatusDocumentResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     template_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('templateId') }})
     title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('title') }})
-    user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    events: Optional[shared_documentevents.DocumentEvents] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
-    files: Optional[shared_documentfiles.DocumentFiles] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('files') }})
+    user_roles: UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
+    events: Optional[DocumentEvents] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
+    files: Optional[DocumentFiles] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('files') }})
     
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import memberclientformw9info as shared_memberclientformw9info
+from .memberclientformw9info import MemberClientFormW9Info
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Dict, Optional
@@ -25,7 +25,7 @@ class BulkCollaboratorItemCreate:
     email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
     first_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstLastName') }})
-    form_w9_data: Optional[shared_memberclientformw9info.MemberClientFormW9Info] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
+    form_w9_data: Optional[MemberClientFormW9Info] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
     labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     
 

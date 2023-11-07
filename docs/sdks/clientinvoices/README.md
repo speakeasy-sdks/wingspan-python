@@ -1,5 +1,5 @@
 # ClientInvoices
-(*client_invoices*)
+(*.client_invoices*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List invoices on client
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.client_invoices.list()
 
-if res.payable_schemas is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

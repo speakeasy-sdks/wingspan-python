@@ -1,5 +1,5 @@
 # CollaboratorsDetailsV2
-(*collaborators_details_v2*)
+(*.collaborators_details_v2*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ Get a list of collaborators and their details
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.collaborators_details_v2.get()
 
-if res.collaborators_report_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

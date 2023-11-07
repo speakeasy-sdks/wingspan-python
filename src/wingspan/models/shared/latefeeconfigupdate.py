@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import frequencyupdate as shared_frequencyupdate
+from .frequencyupdate import FrequencyUpdate
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from wingspan import utils
@@ -11,7 +11,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class LateFeeConfigUpdate:
-    frequency: Optional[shared_frequencyupdate.FrequencyUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency') }})
+    frequency: Optional[FrequencyUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency') }})
     late_fee_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeAmount') }})
     late_fee_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeePercentage') }})
     

@@ -1,5 +1,5 @@
 # Mcc
-(*mcc*)
+(*.mcc*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List mcc codes
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.mcc.list()
 
-if res.mcc_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

@@ -1,5 +1,5 @@
 # Cards
-(*cards*)
+(*.cards*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List cards
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.cards.list()
 
-if res.cards is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

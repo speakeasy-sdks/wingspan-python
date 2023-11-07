@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0 as shared_d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0
-from ..shared import memberdata as shared_memberdata
+from .d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0 import D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0
+from .memberdata import MemberData
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Dict, Optional
@@ -24,8 +24,8 @@ class BulkClientItemUpdate:
     email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
     first_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstLastName') }})
-    integration: Optional[shared_d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
+    integration: Optional[D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
     labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
-    member_data: Optional[shared_memberdata.MemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData') }})
+    member_data: Optional[MemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData') }})
     
 

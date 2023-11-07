@@ -1,4 +1,4 @@
-# BulkInvoiceItemAcceptedPaymentMethods
+# PaymentMethods
 
 
 ## Values

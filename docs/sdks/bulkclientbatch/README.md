@@ -1,5 +1,5 @@
 # BulkClientBatch
-(*bulk_client_batch*)
+(*.bulk_client_batch*)
 
 ### Available Operations
 

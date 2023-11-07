@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkpayableitem as shared_bulkpayableitem
-from ..shared import bulkpayableitemupdate as shared_bulkpayableitemupdate
+from ...models.shared import bulkpayableitem as shared_bulkpayableitem
+from ...models.shared import bulkpayableitemupdate as shared_bulkpayableitemupdate
 from typing import Optional
 
 

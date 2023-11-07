@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import collaboratorgrouprequirement as shared_collaboratorgrouprequirement
+from .collaboratorgrouprequirement import CollaboratorGroupRequirement
 from dataclasses_json import Undefined, dataclass_json
 from typing import Dict, List, Optional
 from wingspan import utils
@@ -13,7 +13,7 @@ from wingspan import utils
 class CollaboratorGroupUpdateRequest:
     collaborator_settings: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings') }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
-    eligibility_requirements: Optional[List[shared_collaboratorgrouprequirement.CollaboratorGroupRequirement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
+    eligibility_requirements: Optional[List[CollaboratorGroupRequirement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     
 

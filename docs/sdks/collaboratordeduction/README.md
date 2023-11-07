@@ -1,5 +1,5 @@
 # CollaboratorDeduction
-(*collaborator_deduction*)
+(*.collaborator_deduction*)
 
 ### Available Operations
 

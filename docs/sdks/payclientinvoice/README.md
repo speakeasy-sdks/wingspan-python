@@ -1,5 +1,5 @@
 # PayClientInvoice
-(*pay_client_invoice*)
+(*.pay_client_invoice*)
 
 ### Available Operations
 

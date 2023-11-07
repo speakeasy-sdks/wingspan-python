@@ -1,5 +1,5 @@
 # BulkInvoiceBatches
-(*bulk_invoice_batches*)
+(*.bulk_invoice_batches*)
 
 ### Available Operations
 
@@ -14,13 +14,12 @@ List bulk invoice batches
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.bulk_invoice_batches.list()
 
-if res.bulk_invoice_batches is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

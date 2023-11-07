@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import card as shared_card
-from ..shared import cardupdaterequest as shared_cardupdaterequest
+from ...models.shared import card as shared_card
+from ...models.shared import cardupdaterequest as shared_cardupdaterequest
 from typing import Optional
 
 

@@ -1,5 +1,5 @@
 # InvoiceTemplate
-(*invoice_template*)
+(*.invoice_template*)
 
 ### Available Operations
 
