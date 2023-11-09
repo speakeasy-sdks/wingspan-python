@@ -12,6 +12,7 @@ class ServiceStatus:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self) -> operations.GetServiceStatusResponse:
         r"""Get Service Status"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

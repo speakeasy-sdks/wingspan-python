@@ -12,6 +12,7 @@ class MemberInvoice:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.InvoiceCreateRequest) -> operations.CreateMemberInvoiceResponse:
         r"""Create invoice on member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class MemberInvoice:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteMemberInvoiceResponse:
         r"""Delete invoice on member by invoiceId"""
@@ -75,6 +77,7 @@ class MemberInvoice:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetMemberInvoiceResponse:
         r"""Get invoice on member by invoiceId"""
         request = operations.GetMemberInvoiceRequest(
@@ -106,6 +109,7 @@ class MemberInvoice:
 
         return res
 
+    
     
     def update(self, id: str, invoice_update_request: Optional[shared.InvoiceUpdateRequest] = None) -> operations.UpdateMemberInvoiceResponse:
         r"""Update invoice on member by invoiceId"""

@@ -1,5 +1,5 @@
 # AdditionalSettings
-(*.additional_settings*)
+(*additional_settings*)
 
 ### Available Operations
 
@@ -29,7 +29,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListAdditionalSettingsResponse](../../models/operations/listadditionalsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -62,4 +66,8 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.UpdateAdditionalSettingsResponse](../../models/operations/updateadditionalsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -12,6 +12,7 @@ class Mcc:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListMCCResponse:
         r"""List mcc codes"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

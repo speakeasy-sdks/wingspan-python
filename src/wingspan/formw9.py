@@ -12,6 +12,7 @@ class FormW9:
         self.sdk_configuration = sdk_config
         
     
+    
     def download(self, id: str) -> operations.DownloadFormW9Response:
         r"""Downloads a form W9 PDF for a collaborator"""
         request = operations.DownloadFormW9Request(

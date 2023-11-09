@@ -1,5 +1,5 @@
 # ServiceStatus
-(*.service_status*)
+(*service_status*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.ping is not None:
 ### Response
 
 **[operations.GetServiceStatusResponse](../../models/operations/getservicestatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

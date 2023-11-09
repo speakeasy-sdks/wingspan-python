@@ -12,6 +12,7 @@ class BulkPayableBatchSummary:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, batch_id: str) -> operations.GetBulkPayableBatchSummaryResponse:
         r"""Get Bulk Payable Batch Import Summary"""
         request = operations.GetBulkPayableBatchSummaryRequest(

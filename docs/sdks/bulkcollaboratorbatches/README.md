@@ -1,5 +1,5 @@
 # BulkCollaboratorBatches
-(*.bulk_collaborator_batches*)
+(*bulk_collaborator_batches*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListBulkCollaboratorBatchesResponse](../../models/operations/listbulkcollaboratorbatchesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

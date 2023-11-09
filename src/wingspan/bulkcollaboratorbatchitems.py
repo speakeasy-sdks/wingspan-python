@@ -12,6 +12,7 @@ class BulkCollaboratorBatchItems:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self, batch_id: str) -> operations.ListBulkCollaboratorBatchItemsResponse:
         r"""List bulk collaborator batch items"""
         request = operations.ListBulkCollaboratorBatchItemsRequest(

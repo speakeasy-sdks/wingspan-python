@@ -12,6 +12,7 @@ class PaymentEligibilityRequirement:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.PaymentEligibility) -> operations.CreatePaymentEligibilityRequirementResponse:
         r"""Create Payment Eligibility Requirement"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class PaymentEligibilityRequirement:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeletePaymentEligibilityRequirementResponse:
         r"""Delete Payment Eligibility Requirement"""
@@ -75,6 +77,7 @@ class PaymentEligibilityRequirement:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetPaymentEligibilityRequirementResponse:
         r"""Get Payment Eligibility Requirement"""
         request = operations.GetPaymentEligibilityRequirementRequest(
@@ -106,6 +109,7 @@ class PaymentEligibilityRequirement:
 
         return res
 
+    
     
     def update(self, id: str, payment_eligibility_update_request: Optional[shared.PaymentEligibilityUpdateRequest] = None) -> operations.UpdatePaymentEligibilityRequirementResponse:
         r"""Update Payment Eligibility Requirement"""

@@ -1,5 +1,5 @@
 # PayoutSettings
-(*.payout_settings*)
+(*payout_settings*)
 
 ### Available Operations
 
@@ -36,7 +36,11 @@ if res.payout_settings_response is not None:
 ### Response
 
 **[operations.GetPayoutSettingsResponse](../../models/operations/getpayoutsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -73,4 +77,8 @@ if res.payout_settings_response is not None:
 ### Response
 
 **[operations.UpdatePayoutSettingsResponse](../../models/operations/updatepayoutsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

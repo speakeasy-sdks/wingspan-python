@@ -12,6 +12,7 @@ class AdditionalSettings:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListAdditionalSettingsResponse:
         r"""List additional settings"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -39,6 +40,7 @@ class AdditionalSettings:
 
         return res
 
+    
     
     def update(self, id: str, additional_data_update_request: Optional[shared.AdditionalDataUpdateRequest] = None) -> operations.UpdateAdditionalSettingsResponse:
         r"""Update additional settings"""

@@ -1,5 +1,5 @@
 # MemberClient
-(*.member_client*)
+(*member_client*)
 
 ### Available Operations
 
@@ -50,7 +50,11 @@ if res.member_client_schema is not None:
 ### Response
 
 **[operations.CreateMemberClientResponse](../../models/operations/creatememberclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -82,7 +86,11 @@ if res.member_client_schema is not None:
 ### Response
 
 **[operations.DeleteMemberClientResponse](../../models/operations/deletememberclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -114,7 +122,11 @@ if res.member_client_schema is not None:
 ### Response
 
 **[operations.GetMemberClientResponse](../../models/operations/getmemberclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -176,4 +188,8 @@ if res.member_client_schema is not None:
 ### Response
 
 **[operations.UpdateMemberClientResponse](../../models/operations/updatememberclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # PayableOnClient
-(*.payable_on_client*)
+(*payable_on_client*)
 
 ### Available Operations
 
@@ -75,7 +75,11 @@ if res.payable_schema is not None:
 ### Response
 
 **[operations.CreatePayableOnClientResponse](../../models/operations/createpayableonclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -158,4 +162,8 @@ if res.payable_schema is not None:
 ### Response
 
 **[operations.UpdatePayableOnClientResponse](../../models/operations/updatepayableonclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

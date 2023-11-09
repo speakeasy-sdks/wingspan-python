@@ -1,5 +1,5 @@
 # CollaboratorDeduction
-(*.collaborator_deduction*)
+(*collaborator_deduction*)
 
 ### Available Operations
 
@@ -46,7 +46,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.CreateCollaboratorDeductionResponse](../../models/operations/createcollaboratordeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -78,7 +82,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.DeleteCollaboratorDeductionResponse](../../models/operations/deletecollaboratordeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -110,7 +118,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.GetCollaboratorDeductionResponse](../../models/operations/getcollaboratordeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -143,4 +155,8 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.UpdateCollaboratorDeductionResponse](../../models/operations/updatecollaboratordeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

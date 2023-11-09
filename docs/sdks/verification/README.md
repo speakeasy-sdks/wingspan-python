@@ -1,5 +1,5 @@
 # Verification
-(*.verification*)
+(*verification*)
 
 ### Available Operations
 
@@ -38,4 +38,8 @@ if res.card_code_response is not None:
 ### Response
 
 **[operations.SendVerificationResponse](../../models/operations/sendverificationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

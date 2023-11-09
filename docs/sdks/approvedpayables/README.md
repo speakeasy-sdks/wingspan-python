@@ -1,5 +1,5 @@
 # ApprovedPayables
-(*.approved_payables*)
+(*approved_payables*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListApprovedPayablesResponse](../../models/operations/listapprovedpayablesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

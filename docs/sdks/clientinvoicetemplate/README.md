@@ -1,5 +1,5 @@
 # ClientInvoiceTemplate
-(*.client_invoice_template*)
+(*client_invoice_template*)
 
 ### Available Operations
 
@@ -68,7 +68,11 @@ if res.client_invoice_template is not None:
 ### Response
 
 **[operations.CreateClientInvoiceTemplateResponse](../../models/operations/createclientinvoicetemplateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -100,7 +104,11 @@ if res.client_invoice_template is not None:
 ### Response
 
 **[operations.GetClientInvoiceTemplateResponse](../../models/operations/getclientinvoicetemplateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -135,4 +143,8 @@ if res.client_invoice_template is not None:
 ### Response
 
 **[operations.UpdateClientInvoiceTemplateResponse](../../models/operations/updateclientinvoicetemplateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

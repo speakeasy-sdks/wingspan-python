@@ -12,6 +12,7 @@ class Institution:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, routing_number: str) -> operations.GetInstitutionResponse:
         r"""Get Institution By Routing Number"""
         request = operations.GetInstitutionRequest(

@@ -12,6 +12,7 @@ class Collaborator:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.CollaboratorCreateRequest) -> operations.CreateCollaboratorResponse:
         r"""Create new collaborator"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class Collaborator:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteCollaboratorResponse:
         r"""Delete collaborator by Id"""
@@ -75,6 +77,7 @@ class Collaborator:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetCollaboratorResponse:
         r"""Get collaborator by Id"""
         request = operations.GetCollaboratorRequest(
@@ -106,6 +109,7 @@ class Collaborator:
 
         return res
 
+    
     
     def update(self, id: str, collaborator_update_request: Optional[shared.CollaboratorUpdateRequest] = None) -> operations.UpdateCollaboratorResponse:
         r"""Update a collaborator by Id"""

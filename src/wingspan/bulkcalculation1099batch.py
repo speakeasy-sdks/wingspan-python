@@ -12,6 +12,7 @@ class BulkCalculation1099Batch:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.BulkBatchCreate) -> operations.CreateBulkCalculation1099BatchResponse:
         r"""Create a bulk calculation1099 batch"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class BulkCalculation1099Batch:
 
         return res
 
+    
     
     def get(self, batch_id: str) -> operations.GetBulkCalculation1099BatchResponse:
         r"""Get a bulk calculation1099 batch"""
@@ -74,6 +76,7 @@ class BulkCalculation1099Batch:
 
         return res
 
+    
     
     def update(self, batch_id: str, bulk_batch_update: Optional[shared.BulkBatchUpdate] = None) -> operations.UpdateBulkCalculation1099BatchResponse:
         r"""Update a bulk calculation1099 batch"""

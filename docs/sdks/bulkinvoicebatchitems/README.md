@@ -1,5 +1,5 @@
 # BulkInvoiceBatchItems
-(*.bulk_invoice_batch_items*)
+(*bulk_invoice_batch_items*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListBulkInvoiceBatchItemsResponse](../../models/operations/listbulkinvoicebatchitemsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

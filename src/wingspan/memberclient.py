@@ -12,6 +12,7 @@ class MemberClient:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.MemberClientCreateRequest) -> operations.CreateMemberClientResponse:
         r"""Create memberClient"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class MemberClient:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteMemberClientResponse:
         r"""Delete memberClient"""
@@ -75,6 +77,7 @@ class MemberClient:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetMemberClientResponse:
         r"""Get Member Client"""
         request = operations.GetMemberClientRequest(
@@ -106,6 +109,7 @@ class MemberClient:
 
         return res
 
+    
     
     def update(self, id: str, member_client_update_request: Optional[shared.MemberClientUpdateRequest] = None) -> operations.UpdateMemberClientResponse:
         r"""Update memberClient"""

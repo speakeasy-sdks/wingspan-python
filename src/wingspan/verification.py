@@ -12,6 +12,7 @@ class Verification:
         self.sdk_configuration = sdk_config
         
     
+    
     def send(self, id: str, card_code_request: Optional[shared.CardCodeRequest] = None) -> operations.SendVerificationResponse:
         r"""Sends a verification code"""
         request = operations.SendVerificationRequest(

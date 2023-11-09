@@ -12,6 +12,7 @@ class PayablesAgingGroup:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self) -> operations.GetPayablesAgingGroupResponse:
         r"""Get a list of payables with respective aging group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

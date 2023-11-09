@@ -1,5 +1,5 @@
 # Invoice
-(*.invoice*)
+(*invoice*)
 
 ### Available Operations
 
@@ -36,7 +36,11 @@ if res.invoice_pdf_generation_response is not None:
 ### Response
 
 **[operations.GenerateInvoiceResponse](../../models/operations/generateinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## send
 
@@ -68,4 +72,8 @@ if res.invoice is not None:
 ### Response
 
 **[operations.SendInvoiceResponse](../../models/operations/sendinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

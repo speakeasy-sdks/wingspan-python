@@ -1,5 +1,5 @@
 # BulkCollaboratorBatch
-(*.bulk_collaborator_batch*)
+(*bulk_collaborator_batch*)
 
 ### Available Operations
 
@@ -42,7 +42,11 @@ if res.bulk_collaborator_batch is not None:
 ### Response
 
 **[operations.CreateBulkCollaboratorBatchResponse](../../models/operations/createbulkcollaboratorbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -74,7 +78,11 @@ if res.bulk_collaborator_batch is not None:
 ### Response
 
 **[operations.GetBulkCollaboratorBatchResponse](../../models/operations/getbulkcollaboratorbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -111,4 +119,8 @@ if res.bulk_collaborator_batch is not None:
 ### Response
 
 **[operations.UpdateBulkCollaboratorBatchResponse](../../models/operations/updatebulkcollaboratorbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

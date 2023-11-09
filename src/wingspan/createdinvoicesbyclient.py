@@ -12,6 +12,7 @@ class CreatedInvoicesByClient:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListCreatedInvoicesByClientResponse:
         r"""List invoices created by client"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

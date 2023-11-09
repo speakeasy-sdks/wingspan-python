@@ -1,5 +1,5 @@
 # PayClientInvoice
-(*.pay_client_invoice*)
+(*pay_client_invoice*)
 
 ### Available Operations
 
@@ -36,4 +36,8 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.PostPayClientInvoiceResponse](../../models/operations/postpayclientinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

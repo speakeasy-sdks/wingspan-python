@@ -1,5 +1,5 @@
 # Card
-(*.card*)
+(*card*)
 
 ### Available Operations
 
@@ -46,7 +46,11 @@ if res.card is not None:
 ### Response
 
 **[operations.CreateCardResponse](../../models/operations/createcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -78,7 +82,11 @@ if res.card is not None:
 ### Response
 
 **[operations.DeleteCardResponse](../../models/operations/deletecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -110,7 +118,11 @@ if res.card_details is not None:
 ### Response
 
 **[operations.GetCardResponse](../../models/operations/getcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -145,4 +157,8 @@ if res.card is not None:
 ### Response
 
 **[operations.UpdateCardResponse](../../models/operations/updatecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

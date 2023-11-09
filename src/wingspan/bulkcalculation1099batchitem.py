@@ -12,6 +12,7 @@ class BulkCalculation1099BatchItem:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, batch_id: str, bulk_calculation1099_item_create: Optional[shared.BulkCalculation1099ItemCreate] = None) -> operations.CreateBulkCalculation1099BatchItemResponse:
         r"""Create a bulk calculation1099 batch item"""
         request = operations.CreateBulkCalculation1099BatchItemRequest(
@@ -48,6 +49,7 @@ class BulkCalculation1099BatchItem:
         return res
 
     
+    
     def get(self, batch_id: str, batch_item_id: str) -> operations.GetBulkCalculation1099BatchItemResponse:
         r"""Get a bulk calculation1099 batch item"""
         request = operations.GetBulkCalculation1099BatchItemRequest(
@@ -80,6 +82,7 @@ class BulkCalculation1099BatchItem:
 
         return res
 
+    
     
     def update(self, batch_id: str, batch_item_id: str, bulk_calculation1099_item_update: Optional[shared.BulkCalculation1099ItemUpdate] = None) -> operations.UpdateBulkCalculation1099BatchItemResponse:
         r"""Update a bulk calculation1099 batch item"""

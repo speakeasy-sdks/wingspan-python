@@ -2,21 +2,21 @@ configVersion: 1.0.0
 management:
   docChecksum: 213e6692a623ef7a4c2e2fbeb0e17e0f
   docVersion: 1.0.0
-  speakeasyVersion: 1.114.1
-  generationVersion: 2.181.1
+  speakeasyVersion: 1.116.0
+  generationVersion: 2.185.0
 generation:
   comments: {}
   sdkClassName: wingspan
   repoURL: https://github.com/speakeasy-sdks/wingspan-python.git
 features:
   python:
-    core: 4.1.0
+    core: 4.1.2
     flattening: 2.81.1
     globalServerURLs: 2.82.0
     groups: 2.81.2
     nameOverrides: 2.81.1
 python:
-  version: 3.0.0
+  version: 3.0.1
   author: Speakeasy
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK for the Wingspan Payments API
@@ -29,8 +29,10 @@ python:
       operations: models/operations
       shared: models/shared
       webhooks: models/webhooks
+  inputModelSuffix: input
   installationURL: https://github.com/speakeasy-sdks/wingspan-python.git
   maxMethodParams: 4
   maxPathParams: 4
+  outputModelSuffix: output
   packageName: wingspan
   repoSubDirectory: .

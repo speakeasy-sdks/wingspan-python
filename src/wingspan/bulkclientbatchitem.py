@@ -12,6 +12,7 @@ class BulkClientBatchItem:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, batch_id: str, bulk_client_item_create: Optional[shared.BulkClientItemCreate] = None) -> operations.CreateBulkClientBatchItemResponse:
         r"""Create a bulk client batch item"""
         request = operations.CreateBulkClientBatchItemRequest(
@@ -48,6 +49,7 @@ class BulkClientBatchItem:
         return res
 
     
+    
     def get(self, batch_id: str, batch_item_id: str) -> operations.GetBulkClientBatchItemResponse:
         r"""Get a bulk client batch item"""
         request = operations.GetBulkClientBatchItemRequest(
@@ -80,6 +82,7 @@ class BulkClientBatchItem:
 
         return res
 
+    
     
     def update(self, batch_id: str, batch_item_id: str, bulk_client_item_update: Optional[shared.BulkClientItemUpdate] = None) -> operations.UpdateBulkClientBatchItemResponse:
         r"""Update a bulk client batch item"""

@@ -12,6 +12,7 @@ class BulkClientBatch:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.BulkBatchCreate) -> operations.CreateBulkClientBatchResponse:
         r"""Create a bulk client batch"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class BulkClientBatch:
 
         return res
 
+    
     
     def get(self, batch_id: str) -> operations.GetBulkClientBatchResponse:
         r"""Get a bulk client batch"""
@@ -74,6 +76,7 @@ class BulkClientBatch:
 
         return res
 
+    
     
     def update(self, batch_id: str, bulk_batch_update: Optional[shared.BulkBatchUpdate] = None) -> operations.UpdateBulkClientBatchResponse:
         r"""Update a bulk client batch"""

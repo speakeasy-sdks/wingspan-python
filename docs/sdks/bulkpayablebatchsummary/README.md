@@ -1,5 +1,5 @@
 # BulkPayableBatchSummary
-(*.bulk_payable_batch_summary*)
+(*bulk_payable_batch_summary*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.bulk_payable_import_summary is not None:
 ### Response
 
 **[operations.GetBulkPayableBatchSummaryResponse](../../models/operations/getbulkpayablebatchsummaryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

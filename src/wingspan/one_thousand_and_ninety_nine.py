@@ -12,6 +12,7 @@ class OneThousandAndNinetyNine:
         self.sdk_configuration = sdk_config
         
     
+    
     def calculate(self, request: shared.Calculate1099Request) -> operations.Calculate1099Response:
         r"""Calculate 1099 amounts for collaborator"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -43,6 +44,7 @@ class OneThousandAndNinetyNine:
         return res
 
     
+    
     def mark(self, request: shared.Mark1099AsUndeliveredRequest) -> operations.Mark1099Response:
         r"""Mark a 1099 submission as returned by mail for collaborator"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -73,6 +75,7 @@ class OneThousandAndNinetyNine:
 
         return res
 
+    
     
     def remail(self, request: shared.Remail1099Request) -> operations.Remail1099Response:
         r"""Re-mail 1099 submission for collaborator"""

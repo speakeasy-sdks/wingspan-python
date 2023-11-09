@@ -12,6 +12,7 @@ class CollaboratorGroupEligibilityRequirement:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete(self, eligibility_requirement_id: str, id: str) -> operations.DeleteCollaboratorGroupEligibilityRequirementResponse:
         r"""Delete Eligibility Requirement"""
         request = operations.DeleteCollaboratorGroupEligibilityRequirementRequest(
@@ -44,6 +45,7 @@ class CollaboratorGroupEligibilityRequirement:
 
         return res
 
+    
     
     def replace(self, eligibility_requirement_id: str, id: str, collaborator_group_requirement_update: Optional[shared.CollaboratorGroupRequirementUpdate] = None) -> operations.ReplaceCollaboratorGroupEligibilityRequirementResponse:
         r"""Replace Eligibility Requirement"""

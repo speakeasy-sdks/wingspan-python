@@ -1,5 +1,5 @@
 # Statement
-(*.statement*)
+(*statement*)
 
 ### Available Operations
 
@@ -36,7 +36,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DownloadStatementResponse](../../models/operations/downloadstatementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -68,4 +72,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetStatementResponse](../../models/operations/getstatementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -12,6 +12,7 @@ class Cards:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListCardsResponse:
         r"""List cards"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

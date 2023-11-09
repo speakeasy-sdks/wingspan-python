@@ -1,5 +1,5 @@
 # EligibilityRequirement
-(*.eligibility_requirement*)
+(*eligibility_requirement*)
 
 ### Available Operations
 
@@ -41,7 +41,11 @@ if res.eligibility_requirement is not None:
 ### Response
 
 **[operations.CreateEligibilityRequirementResponse](../../models/operations/createeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -73,7 +77,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.DeleteEligibilityRequirementResponse](../../models/operations/deleteeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -105,7 +113,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetEligibilityRequirementResponse](../../models/operations/geteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -140,4 +152,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.UpdateEligibilityRequirementResponse](../../models/operations/updateeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

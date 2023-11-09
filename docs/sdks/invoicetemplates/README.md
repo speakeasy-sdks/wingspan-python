@@ -1,5 +1,5 @@
 # InvoiceTemplates
-(*.invoice_templates*)
+(*invoice_templates*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListInvoiceTemplatesResponse](../../models/operations/listinvoicetemplatesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

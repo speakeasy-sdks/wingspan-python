@@ -12,6 +12,7 @@ class CollaboratorsDetailsV2:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self) -> operations.GetCollaboratorsDetailsV2Response:
         r"""Get a list of collaborators and their details"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

@@ -12,6 +12,7 @@ class ClientInvoice:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, id: str) -> operations.GetClientInvoiceResponse:
         r"""Get client-invoice by invoiceId"""
         request = operations.GetClientInvoiceRequest(
@@ -43,6 +44,7 @@ class ClientInvoice:
 
         return res
 
+    
     
     def update(self, id: str, client_invoice_update_request: Optional[shared.ClientInvoiceUpdateRequest] = None) -> operations.UpdateClientInvoiceResponse:
         r"""Update client-invoice by invoiceId"""

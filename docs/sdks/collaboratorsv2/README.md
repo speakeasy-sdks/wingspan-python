@@ -1,5 +1,5 @@
 # CollaboratorsV2
-(*.collaborators_v2*)
+(*collaborators_v2*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListCollaboratorsV2Response](../../models/operations/listcollaboratorsv2response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

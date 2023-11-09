@@ -12,6 +12,7 @@ class BulkInvoiceBatchItem:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, batch_id: str, bulk_invoice_item_create: Optional[shared.BulkInvoiceItemCreate] = None) -> operations.CreateBulkInvoiceBatchItemResponse:
         r"""Create a bulk invoice batch item"""
         request = operations.CreateBulkInvoiceBatchItemRequest(
@@ -48,6 +49,7 @@ class BulkInvoiceBatchItem:
         return res
 
     
+    
     def get(self, batch_id: str, batch_item_id: str) -> operations.GetBulkInvoiceBatchItemResponse:
         r"""Get a bulk invoice batch item"""
         request = operations.GetBulkInvoiceBatchItemRequest(
@@ -80,6 +82,7 @@ class BulkInvoiceBatchItem:
 
         return res
 
+    
     
     def update(self, batch_id: str, batch_item_id: str, bulk_invoice_item_update: Optional[shared.BulkInvoiceItemUpdate] = None) -> operations.UpdateBulkInvoiceBatchItemResponse:
         r"""Update a bulk invoice batch item"""

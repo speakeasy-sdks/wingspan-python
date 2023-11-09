@@ -12,6 +12,7 @@ class InstantPayout:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.InstantPayoutRequest) -> operations.CreateInstantPayoutResponse:
         r"""Create instant payout details"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -43,6 +44,7 @@ class InstantPayout:
         return res
 
     
+    
     def delete(self) -> operations.DeleteInstantPayoutResponse:
         r"""Delete instant payout"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -70,6 +72,7 @@ class InstantPayout:
 
         return res
 
+    
     
     def fetch(self) -> operations.FetchInstantPayoutResponse:
         r"""Fetch instant payout details"""

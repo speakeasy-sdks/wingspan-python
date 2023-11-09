@@ -1,5 +1,5 @@
 # BulkCalculation1099Batch
-(*.bulk_calculation1099_batch*)
+(*bulk_calculation1099_batch*)
 
 ### Available Operations
 
@@ -42,7 +42,11 @@ if res.bulk_calculation1099_batch is not None:
 ### Response
 
 **[operations.CreateBulkCalculation1099BatchResponse](../../models/operations/createbulkcalculation1099batchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -74,7 +78,11 @@ if res.bulk_calculation1099_batch is not None:
 ### Response
 
 **[operations.GetBulkCalculation1099BatchResponse](../../models/operations/getbulkcalculation1099batchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -111,4 +119,8 @@ if res.bulk_calculation1099_batch is not None:
 ### Response
 
 **[operations.UpdateBulkCalculation1099BatchResponse](../../models/operations/updatebulkcalculation1099batchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

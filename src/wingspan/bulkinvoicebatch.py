@@ -12,6 +12,7 @@ class BulkInvoiceBatch:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.BulkInvoiceBatchCreate) -> operations.CreateBulkInvoiceBatchResponse:
         r"""Create a bulk invoice batch"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class BulkInvoiceBatch:
 
         return res
 
+    
     
     def get(self, batch_id: str) -> operations.GetBulkInvoiceBatchResponse:
         r"""Get a bulk invoice batch"""
@@ -74,6 +76,7 @@ class BulkInvoiceBatch:
 
         return res
 
+    
     
     def update(self, batch_id: str, bulk_invoice_batch_update: Optional[shared.BulkInvoiceBatchUpdate] = None) -> operations.UpdateBulkInvoiceBatchResponse:
         r"""Update a bulk invoice batch"""

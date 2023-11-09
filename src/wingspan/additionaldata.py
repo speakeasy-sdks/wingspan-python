@@ -12,6 +12,7 @@ class AdditionalData:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.AdditionalData) -> operations.CreateAdditionalDataResponse:
         r"""Create additional data"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class AdditionalData:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteAdditionalDataResponse:
         r"""Delete additional data"""
@@ -74,6 +76,7 @@ class AdditionalData:
 
         return res
 
+    
     
     def get(self, id: str) -> operations.GetAdditionalDataResponse:
         r"""Get additional data"""

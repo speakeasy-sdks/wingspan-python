@@ -12,6 +12,7 @@ class CollaboratorGroup:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.CollaboratorGroupCreateRequest) -> operations.CreateCollaboratorGroupResponse:
         r"""Create Collaborator Group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class CollaboratorGroup:
 
         return res
 
+    
     
     def get(self, id: str) -> operations.GetCollaboratorGroupResponse:
         r"""Get Collaborator Group"""
@@ -74,6 +76,7 @@ class CollaboratorGroup:
 
         return res
 
+    
     
     def update(self, id: str, collaborator_group_update_request: Optional[shared.CollaboratorGroupUpdateRequest] = None) -> operations.UpdateCollaboratorGroupResponse:
         r"""Update Collaborator Group"""

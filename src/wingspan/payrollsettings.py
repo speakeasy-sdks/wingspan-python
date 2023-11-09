@@ -12,6 +12,7 @@ class PayrollSettings:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, id: str) -> operations.GetPayrollSettingsResponse:
         r"""Get payroll settings"""
         request = operations.GetPayrollSettingsRequest(
@@ -43,6 +44,7 @@ class PayrollSettings:
 
         return res
 
+    
     
     def update(self, id: str, payroll_settings_update: Optional[shared.PayrollSettingsUpdate] = None) -> operations.UpdatePayrollSettingsResponse:
         r"""Update payroll settings"""

@@ -12,6 +12,7 @@ class BulkClientBatchItems:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self, batch_id: str) -> operations.ListBulkClientBatchItemsResponse:
         r"""List bulk client batch items"""
         request = operations.ListBulkClientBatchItemsRequest(

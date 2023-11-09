@@ -1,5 +1,5 @@
 # CollaboratorGroupEligibilityRequirement
-(*.collaborator_group_eligibility_requirement*)
+(*collaborator_group_eligibility_requirement*)
 
 ### Available Operations
 
@@ -37,7 +37,11 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.DeleteCollaboratorGroupEligibilityRequirementResponse](../../models/operations/deletecollaboratorgroupeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## replace
 
@@ -73,4 +77,8 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.ReplaceCollaboratorGroupEligibilityRequirementResponse](../../models/operations/replacecollaboratorgroupeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

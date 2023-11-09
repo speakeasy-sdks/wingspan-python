@@ -1,5 +1,5 @@
 # PayrollSettings
-(*.payroll_settings*)
+(*payroll_settings*)
 
 ### Available Operations
 
@@ -36,7 +36,11 @@ if res.payroll_settings is not None:
 ### Response
 
 **[operations.GetPayrollSettingsResponse](../../models/operations/getpayrollsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -84,4 +88,8 @@ if res.payroll_settings is not None:
 ### Response
 
 **[operations.UpdatePayrollSettingsResponse](../../models/operations/updatepayrollsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

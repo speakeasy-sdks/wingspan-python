@@ -1,5 +1,5 @@
 # ClientInvoice
-(*.client_invoice*)
+(*client_invoice*)
 
 ### Available Operations
 
@@ -36,7 +36,11 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.GetClientInvoiceResponse](../../models/operations/getclientinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -71,4 +75,8 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.UpdateClientInvoiceResponse](../../models/operations/updateclientinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

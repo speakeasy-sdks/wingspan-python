@@ -1,5 +1,5 @@
 # PayoutDebitCard
-(*.payout_debit_card*)
+(*payout_debit_card*)
 
 ### Available Operations
 
@@ -49,7 +49,11 @@ if res.checkbook_card is not None:
 ### Response
 
 **[operations.CreatePayoutDebitCardResponse](../../models/operations/createpayoutdebitcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -82,7 +86,11 @@ if res.checkbook_card is not None:
 ### Response
 
 **[operations.DeletePayoutDebitCardResponse](../../models/operations/deletepayoutdebitcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -115,4 +123,8 @@ if res.checkbook_card is not None:
 ### Response
 
 **[operations.GetPayoutDebitCardResponse](../../models/operations/getpayoutdebitcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -12,6 +12,7 @@ class InvoiceTemplate:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.InvoiceTemplateCreateRequest) -> operations.CreateInvoiceTemplateResponse:
         r"""Create invoice-template"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class InvoiceTemplate:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteInvoiceTemplateResponse:
         r"""Delete invoice-template"""
@@ -75,6 +77,7 @@ class InvoiceTemplate:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetInvoiceTemplateResponse:
         r"""Get invoice-template"""
         request = operations.GetInvoiceTemplateRequest(
@@ -106,6 +109,7 @@ class InvoiceTemplate:
 
         return res
 
+    
     
     def update(self, id: str, invoice_template_update_request: Optional[shared.InvoiceTemplateUpdateRequest] = None) -> operations.UpdateInvoiceTemplateResponse:
         r"""Update invoice-template"""

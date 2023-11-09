@@ -12,6 +12,7 @@ class ClientInvoiceFees:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.TestInvoiceCreate) -> operations.CreateClientInvoiceFeesResponse:
         r"""Create client-invoice fees"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class ClientInvoiceFees:
 
         return res
 
+    
     
     def list(self, invoice_id: str) -> operations.ListClientInvoiceFeesResponse:
         r"""List client-invoice fees"""

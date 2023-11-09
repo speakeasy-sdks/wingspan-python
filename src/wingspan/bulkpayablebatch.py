@@ -12,6 +12,7 @@ class BulkPayableBatch:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.BulkPayableBatchCreate) -> operations.CreateBulkPayableBatchResponse:
         r"""Create a bulk payable batch"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class BulkPayableBatch:
 
         return res
 
+    
     
     def delete(self, batch_id: str) -> operations.DeleteBulkPayableBatchResponse:
         r"""Delete a bulk payable batch"""
@@ -75,6 +77,7 @@ class BulkPayableBatch:
         return res
 
     
+    
     def get(self, batch_id: str) -> operations.GetBulkPayableBatchResponse:
         r"""Get a bulk payable batch"""
         request = operations.GetBulkPayableBatchRequest(
@@ -106,6 +109,7 @@ class BulkPayableBatch:
 
         return res
 
+    
     
     def update(self, batch_id: str, bulk_payable_batch_update: Optional[shared.BulkPayableBatchUpdate] = None) -> operations.UpdateBulkPayableBatchResponse:
         r"""Update a bulk payable batch"""

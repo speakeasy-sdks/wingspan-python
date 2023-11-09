@@ -1,5 +1,5 @@
 # CollaboratorEvents
-(*.collaborator_events*)
+(*collaborator_events*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.collaborator_events is not None:
 ### Response
 
 **[operations.GetCollaboratorEventsResponse](../../models/operations/getcollaboratoreventsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -12,6 +12,7 @@ class PayoutSettings:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, id: str) -> operations.GetPayoutSettingsResponse:
         r"""Get the payout settings"""
         request = operations.GetPayoutSettingsRequest(
@@ -43,6 +44,7 @@ class PayoutSettings:
 
         return res
 
+    
     
     def update(self, id: str, payout_settings_update: Optional[shared.PayoutSettingsUpdate] = None) -> operations.UpdatePayoutSettingsResponse:
         r"""Update the payout settings"""

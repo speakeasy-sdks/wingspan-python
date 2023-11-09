@@ -12,6 +12,7 @@ class PayoutDebitCard:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, member_id: str, checkbook_card_create: Optional[shared.CheckbookCardCreate] = None) -> operations.CreatePayoutDebitCardResponse:
         r"""Create a payout debit card"""
         request = operations.CreatePayoutDebitCardRequest(
@@ -48,6 +49,7 @@ class PayoutDebitCard:
         return res
 
     
+    
     def delete(self, id: str, member_id: str) -> operations.DeletePayoutDebitCardResponse:
         r"""Delete the payout debit card"""
         request = operations.DeletePayoutDebitCardRequest(
@@ -80,6 +82,7 @@ class PayoutDebitCard:
 
         return res
 
+    
     
     def get(self, id: str, member_id: str) -> operations.GetPayoutDebitCardResponse:
         r"""Get the payout debit card"""

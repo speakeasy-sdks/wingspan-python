@@ -12,6 +12,7 @@ class ApprovedPayables:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListApprovedPayablesResponse:
         r"""List approved payables for payroll"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

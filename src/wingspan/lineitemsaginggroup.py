@@ -12,6 +12,7 @@ class LineItemsAgingGroup:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self) -> operations.GetLineItemsAgingGroupResponse:
         r"""Get a list of line items with respective aging group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

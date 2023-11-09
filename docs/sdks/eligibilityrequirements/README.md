@@ -1,5 +1,5 @@
 # EligibilityRequirements
-(*.eligibility_requirements*)
+(*eligibility_requirements*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListEligibilityRequirementsResponse](../../models/operations/listeligibilityrequirementsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # CollaboratorToGroup
-(*.collaborator_to_group*)
+(*collaborator_to_group*)
 
 ### Available Operations
 
@@ -37,7 +37,11 @@ if res.collaborator_schema is not None:
 ### Response
 
 **[operations.AddCollaboratorToGroupResponse](../../models/operations/addcollaboratortogroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove
 
@@ -70,4 +74,8 @@ if res.collaborator_schema is not None:
 ### Response
 
 **[operations.RemoveCollaboratorToGroupResponse](../../models/operations/removecollaboratortogroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

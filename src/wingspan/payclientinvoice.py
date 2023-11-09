@@ -12,6 +12,7 @@ class PayClientInvoice:
         self.sdk_configuration = sdk_config
         
     
+    
     def post(self, invoice_id: str, pay_request: Optional[shared.PayRequest] = None) -> operations.PostPayClientInvoiceResponse:
         r"""Pay client-invoice"""
         request = operations.PostPayClientInvoiceRequest(

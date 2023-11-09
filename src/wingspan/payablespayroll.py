@@ -12,6 +12,7 @@ class PayablesPayroll:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self, payroll_id: str) -> operations.ListPayablesPayrollResponse:
         r"""Get a list of payables connected to payroll run"""
         request = operations.ListPayablesPayrollRequest(

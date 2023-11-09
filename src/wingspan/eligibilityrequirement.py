@@ -12,6 +12,7 @@ class EligibilityRequirement:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.EligibilityRequirementCreateRequest) -> operations.CreateEligibilityRequirementResponse:
         r"""Create Eligibility Requirement"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class EligibilityRequirement:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteEligibilityRequirementResponse:
         r"""Delete Eligibility Requirement"""
@@ -75,6 +77,7 @@ class EligibilityRequirement:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetEligibilityRequirementResponse:
         r"""Get Eligibility Requirement"""
         request = operations.GetEligibilityRequirementRequest(
@@ -106,6 +109,7 @@ class EligibilityRequirement:
 
         return res
 
+    
     
     def update(self, id: str, eligibility_requirement_update_request: Optional[shared.EligibilityRequirementUpdateRequest] = None) -> operations.UpdateEligibilityRequirementResponse:
         r"""Update Eligibility Requirement"""

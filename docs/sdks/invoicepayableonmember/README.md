@@ -1,5 +1,5 @@
 # InvoicePayableOnMember
-(*.invoice_payable_on_member*)
+(*invoice_payable_on_member*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.payable_schema is not None:
 ### Response
 
 **[operations.GetInvoicePayableOnMemberResponse](../../models/operations/getinvoicepayableonmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

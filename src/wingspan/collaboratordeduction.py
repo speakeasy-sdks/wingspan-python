@@ -12,6 +12,7 @@ class CollaboratorDeduction:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.DeductionCreateRequest) -> operations.CreateCollaboratorDeductionResponse:
         r"""Create deduction"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class CollaboratorDeduction:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteCollaboratorDeductionResponse:
         r"""Delete deduction"""
@@ -75,6 +77,7 @@ class CollaboratorDeduction:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetCollaboratorDeductionResponse:
         r"""Get deduction"""
         request = operations.GetCollaboratorDeductionRequest(
@@ -106,6 +109,7 @@ class CollaboratorDeduction:
 
         return res
 
+    
     
     def update(self, id: str, deduction_update_request: Optional[shared.DeductionUpdateRequest] = None) -> operations.UpdateCollaboratorDeductionResponse:
         r"""Update deduction"""

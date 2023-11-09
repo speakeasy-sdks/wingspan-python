@@ -1,5 +1,5 @@
 # BankStatements
-(*.bank_statements*)
+(*bank_statements*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListBankStatementsResponse](../../models/operations/listbankstatementsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

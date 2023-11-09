@@ -1,5 +1,5 @@
 # MemberInvoice
-(*.member_invoice*)
+(*member_invoice*)
 
 ### Available Operations
 
@@ -85,7 +85,11 @@ if res.invoice is not None:
 ### Response
 
 **[operations.CreateMemberInvoiceResponse](../../models/operations/creatememberinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -117,7 +121,11 @@ if res.invoice is not None:
 ### Response
 
 **[operations.DeleteMemberInvoiceResponse](../../models/operations/deletememberinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -149,7 +157,11 @@ if res.invoice is not None:
 ### Response
 
 **[operations.GetMemberInvoiceResponse](../../models/operations/getmemberinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -229,4 +241,8 @@ if res.invoice is not None:
 ### Response
 
 **[operations.UpdateMemberInvoiceResponse](../../models/operations/updatememberinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

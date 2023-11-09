@@ -1,5 +1,5 @@
 # PayablesPayroll
-(*.payables_payroll*)
+(*payables_payroll*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.payroll_report_response is not None:
 ### Response
 
 **[operations.ListPayablesPayrollResponse](../../models/operations/listpayablespayrollresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

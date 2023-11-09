@@ -1,5 +1,5 @@
 # Form1099
-(*.form1099*)
+(*form1099*)
 
 ### Available Operations
 
@@ -37,4 +37,8 @@ if res.download1099_response is not None:
 ### Response
 
 **[operations.DownloadForm1099Response](../../models/operations/downloadform1099response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

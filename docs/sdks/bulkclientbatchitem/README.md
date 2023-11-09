@@ -1,5 +1,5 @@
 # BulkClientBatchItem
-(*.bulk_client_batch_item*)
+(*bulk_client_batch_item*)
 
 ### Available Operations
 
@@ -46,7 +46,11 @@ if res.bulk_client_item is not None:
 ### Response
 
 **[operations.CreateBulkClientBatchItemResponse](../../models/operations/createbulkclientbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -79,7 +83,11 @@ if res.bulk_client_item is not None:
 ### Response
 
 **[operations.GetBulkClientBatchItemResponse](../../models/operations/getbulkclientbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -121,4 +129,8 @@ if res.bulk_client_item is not None:
 ### Response
 
 **[operations.UpdateBulkClientBatchItemResponse](../../models/operations/updatebulkclientbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

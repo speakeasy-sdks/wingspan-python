@@ -12,6 +12,7 @@ class ClientCollaboratorsV2:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListClientCollaboratorsV2Response:
         r"""Lists all collaborators in the V2 format"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

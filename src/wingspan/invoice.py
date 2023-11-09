@@ -12,6 +12,7 @@ class Invoice:
         self.sdk_configuration = sdk_config
         
     
+    
     def generate(self, invoice_id: str) -> operations.GenerateInvoiceResponse:
         r"""Generate invoice"""
         request = operations.GenerateInvoiceRequest(
@@ -43,6 +44,7 @@ class Invoice:
 
         return res
 
+    
     
     def send(self, invoice_id: str) -> operations.SendInvoiceResponse:
         r"""Send invoice"""

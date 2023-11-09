@@ -1,5 +1,5 @@
 # BulkPayableBatch
-(*.bulk_payable_batch*)
+(*bulk_payable_batch*)
 
 ### Available Operations
 
@@ -44,7 +44,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.CreateBulkPayableBatchResponse](../../models/operations/createbulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -76,7 +80,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.DeleteBulkPayableBatchResponse](../../models/operations/deletebulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -108,7 +116,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.GetBulkPayableBatchResponse](../../models/operations/getbulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -145,4 +157,8 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.UpdateBulkPayableBatchResponse](../../models/operations/updatebulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

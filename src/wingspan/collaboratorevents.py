@@ -12,6 +12,7 @@ class CollaboratorEvents:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, id: str) -> operations.GetCollaboratorEventsResponse:
         r"""Get collaborator events by collaboratorId"""
         request = operations.GetCollaboratorEventsRequest(

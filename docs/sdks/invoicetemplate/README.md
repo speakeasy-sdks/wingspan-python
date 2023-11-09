@@ -1,5 +1,5 @@
 # InvoiceTemplate
-(*.invoice_template*)
+(*invoice_template*)
 
 ### Available Operations
 
@@ -95,7 +95,11 @@ if res.invoice_template is not None:
 ### Response
 
 **[operations.CreateInvoiceTemplateResponse](../../models/operations/createinvoicetemplateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -127,7 +131,11 @@ if res.invoice_template is not None:
 ### Response
 
 **[operations.DeleteInvoiceTemplateResponse](../../models/operations/deleteinvoicetemplateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -159,7 +167,11 @@ if res.invoice_template is not None:
 ### Response
 
 **[operations.GetInvoiceTemplateResponse](../../models/operations/getinvoicetemplateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -248,4 +260,8 @@ if res.invoice_template is not None:
 ### Response
 
 **[operations.UpdateInvoiceTemplateResponse](../../models/operations/updateinvoicetemplateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

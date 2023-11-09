@@ -12,6 +12,7 @@ class InvoicePayableOnMember:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, id: str) -> operations.GetInvoicePayableOnMemberResponse:
         r"""Get invoice on member by payableId"""
         request = operations.GetInvoicePayableOnMemberRequest(

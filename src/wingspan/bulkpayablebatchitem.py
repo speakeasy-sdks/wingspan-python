@@ -12,6 +12,7 @@ class BulkPayableBatchItem:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, batch_id: str, bulk_payable_item_create: Optional[shared.BulkPayableItemCreate] = None) -> operations.CreateBulkPayableBatchItemResponse:
         r"""Create a bulk payable batch item"""
         request = operations.CreateBulkPayableBatchItemRequest(
@@ -48,6 +49,7 @@ class BulkPayableBatchItem:
         return res
 
     
+    
     def get(self, batch_id: str, batch_item_id: str) -> operations.GetBulkPayableBatchItemResponse:
         r"""Get a bulk payable batch item"""
         request = operations.GetBulkPayableBatchItemRequest(
@@ -80,6 +82,7 @@ class BulkPayableBatchItem:
 
         return res
 
+    
     
     def update(self, batch_id: str, batch_item_id: str, bulk_payable_item_update: Optional[shared.BulkPayableItemUpdate] = None) -> operations.UpdateBulkPayableBatchItemResponse:
         r"""Update a bulk payable batch item"""

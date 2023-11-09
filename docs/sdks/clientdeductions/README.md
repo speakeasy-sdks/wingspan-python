@@ -1,5 +1,5 @@
 # ClientDeductions
-(*.client_deductions*)
+(*client_deductions*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListClientDeductionsResponse](../../models/operations/listclientdeductionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

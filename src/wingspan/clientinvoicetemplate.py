@@ -12,6 +12,7 @@ class ClientInvoiceTemplate:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.ClientInvoiceTemplateCreateRequest) -> operations.CreateClientInvoiceTemplateResponse:
         r"""Create client-invoice-template"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class ClientInvoiceTemplate:
 
         return res
 
+    
     
     def get(self, id: str) -> operations.GetClientInvoiceTemplateResponse:
         r"""Get client-invoice-template"""
@@ -74,6 +76,7 @@ class ClientInvoiceTemplate:
 
         return res
 
+    
     
     def update(self, id: str, client_invoice_template_update_request: Optional[shared.ClientInvoiceTemplateUpdateRequest] = None) -> operations.UpdateClientInvoiceTemplateResponse:
         r"""Update client-invoice-template"""

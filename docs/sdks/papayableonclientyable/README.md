@@ -1,5 +1,5 @@
 # PaPayableOnClientyable
-(*.pa_payable_on_clientyable*)
+(*pa_payable_on_clientyable*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.payable_schema is not None:
 ### Response
 
 **[operations.DeletePayableOnClientResponse](../../models/operations/deletepayableonclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

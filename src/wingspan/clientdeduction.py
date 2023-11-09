@@ -12,6 +12,7 @@ class ClientDeduction:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.DeductionCreateRequest) -> operations.CreateClientDeductionResponse:
         r"""Create deduction"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

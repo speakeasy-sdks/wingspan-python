@@ -1,5 +1,5 @@
 # AdditionalData
-(*.additional_data*)
+(*additional_data*)
 
 ### Available Operations
 
@@ -43,7 +43,11 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.CreateAdditionalDataResponse](../../models/operations/createadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -75,7 +79,11 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.DeleteAdditionalDataResponse](../../models/operations/deleteadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -107,4 +115,8 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.GetAdditionalDataResponse](../../models/operations/getadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

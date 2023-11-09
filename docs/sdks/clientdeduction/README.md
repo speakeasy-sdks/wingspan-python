@@ -1,5 +1,5 @@
 # ClientDeduction
-(*.client_deduction*)
+(*client_deduction*)
 
 ### Available Operations
 
@@ -43,4 +43,8 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.CreateClientDeductionResponse](../../models/operations/createclientdeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

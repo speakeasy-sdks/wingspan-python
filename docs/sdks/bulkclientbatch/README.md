@@ -1,5 +1,5 @@
 # BulkClientBatch
-(*.bulk_client_batch*)
+(*bulk_client_batch*)
 
 ### Available Operations
 
@@ -42,7 +42,11 @@ if res.bulk_client_batch is not None:
 ### Response
 
 **[operations.CreateBulkClientBatchResponse](../../models/operations/createbulkclientbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -74,7 +78,11 @@ if res.bulk_client_batch is not None:
 ### Response
 
 **[operations.GetBulkClientBatchResponse](../../models/operations/getbulkclientbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -111,4 +119,8 @@ if res.bulk_client_batch is not None:
 ### Response
 
 **[operations.UpdateBulkClientBatchResponse](../../models/operations/updatebulkclientbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -12,6 +12,7 @@ class PaPayableOnClientyable:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete(self, id: str) -> operations.DeletePayableOnClientResponse:
         r"""Delete payable on client by payableId"""
         request = operations.DeletePayableOnClientRequest(

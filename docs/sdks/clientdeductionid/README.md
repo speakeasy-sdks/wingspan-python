@@ -1,5 +1,5 @@
 # ClientDeductionID
-(*.client_deduction_id*)
+(*client_deduction_id*)
 
 ### Available Operations
 
@@ -37,7 +37,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.DeleteClientDeductionIDResponse](../../models/operations/deleteclientdeductionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -69,7 +73,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.GetClientDeductionIDResponse](../../models/operations/getclientdeductionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -102,4 +110,8 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.UpdateClientDeductionIDResponse](../../models/operations/updateclientdeductionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

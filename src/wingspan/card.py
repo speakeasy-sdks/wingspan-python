@@ -12,6 +12,7 @@ class Card:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.CardCreateRequest) -> operations.CreateCardResponse:
         r"""Create card"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -42,6 +43,7 @@ class Card:
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteCardResponse:
         r"""Delete a card by cardId"""
@@ -75,6 +77,7 @@ class Card:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetCardResponse:
         r"""Get card by cardId"""
         request = operations.GetCardRequest(
@@ -106,6 +109,7 @@ class Card:
 
         return res
 
+    
     
     def update(self, id: str, card_update_request: Optional[shared.CardUpdateRequest] = None) -> operations.UpdateCardResponse:
         r"""Update card by cardId"""

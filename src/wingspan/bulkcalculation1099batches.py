@@ -12,6 +12,7 @@ class BulkCalculation1099Batches:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListBulkCalculation1099BatchesResponse:
         r"""List bulk calculation1099 batches"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

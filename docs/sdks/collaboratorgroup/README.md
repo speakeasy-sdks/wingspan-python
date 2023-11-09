@@ -1,5 +1,5 @@
 # CollaboratorGroup
-(*.collaborator_group*)
+(*collaborator_group*)
 
 ### Available Operations
 
@@ -47,7 +47,11 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.CreateCollaboratorGroupResponse](../../models/operations/createcollaboratorgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -79,7 +83,11 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.GetCollaboratorGroupResponse](../../models/operations/getcollaboratorgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -119,4 +127,8 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.UpdateCollaboratorGroupResponse](../../models/operations/updatecollaboratorgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

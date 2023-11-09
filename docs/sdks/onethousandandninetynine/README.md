@@ -1,5 +1,5 @@
 # OneThousandAndNinetyNine
-(*.one_thousand_and_ninety_nine*)
+(*one_thousand_and_ninety_nine*)
 
 ### Available Operations
 
@@ -41,7 +41,11 @@ if res.calculate1099_response is not None:
 ### Response
 
 **[operations.Calculate1099Response](../../models/operations/calculate1099response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## mark
 
@@ -78,7 +82,11 @@ if res.mark1099_as_undelivered_response is not None:
 ### Response
 
 **[operations.Mark1099Response](../../models/operations/mark1099response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remail
 
@@ -120,4 +128,8 @@ if res.remail1099_response is not None:
 ### Response
 
 **[operations.Remail1099Response](../../models/operations/remail1099response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

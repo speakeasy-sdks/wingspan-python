@@ -12,6 +12,7 @@ class ClientDeductionID:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete(self, id: str) -> operations.DeleteClientDeductionIDResponse:
         r"""Delete deduction"""
         request = operations.DeleteClientDeductionIDRequest(
@@ -44,6 +45,7 @@ class ClientDeductionID:
         return res
 
     
+    
     def get(self, id: str) -> operations.GetClientDeductionIDResponse:
         r"""Get deduction"""
         request = operations.GetClientDeductionIDRequest(
@@ -75,6 +77,7 @@ class ClientDeductionID:
 
         return res
 
+    
     
     def update(self, id: str, deduction_update_request: Optional[shared.DeductionUpdateRequest] = None) -> operations.UpdateClientDeductionIDResponse:
         r"""Update deduction"""

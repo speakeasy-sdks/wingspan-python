@@ -12,6 +12,7 @@ class PayoutDebitCards:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self, member_id: str) -> operations.ListPayoutDebitCardsResponse:
         r"""List the payout debit cards"""
         request = operations.ListPayoutDebitCardsRequest(

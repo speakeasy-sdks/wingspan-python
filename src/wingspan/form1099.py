@@ -12,6 +12,7 @@ class Form1099:
         self.sdk_configuration = sdk_config
         
     
+    
     def download(self, id: str, index: str, year: str) -> operations.DownloadForm1099Response:
         r"""Downloads a form 1099 PDF for a collaborator"""
         request = operations.DownloadForm1099Request(

@@ -1,5 +1,5 @@
 # MemberClients
-(*.member_clients*)
+(*member_clients*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListMemberClientsResponse](../../models/operations/listmemberclientsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

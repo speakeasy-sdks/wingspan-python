@@ -1,5 +1,5 @@
 # Collaborator
-(*.collaborator*)
+(*collaborator*)
 
 ### Available Operations
 
@@ -56,7 +56,11 @@ if res.collaborator_schema is not None:
 ### Response
 
 **[operations.CreateCollaboratorResponse](../../models/operations/createcollaboratorresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -88,7 +92,11 @@ if res.collaborator_schema is not None:
 ### Response
 
 **[operations.DeleteCollaboratorResponse](../../models/operations/deletecollaboratorresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -120,7 +128,11 @@ if res.collaborator_schema is not None:
 ### Response
 
 **[operations.GetCollaboratorResponse](../../models/operations/getcollaboratorresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -178,4 +190,8 @@ if res.collaborator_schema is not None:
 ### Response
 
 **[operations.UpdateCollaboratorResponse](../../models/operations/updatecollaboratorresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

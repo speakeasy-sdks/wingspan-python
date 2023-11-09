@@ -12,6 +12,7 @@ class CollaboratorToGroup:
         self.sdk_configuration = sdk_config
         
     
+    
     def add(self, group_id: str, id: str) -> operations.AddCollaboratorToGroupResponse:
         r"""Add collaborator to collaborators group"""
         request = operations.AddCollaboratorToGroupRequest(
@@ -44,6 +45,7 @@ class CollaboratorToGroup:
 
         return res
 
+    
     
     def remove(self, group_id: str, id: str) -> operations.RemoveCollaboratorToGroupResponse:
         r"""Remove collaborator from collaborators group"""

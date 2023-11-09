@@ -1,5 +1,5 @@
 # Payables
-(*.payables*)
+(*payables*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.payables_summary is not None:
 ### Response
 
 **[operations.GetPayablesResponse](../../models/operations/getpayablesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # PaymentEligibilityRequirement
-(*.payment_eligibility_requirement*)
+(*payment_eligibility_requirement*)
 
 ### Available Operations
 
@@ -42,7 +42,11 @@ if res.payment_eligibility is not None:
 ### Response
 
 **[operations.CreatePaymentEligibilityRequirementResponse](../../models/operations/createpaymenteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -74,7 +78,11 @@ if res.payment_eligibility is not None:
 ### Response
 
 **[operations.DeletePaymentEligibilityRequirementResponse](../../models/operations/deletepaymenteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -106,7 +114,11 @@ if res.payment_eligibility is not None:
 ### Response
 
 **[operations.GetPaymentEligibilityRequirementResponse](../../models/operations/getpaymenteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -141,4 +153,8 @@ if res.payment_eligibility is not None:
 ### Response
 
 **[operations.UpdatePaymentEligibilityRequirementResponse](../../models/operations/updatepaymenteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

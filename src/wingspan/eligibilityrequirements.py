@@ -12,6 +12,7 @@ class EligibilityRequirements:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListEligibilityRequirementsResponse:
         r"""List Eligibility Requirements"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

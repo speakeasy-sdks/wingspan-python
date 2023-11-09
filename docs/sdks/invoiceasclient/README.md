@@ -1,5 +1,5 @@
 # InvoiceAsClient
-(*.invoice_as_client*)
+(*invoice_as_client*)
 
 ### Available Operations
 
@@ -55,4 +55,8 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.CreateInvoiceAsClientResponse](../../models/operations/createinvoiceasclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

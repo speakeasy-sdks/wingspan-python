@@ -1,5 +1,5 @@
 # AppLink
-(*.app_link*)
+(*app_link*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.banking_application_form is not None:
 ### Response
 
 **[operations.GetAppLinkResponse](../../models/operations/getapplinkresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

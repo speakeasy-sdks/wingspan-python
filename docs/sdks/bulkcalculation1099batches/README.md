@@ -1,5 +1,5 @@
 # BulkCalculation1099Batches
-(*.bulk_calculation1099_batches*)
+(*bulk_calculation1099_batches*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListBulkCalculation1099BatchesResponse](../../models/operations/listbulkcalculation1099batchesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

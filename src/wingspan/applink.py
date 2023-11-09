@@ -12,6 +12,7 @@ class AppLink:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, member_id: str) -> operations.GetAppLinkResponse:
         r"""Gets an application link for creating the clearing bank account"""
         request = operations.GetAppLinkRequest(

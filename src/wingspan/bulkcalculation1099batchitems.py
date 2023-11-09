@@ -12,6 +12,7 @@ class BulkCalculation1099BatchItems:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self, batch_id: str) -> operations.ListBulkCalculation1099BatchItemsResponse:
         r"""List bulk calculation1099 batch items"""
         request = operations.ListBulkCalculation1099BatchItemsRequest(

@@ -1,5 +1,5 @@
 # BulkInvoiceBatchItem
-(*.bulk_invoice_batch_item*)
+(*bulk_invoice_batch_item*)
 
 ### Available Operations
 
@@ -51,7 +51,11 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.CreateBulkInvoiceBatchItemResponse](../../models/operations/createbulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -84,7 +88,11 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.GetBulkInvoiceBatchItemResponse](../../models/operations/getbulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -126,4 +134,8 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.UpdateBulkInvoiceBatchItemResponse](../../models/operations/updatebulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

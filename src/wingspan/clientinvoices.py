@@ -12,6 +12,7 @@ class ClientInvoices:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListClientInvoicesResponse:
         r"""List invoices on client"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

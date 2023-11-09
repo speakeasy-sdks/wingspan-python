@@ -12,6 +12,7 @@ class InvoiceAsClient:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.ClientInvoiceCreateRequest) -> operations.CreateInvoiceAsClientResponse:
         r"""Create invoice as client"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

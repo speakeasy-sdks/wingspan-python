@@ -1,5 +1,5 @@
 # Payroll
-(*.payroll*)
+(*payroll*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.invoice is not None:
 ### Response
 
 **[operations.ExecutePayrollResponse](../../models/operations/executepayrollresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

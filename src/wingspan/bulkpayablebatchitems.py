@@ -12,6 +12,7 @@ class BulkPayableBatchItems:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self, batch_id: str) -> operations.ListBulkPayableBatchItemsResponse:
         r"""List bulk payable batch items"""
         request = operations.ListBulkPayableBatchItemsRequest(

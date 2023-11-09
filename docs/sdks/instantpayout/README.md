@@ -1,5 +1,5 @@
 # InstantPayout
-(*.instant_payout*)
+(*instant_payout*)
 
 ### Available Operations
 
@@ -40,7 +40,11 @@ if res.instant_payout_response is not None:
 ### Response
 
 **[operations.CreateInstantPayoutResponse](../../models/operations/createinstantpayoutresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -65,7 +69,11 @@ if res.instant_payout_response is not None:
 ### Response
 
 **[operations.DeleteInstantPayoutResponse](../../models/operations/deleteinstantpayoutresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## fetch
 
@@ -90,4 +98,8 @@ if res.instant_payout_response is not None:
 ### Response
 
 **[operations.FetchInstantPayoutResponse](../../models/operations/fetchinstantpayoutresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

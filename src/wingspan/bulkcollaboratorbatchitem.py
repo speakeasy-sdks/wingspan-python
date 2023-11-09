@@ -12,6 +12,7 @@ class BulkCollaboratorBatchItem:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, batch_id: str, bulk_collaborator_item_create: Optional[shared.BulkCollaboratorItemCreate] = None) -> operations.CreateBulkCollaboratorBatchItemResponse:
         r"""Create a bulk collaborator batch item"""
         request = operations.CreateBulkCollaboratorBatchItemRequest(
@@ -48,6 +49,7 @@ class BulkCollaboratorBatchItem:
         return res
 
     
+    
     def get(self, batch_id: str, batch_item_id: str) -> operations.GetBulkCollaboratorBatchItemResponse:
         r"""Get a bulk collaborator batch item"""
         request = operations.GetBulkCollaboratorBatchItemRequest(
@@ -80,6 +82,7 @@ class BulkCollaboratorBatchItem:
 
         return res
 
+    
     
     def update(self, batch_id: str, batch_item_id: str, bulk_collaborator_item_update: Optional[shared.BulkCollaboratorItemUpdate] = None) -> operations.UpdateBulkCollaboratorBatchItemResponse:
         r"""Update a bulk collaborator batch item"""

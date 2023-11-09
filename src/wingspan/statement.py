@@ -12,6 +12,7 @@ class Statement:
         self.sdk_configuration = sdk_config
         
     
+    
     def download(self, id: str) -> operations.DownloadStatementResponse:
         r"""Download bank statement pdf"""
         request = operations.DownloadStatementRequest(
@@ -39,6 +40,7 @@ class Statement:
 
         return res
 
+    
     
     def get(self, id: str) -> operations.GetStatementResponse:
         r"""Get bank statement"""

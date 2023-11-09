@@ -1,5 +1,5 @@
 # MemberInvoices
-(*.member_invoices*)
+(*member_invoices*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListMemberInvoicesResponse](../../models/operations/listmemberinvoicesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

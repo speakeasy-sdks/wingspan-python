@@ -1,5 +1,5 @@
 # ClientCollaboratorV2
-(*.client_collaborator_v2*)
+(*client_collaborator_v2*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.collaborator_v2 is not None:
 ### Response
 
 **[operations.GetClientCollaboratorV2Response](../../models/operations/getclientcollaboratorv2response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

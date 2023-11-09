@@ -12,6 +12,7 @@ class CodeToToken:
         self.sdk_configuration = sdk_config
         
     
+    
     def exchange(self, id: str, card_token_request: Optional[shared.CardTokenRequest] = None) -> operations.ExchangeCodeToTokenResponse:
         r"""Exchange the code for a token"""
         request = operations.ExchangeCodeToTokenRequest(

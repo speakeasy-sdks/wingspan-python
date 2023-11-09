@@ -1,5 +1,5 @@
 # BulkClientBatches
-(*.bulk_client_batches*)
+(*bulk_client_batches*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListBulkClientBatchesResponse](../../models/operations/listbulkclientbatchesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Institution
-(*.institution*)
+(*institution*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.institution_response is not None:
 ### Response
 
 **[operations.GetInstitutionResponse](../../models/operations/getinstitutionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

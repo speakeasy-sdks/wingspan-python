@@ -1,5 +1,5 @@
 # PayoutDebitCards
-(*.payout_debit_cards*)
+(*payout_debit_cards*)
 
 ### Available Operations
 
@@ -35,4 +35,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.ListPayoutDebitCardsResponse](../../models/operations/listpayoutdebitcardsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

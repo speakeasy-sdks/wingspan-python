@@ -12,6 +12,7 @@ class ClientCollaboratorV2:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, client_id: str) -> operations.GetClientCollaboratorV2Response:
         r"""Get a single V2 Collaborator by clientId"""
         request = operations.GetClientCollaboratorV2Request(

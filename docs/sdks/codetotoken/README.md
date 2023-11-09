@@ -1,5 +1,5 @@
 # CodeToToken
-(*.code_to_token*)
+(*code_to_token*)
 
 ### Available Operations
 
@@ -39,4 +39,8 @@ if res.card_token_response is not None:
 ### Response
 
 **[operations.ExchangeCodeToTokenResponse](../../models/operations/exchangecodetotokenresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
