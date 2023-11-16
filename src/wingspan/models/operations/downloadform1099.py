@@ -23,11 +23,11 @@ class DownloadForm1099Request:
 class DownloadForm1099Response:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     download1099_response: Optional[shared_download1099response.Download1099Response] = dataclasses.field(default=None)
     r"""Download1099Response"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -11,11 +11,11 @@ from typing import Optional
 class CreatePayableOnClientResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     payable_schema: Optional[shared_payableschema.PayableSchema] = dataclasses.field(default=None)
     r"""A payable"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

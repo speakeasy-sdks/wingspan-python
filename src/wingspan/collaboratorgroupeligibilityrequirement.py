@@ -31,7 +31,7 @@ class CollaboratorGroupEligibilityRequirement:
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeleteCollaboratorGroupEligibilityRequirementResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -69,7 +69,7 @@ class CollaboratorGroupEligibilityRequirement:
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.ReplaceCollaboratorGroupEligibilityRequirementResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
