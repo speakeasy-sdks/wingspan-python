@@ -93,6 +93,7 @@ src/wingspan/utils/__init__.py
 src/wingspan/utils/retries.py
 src/wingspan/utils/utils.py
 src/wingspan/models/errors/sdkerror.py
+tests/helpers.py
 src/wingspan/models/operations/getservicestatus.py
 src/wingspan/models/operations/listcards.py
 src/wingspan/models/operations/createcard.py
