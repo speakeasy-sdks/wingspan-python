@@ -30,7 +30,7 @@ res = s.bulk_invoice_batch_item.create(batch_id='string', bulk_invoice_item_crea
     due_date='string',
     invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.PAID,
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     line_item_description='string',
 ))
@@ -113,7 +113,7 @@ res = s.bulk_invoice_batch_item.update(batch_id='string', batch_item_id='string'
     ],
     credit_fee_handling=shared.FeeHandlingConfig(),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 ))
 

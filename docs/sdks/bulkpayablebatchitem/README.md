@@ -25,7 +25,7 @@ res = s.bulk_payable_batch_item.create(batch_id='string', bulk_payable_item_crea
     bulk_payable_batch_id='string',
     due_date='string',
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     line_item_description='string',
     payable_status=shared.PayableStatusBulkPayableItemCreate.APPROVED,
@@ -105,7 +105,7 @@ s = wingspan.Wingspan()
 
 res = s.bulk_payable_batch_item.update(batch_id='string', batch_item_id='string', bulk_payable_item_update=shared.BulkPayableItemUpdate(
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 ))
 

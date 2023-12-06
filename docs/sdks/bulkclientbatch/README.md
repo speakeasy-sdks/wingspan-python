@@ -21,7 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkBatchCreate(
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 )
 
@@ -99,7 +99,7 @@ s = wingspan.Wingspan()
 
 res = s.bulk_client_batch.update(batch_id='string', bulk_batch_update=shared.BulkBatchUpdate(
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 ))
 

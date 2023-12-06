@@ -28,7 +28,7 @@ req = shared.MemberClientCreateRequest(
         quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     member_data=shared.MemberData(),
 )
@@ -167,7 +167,7 @@ res = s.member_client.update(id='string', member_client_update_request=shared.Me
         quickbooks=shared.D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863(),
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     member_data=shared.MemberData(),
 ))

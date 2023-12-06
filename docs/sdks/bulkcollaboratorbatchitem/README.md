@@ -30,7 +30,7 @@ res = s.bulk_collaborator_batch_item.create(batch_id='string', bulk_collaborator
         state='string',
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 ))
 
@@ -116,7 +116,7 @@ res = s.bulk_collaborator_batch_item.update(batch_id='string', batch_item_id='st
         state='string',
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 ))
 

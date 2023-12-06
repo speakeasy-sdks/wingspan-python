@@ -459,7 +459,6 @@ src/wingspan/models/__init__.py
 src/wingspan/models/errors/__init__.py
 src/wingspan/models/operations/__init__.py
 src/wingspan/models/shared/__init__.py
-USAGE.md
 docs/models/operations/getservicestatusresponse.md
 docs/models/operations/listcardsresponse.md
 docs/models/operations/createcardresponse.md
@@ -1179,4 +1178,5 @@ docs/sdks/clientcollaboratorsv2/README.md
 docs/sdks/clientcollaboratorv2/README.md
 docs/sdks/collaboratorsv2/README.md
 docs/sdks/collaboratorv2/README.md
+USAGE.md
 .gitattributes

@@ -35,7 +35,7 @@ req = shared.CollaboratorCreateRequest(
         quickbooks=shared.Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4(),
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 )
 
@@ -170,7 +170,7 @@ res = s.collaborator.update(id='string', collaborator_update_request=shared.Coll
         quickbooks=shared.Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4(),
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 ))
 

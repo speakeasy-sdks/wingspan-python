@@ -43,7 +43,7 @@ req = shared.InvoiceTemplateCreateRequest(
         ],
         credit_fee_handling=shared.FeeHandlingConfig(),
         labels={
-            "key": 'string',
+            'key': 'string',
         },
         late_fee_handling=shared.LateFeeConfig(
             frequency=shared.Frequency(
@@ -57,7 +57,7 @@ req = shared.InvoiceTemplateCreateRequest(
                     quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
                 ),
                 labels={
-                    "key": 'string',
+                    'key': 'string',
                 },
             ),
         ],
@@ -67,7 +67,7 @@ req = shared.InvoiceTemplateCreateRequest(
         ),
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     schedule_dates=[
         shared.ScheduleDate(
@@ -214,7 +214,7 @@ res = s.invoice_template.update(id='string', invoice_template_update_request=sha
             quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
         ),
         labels={
-            "key": 'string',
+            'key': 'string',
         },
         late_fee_handling=shared.LateFeeConfigUpdate(
             frequency=shared.FrequencyUpdate(),
@@ -226,7 +226,7 @@ res = s.invoice_template.update(id='string', invoice_template_update_request=sha
                     quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
                 ),
                 labels={
-                    "key": 'string',
+                    'key': 'string',
                 },
             ),
         ],
@@ -237,7 +237,7 @@ res = s.invoice_template.update(id='string', invoice_template_update_request=sha
         ),
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     schedule_dates=[
         shared.ScheduleDateUpdate(),

@@ -25,7 +25,7 @@ res = s.bulk_client_batch_item.create(batch_id='string', bulk_client_item_create
         quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     member_data=shared.MemberData(),
 ))
@@ -107,7 +107,7 @@ res = s.bulk_client_batch_item.update(batch_id='string', batch_item_id='string',
         quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
     ),
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     member_data=shared.MemberData(),
 ))

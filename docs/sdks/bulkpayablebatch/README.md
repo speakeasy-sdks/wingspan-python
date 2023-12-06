@@ -22,7 +22,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkPayableBatchCreate(
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.MERGE,
 )
@@ -137,7 +137,7 @@ s = wingspan.Wingspan()
 
 res = s.bulk_payable_batch.update(batch_id='string', bulk_payable_batch_update=shared.BulkPayableBatchUpdate(
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 ))
 

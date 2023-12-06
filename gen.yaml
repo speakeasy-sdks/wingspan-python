@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 213e6692a623ef7a4c2e2fbeb0e17e0f
   docVersion: 1.0.0
-  speakeasyVersion: 1.121.3
-  generationVersion: 2.195.2
+  speakeasyVersion: 1.125.2
+  generationVersion: 2.210.6
 generation:
   comments: {}
   sdkClassName: wingspan
@@ -12,13 +12,13 @@ generation:
     optionalPropertyRendering: withExample
 features:
   python:
-    core: 4.1.5
+    core: 4.1.6
     flattening: 2.81.1
     globalServerURLs: 2.82.1
     groups: 2.81.2
     nameOverrides: 2.81.1
 python:
-  version: 3.0.4
+  version: 3.0.5
   author: Speakeasy
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK for the Wingspan Payments API

@@ -36,7 +36,7 @@ req = shared.ClientInvoiceTemplateCreateRequest(
                     quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
                 ),
                 labels={
-                    "key": 'string',
+                    'key': 'string',
                 },
             ),
         ],

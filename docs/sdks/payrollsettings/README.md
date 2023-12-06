@@ -58,7 +58,7 @@ s = wingspan.Wingspan()
 res = s.payroll_settings.update(id='string', payroll_settings_update=shared.PayrollSettingsUpdate(
     calculation_settings1099=shared.CalculationSettings1099(
         state_tax_id={
-            "key": 'string',
+            'key': 'string',
         },
     ),
     frequency=shared.FrequencyUpdate(),

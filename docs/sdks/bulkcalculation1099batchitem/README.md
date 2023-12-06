@@ -23,7 +23,7 @@ s = wingspan.Wingspan()
 res = s.bulk_calculation1099_batch_item.create(batch_id='string', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
     client_id='string',
     labels={
-        "key": 'string',
+        'key': 'string',
     },
     year=4865.89,
 ))
@@ -102,7 +102,7 @@ s = wingspan.Wingspan()
 
 res = s.bulk_calculation1099_batch_item.update(batch_id='string', batch_item_id='string', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
     labels={
-        "key": 'string',
+        'key': 'string',
     },
 ))
 

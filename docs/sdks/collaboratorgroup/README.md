@@ -21,7 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
     collaborator_settings={
-        "key": 'string',
+        'key': 'string',
     },
     description='Multi-tiered human-resource model',
     eligibility_requirements=[
@@ -104,7 +104,7 @@ s = wingspan.Wingspan()
 
 res = s.collaborator_group.update(id='string', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
     collaborator_settings={
-        "key": 'string',
+        'key': 'string',
     },
     eligibility_requirements=[
         shared.CollaboratorGroupRequirement(),
