@@ -96,8 +96,8 @@ class Wingspan:
     service_status: ServiceStatus
     cards: Cards
     card: Card
-    verification: Verification
     code_to_token: CodeToToken
+    verification: Verification
     instant_payout: InstantPayout
     institution: Institution
     bank_statements: BankStatements
@@ -123,8 +123,8 @@ class Wingspan:
     bulk_payable_batch_summary: BulkPayableBatchSummary
     bulk_payable_batch_items: BulkPayableBatchItems
     bulk_payable_batch_item: BulkPayableBatchItem
-    client_deduction: ClientDeduction
     client_deductions: ClientDeductions
+    client_deduction: ClientDeduction
     client_deduction_id: ClientDeductionID
     created_invoices_by_client: CreatedInvoicesByClient
     invoice_as_client: InvoiceAsClient
@@ -135,17 +135,17 @@ class Wingspan:
     pay_client_invoice: PayClientInvoice
     collaborators: Collaborators
     collaborator: Collaborator
-    collaborator_deduction: CollaboratorDeduction
     collaborator_deductions: CollaboratorDeductions
+    collaborator_deduction: CollaboratorDeduction
     collaborator_groups: CollaboratorGroups
     collaborator_group: CollaboratorGroup
     collaborator_group_eligibility_requirement: CollaboratorGroupEligibilityRequirement
-    additional_data: AdditionalData
     additional_settings: AdditionalSettings
-    eligibility_requirement: EligibilityRequirement
+    additional_data: AdditionalData
     eligibility_requirements: EligibilityRequirements
-    payment_eligibility_requirement: PaymentEligibilityRequirement
+    eligibility_requirement: EligibilityRequirement
     payment_eligibility_requirements: PaymentEligibilityRequirements
+    payment_eligibility_requirement: PaymentEligibilityRequirement
     one_thousand_and_ninety_nine: OneThousandAndNinetyNine
     collaborator_to_group: CollaboratorToGroup
     form1099: Form1099
@@ -162,8 +162,8 @@ class Wingspan:
     payroll: Payroll
     client_invoices: ClientInvoices
     payable_on_client: PayableOnClient
-    invoice_payable_on_member: InvoicePayableOnMember
     pa_payable_on_clientyable: PaPayableOnClientyable
+    invoice_payable_on_member: InvoicePayableOnMember
     payout_settings: PayoutSettings
     payout_debit_cards: PayoutDebitCards
     payout_debit_card: PayoutDebitCard
@@ -217,8 +217,8 @@ class Wingspan:
         self.service_status = ServiceStatus(self.sdk_configuration)
         self.cards = Cards(self.sdk_configuration)
         self.card = Card(self.sdk_configuration)
-        self.verification = Verification(self.sdk_configuration)
         self.code_to_token = CodeToToken(self.sdk_configuration)
+        self.verification = Verification(self.sdk_configuration)
         self.instant_payout = InstantPayout(self.sdk_configuration)
         self.institution = Institution(self.sdk_configuration)
         self.bank_statements = BankStatements(self.sdk_configuration)
@@ -244,8 +244,8 @@ class Wingspan:
         self.bulk_payable_batch_summary = BulkPayableBatchSummary(self.sdk_configuration)
         self.bulk_payable_batch_items = BulkPayableBatchItems(self.sdk_configuration)
         self.bulk_payable_batch_item = BulkPayableBatchItem(self.sdk_configuration)
-        self.client_deduction = ClientDeduction(self.sdk_configuration)
         self.client_deductions = ClientDeductions(self.sdk_configuration)
+        self.client_deduction = ClientDeduction(self.sdk_configuration)
         self.client_deduction_id = ClientDeductionID(self.sdk_configuration)
         self.created_invoices_by_client = CreatedInvoicesByClient(self.sdk_configuration)
         self.invoice_as_client = InvoiceAsClient(self.sdk_configuration)
@@ -256,17 +256,17 @@ class Wingspan:
         self.pay_client_invoice = PayClientInvoice(self.sdk_configuration)
         self.collaborators = Collaborators(self.sdk_configuration)
         self.collaborator = Collaborator(self.sdk_configuration)
-        self.collaborator_deduction = CollaboratorDeduction(self.sdk_configuration)
         self.collaborator_deductions = CollaboratorDeductions(self.sdk_configuration)
+        self.collaborator_deduction = CollaboratorDeduction(self.sdk_configuration)
         self.collaborator_groups = CollaboratorGroups(self.sdk_configuration)
         self.collaborator_group = CollaboratorGroup(self.sdk_configuration)
         self.collaborator_group_eligibility_requirement = CollaboratorGroupEligibilityRequirement(self.sdk_configuration)
-        self.additional_data = AdditionalData(self.sdk_configuration)
         self.additional_settings = AdditionalSettings(self.sdk_configuration)
-        self.eligibility_requirement = EligibilityRequirement(self.sdk_configuration)
+        self.additional_data = AdditionalData(self.sdk_configuration)
         self.eligibility_requirements = EligibilityRequirements(self.sdk_configuration)
-        self.payment_eligibility_requirement = PaymentEligibilityRequirement(self.sdk_configuration)
+        self.eligibility_requirement = EligibilityRequirement(self.sdk_configuration)
         self.payment_eligibility_requirements = PaymentEligibilityRequirements(self.sdk_configuration)
+        self.payment_eligibility_requirement = PaymentEligibilityRequirement(self.sdk_configuration)
         self.one_thousand_and_ninety_nine = OneThousandAndNinetyNine(self.sdk_configuration)
         self.collaborator_to_group = CollaboratorToGroup(self.sdk_configuration)
         self.form1099 = Form1099(self.sdk_configuration)
@@ -283,8 +283,8 @@ class Wingspan:
         self.payroll = Payroll(self.sdk_configuration)
         self.client_invoices = ClientInvoices(self.sdk_configuration)
         self.payable_on_client = PayableOnClient(self.sdk_configuration)
-        self.invoice_payable_on_member = InvoicePayableOnMember(self.sdk_configuration)
         self.pa_payable_on_clientyable = PaPayableOnClientyable(self.sdk_configuration)
+        self.invoice_payable_on_member = InvoicePayableOnMember(self.sdk_configuration)
         self.payout_settings = PayoutSettings(self.sdk_configuration)
         self.payout_debit_cards = PayoutDebitCards(self.sdk_configuration)
         self.payout_debit_card = PayoutDebitCard(self.sdk_configuration)

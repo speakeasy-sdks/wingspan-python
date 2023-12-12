@@ -13,13 +13,13 @@ class PaymentEligibilityRequirement:
         
     
     
-    def create(self, request: shared.PaymentEligibility) -> operations.CreatePaymentEligibilityRequirementResponse:
+    def create(self, request: Optional[shared.PaymentEligibility]) -> operations.CreatePaymentEligibilityRequirementResponse:
         r"""Create Payment Eligibility Requirement"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator-settings/payment-eligibility'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.PaymentEligibility], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -122,7 +122,7 @@ class PaymentEligibilityRequirement:
         
         url = utils.generate_url(operations.UpdatePaymentEligibilityRequirementRequest, base_url, '/payments/collaborator-settings/payment-eligibility/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "payment_eligibility_update_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdatePaymentEligibilityRequirementRequest, "payment_eligibility_update_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

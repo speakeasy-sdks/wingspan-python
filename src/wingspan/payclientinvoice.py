@@ -24,7 +24,7 @@ class PayClientInvoice:
         
         url = utils.generate_url(operations.PostPayClientInvoiceRequest, base_url, '/payments/client/invoice/{invoice_id}/pay', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "pay_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PostPayClientInvoiceRequest, "pay_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

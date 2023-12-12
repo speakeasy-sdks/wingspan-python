@@ -59,7 +59,7 @@ class CollaboratorGroupEligibilityRequirement:
         
         url = utils.generate_url(operations.ReplaceCollaboratorGroupEligibilityRequirementRequest, base_url, '/payments/collaborator-group/{id}/eligibility-requirement/{eligibilityRequirementId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "collaborator_group_requirement_update", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ReplaceCollaboratorGroupEligibilityRequirementRequest, "collaborator_group_requirement_update", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

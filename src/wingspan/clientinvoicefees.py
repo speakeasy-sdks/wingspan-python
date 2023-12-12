@@ -13,13 +13,13 @@ class ClientInvoiceFees:
         
     
     
-    def create(self, request: shared.TestInvoiceCreate) -> operations.CreateClientInvoiceFeesResponse:
+    def create(self, request: Optional[shared.TestInvoiceCreate]) -> operations.CreateClientInvoiceFeesResponse:
         r"""Create client-invoice fees"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/invoice/test/create'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.TestInvoiceCreate], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

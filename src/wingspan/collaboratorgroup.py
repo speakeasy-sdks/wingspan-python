@@ -13,13 +13,13 @@ class CollaboratorGroup:
         
     
     
-    def create(self, request: shared.CollaboratorGroupCreateRequest) -> operations.CreateCollaboratorGroupResponse:
+    def create(self, request: Optional[shared.CollaboratorGroupCreateRequest]) -> operations.CreateCollaboratorGroupResponse:
         r"""Create Collaborator Group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator-group'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.CollaboratorGroupCreateRequest], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -89,7 +89,7 @@ class CollaboratorGroup:
         
         url = utils.generate_url(operations.UpdateCollaboratorGroupRequest, base_url, '/payments/collaborator-group/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "collaborator_group_update_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCollaboratorGroupRequest, "collaborator_group_update_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

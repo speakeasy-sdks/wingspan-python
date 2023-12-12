@@ -13,13 +13,13 @@ class AdditionalData:
         
     
     
-    def create(self, request: shared.AdditionalData) -> operations.CreateAdditionalDataResponse:
+    def create(self, request: Optional[shared.AdditionalData]) -> operations.CreateAdditionalDataResponse:
         r"""Create additional data"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator-settings/additional-data'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.AdditionalData], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

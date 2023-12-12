@@ -24,7 +24,7 @@ class PayoutDebitCard:
         
         url = utils.generate_url(operations.CreatePayoutDebitCardRequest, base_url, '/payments/payout-settings/{memberId}/debit-card', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "checkbook_card_create", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePayoutDebitCardRequest, "checkbook_card_create", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

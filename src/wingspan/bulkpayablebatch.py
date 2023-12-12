@@ -13,13 +13,13 @@ class BulkPayableBatch:
         
     
     
-    def create(self, request: shared.BulkPayableBatchCreate) -> operations.CreateBulkPayableBatchResponse:
+    def create(self, request: Optional[shared.BulkPayableBatchCreate]) -> operations.CreateBulkPayableBatchResponse:
         r"""Create a bulk payable batch"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/bulk/payable/batch'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.BulkPayableBatchCreate], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -122,7 +122,7 @@ class BulkPayableBatch:
         
         url = utils.generate_url(operations.UpdateBulkPayableBatchRequest, base_url, '/payments/bulk/payable/batch/{batchId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_payable_batch_update", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateBulkPayableBatchRequest, "bulk_payable_batch_update", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

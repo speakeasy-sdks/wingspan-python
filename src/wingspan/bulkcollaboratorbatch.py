@@ -13,13 +13,13 @@ class BulkCollaboratorBatch:
         
     
     
-    def create(self, request: shared.BulkBatchCreate) -> operations.CreateBulkCollaboratorBatchResponse:
+    def create(self, request: Optional[shared.BulkBatchCreate]) -> operations.CreateBulkCollaboratorBatchResponse:
         r"""Create a bulk collaborator batch"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/bulk/collaborator/batch'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.BulkBatchCreate], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -89,7 +89,7 @@ class BulkCollaboratorBatch:
         
         url = utils.generate_url(operations.UpdateBulkCollaboratorBatchRequest, base_url, '/payments/bulk/collaborator/batch/{batchId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_batch_update", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateBulkCollaboratorBatchRequest, "bulk_batch_update", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

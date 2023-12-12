@@ -13,13 +13,13 @@ class OneThousandAndNinetyNine:
         
     
     
-    def calculate(self, request: shared.Calculate1099Request) -> operations.Calculate1099Response:
+    def calculate(self, request: Optional[shared.Calculate1099Request]) -> operations.Calculate1099Response:
         r"""Calculate 1099 amounts for collaborator"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator/1099/calculate'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.Calculate1099Request], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -45,13 +45,13 @@ class OneThousandAndNinetyNine:
 
     
     
-    def mark(self, request: shared.Mark1099AsUndeliveredRequest) -> operations.Mark1099Response:
+    def mark(self, request: Optional[shared.Mark1099AsUndeliveredRequest]) -> operations.Mark1099Response:
         r"""Mark a 1099 submission as returned by mail for collaborator"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator/1099/mark-undelivered'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.Mark1099AsUndeliveredRequest], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -77,13 +77,13 @@ class OneThousandAndNinetyNine:
 
     
     
-    def remail(self, request: shared.Remail1099Request) -> operations.Remail1099Response:
+    def remail(self, request: Optional[shared.Remail1099Request]) -> operations.Remail1099Response:
         r"""Re-mail 1099 submission for collaborator"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator/1099/remail'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.Remail1099Request], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

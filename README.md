@@ -45,13 +45,13 @@ if res.ping is not None:
 * [get](docs/sdks/card/README.md#get) - Get card by cardId
 * [update](docs/sdks/card/README.md#update) - Update card by cardId
 
-### [verification](docs/sdks/verification/README.md)
-
-* [send](docs/sdks/verification/README.md#send) - Sends a verification code
-
 ### [code_to_token](docs/sdks/codetotoken/README.md)
 
 * [exchange](docs/sdks/codetotoken/README.md#exchange) - Exchange the code for a token
+
+### [verification](docs/sdks/verification/README.md)
+
+* [send](docs/sdks/verification/README.md#send) - Sends a verification code
 
 ### [instant_payout](docs/sdks/instantpayout/README.md)
 
@@ -177,13 +177,13 @@ if res.ping is not None:
 * [get](docs/sdks/bulkpayablebatchitem/README.md#get) - Get a bulk payable batch item
 * [update](docs/sdks/bulkpayablebatchitem/README.md#update) - Update a bulk payable batch item
 
-### [client_deduction](docs/sdks/clientdeduction/README.md)
-
-* [create](docs/sdks/clientdeduction/README.md#create) - Create deduction
-
 ### [client_deductions](docs/sdks/clientdeductions/README.md)
 
 * [list](docs/sdks/clientdeductions/README.md#list) - List deductions
+
+### [client_deduction](docs/sdks/clientdeduction/README.md)
+
+* [create](docs/sdks/clientdeduction/README.md#create) - Create deduction
 
 ### [client_deduction_id](docs/sdks/clientdeductionid/README.md)
 
@@ -234,16 +234,16 @@ if res.ping is not None:
 * [get](docs/sdks/collaborator/README.md#get) - Get collaborator by Id
 * [update](docs/sdks/collaborator/README.md#update) - Update a collaborator by Id
 
+### [collaborator_deductions](docs/sdks/collaboratordeductions/README.md)
+
+* [list](docs/sdks/collaboratordeductions/README.md#list) - List deductions
+
 ### [collaborator_deduction](docs/sdks/collaboratordeduction/README.md)
 
 * [create](docs/sdks/collaboratordeduction/README.md#create) - Create deduction
 * [delete](docs/sdks/collaboratordeduction/README.md#delete) - Delete deduction
 * [get](docs/sdks/collaboratordeduction/README.md#get) - Get deduction
 * [update](docs/sdks/collaboratordeduction/README.md#update) - Update deduction
-
-### [collaborator_deductions](docs/sdks/collaboratordeductions/README.md)
-
-* [list](docs/sdks/collaboratordeductions/README.md#list) - List deductions
 
 ### [collaborator_groups](docs/sdks/collaboratorgroups/README.md)
 
@@ -260,16 +260,20 @@ if res.ping is not None:
 * [delete](docs/sdks/collaboratorgroupeligibilityrequirement/README.md#delete) - Delete Eligibility Requirement
 * [replace](docs/sdks/collaboratorgroupeligibilityrequirement/README.md#replace) - Replace Eligibility Requirement
 
+### [additional_settings](docs/sdks/additionalsettings/README.md)
+
+* [list](docs/sdks/additionalsettings/README.md#list) - List additional settings
+* [update](docs/sdks/additionalsettings/README.md#update) - Update additional settings
+
 ### [additional_data](docs/sdks/additionaldata/README.md)
 
 * [create](docs/sdks/additionaldata/README.md#create) - Create additional data
 * [delete](docs/sdks/additionaldata/README.md#delete) - Delete additional data
 * [get](docs/sdks/additionaldata/README.md#get) - Get additional data
 
-### [additional_settings](docs/sdks/additionalsettings/README.md)
+### [eligibility_requirements](docs/sdks/eligibilityrequirements/README.md)
 
-* [list](docs/sdks/additionalsettings/README.md#list) - List additional settings
-* [update](docs/sdks/additionalsettings/README.md#update) - Update additional settings
+* [list](docs/sdks/eligibilityrequirements/README.md#list) - List Eligibility Requirements
 
 ### [eligibility_requirement](docs/sdks/eligibilityrequirement/README.md)
 
@@ -278,9 +282,9 @@ if res.ping is not None:
 * [get](docs/sdks/eligibilityrequirement/README.md#get) - Get Eligibility Requirement
 * [update](docs/sdks/eligibilityrequirement/README.md#update) - Update Eligibility Requirement
 
-### [eligibility_requirements](docs/sdks/eligibilityrequirements/README.md)
+### [payment_eligibility_requirements](docs/sdks/paymenteligibilityrequirements/README.md)
 
-* [list](docs/sdks/eligibilityrequirements/README.md#list) - List Eligibility Requirements
+* [list](docs/sdks/paymenteligibilityrequirements/README.md#list) - List Payment Eligigbility Requirements
 
 ### [payment_eligibility_requirement](docs/sdks/paymenteligibilityrequirement/README.md)
 
@@ -288,10 +292,6 @@ if res.ping is not None:
 * [delete](docs/sdks/paymenteligibilityrequirement/README.md#delete) - Delete Payment Eligibility Requirement
 * [get](docs/sdks/paymenteligibilityrequirement/README.md#get) - Get Payment Eligibility Requirement
 * [update](docs/sdks/paymenteligibilityrequirement/README.md#update) - Update Payment Eligibility Requirement
-
-### [payment_eligibility_requirements](docs/sdks/paymenteligibilityrequirements/README.md)
-
-* [list](docs/sdks/paymenteligibilityrequirements/README.md#list) - List Payment Eligigbility Requirements
 
 ### [one_thousand_and_ninety_nine](docs/sdks/onethousandandninetynine/README.md)
 
@@ -371,13 +371,13 @@ if res.ping is not None:
 * [create](docs/sdks/payableonclient/README.md#create) - Create payable on client for member
 * [update](docs/sdks/payableonclient/README.md#update) - Update payable on client by payableId
 
-### [invoice_payable_on_member](docs/sdks/invoicepayableonmember/README.md)
-
-* [get](docs/sdks/invoicepayableonmember/README.md#get) - Get invoice on member by payableId
-
 ### [pa_payable_on_clientyable](docs/sdks/papayableonclientyable/README.md)
 
 * [delete](docs/sdks/papayableonclientyable/README.md#delete) - Delete payable on client by payableId
+
+### [invoice_payable_on_member](docs/sdks/invoicepayableonmember/README.md)
+
+* [get](docs/sdks/invoicepayableonmember/README.md#get) - Get invoice on member by payableId
 
 ### [payout_settings](docs/sdks/payoutsettings/README.md)
 

@@ -13,13 +13,13 @@ class Collaborator:
         
     
     
-    def create(self, request: shared.CollaboratorCreateRequest) -> operations.CreateCollaboratorResponse:
+    def create(self, request: Optional[shared.CollaboratorCreateRequest]) -> operations.CreateCollaboratorResponse:
         r"""Create new collaborator"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.CollaboratorCreateRequest], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -122,7 +122,7 @@ class Collaborator:
         
         url = utils.generate_url(operations.UpdateCollaboratorRequest, base_url, '/payments/collaborator/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "collaborator_update_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCollaboratorRequest, "collaborator_update_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

@@ -24,7 +24,7 @@ class BulkClientBatchItem:
         
         url = utils.generate_url(operations.CreateBulkClientBatchItemRequest, base_url, '/payments/bulk/client/batch/{batchId}/item', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_client_item_create", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateBulkClientBatchItemRequest, "bulk_client_item_create", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -96,7 +96,7 @@ class BulkClientBatchItem:
         
         url = utils.generate_url(operations.UpdateBulkClientBatchItemRequest, base_url, '/payments/bulk/client/batch/{batchId}/item/{batchItemId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_client_item_update", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateBulkClientBatchItemRequest, "bulk_client_item_update", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

@@ -24,7 +24,7 @@ class BulkInvoiceBatchItem:
         
         url = utils.generate_url(operations.CreateBulkInvoiceBatchItemRequest, base_url, '/payments/bulk/invoice/batch/{batchId}/item', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_invoice_item_create", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateBulkInvoiceBatchItemRequest, "bulk_invoice_item_create", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -96,7 +96,7 @@ class BulkInvoiceBatchItem:
         
         url = utils.generate_url(operations.UpdateBulkInvoiceBatchItemRequest, base_url, '/payments/bulk/invoice/batch/{batchId}/item/{batchItemId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_invoice_item_update", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateBulkInvoiceBatchItemRequest, "bulk_invoice_item_update", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

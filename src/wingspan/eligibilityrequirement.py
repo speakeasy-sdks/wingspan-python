@@ -13,13 +13,13 @@ class EligibilityRequirement:
         
     
     
-    def create(self, request: shared.EligibilityRequirementCreateRequest) -> operations.CreateEligibilityRequirementResponse:
+    def create(self, request: Optional[shared.EligibilityRequirementCreateRequest]) -> operations.CreateEligibilityRequirementResponse:
         r"""Create Eligibility Requirement"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator-settings/eligibility-requirement'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.EligibilityRequirementCreateRequest], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -122,7 +122,7 @@ class EligibilityRequirement:
         
         url = utils.generate_url(operations.UpdateEligibilityRequirementRequest, base_url, '/payments/collaborator-settings/eligibility-requirement/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "eligibility_requirement_update_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateEligibilityRequirementRequest, "eligibility_requirement_update_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

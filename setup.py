@@ -10,7 +10,7 @@ except FileNotFoundError:
 
 setuptools.setup(
     name="wingspan",
-    version="3.0.5",
+    version="3.1.0",
     author="Speakeasy",
     description="Python Client SDK for the Wingspan Payments API",
     long_description=long_description,

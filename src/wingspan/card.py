@@ -13,13 +13,13 @@ class Card:
         
     
     
-    def create(self, request: shared.CardCreateRequest) -> operations.CreateCardResponse:
+    def create(self, request: Optional[shared.CardCreateRequest]) -> operations.CreateCardResponse:
         r"""Create card"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/banking/card'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.CardCreateRequest], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -122,7 +122,7 @@ class Card:
         
         url = utils.generate_url(operations.UpdateCardRequest, base_url, '/payments/banking/card/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "card_update_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCardRequest, "card_update_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

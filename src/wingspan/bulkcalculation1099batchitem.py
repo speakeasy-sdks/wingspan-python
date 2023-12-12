@@ -24,7 +24,7 @@ class BulkCalculation1099BatchItem:
         
         url = utils.generate_url(operations.CreateBulkCalculation1099BatchItemRequest, base_url, '/payments/bulk/calculation1099/batch/{batchId}/item', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_calculation1099_item_create", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateBulkCalculation1099BatchItemRequest, "bulk_calculation1099_item_create", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -96,7 +96,7 @@ class BulkCalculation1099BatchItem:
         
         url = utils.generate_url(operations.UpdateBulkCalculation1099BatchItemRequest, base_url, '/payments/bulk/calculation1099/batch/{batchId}/item/{batchItemId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_calculation1099_item_update", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateBulkCalculation1099BatchItemRequest, "bulk_calculation1099_item_update", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

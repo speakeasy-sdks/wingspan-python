@@ -24,7 +24,7 @@ class BulkCollaboratorBatchItem:
         
         url = utils.generate_url(operations.CreateBulkCollaboratorBatchItemRequest, base_url, '/payments/bulk/collaborator/batch/{batchId}/item', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_collaborator_item_create", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateBulkCollaboratorBatchItemRequest, "bulk_collaborator_item_create", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -96,7 +96,7 @@ class BulkCollaboratorBatchItem:
         
         url = utils.generate_url(operations.UpdateBulkCollaboratorBatchItemRequest, base_url, '/payments/bulk/collaborator/batch/{batchId}/item/{batchItemId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_collaborator_item_update", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateBulkCollaboratorBatchItemRequest, "bulk_collaborator_item_update", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
