@@ -1,24 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 213e6692a623ef7a4c2e2fbeb0e17e0f
-  docVersion: 1.0.0
-  speakeasyVersion: 1.127.0
-  generationVersion: 2.220.0
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: wingspan
-  repoURL: https://github.com/speakeasy-sdks/wingspan-python.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  python:
-    core: 4.3.1
-    flattening: 2.81.1
-    globalServerURLs: 2.82.1
-    groups: 2.81.2
-    nameOverrides: 2.81.1
 python:
   version: 3.1.1
   author: Speakeasy
@@ -34,9 +20,7 @@ python:
       shared: models/shared
       webhooks: models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/wingspan-python.git
   maxMethodParams: 4
   maxPathParams: 4
   outputModelSuffix: output
   packageName: wingspan
-  repoSubDirectory: .
