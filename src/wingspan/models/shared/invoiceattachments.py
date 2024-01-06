@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import invoiceattachmentfile as shared_invoiceattachmentfile
+from .invoiceattachmentfile import InvoiceAttachmentFile
 from dataclasses_json import Undefined, dataclass_json
 from typing import List, Optional
 from wingspan import utils
@@ -12,7 +12,7 @@ from wingspan import utils
 @dataclasses.dataclass
 class InvoiceAttachments:
     custom_attachment_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds') }})
-    custom_attachment_info: Optional[List[shared_invoiceattachmentfile.InvoiceAttachmentFile]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentInfo') }})
+    custom_attachment_info: Optional[List[InvoiceAttachmentFile]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentInfo') }})
     invoice_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceLink') }})
     invoice_pdf: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicePdf') }})
     receipt_pdf: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('receiptPdf') }})

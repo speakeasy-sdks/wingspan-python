@@ -19,8 +19,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.TestInvoiceCreate(
-    contact_name='online',
-    email='Rylan13@yahoo.com',
+    contact_name='string',
+    email='Jena.Nienow28@yahoo.com',
 )
 
 res = s.client_invoice_fees.create(req)
@@ -40,7 +40,11 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.CreateClientInvoiceFeesResponse](../../models/operations/createclientinvoicefeesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## list
 
@@ -55,7 +59,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_fees.list(invoice_id='Bicycle')
+res = s.client_invoice_fees.list(invoice_id='string')
 
 if res.invoice_fee_calculation is not None:
     # handle response
@@ -72,4 +76,8 @@ if res.invoice_fee_calculation is not None:
 ### Response
 
 **[operations.ListClientInvoiceFeesResponse](../../models/operations/listclientinvoicefeesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

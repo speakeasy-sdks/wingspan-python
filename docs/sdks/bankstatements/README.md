@@ -14,13 +14,12 @@ List bank statements
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.bank_statements.list()
 
-if res.bank_statements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.bank_statements is not None:
 ### Response
 
 **[operations.ListBankStatementsResponse](../../models/operations/listbankstatementsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

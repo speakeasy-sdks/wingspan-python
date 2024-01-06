@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import eligibilityrequirement as shared_eligibilityrequirement
+from ...models.shared import eligibilityrequirement as shared_eligibilityrequirement
 from typing import List, Optional
 
 
@@ -11,11 +11,11 @@ from typing import List, Optional
 class ListEligibilityRequirementsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    eligibility_requirements: Optional[List[shared_eligibilityrequirement.EligibilityRequirement]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_eligibilityrequirement.EligibilityRequirement]] = dataclasses.field(default=None)
     r"""List of Eligibility Requirements"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

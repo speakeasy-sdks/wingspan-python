@@ -21,7 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkInvoiceBatchCreate(
     labels={
-        "online": 'Configuration',
+        'key': 'string',
     },
     processing_strategy=shared.BulkInvoiceBatchCreateProcessingStrategy.MERGE,
 )
@@ -43,7 +43,11 @@ if res.bulk_invoice_batch is not None:
 ### Response
 
 **[operations.CreateBulkInvoiceBatchResponse](../../models/operations/createbulkinvoicebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -58,7 +62,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.get(batch_id='female')
+res = s.bulk_invoice_batch.get(batch_id='string')
 
 if res.bulk_invoice_batch is not None:
     # handle response
@@ -75,7 +79,11 @@ if res.bulk_invoice_batch is not None:
 ### Response
 
 **[operations.GetBulkInvoiceBatchResponse](../../models/operations/getbulkinvoicebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -90,9 +98,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.update(batch_id='Van', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate(
+res = s.bulk_invoice_batch.update(batch_id='string', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate(
     labels={
-        "East": 'male',
+        'key': 'string',
     },
 ))
 
@@ -112,4 +120,8 @@ if res.bulk_invoice_batch is not None:
 ### Response
 
 **[operations.UpdateBulkInvoiceBatchResponse](../../models/operations/updatebulkinvoicebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

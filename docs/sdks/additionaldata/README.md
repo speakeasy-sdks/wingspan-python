@@ -21,9 +21,9 @@ s = wingspan.Wingspan()
 
 req = shared.AdditionalData(
     key='<key>',
-    name='online',
+    name='string',
     required=False,
-    type=shared.AdditionalDataType.STRING,
+    type=shared.Type.BOOLEAN,
 )
 
 res = s.additional_data.create(req)
@@ -43,7 +43,11 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.CreateAdditionalDataResponse](../../models/operations/createadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -58,7 +62,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.delete(id='program')
+res = s.additional_data.delete(id='string')
 
 if res.additional_data is not None:
     # handle response
@@ -75,7 +79,11 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.DeleteAdditionalDataResponse](../../models/operations/deleteadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -90,7 +98,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.get(id='female')
+res = s.additional_data.get(id='string')
 
 if res.additional_data is not None:
     # handle response
@@ -107,4 +115,8 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.GetAdditionalDataResponse](../../models/operations/getadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

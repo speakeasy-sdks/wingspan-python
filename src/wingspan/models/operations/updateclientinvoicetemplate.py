@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clientinvoicetemplate as shared_clientinvoicetemplate
-from ..shared import clientinvoicetemplateupdaterequest as shared_clientinvoicetemplateupdaterequest
+from ...models.shared import clientinvoicetemplate as shared_clientinvoicetemplate
+from ...models.shared import clientinvoicetemplateupdaterequest as shared_clientinvoicetemplateupdaterequest
 from typing import Optional
 
 
@@ -21,11 +21,11 @@ class UpdateClientInvoiceTemplateRequest:
 class UpdateClientInvoiceTemplateResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     client_invoice_template: Optional[shared_clientinvoicetemplate.ClientInvoiceTemplate] = dataclasses.field(default=None)
     r"""A client created invoiceTemplate (recurring Invoice)"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -14,13 +14,12 @@ Get a list of collaborators and their details
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.collaborators_details_v2.get()
 
-if res.collaborators_report_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.collaborators_report_responses is not None:
 ### Response
 
 **[operations.GetCollaboratorsDetailsV2Response](../../models/operations/getcollaboratorsdetailsv2response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

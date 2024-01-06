@@ -22,7 +22,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkPayableBatchCreate(
     labels={
-        "online": 'Configuration',
+        'key': 'string',
     },
     processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.MERGE,
 )
@@ -44,7 +44,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.CreateBulkPayableBatchResponse](../../models/operations/createbulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -59,7 +63,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.delete(batch_id='program')
+res = s.bulk_payable_batch.delete(batch_id='string')
 
 if res.bulk_payable_batch is not None:
     # handle response
@@ -76,7 +80,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.DeleteBulkPayableBatchResponse](../../models/operations/deletebulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -91,7 +99,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.get(batch_id='female')
+res = s.bulk_payable_batch.get(batch_id='string')
 
 if res.bulk_payable_batch is not None:
     # handle response
@@ -108,7 +116,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.GetBulkPayableBatchResponse](../../models/operations/getbulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -123,9 +135,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.update(batch_id='Van', bulk_payable_batch_update=shared.BulkPayableBatchUpdate(
+res = s.bulk_payable_batch.update(batch_id='string', bulk_payable_batch_update=shared.BulkPayableBatchUpdate(
     labels={
-        "East": 'male',
+        'key': 'string',
     },
 ))
 
@@ -145,4 +157,8 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.UpdateBulkPayableBatchResponse](../../models/operations/updatebulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

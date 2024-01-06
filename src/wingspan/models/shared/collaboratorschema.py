@@ -2,15 +2,15 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c as shared_b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c
-from ..shared import clientdata as shared_clientdata
-from ..shared import memberclientformw9info as shared_memberclientformw9info
-from ..shared import memberclientrequirementresponse as shared_memberclientrequirementresponse
-from ..shared import memberclientwireaccount as shared_memberclientwireaccount
-from ..shared import memberdata as shared_memberdata
-from ..shared import redactedmember as shared_redactedmember
-from ..shared import twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4 as shared_twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
-from ..shared import userroles as shared_userroles
+from .b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c import B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c
+from .clientdata import ClientData
+from .memberclientformw9info import MemberClientFormW9Info
+from .memberclientrequirementresponse import MemberClientRequirementResponse
+from .memberclientwireaccount import MemberClientWireAccount
+from .memberdata import MemberData
+from .redactedmember import RedactedMember
+from .twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4 import TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
+from .userroles import UserRoles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Dict, List, Optional
@@ -31,24 +31,24 @@ class TaxStatusCollaboratorSchema(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CollaboratorSchema:
-    ach_credit_account: shared_memberclientwireaccount.MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('achCreditAccount') }})
+    ach_credit_account: MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('achCreditAccount') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     collaborator_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorId') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
-    form1099_balances: shared_b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c.B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances') }})
-    international_wire_account: shared_memberclientwireaccount.MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internationalWireAccount') }})
+    form1099_balances: B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances') }})
+    international_wire_account: MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internationalWireAccount') }})
     labels: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
-    member: shared_redactedmember.RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member') }})
+    member: RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member') }})
     member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})
     status: StatusCollaboratorSchema = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     tax_status: TaxStatusCollaboratorSchema = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxStatus') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
-    user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    client_data: Optional[shared_clientdata.ClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData') }})
+    user_roles: UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
+    client_data: Optional[ClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData') }})
     collaborator_group_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupIds') }})
-    eligibility_requirements: Optional[List[shared_memberclientrequirementresponse.MemberClientRequirementResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
-    form_w9_data: Optional[shared_memberclientformw9info.MemberClientFormW9Info] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
-    integration: Optional[shared_twenty_sixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4.TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
-    member_data: Optional[shared_memberdata.MemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData') }})
+    eligibility_requirements: Optional[List[MemberClientRequirementResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
+    form_w9_data: Optional[MemberClientFormW9Info] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
+    integration: Optional[TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
+    member_data: Optional[MemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData') }})
     
 

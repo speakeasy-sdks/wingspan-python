@@ -12,6 +12,7 @@ class CollaboratorToGroup:
         self.sdk_configuration = sdk_config
         
     
+    
     def add(self, group_id: str, id: str) -> operations.AddCollaboratorToGroupResponse:
         r"""Add collaborator to collaborators group"""
         request = operations.AddCollaboratorToGroupRequest(
@@ -30,7 +31,7 @@ class CollaboratorToGroup:
         
         http_res = client.request('PATCH', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.AddCollaboratorToGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -39,9 +40,12 @@ class CollaboratorToGroup:
                 res.collaborator_schema = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def remove(self, group_id: str, id: str) -> operations.RemoveCollaboratorToGroupResponse:
         r"""Remove collaborator from collaborators group"""
@@ -61,7 +65,7 @@ class CollaboratorToGroup:
         
         http_res = client.request('PATCH', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.RemoveCollaboratorToGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -70,6 +74,8 @@ class CollaboratorToGroup:
                 res.collaborator_schema = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 

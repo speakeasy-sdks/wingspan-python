@@ -12,6 +12,7 @@ class ClientCollaboratorV2:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, client_id: str) -> operations.GetClientCollaboratorV2Response:
         r"""Get a single V2 Collaborator by clientId"""
         request = operations.GetClientCollaboratorV2Request(
@@ -29,7 +30,7 @@ class ClientCollaboratorV2:
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetClientCollaboratorV2Response(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -38,6 +39,8 @@ class ClientCollaboratorV2:
                 res.collaborator_v2 = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 

@@ -15,13 +15,12 @@ List additional settings
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.additional_settings.list()
 
-if res.additional_data is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -30,7 +29,11 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.ListAdditionalSettingsResponse](../../models/operations/listadditionalsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -45,7 +48,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.additional_settings.update(id='Van', additional_data_update_request=shared.AdditionalDataUpdateRequest())
+res = s.additional_settings.update(id='string', additional_data_update_request=shared.AdditionalDataUpdateRequest())
 
 if res.additional_data is not None:
     # handle response
@@ -63,4 +66,8 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.UpdateAdditionalSettingsResponse](../../models/operations/updateadditionalsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

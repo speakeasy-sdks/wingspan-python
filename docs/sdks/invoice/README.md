@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice.generate(invoice_id='ohm')
+res = s.invoice.generate(invoice_id='string')
 
 if res.invoice_pdf_generation_response is not None:
     # handle response
@@ -36,7 +36,11 @@ if res.invoice_pdf_generation_response is not None:
 ### Response
 
 **[operations.GenerateInvoiceResponse](../../models/operations/generateinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## send
 
@@ -51,7 +55,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.invoice.send(invoice_id='hacking')
+res = s.invoice.send(invoice_id='string')
 
 if res.invoice is not None:
     # handle response
@@ -68,4 +72,8 @@ if res.invoice is not None:
 ### Response
 
 **[operations.SendInvoiceResponse](../../models/operations/sendinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

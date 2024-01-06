@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.app_link.get(member_id='female')
+res = s.app_link.get(member_id='string')
 
 if res.banking_application_form is not None:
     # handle response
@@ -35,4 +35,8 @@ if res.banking_application_form is not None:
 ### Response
 
 **[operations.GetAppLinkResponse](../../models/operations/getapplinkresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

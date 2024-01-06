@@ -14,13 +14,12 @@ List Payment Eligigbility Requirements
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.payment_eligibility_requirements.list()
 
-if res.payment_eligibilities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.payment_eligibilities is not None:
 ### Response
 
 **[operations.ListPaymentEligibilityRequirementsResponse](../../models/operations/listpaymenteligibilityrequirementsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

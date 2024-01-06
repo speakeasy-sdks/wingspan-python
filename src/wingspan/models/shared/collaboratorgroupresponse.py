@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import eligibilityrequirement as shared_eligibilityrequirement
+from .eligibilityrequirement import EligibilityRequirement
 from dataclasses_json import Undefined, dataclass_json
 from typing import Dict, List, Optional
 from wingspan import utils
@@ -17,6 +17,6 @@ class CollaboratorGroupResponse:
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     collaborator_settings: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings') }})
-    eligibility_requirements: Optional[List[shared_eligibilityrequirement.EligibilityRequirement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
+    eligibility_requirements: Optional[List[EligibilityRequirement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
     
 

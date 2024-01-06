@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_v2.get(member_id='female')
+res = s.collaborator_v2.get(member_id='string')
 
 if res.collaborator_v2 is not None:
     # handle response
@@ -35,4 +35,8 @@ if res.collaborator_v2 is not None:
 ### Response
 
 **[operations.GetCollaboratorV2Response](../../models/operations/getcollaboratorv2response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

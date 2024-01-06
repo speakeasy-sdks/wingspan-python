@@ -20,19 +20,19 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.create(batch_id='online', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
+res = s.bulk_invoice_batch_item.create(batch_id='string', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
     accepted_payment_methods=[
-        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.MANUAL,
+        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.ACH,
     ],
-    amount=8592.13,
-    bulk_invoice_batch_id='Money',
+    amount=4893.82,
+    bulk_invoice_batch_id='string',
     credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='blue',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.CANCELLED,
+    due_date='string',
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.PAID,
     labels={
-        "grey": 'technology',
+        'key': 'string',
     },
-    line_item_description='East',
+    line_item_description='string',
 ))
 
 if res.bulk_invoice_item is not None:
@@ -51,7 +51,11 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.CreateBulkInvoiceBatchItemResponse](../../models/operations/createbulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -66,7 +70,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.get(batch_id='female', batch_item_id='program')
+res = s.bulk_invoice_batch_item.get(batch_id='string', batch_item_id='string')
 
 if res.bulk_invoice_item is not None:
     # handle response
@@ -84,7 +88,11 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.GetBulkInvoiceBatchItemResponse](../../models/operations/getbulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -99,13 +107,13 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.update(batch_id='Van', batch_item_id='East', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
+res = s.bulk_invoice_batch_item.update(batch_id='string', batch_item_id='string', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
     accepted_payment_methods=[
-        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.MANUAL,
+        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
     ],
     credit_fee_handling=shared.FeeHandlingConfig(),
     labels={
-        "dock": 'Quality',
+        'key': 'string',
     },
 ))
 
@@ -126,4 +134,8 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.UpdateBulkInvoiceBatchItemResponse](../../models/operations/updatebulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

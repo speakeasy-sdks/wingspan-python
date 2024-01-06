@@ -20,7 +20,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InstantPayoutRequest(
-    external_payout_account_token='online',
+    external_payout_account_token='string',
 )
 
 res = s.instant_payout.create(req)
@@ -40,7 +40,11 @@ if res.instant_payout_response is not None:
 ### Response
 
 **[operations.CreateInstantPayoutResponse](../../models/operations/createinstantpayoutresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -50,7 +54,6 @@ Delete instant payout
 
 ```python
 import wingspan
-
 
 s = wingspan.Wingspan()
 
@@ -66,7 +69,11 @@ if res.instant_payout_response is not None:
 ### Response
 
 **[operations.DeleteInstantPayoutResponse](../../models/operations/deleteinstantpayoutresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## fetch
 
@@ -76,7 +83,6 @@ Fetch instant payout details
 
 ```python
 import wingspan
-
 
 s = wingspan.Wingspan()
 
@@ -92,4 +98,8 @@ if res.instant_payout_response is not None:
 ### Response
 
 **[operations.FetchInstantPayoutResponse](../../models/operations/fetchinstantpayoutresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

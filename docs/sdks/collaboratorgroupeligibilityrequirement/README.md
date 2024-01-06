@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group_eligibility_requirement.delete(eligibility_requirement_id='program', id='Designer')
+res = s.collaborator_group_eligibility_requirement.delete(eligibility_requirement_id='string', id='string')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -37,7 +37,11 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.DeleteCollaboratorGroupEligibilityRequirementResponse](../../models/operations/deletecollaboratorgroupeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## replace
 
@@ -52,8 +56,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group_eligibility_requirement.replace(eligibility_requirement_id='Cruiser', id='Tandem', collaborator_group_requirement_update=shared.CollaboratorGroupRequirementUpdate(
-    new_eligibility_requirement_id='Wooden',
+res = s.collaborator_group_eligibility_requirement.replace(eligibility_requirement_id='string', id='string', collaborator_group_requirement_update=shared.CollaboratorGroupRequirementUpdate(
+    new_eligibility_requirement_id='string',
 ))
 
 if res.collaborator_group_response is not None:
@@ -73,4 +77,8 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.ReplaceCollaboratorGroupEligibilityRequirementResponse](../../models/operations/replacecollaboratorgroupeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

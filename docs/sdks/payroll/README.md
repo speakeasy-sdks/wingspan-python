@@ -14,7 +14,6 @@ Execute payroll
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
@@ -29,4 +28,8 @@ if res.invoice is not None:
 ### Response
 
 **[operations.ExecutePayrollResponse](../../models/operations/executepayrollresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

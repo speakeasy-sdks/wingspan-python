@@ -1,9 +1,10 @@
-# BulkPayableItemWorkflowSubStatus
+# Workflow
 
 
 ## Values
 
 | Name                          | Value                         |
 | ----------------------------- | ----------------------------- |
-| `SUBMITTED`                   | Submitted                     |
+| `SINGLE_STAGE`                | SingleStage                   |
+| `DUAL_STAGE`                  | DualStage                     |
 | `LESS_THAN_NIL_GREATER_THAN_` | <nil>                         |

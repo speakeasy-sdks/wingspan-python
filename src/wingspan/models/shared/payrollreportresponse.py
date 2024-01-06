@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import forty_twof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07 as shared_forty_twof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07
-from ..shared import payrollreportinvoice as shared_payrollreportinvoice
+from .forty_twof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07 import FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07
+from .payrollreportinvoice import PayrollReportInvoice
 from dataclasses_json import Undefined, dataclass_json
 from typing import List
 from wingspan import utils
@@ -12,7 +12,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PayrollReportResponse:
-    invoices: List[shared_payrollreportinvoice.PayrollReportInvoice] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoices') }})
-    parent_invoice: shared_forty_twof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07.FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parentInvoice') }})
+    invoices: List[PayrollReportInvoice] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoices') }})
+    parent_invoice: FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parentInvoice') }})
     
 

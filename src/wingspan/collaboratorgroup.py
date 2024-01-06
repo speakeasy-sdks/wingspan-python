@@ -12,13 +12,14 @@ class CollaboratorGroup:
         self.sdk_configuration = sdk_config
         
     
-    def create(self, request: shared.CollaboratorGroupCreateRequest) -> operations.CreateCollaboratorGroupResponse:
+    
+    def create(self, request: Optional[shared.CollaboratorGroupCreateRequest]) -> operations.CreateCollaboratorGroupResponse:
         r"""Create Collaborator Group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator-group'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.CollaboratorGroupCreateRequest], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -28,7 +29,7 @@ class CollaboratorGroup:
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.CreateCollaboratorGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -37,9 +38,12 @@ class CollaboratorGroup:
                 res.collaborator_group_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def get(self, id: str) -> operations.GetCollaboratorGroupResponse:
         r"""Get Collaborator Group"""
@@ -58,7 +62,7 @@ class CollaboratorGroup:
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCollaboratorGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -67,9 +71,12 @@ class CollaboratorGroup:
                 res.collaborator_group_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def update(self, id: str, collaborator_group_update_request: Optional[shared.CollaboratorGroupUpdateRequest] = None) -> operations.UpdateCollaboratorGroupResponse:
         r"""Update Collaborator Group"""
@@ -82,7 +89,7 @@ class CollaboratorGroup:
         
         url = utils.generate_url(operations.UpdateCollaboratorGroupRequest, base_url, '/payments/collaborator-group/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "collaborator_group_update_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCollaboratorGroupRequest, "collaborator_group_update_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -92,7 +99,7 @@ class CollaboratorGroup:
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.UpdateCollaboratorGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -101,6 +108,8 @@ class CollaboratorGroup:
                 res.collaborator_group_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 

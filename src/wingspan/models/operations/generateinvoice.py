@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import invoicepdfgenerationresponse as shared_invoicepdfgenerationresponse
+from ...models.shared import invoicepdfgenerationresponse as shared_invoicepdfgenerationresponse
 from typing import Optional
 
 
@@ -19,11 +19,11 @@ class GenerateInvoiceRequest:
 class GenerateInvoiceResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     invoice_pdf_generation_response: Optional[shared_invoicepdfgenerationresponse.InvoicePdfGenerationResponse] = dataclasses.field(default=None)
     r"""Response from generation of invoice pdf"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -14,7 +14,6 @@ Get Service Status
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
@@ -29,4 +28,8 @@ if res.ping is not None:
 ### Response
 
 **[operations.GetServiceStatusResponse](../../models/operations/getservicestatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

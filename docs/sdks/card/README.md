@@ -22,10 +22,10 @@ s = wingspan.Wingspan()
 
 req = shared.CardCreateRequest(
     shipping_address=shared.Address(
-        address_line1='online',
-        city='Stokesview',
-        postal_code='17097',
-        state='abnormally',
+        address_line1='string',
+        city='Jenafurt',
+        postal_code='42170-9739',
+        state='string',
     ),
 )
 
@@ -46,7 +46,11 @@ if res.card is not None:
 ### Response
 
 **[operations.CreateCardResponse](../../models/operations/createcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -61,7 +65,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.card.delete(id='program')
+res = s.card.delete(id='string')
 
 if res.card is not None:
     # handle response
@@ -78,7 +82,11 @@ if res.card is not None:
 ### Response
 
 **[operations.DeleteCardResponse](../../models/operations/deletecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -93,7 +101,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.card.get(id='female')
+res = s.card.get(id='string')
 
 if res.card_details is not None:
     # handle response
@@ -110,7 +118,11 @@ if res.card_details is not None:
 ### Response
 
 **[operations.GetCardResponse](../../models/operations/getcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -125,8 +137,8 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.card.update(id='Van', card_update_request=shared.CardUpdateRequest(
-    status=shared.PropertiesCardUpdateRequest.ACTIVE,
+res = s.card.update(id='string', card_update_request=shared.CardUpdateRequest(
+    status=shared.PropertiesCardUpdateRequest.CLOSED_BY_CUSTOMER,
 ))
 
 if res.card is not None:
@@ -145,4 +157,8 @@ if res.card is not None:
 ### Response
 
 **[operations.UpdateCardResponse](../../models/operations/updatecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

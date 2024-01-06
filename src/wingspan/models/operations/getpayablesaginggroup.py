@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import payableagingreportresponse as shared_payableagingreportresponse
+from ...models.shared import payableagingreportresponse as shared_payableagingreportresponse
 from typing import List, Optional
 
 
@@ -11,11 +11,11 @@ from typing import List, Optional
 class GetPayablesAgingGroupResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    payable_aging_report_responses: Optional[List[shared_payableagingreportresponse.PayableAgingReportResponse]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_payableagingreportresponse.PayableAgingReportResponse]] = dataclasses.field(default=None)
     r"""Payables list grouped by age"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

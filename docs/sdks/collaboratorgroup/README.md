@@ -21,13 +21,13 @@ s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
     collaborator_settings={
-        "online": 'Configuration',
+        'key': 'string',
     },
-    description='Inverse discrete benchmark',
+    description='Multi-tiered human-resource model',
     eligibility_requirements=[
         shared.CollaboratorGroupRequirement(),
     ],
-    name='blue',
+    name='string',
 )
 
 res = s.collaborator_group.create(req)
@@ -47,7 +47,11 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.CreateCollaboratorGroupResponse](../../models/operations/createcollaboratorgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -62,7 +66,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.get(id='female')
+res = s.collaborator_group.get(id='string')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -79,7 +83,11 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.GetCollaboratorGroupResponse](../../models/operations/getcollaboratorgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -94,9 +102,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.update(id='Van', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
+res = s.collaborator_group.update(id='string', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
     collaborator_settings={
-        "East": 'male',
+        'key': 'string',
     },
     eligibility_requirements=[
         shared.CollaboratorGroupRequirement(),
@@ -119,4 +127,8 @@ if res.collaborator_group_response is not None:
 ### Response
 
 **[operations.UpdateCollaboratorGroupResponse](../../models/operations/updatecollaboratorgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

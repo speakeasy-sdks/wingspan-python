@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import calculationsettings1099 as shared_calculationsettings1099
-from ..shared import frequency as shared_frequency
-from ..shared import fundingsource as shared_fundingsource
-from ..shared import scheduledate as shared_scheduledate
+from .calculationsettings1099 import CalculationSettings1099
+from .frequency import Frequency
+from .fundingsource import FundingSource
+from .scheduledate import ScheduleDate
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import List, Optional
@@ -17,7 +17,7 @@ class StatusPayrollSettings(str, Enum):
     EXPIRED = 'Expired'
     CANCELLED = 'Cancelled'
 
-class PayrollSettingsWorkflow(str, Enum):
+class Workflow(str, Enum):
     SINGLE_STAGE = 'SingleStage'
     DUAL_STAGE = 'DualStage'
     LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
@@ -27,14 +27,14 @@ class PayrollSettingsWorkflow(str, Enum):
 @dataclasses.dataclass
 class PayrollSettings:
     status: StatusPayrollSettings = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-    calculation_settings1099: Optional[shared_calculationsettings1099.CalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationSettings1099') }})
+    calculation_settings1099: Optional[CalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationSettings1099') }})
     enable_planned_payroll: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enablePlannedPayroll') }})
     enable_process_days_before_due: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enableProcessDaysBeforeDue') }})
-    frequency: Optional[shared_frequency.Frequency] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency') }})
-    funding_source: Optional[shared_fundingsource.FundingSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fundingSource') }})
+    frequency: Optional[Frequency] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency') }})
+    funding_source: Optional[FundingSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fundingSource') }})
     issue1099s: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('issue1099s') }})
     process_days_before_due: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processDaysBeforeDue') }})
-    schedule_dates: Optional[List[shared_scheduledate.ScheduleDate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates') }})
-    workflow: Optional[PayrollSettingsWorkflow] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflow') }})
+    schedule_dates: Optional[List[ScheduleDate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates') }})
+    workflow: Optional[Workflow] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflow') }})
     
 

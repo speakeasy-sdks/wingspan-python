@@ -12,13 +12,14 @@ class Collaborator:
         self.sdk_configuration = sdk_config
         
     
-    def create(self, request: shared.CollaboratorCreateRequest) -> operations.CreateCollaboratorResponse:
+    
+    def create(self, request: Optional[shared.CollaboratorCreateRequest]) -> operations.CreateCollaboratorResponse:
         r"""Create new collaborator"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/payments/collaborator'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.CollaboratorCreateRequest], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -28,7 +29,7 @@ class Collaborator:
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.CreateCollaboratorResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -37,9 +38,12 @@ class Collaborator:
                 res.collaborator_schema = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def delete(self, id: str) -> operations.DeleteCollaboratorResponse:
         r"""Delete collaborator by Id"""
@@ -58,7 +62,7 @@ class Collaborator:
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeleteCollaboratorResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -67,9 +71,12 @@ class Collaborator:
                 res.collaborator_schema = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def get(self, id: str) -> operations.GetCollaboratorResponse:
         r"""Get collaborator by Id"""
@@ -88,7 +95,7 @@ class Collaborator:
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCollaboratorResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -97,9 +104,12 @@ class Collaborator:
                 res.collaborator_schema = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def update(self, id: str, collaborator_update_request: Optional[shared.CollaboratorUpdateRequest] = None) -> operations.UpdateCollaboratorResponse:
         r"""Update a collaborator by Id"""
@@ -112,7 +122,7 @@ class Collaborator:
         
         url = utils.generate_url(operations.UpdateCollaboratorRequest, base_url, '/payments/collaborator/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "collaborator_update_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCollaboratorRequest, "collaborator_update_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -122,7 +132,7 @@ class Collaborator:
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.UpdateCollaboratorResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -131,6 +141,8 @@ class Collaborator:
                 res.collaborator_schema = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 

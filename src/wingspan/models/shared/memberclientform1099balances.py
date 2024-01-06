@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5 as shared_eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5
-from ..shared import form1099correction as shared_form1099correction
-from ..shared import form1099events as shared_form1099events
+from .eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5 import Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5
+from .form1099correction import Form1099Correction
+from .form1099events import Form1099Events
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
@@ -30,7 +30,7 @@ class StatusMemberClientForm1099Balances(str, Enum):
 
 
 @dataclasses.dataclass
-class MemberClientForm1099BalancesTaxForm:
+class TaxForm:
     pass
 
 class TypeMemberClientForm1099Balances(str, Enum):
@@ -48,10 +48,10 @@ class MemberClientForm1099Balances:
     platform_income: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('platformIncome') }})
     status: StatusMemberClientForm1099Balances = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     type: TypeMemberClientForm1099Balances = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-    correction: Optional[shared_form1099correction.Form1099Correction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('correction') }})
-    dispute: Optional[shared_eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5.Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dispute') }})
-    events: Optional[shared_form1099events.Form1099Events] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
-    tax_form: Optional[MemberClientForm1099BalancesTaxForm] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxForm') }})
+    correction: Optional[Form1099Correction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('correction') }})
+    dispute: Optional[Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dispute') }})
+    events: Optional[Form1099Events] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
+    tax_form: Optional[TaxForm] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxForm') }})
     tax_form_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxFormId') }})
     
 

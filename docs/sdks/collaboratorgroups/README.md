@@ -14,13 +14,12 @@ List Collaborator Groups
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.collaborator_groups.list()
 
-if res.collaborator_group_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.collaborator_group_responses is not None:
 ### Response
 
 **[operations.ListCollaboratorGroupsResponse](../../models/operations/listcollaboratorgroupsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -18,7 +18,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.pay_client_invoice.post(invoice_id='payment', pay_request=shared.PayRequest())
+res = s.pay_client_invoice.post(invoice_id='string', pay_request=shared.PayRequest())
 
 if res.client_invoice is not None:
     # handle response
@@ -36,4 +36,8 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.PostPayClientInvoiceResponse](../../models/operations/postpayclientinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

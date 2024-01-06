@@ -21,7 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.BulkBatchCreate(
     labels={
-        "online": 'Configuration',
+        'key': 'string',
     },
 )
 
@@ -42,7 +42,11 @@ if res.bulk_collaborator_batch is not None:
 ### Response
 
 **[operations.CreateBulkCollaboratorBatchResponse](../../models/operations/createbulkcollaboratorbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -57,7 +61,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch.get(batch_id='female')
+res = s.bulk_collaborator_batch.get(batch_id='string')
 
 if res.bulk_collaborator_batch is not None:
     # handle response
@@ -74,7 +78,11 @@ if res.bulk_collaborator_batch is not None:
 ### Response
 
 **[operations.GetBulkCollaboratorBatchResponse](../../models/operations/getbulkcollaboratorbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -89,9 +97,9 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch.update(batch_id='Van', bulk_batch_update=shared.BulkBatchUpdate(
+res = s.bulk_collaborator_batch.update(batch_id='string', bulk_batch_update=shared.BulkBatchUpdate(
     labels={
-        "East": 'male',
+        'key': 'string',
     },
 ))
 
@@ -111,4 +119,8 @@ if res.bulk_collaborator_batch is not None:
 ### Response
 
 **[operations.UpdateBulkCollaboratorBatchResponse](../../models/operations/updatebulkcollaboratorbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

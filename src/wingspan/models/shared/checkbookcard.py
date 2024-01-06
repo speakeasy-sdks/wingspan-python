@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import address as shared_address
+from .address import Address
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from wingspan import utils
 
-class CheckbookCardBrand(str, Enum):
+class Brand(str, Enum):
     AMERICAN_EXPRESS = 'AmericanExpress'
     VISA = 'Visa'
     MASTERCARD = 'Mastercard'
@@ -19,8 +19,8 @@ class CheckbookCardBrand(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CheckbookCard:
-    address: shared_address.Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
-    brand: CheckbookCardBrand = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand') }})
+    address: Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
+    brand: Brand = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand') }})
     card_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardId') }})
     expiration_mm: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expirationMM') }})
     expiration_yyyy: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expirationYYYY') }})

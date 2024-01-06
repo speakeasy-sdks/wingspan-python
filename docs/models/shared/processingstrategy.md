@@ -1,4 +1,4 @@
-# BulkInvoiceBatchProcessingStrategy
+# ProcessingStrategy
 
 
 ## Values

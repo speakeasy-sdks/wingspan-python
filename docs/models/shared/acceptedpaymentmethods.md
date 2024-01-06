@@ -1,4 +1,4 @@
-# PayableUpdateRequestPaymentMethods
+# AcceptedPaymentMethods
 
 
 ## Values

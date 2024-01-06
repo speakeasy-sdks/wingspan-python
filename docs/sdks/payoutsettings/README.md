@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.get(id='female')
+res = s.payout_settings.get(id='string')
 
 if res.payout_settings_response is not None:
     # handle response
@@ -36,7 +36,11 @@ if res.payout_settings_response is not None:
 ### Response
 
 **[operations.GetPayoutSettingsResponse](../../models/operations/getpayoutsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -51,7 +55,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.update(id='Van', payout_settings_update=shared.PayoutSettingsUpdate(
+res = s.payout_settings.update(id='string', payout_settings_update=shared.PayoutSettingsUpdate(
     payout_destinations=[
         shared.PayoutDestinationUpdate(),
     ],
@@ -73,4 +77,8 @@ if res.payout_settings_response is not None:
 ### Response
 
 **[operations.UpdatePayoutSettingsResponse](../../models/operations/updatepayoutsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

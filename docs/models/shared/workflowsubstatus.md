@@ -1,10 +1,9 @@
-# PayrollSettingsWorkflow
+# WorkflowSubStatus
 
 
 ## Values
 
 | Name                          | Value                         |
 | ----------------------------- | ----------------------------- |
-| `SINGLE_STAGE`                | SingleStage                   |
-| `DUAL_STAGE`                  | DualStage                     |
+| `SUBMITTED`                   | Submitted                     |
 | `LESS_THAN_NIL_GREATER_THAN_` | <nil>                         |

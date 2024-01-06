@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import remail1099response as shared_remail1099response
+from ...models.shared import remail1099response as shared_remail1099response
 from typing import Optional
 
 
@@ -11,10 +11,10 @@ from typing import Optional
 class Remail1099Response:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     remail1099_response: Optional[shared_remail1099response.Remail1099Response] = dataclasses.field(default=None)
     r"""Remail 1099 response"""
     

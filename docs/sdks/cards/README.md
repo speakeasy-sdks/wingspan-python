@@ -14,13 +14,12 @@ List cards
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.cards.list()
 
-if res.cards is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.cards is not None:
 ### Response
 
 **[operations.ListCardsResponse](../../models/operations/listcardsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

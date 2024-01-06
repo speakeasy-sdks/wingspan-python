@@ -14,13 +14,12 @@ List bulk collaborator batches
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.bulk_collaborator_batches.list()
 
-if res.bulk_collaborator_batches is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.bulk_collaborator_batches is not None:
 ### Response
 
 **[operations.ListBulkCollaboratorBatchesResponse](../../models/operations/listbulkcollaboratorbatchesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

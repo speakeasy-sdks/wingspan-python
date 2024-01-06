@@ -12,6 +12,7 @@ class AdditionalSettings:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self) -> operations.ListAdditionalSettingsResponse:
         r"""List additional settings"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -25,18 +26,21 @@ class AdditionalSettings:
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.ListAdditionalSettingsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.AdditionalData]])
-                res.additional_data = out
+                res.classes = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def update(self, id: str, additional_data_update_request: Optional[shared.AdditionalDataUpdateRequest] = None) -> operations.UpdateAdditionalSettingsResponse:
         r"""Update additional settings"""
@@ -49,7 +53,7 @@ class AdditionalSettings:
         
         url = utils.generate_url(operations.UpdateAdditionalSettingsRequest, base_url, '/payments/collaborator-settings/additional-data/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "additional_data_update_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAdditionalSettingsRequest, "additional_data_update_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -59,7 +63,7 @@ class AdditionalSettings:
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.UpdateAdditionalSettingsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -68,6 +72,8 @@ class AdditionalSettings:
                 res.additional_data = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 

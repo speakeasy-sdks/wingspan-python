@@ -19,7 +19,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.download(id='optical')
+res = s.statement.download(id='string')
 
 if res.status_code == 200:
     # handle response
@@ -36,7 +36,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DownloadStatementResponse](../../models/operations/downloadstatementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -51,9 +55,9 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.statement.get(id='female')
+res = s.statement.get(id='string')
 
-if res.bank_statements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -68,4 +72,8 @@ if res.bank_statements is not None:
 ### Response
 
 **[operations.GetStatementResponse](../../models/operations/getstatementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -12,6 +12,7 @@ class Verification:
         self.sdk_configuration = sdk_config
         
     
+    
     def send(self, id: str, card_code_request: Optional[shared.CardCodeRequest] = None) -> operations.SendVerificationResponse:
         r"""Sends a verification code"""
         request = operations.SendVerificationRequest(
@@ -23,7 +24,7 @@ class Verification:
         
         url = utils.generate_url(operations.SendVerificationRequest, base_url, '/payments/banking/card/{id}/token', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "card_code_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SendVerificationRequest, "card_code_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -33,7 +34,7 @@ class Verification:
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.SendVerificationResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -42,6 +43,8 @@ class Verification:
                 res.card_code_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 

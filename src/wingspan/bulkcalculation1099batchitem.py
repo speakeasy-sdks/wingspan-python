@@ -12,6 +12,7 @@ class BulkCalculation1099BatchItem:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, batch_id: str, bulk_calculation1099_item_create: Optional[shared.BulkCalculation1099ItemCreate] = None) -> operations.CreateBulkCalculation1099BatchItemResponse:
         r"""Create a bulk calculation1099 batch item"""
         request = operations.CreateBulkCalculation1099BatchItemRequest(
@@ -23,7 +24,7 @@ class BulkCalculation1099BatchItem:
         
         url = utils.generate_url(operations.CreateBulkCalculation1099BatchItemRequest, base_url, '/payments/bulk/calculation1099/batch/{batchId}/item', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_calculation1099_item_create", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateBulkCalculation1099BatchItemRequest, "bulk_calculation1099_item_create", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -33,7 +34,7 @@ class BulkCalculation1099BatchItem:
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.CreateBulkCalculation1099BatchItemResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -42,9 +43,12 @@ class BulkCalculation1099BatchItem:
                 res.bulk_calculation1099_item = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def get(self, batch_id: str, batch_item_id: str) -> operations.GetBulkCalculation1099BatchItemResponse:
         r"""Get a bulk calculation1099 batch item"""
@@ -64,7 +68,7 @@ class BulkCalculation1099BatchItem:
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetBulkCalculation1099BatchItemResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -73,9 +77,12 @@ class BulkCalculation1099BatchItem:
                 res.bulk_calculation1099_item = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def update(self, batch_id: str, batch_item_id: str, bulk_calculation1099_item_update: Optional[shared.BulkCalculation1099ItemUpdate] = None) -> operations.UpdateBulkCalculation1099BatchItemResponse:
         r"""Update a bulk calculation1099 batch item"""
@@ -89,7 +96,7 @@ class BulkCalculation1099BatchItem:
         
         url = utils.generate_url(operations.UpdateBulkCalculation1099BatchItemRequest, base_url, '/payments/bulk/calculation1099/batch/{batchId}/item/{batchItemId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bulk_calculation1099_item_update", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateBulkCalculation1099BatchItemRequest, "bulk_calculation1099_item_update", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -99,7 +106,7 @@ class BulkCalculation1099BatchItem:
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.UpdateBulkCalculation1099BatchItemResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -108,6 +115,8 @@ class BulkCalculation1099BatchItem:
                 res.bulk_payable_item = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 

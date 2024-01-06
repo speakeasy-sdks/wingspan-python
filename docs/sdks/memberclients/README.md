@@ -14,13 +14,12 @@ List memberClients
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.member_clients.list()
 
-if res.member_client_schemas is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.member_client_schemas is not None:
 ### Response
 
 **[operations.ListMemberClientsResponse](../../models/operations/listmemberclientsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

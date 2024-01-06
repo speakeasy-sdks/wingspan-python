@@ -1,4 +1,4 @@
-# ClientInvoiceCurrency
+# Currency
 
 
 ## Values

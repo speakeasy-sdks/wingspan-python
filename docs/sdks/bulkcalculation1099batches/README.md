@@ -14,13 +14,12 @@ List bulk calculation1099 batches
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.bulk_calculation1099_batches.list()
 
-if res.bulk_calculation1099_batches is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.bulk_calculation1099_batches is not None:
 ### Response
 
 **[operations.ListBulkCalculation1099BatchesResponse](../../models/operations/listbulkcalculation1099batchesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -18,7 +18,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.form_w9.download(id='optical')
+res = s.form_w9.download(id='string')
 
 if res.download_w9_response is not None:
     # handle response
@@ -35,4 +35,8 @@ if res.download_w9_response is not None:
 ### Response
 
 **[operations.DownloadFormW9Response](../../models/operations/downloadformw9response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

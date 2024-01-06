@@ -41,7 +41,11 @@ if res.eligibility_requirement is not None:
 ### Response
 
 **[operations.CreateEligibilityRequirementResponse](../../models/operations/createeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -56,9 +60,9 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.delete(id='program')
+res = s.eligibility_requirement.delete(id='string')
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -73,7 +77,11 @@ if res.eligibility_requirements is not None:
 ### Response
 
 **[operations.DeleteEligibilityRequirementResponse](../../models/operations/deleteeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -88,9 +96,9 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.get(id='female')
+res = s.eligibility_requirement.get(id='string')
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -105,7 +113,11 @@ if res.eligibility_requirements is not None:
 ### Response
 
 **[operations.GetEligibilityRequirementResponse](../../models/operations/geteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -120,11 +132,11 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.update(id='Van', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
+res = s.eligibility_requirement.update(id='string', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
     requirement_type=shared.EligibilityRequirementUpdateRequestRequirementType.SIGNATURE,
 ))
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -140,4 +152,8 @@ if res.eligibility_requirements is not None:
 ### Response
 
 **[operations.UpdateEligibilityRequirementResponse](../../models/operations/updateeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -1,4 +1,4 @@
-# EligibilityRequirementRequirementType
+# RequirementType
 
 
 ## Values

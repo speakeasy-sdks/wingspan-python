@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bankstatement as shared_bankstatement
+from ...models.shared import bankstatement as shared_bankstatement
 from typing import List, Optional
 
 
@@ -11,11 +11,11 @@ from typing import List, Optional
 class ListBankStatementsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    bank_statements: Optional[List[shared_bankstatement.BankStatement]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_bankstatement.BankStatement]] = dataclasses.field(default=None)
     r"""A list of bank statements"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

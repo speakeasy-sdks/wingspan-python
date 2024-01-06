@@ -22,10 +22,10 @@ s = wingspan.Wingspan()
 
 req = shared.DeductionCreateRequest(
     amount=4865.89,
-    client_id='bluetooth',
-    currency=shared.DeductionCreateRequestCurrency.CAD,
-    member_id='Money',
-    name='blue',
+    client_id='string',
+    currency=shared.DeductionCreateRequestCurrency.USD,
+    member_id='string',
+    name='string',
     type=shared.TypeDeductionCreateRequest.POST_PAYMENT,
 )
 
@@ -46,7 +46,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.CreateCollaboratorDeductionResponse](../../models/operations/createcollaboratordeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -61,7 +65,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.delete(id='program')
+res = s.collaborator_deduction.delete(id='string')
 
 if res.deduction_response is not None:
     # handle response
@@ -78,7 +82,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.DeleteCollaboratorDeductionResponse](../../models/operations/deletecollaboratordeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -93,7 +101,7 @@ from wingspan.models import operations
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.get(id='female')
+res = s.collaborator_deduction.get(id='string')
 
 if res.deduction_response is not None:
     # handle response
@@ -110,7 +118,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.GetCollaboratorDeductionResponse](../../models/operations/getcollaboratordeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -125,7 +137,7 @@ from wingspan.models import operations, shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.update(id='Van', deduction_update_request=shared.DeductionUpdateRequest())
+res = s.collaborator_deduction.update(id='string', deduction_update_request=shared.DeductionUpdateRequest())
 
 if res.deduction_response is not None:
     # handle response
@@ -143,4 +155,8 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.UpdateCollaboratorDeductionResponse](../../models/operations/updatecollaboratordeductionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

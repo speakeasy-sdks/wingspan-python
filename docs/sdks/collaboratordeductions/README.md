@@ -14,13 +14,12 @@ List deductions
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.collaborator_deductions.list()
 
-if res.deduction_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -29,4 +28,8 @@ if res.deduction_responses is not None:
 ### Response
 
 **[operations.ListCollaboratorDeductionsResponse](../../models/operations/listcollaboratordeductionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
