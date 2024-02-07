@@ -21,16 +21,16 @@ s = wingspan.Wingspan()
 
 
 res = s.payout_debit_card.create(member_id='string', checkbook_card_create=shared.CheckbookCardCreate(
+    card_number='string',
+    exp_mm='string',
+    exp_yyyy='string',
+    name='string',
     address=shared.Address(
         address_line1='string',
         city='Jenafurt',
         postal_code='42170-9739',
         state='string',
     ),
-    card_number='string',
-    exp_mm='string',
-    exp_yyyy='string',
-    name='string',
 ))
 
 if res.checkbook_card is not None:

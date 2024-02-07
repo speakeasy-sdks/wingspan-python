@@ -4,15 +4,15 @@ management:
   docChecksum: 213e6692a623ef7a4c2e2fbeb0e17e0f
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.248.1
-  releaseVersion: 4.0.0
-  configChecksum: 957d0a93491826344396c1440cced227
+  generationVersion: 2.250.12
+  releaseVersion: 5.0.0
+  configChecksum: 682ffd12afdc9c4fb17eceb290afd87e
   repoURL: https://github.com/speakeasy-sdks/wingspan-python.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/wingspan-python.git
 features:
   python:
-    core: 4.4.4
+    core: 4.4.5
     flattening: 2.81.1
     globalServerURLs: 2.82.1
     groups: 2.81.2

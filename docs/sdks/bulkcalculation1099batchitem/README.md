@@ -22,10 +22,10 @@ s = wingspan.Wingspan()
 
 res = s.bulk_calculation1099_batch_item.create(batch_id='string', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
     client_id='string',
+    year=4865.89,
     labels={
         'key': 'string',
     },
-    year=4865.89,
 ))
 
 if res.bulk_calculation1099_item is not None:

@@ -19,10 +19,10 @@ class DownloadFormW9Request:
 class DownloadFormW9Response:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     download_w9_response: Optional[shared_downloadw9response.DownloadW9Response] = dataclasses.field(default=None)
     r"""A file stream for a W9 PDF download."""
     

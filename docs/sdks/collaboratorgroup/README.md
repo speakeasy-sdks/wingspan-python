@@ -20,14 +20,14 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
+    description='Multi-tiered human-resource model',
+    name='string',
     collaborator_settings={
         'key': 'string',
     },
-    description='Multi-tiered human-resource model',
     eligibility_requirements=[
         shared.CollaboratorGroupRequirement(),
     ],
-    name='string',
 )
 
 res = s.collaborator_group.create(req)

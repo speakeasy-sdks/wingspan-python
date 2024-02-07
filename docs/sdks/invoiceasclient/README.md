@@ -19,10 +19,6 @@ s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceCreateRequest(
     client_email='string',
-    client_email_cc=[
-        'string',
-    ],
-    credit_fee_handling=shared.FeeHandlingConfig(),
     due_date='string',
     line_items=[
         shared.InvoiceLineItemsCreateRequest(
@@ -36,6 +32,10 @@ req = shared.ClientInvoiceCreateRequest(
         ),
     ],
     member_id='string',
+    client_email_cc=[
+        'string',
+    ],
+    credit_fee_handling=shared.FeeHandlingConfig(),
 )
 
 res = s.invoice_as_client.create(req)

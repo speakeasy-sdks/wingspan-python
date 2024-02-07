@@ -19,10 +19,10 @@ class GetInstitutionRequest:
 class GetInstitutionResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     institution_response: Optional[shared_institutionresponse.InstitutionResponse] = dataclasses.field(default=None)
     r"""Institution Response"""
     

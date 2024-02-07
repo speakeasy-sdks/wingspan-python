@@ -21,6 +21,20 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InvoiceCreateRequest(
+    credit_fee_handling=shared.FeeHandlingConfig(),
+    due_date='string',
+    line_items=[
+        shared.InvoiceLineItemsCreateRequest(
+            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
+            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+            ),
+            labels={
+                'key': 'string',
+            },
+        ),
+    ],
+    member_client_id='string',
     accepted_payment_methods=[
         shared.InvoiceCreateRequestAcceptedPaymentMethods.ACH,
     ],
@@ -38,8 +52,6 @@ req = shared.InvoiceCreateRequest(
             member_client_id='string',
         ),
     ],
-    credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='string',
     integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
         quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
     ),
@@ -49,19 +61,7 @@ req = shared.InvoiceCreateRequest(
     late_fee_handling=shared.LateFeeConfigUpdate(
         frequency=shared.FrequencyUpdate(),
     ),
-    line_items=[
-        shared.InvoiceLineItemsCreateRequest(
-            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
-            ),
-            labels={
-                'key': 'string',
-            },
-        ),
-    ],
     member=shared.Member(),
-    member_client_id='string',
     metadata=shared.InvoiceMetadata(),
     notification_preferences=shared.InvoiceNotificationPreferences(
         send_reminders=False,

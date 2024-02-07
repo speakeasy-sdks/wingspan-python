@@ -21,10 +21,19 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.InvoiceTemplateCreateRequest(
-    frequency=shared.Frequency(
-        start_date='string',
-    ),
     invoice_data=shared.InvoiceDataCreateRequest(
+        line_items=[
+            shared.InvoiceLineItemsCreateRequest(
+                discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
+                integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
+                    quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
+                ),
+                labels={
+                    'key': 'string',
+                },
+            ),
+        ],
+        member_client_id='string',
         accepted_payment_methods=[
             shared.InvoiceDataCreateRequestAcceptedPaymentMethods.ACH,
         ],
@@ -50,21 +59,13 @@ req = shared.InvoiceTemplateCreateRequest(
                 start_date='string',
             ),
         ),
-        line_items=[
-            shared.InvoiceLineItemsCreateRequest(
-                discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
-                integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                    quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
-                ),
-                labels={
-                    'key': 'string',
-                },
-            ),
-        ],
-        member_client_id='string',
         notification_preferences=shared.InvoiceNotificationPreferences(
             send_reminders=False,
         ),
+    ),
+    status=shared.StatusInvoiceTemplateCreateRequest.ACTIVE,
+    frequency=shared.Frequency(
+        start_date='string',
     ),
     labels={
         'key': 'string',
@@ -72,10 +73,9 @@ req = shared.InvoiceTemplateCreateRequest(
     schedule_dates=[
         shared.ScheduleDate(
             date_='string',
-            status=shared.StatusScheduleDate.PENDING,
+            status=shared.StatusScheduleDate.MODIFIED,
         ),
     ],
-    status=shared.StatusInvoiceTemplateCreateRequest.CANCELLED,
 )
 
 res = s.invoice_template.create(req)

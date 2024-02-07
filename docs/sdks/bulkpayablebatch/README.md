@@ -21,10 +21,10 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkPayableBatchCreate(
+    processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.MERGE,
     labels={
         'key': 'string',
     },
-    processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.MERGE,
 )
 
 res = s.bulk_payable_batch.create(req)

@@ -21,18 +21,18 @@ s = wingspan.Wingspan()
 
 
 res = s.bulk_invoice_batch_item.create(batch_id='string', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
-    accepted_payment_methods=[
-        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.ACH,
-    ],
-    amount=4893.82,
+    amount=4865.89,
     bulk_invoice_batch_id='string',
-    credit_fee_handling=shared.FeeHandlingConfig(),
     due_date='string',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.PAID,
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.APPROVED,
+    line_item_description='string',
+    accepted_payment_methods=[
+        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.MANUAL,
+    ],
+    credit_fee_handling=shared.FeeHandlingConfig(),
     labels={
         'key': 'string',
     },
-    line_item_description='string',
 ))
 
 if res.bulk_invoice_item is not None:

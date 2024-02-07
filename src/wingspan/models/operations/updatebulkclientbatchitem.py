@@ -23,10 +23,10 @@ class UpdateBulkClientBatchItemRequest:
 class UpdateBulkClientBatchItemResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     bulk_client_item: Optional[shared_bulkclientitem.BulkClientItem] = dataclasses.field(default=None)
     r"""An item that will be converted into a client"""
     

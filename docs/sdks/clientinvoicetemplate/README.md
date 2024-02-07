@@ -21,14 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceTemplateCreateRequest(
     client_email='string',
-    client_email_cc=[
-        'string',
-    ],
-    frequency=shared.Frequency(
-        start_date='string',
-    ),
     invoice_data=shared.ClientInvoiceDataCreateRequest(
-        credit_fee_handling=shared.FeeHandlingConfig(),
         line_items=[
             shared.InvoiceLineItemsCreateRequest(
                 discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
@@ -40,15 +33,22 @@ req = shared.ClientInvoiceTemplateCreateRequest(
                 },
             ),
         ],
+        credit_fee_handling=shared.FeeHandlingConfig(),
     ),
     member_id='string',
+    status=shared.StatusClientInvoiceTemplateCreateRequest.DRAFT,
+    client_email_cc=[
+        'string',
+    ],
+    frequency=shared.Frequency(
+        start_date='string',
+    ),
     schedule_dates=[
         shared.ScheduleDate(
             date_='string',
             status=shared.StatusScheduleDate.COMPLETED,
         ),
     ],
-    status=shared.StatusClientInvoiceTemplateCreateRequest.DRAFT,
 )
 
 res = s.client_invoice_template.create(req)

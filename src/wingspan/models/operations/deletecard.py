@@ -19,10 +19,10 @@ class DeleteCardRequest:
 class DeleteCardResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     card: Optional[shared_card.Card] = dataclasses.field(default=None)
     r"""A card summary"""
     

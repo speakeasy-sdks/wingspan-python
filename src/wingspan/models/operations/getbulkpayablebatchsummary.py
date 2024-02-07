@@ -19,10 +19,10 @@ class GetBulkPayableBatchSummaryRequest:
 class GetBulkPayableBatchSummaryResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     bulk_payable_import_summary: Optional[shared_bulkpayableimportsummary.BulkPayableImportSummary] = dataclasses.field(default=None)
     r"""Summary of the bulk payable import"""
     

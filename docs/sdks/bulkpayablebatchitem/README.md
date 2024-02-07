@@ -24,11 +24,11 @@ res = s.bulk_payable_batch_item.create(batch_id='string', bulk_payable_item_crea
     amount=4865.89,
     bulk_payable_batch_id='string',
     due_date='string',
+    line_item_description='string',
+    payable_status=shared.PayableStatusBulkPayableItemCreate.APPROVED,
     labels={
         'key': 'string',
     },
-    line_item_description='string',
-    payable_status=shared.PayableStatusBulkPayableItemCreate.APPROVED,
 ))
 
 if res.bulk_payable_item is not None:

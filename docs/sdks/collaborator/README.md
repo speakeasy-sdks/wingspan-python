@@ -21,8 +21,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CollaboratorCreateRequest(
-    client_data=shared.ClientData(),
     client_id='string',
+    client_data=shared.ClientData(),
     form_w9_data=shared.MemberClientFormW9Info(
         address_line1='string',
         city='Jenafurt',
