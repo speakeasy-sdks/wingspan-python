@@ -15,7 +15,7 @@ Create a bulk calculation1099 batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
@@ -23,9 +23,6 @@ s = wingspan.Wingspan()
 res = s.bulk_calculation1099_batch_item.create(batch_id='string', bulk_calculation1099_item_create=shared.BulkCalculation1099ItemCreate(
     client_id='string',
     year=4865.89,
-    labels={
-        'key': 'string',
-    },
 ))
 
 if res.bulk_calculation1099_item is not None:
@@ -58,7 +55,6 @@ Get a bulk calculation1099 batch item
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -95,16 +91,12 @@ Update a bulk calculation1099 batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch_item.update(batch_id='string', batch_item_id='string', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate(
-    labels={
-        'key': 'string',
-    },
-))
+res = s.bulk_calculation1099_batch_item.update(batch_id='string', batch_item_id='string', bulk_calculation1099_item_update=shared.BulkCalculation1099ItemUpdate())
 
 if res.bulk_payable_item is not None:
     # handle response

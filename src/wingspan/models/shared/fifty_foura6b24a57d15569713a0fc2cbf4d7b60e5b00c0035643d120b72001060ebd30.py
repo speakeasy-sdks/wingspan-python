@@ -11,7 +11,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class FiftyFoura6b24a57d15569713a0fc2cbf4d7b60e5b00c0035643d120b72001060ebd30:
-    track: Optional[Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('track') }})
-    unit: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    track: Optional[Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('track'), 'exclude': lambda f: f is FiftyFoura6b24a57d15569713a0fc2cbf4d7b60e5b00c0035643d120b72001060ebd30.UNSET }})
+    unit: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit'), 'exclude': lambda f: f is FiftyFoura6b24a57d15569713a0fc2cbf4d7b60e5b00c0035643d120b72001060ebd30.UNSET }})
     
 

@@ -11,7 +11,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CardCreateRequest:
-    request_physical_card: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requestPhysicalCard') }})
-    shipping_address: Optional[Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shippingAddress') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    request_physical_card: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requestPhysicalCard'), 'exclude': lambda f: f is CardCreateRequest.UNSET }})
+    shipping_address: Optional[Address] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shippingAddress'), 'exclude': lambda f: f is CardCreateRequest.UNSET }})
     
 

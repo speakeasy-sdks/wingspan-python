@@ -463,6 +463,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import wingspan
+from wingspan.models import errors
 
 s = wingspan.Wingspan()
 
@@ -471,7 +472,7 @@ res = None
 try:
     res = s.service_status.get()
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.ping is not None:

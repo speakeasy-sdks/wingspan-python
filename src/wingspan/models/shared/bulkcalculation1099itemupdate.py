@@ -16,9 +16,10 @@ class CalculationTypeBulkCalculation1099ItemUpdate(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class BulkCalculation1099ItemUpdate:
-    calculation_type: Optional[CalculationTypeBulkCalculation1099ItemUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationType') }})
-    client_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
-    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
-    year: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('year') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    calculation_type: Optional[CalculationTypeBulkCalculation1099ItemUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationType'), 'exclude': lambda f: f is BulkCalculation1099ItemUpdate.UNSET }})
+    client_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId'), 'exclude': lambda f: f is BulkCalculation1099ItemUpdate.UNSET }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is BulkCalculation1099ItemUpdate.UNSET }})
+    year: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('year'), 'exclude': lambda f: f is BulkCalculation1099ItemUpdate.UNSET }})
     
 

@@ -4,7 +4,7 @@ management:
   docChecksum: 213e6692a623ef7a4c2e2fbeb0e17e0f
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.250.12
+  generationVersion: 2.253.0
   releaseVersion: 5.0.0
   configChecksum: 682ffd12afdc9c4fb17eceb290afd87e
   repoURL: https://github.com/speakeasy-sdks/wingspan-python.git

@@ -14,7 +14,6 @@ Get client-invoice by invoiceId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -50,14 +49,12 @@ Update client-invoice by invoiceId
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice.update(id='string', client_invoice_update_request=shared.ClientInvoiceUpdateRequest(
-    credit_fee_handling=shared.FeeHandlingConfig(),
-))
+res = s.client_invoice.update(id='string', client_invoice_update_request=shared.ClientInvoiceUpdateRequest())
 
 if res.client_invoice is not None:
     # handle response

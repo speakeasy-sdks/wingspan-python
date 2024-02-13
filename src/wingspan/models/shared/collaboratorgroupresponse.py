@@ -11,12 +11,13 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CollaboratorGroupResponse:
+    UNSET='__SPEAKEASY_UNSET__'
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     collaborator_group_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId') }})
     default_group: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultGroup') }})
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    collaborator_settings: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings') }})
-    eligibility_requirements: Optional[List[EligibilityRequirement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
+    collaborator_settings: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings'), 'exclude': lambda f: f is CollaboratorGroupResponse.UNSET }})
+    eligibility_requirements: Optional[List[EligibilityRequirement]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements'), 'exclude': lambda f: f is CollaboratorGroupResponse.UNSET }})
     
 

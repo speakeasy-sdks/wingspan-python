@@ -17,10 +17,11 @@ class StatusScheduleDate(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ScheduleDate:
+    UNSET='__SPEAKEASY_UNSET__'
     date_: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('date') }})
     status: StatusScheduleDate = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-    cut_off_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cutOffDate') }})
-    invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceId') }})
-    invoice_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceTemplateId') }})
+    cut_off_date: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cutOffDate'), 'exclude': lambda f: f is ScheduleDate.UNSET }})
+    invoice_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceId'), 'exclude': lambda f: f is ScheduleDate.UNSET }})
+    invoice_template_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceTemplateId'), 'exclude': lambda f: f is ScheduleDate.UNSET }})
     
 

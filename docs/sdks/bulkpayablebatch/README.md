@@ -22,9 +22,6 @@ s = wingspan.Wingspan()
 
 req = shared.BulkPayableBatchCreate(
     processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.MERGE,
-    labels={
-        'key': 'string',
-    },
 )
 
 res = s.bulk_payable_batch.create(req)
@@ -58,7 +55,6 @@ Delete a bulk payable batch
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -94,7 +90,6 @@ Get a bulk payable batch
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -130,16 +125,12 @@ Update a bulk payable batch
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.update(batch_id='string', bulk_payable_batch_update=shared.BulkPayableBatchUpdate(
-    labels={
-        'key': 'string',
-    },
-))
+res = s.bulk_payable_batch.update(batch_id='string', bulk_payable_batch_update=shared.BulkPayableBatchUpdate())
 
 if res.bulk_payable_batch is not None:
     # handle response

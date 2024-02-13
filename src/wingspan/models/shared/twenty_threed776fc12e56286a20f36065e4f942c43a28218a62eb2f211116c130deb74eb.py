@@ -12,9 +12,10 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb:
-    address: Optional[Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
-    company: Optional[Company] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company') }})
-    logo_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logoUrl') }})
-    ssn_last_four: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssnLastFour') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    address: Optional[Address] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb.UNSET }})
+    company: Optional[Company] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb.UNSET }})
+    logo_url: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logoUrl'), 'exclude': lambda f: f is TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb.UNSET }})
+    ssn_last_four: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssnLastFour'), 'exclude': lambda f: f is TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb.UNSET }})
     
 

@@ -21,8 +21,9 @@ class ShareTaxDocumentMemberData(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class MemberData:
-    auto_pay_requirement: Optional[AutoPayRequirementMemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPayRequirement') }})
-    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
-    share_tax_document: Optional[ShareTaxDocumentMemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shareTaxDocument') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    auto_pay_requirement: Optional[AutoPayRequirementMemberData] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPayRequirement'), 'exclude': lambda f: f is MemberData.UNSET }})
+    external_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is MemberData.UNSET }})
+    share_tax_document: Optional[ShareTaxDocumentMemberData] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shareTaxDocument'), 'exclude': lambda f: f is MemberData.UNSET }})
     
 

@@ -13,7 +13,6 @@ Get a single V2 Collaborator by memberId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

@@ -15,24 +15,12 @@ Create a bulk collaborator batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.create(batch_id='string', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
-    form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='string',
-        city='Jenafurt',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.CORPORATION_C,
-        country='Iraq',
-        postal_code='17097',
-        state='string',
-    ),
-    labels={
-        'key': 'string',
-    },
-))
+res = s.bulk_collaborator_batch_item.create(batch_id='string', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate())
 
 if res.bulk_collaborator_item is not None:
     # handle response
@@ -64,7 +52,6 @@ Get a bulk collaborator batch item
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -101,24 +88,12 @@ Update a bulk collaborator batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.update(batch_id='string', batch_item_id='string', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
-    form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='string',
-        city='Ann Arbor',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.LLC_CORPORATION_S,
-        country='American Samoa',
-        postal_code='79266',
-        state='string',
-    ),
-    labels={
-        'key': 'string',
-    },
-))
+res = s.bulk_collaborator_batch_item.update(batch_id='string', batch_item_id='string', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate())
 
 if res.bulk_collaborator_item is not None:
     # handle response

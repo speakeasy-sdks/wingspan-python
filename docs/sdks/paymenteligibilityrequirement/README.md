@@ -56,7 +56,6 @@ Delete Payment Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -92,7 +91,6 @@ Get Payment Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -128,14 +126,12 @@ Update Payment Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.update(id='string', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest(
-    value=shared.Value(),
-))
+res = s.payment_eligibility_requirement.update(id='string', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest())
 
 if res.payment_eligibility is not None:
     # handle response

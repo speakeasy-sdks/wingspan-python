@@ -11,7 +11,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ProcessingFees:
-    credit_card_fee: Optional[Fee] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditCardFee') }})
-    instant_payout_fee: Optional[Fee] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instantPayoutFee') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    credit_card_fee: Optional[Fee] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditCardFee'), 'exclude': lambda f: f is ProcessingFees.UNSET }})
+    instant_payout_fee: Optional[Fee] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instantPayoutFee'), 'exclude': lambda f: f is ProcessingFees.UNSET }})
     
 

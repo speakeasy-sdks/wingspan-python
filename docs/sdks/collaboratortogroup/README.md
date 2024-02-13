@@ -14,7 +14,6 @@ Add collaborator to collaborators group
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -51,7 +50,6 @@ Remove collaborator from collaborators group
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

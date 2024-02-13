@@ -32,6 +32,7 @@ class TaxStatusCollaboratorV2(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CollaboratorV2:
+    UNSET='__SPEAKEASY_UNSET__'
     ach_credit_account: MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('achCreditAccount') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     collaborations: List[Collaboration] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaborations') }})
@@ -49,8 +50,8 @@ class CollaboratorV2:
     tax_status: TaxStatusCollaboratorV2 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxStatus') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    client_data: Optional[ClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData') }})
-    member_data: Optional[MemberData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData') }})
-    member_events: Optional[CollaboratorEvents] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberEvents') }})
+    client_data: Optional[ClientData] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData'), 'exclude': lambda f: f is CollaboratorV2.UNSET }})
+    member_data: Optional[MemberData] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberData'), 'exclude': lambda f: f is CollaboratorV2.UNSET }})
+    member_events: Optional[CollaboratorEvents] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberEvents'), 'exclude': lambda f: f is CollaboratorV2.UNSET }})
     
 

@@ -27,6 +27,7 @@ class TypeDeductionResponse(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DeductionResponse:
+    UNSET='__SPEAKEASY_UNSET__'
     amount: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     application: List[DeductionApplication] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('application') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
@@ -42,8 +43,8 @@ class DeductionResponse:
     type: TypeDeductionResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     user_roles: UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    deduction_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionTemplateId') }})
-    disbursement: Optional[PostPaymentDeductionDisbursement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursement') }})
-    source_invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId') }})
+    deduction_template_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionTemplateId'), 'exclude': lambda f: f is DeductionResponse.UNSET }})
+    disbursement: Optional[PostPaymentDeductionDisbursement] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursement'), 'exclude': lambda f: f is DeductionResponse.UNSET }})
+    source_invoice_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId'), 'exclude': lambda f: f is DeductionResponse.UNSET }})
     
 

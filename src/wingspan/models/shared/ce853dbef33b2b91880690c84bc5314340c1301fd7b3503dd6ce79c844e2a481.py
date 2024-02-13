@@ -29,13 +29,14 @@ class CompanyStructurece853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481:
-    address: Optional[Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
-    company_structure: Optional[CompanyStructurece853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('companyStructure') }})
-    ein: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ein') }})
-    first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstName') }})
-    last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastName') }})
-    legal_business_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('legalBusinessName') }})
-    ssn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssn') }})
-    total_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalAmount') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    address: Optional[Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.UNSET }})
+    company_structure: Optional[CompanyStructurece853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('companyStructure'), 'exclude': lambda f: f is Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.UNSET }})
+    ein: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ein'), 'exclude': lambda f: f is Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.UNSET }})
+    first_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstName'), 'exclude': lambda f: f is Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.UNSET }})
+    last_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastName'), 'exclude': lambda f: f is Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.UNSET }})
+    legal_business_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('legalBusinessName'), 'exclude': lambda f: f is Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.UNSET }})
+    ssn: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssn'), 'exclude': lambda f: f is Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.UNSET }})
+    total_amount: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalAmount'), 'exclude': lambda f: f is Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481.UNSET }})
     
 

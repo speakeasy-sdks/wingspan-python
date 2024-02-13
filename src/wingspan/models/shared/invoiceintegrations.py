@@ -11,6 +11,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class InvoiceIntegrations:
-    quickbooks: Optional[Sixa889960fef25bc170d22a40a86ac4d6889f536685dd9369ec52d3df36732601] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    quickbooks: Optional[Sixa889960fef25bc170d22a40a86ac4d6889f536685dd9369ec52d3df36732601] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks'), 'exclude': lambda f: f is InvoiceIntegrations.UNSET }})
     
 

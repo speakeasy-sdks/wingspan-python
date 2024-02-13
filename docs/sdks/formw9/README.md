@@ -13,7 +13,6 @@ Downloads a form W9 PDF for a collaborator
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

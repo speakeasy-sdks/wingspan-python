@@ -22,7 +22,8 @@ class StatusClientInvoiceUpdateRequest(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientInvoiceUpdateRequest:
-    credit_fee_handling: Optional[FeeHandlingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling') }})
-    status: Optional[StatusClientInvoiceUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    credit_fee_handling: Optional[FeeHandlingConfig] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creditFeeHandling'), 'exclude': lambda f: f is ClientInvoiceUpdateRequest.UNSET }})
+    status: Optional[StatusClientInvoiceUpdateRequest] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is ClientInvoiceUpdateRequest.UNSET }})
     
 

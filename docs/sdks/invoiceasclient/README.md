@@ -21,21 +21,9 @@ req = shared.ClientInvoiceCreateRequest(
     client_email='string',
     due_date='string',
     line_items=[
-        shared.InvoiceLineItemsCreateRequest(
-            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
-            ),
-            labels={
-                'key': 'string',
-            },
-        ),
+        shared.InvoiceLineItemsCreateRequest(),
     ],
     member_id='string',
-    client_email_cc=[
-        'string',
-    ],
-    credit_fee_handling=shared.FeeHandlingConfig(),
 )
 
 res = s.invoice_as_client.create(req)

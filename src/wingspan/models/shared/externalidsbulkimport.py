@@ -10,6 +10,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ExternalIdsBulkImport:
-    bulk_item_merge_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkItemMergeKey') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    bulk_item_merge_key: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkItemMergeKey'), 'exclude': lambda f: f is ExternalIdsBulkImport.UNSET }})
     
 

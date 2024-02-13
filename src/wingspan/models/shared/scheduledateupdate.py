@@ -18,8 +18,9 @@ class StatusScheduleDateUpdate(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ScheduleDateUpdate:
-    date_: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('date') }})
-    invoice_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceTemplateId') }})
-    status: Optional[StatusScheduleDateUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    date_: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('date'), 'exclude': lambda f: f is ScheduleDateUpdate.UNSET }})
+    invoice_template_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceTemplateId'), 'exclude': lambda f: f is ScheduleDateUpdate.UNSET }})
+    status: Optional[StatusScheduleDateUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is ScheduleDateUpdate.UNSET }})
     
 

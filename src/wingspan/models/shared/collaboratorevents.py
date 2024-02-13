@@ -10,9 +10,10 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CollaboratorEvents:
+    UNSET='__SPEAKEASY_UNSET__'
     know_your_customer_verified_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('knowYourCustomerVerifiedAt') }})
     payout_method_first_added_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutMethodFirstAddedAt') }})
     tax_documentation_verified_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxDocumentationVerifiedAt') }})
-    signed_up_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('signedUpAt') }})
+    signed_up_at: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('signedUpAt'), 'exclude': lambda f: f is CollaboratorEvents.UNSET }})
     
 

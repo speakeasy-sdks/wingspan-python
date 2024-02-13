@@ -15,7 +15,7 @@ Create a payout debit card
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
@@ -25,12 +25,6 @@ res = s.payout_debit_card.create(member_id='string', checkbook_card_create=share
     exp_mm='string',
     exp_yyyy='string',
     name='string',
-    address=shared.Address(
-        address_line1='string',
-        city='Jenafurt',
-        postal_code='42170-9739',
-        state='string',
-    ),
 ))
 
 if res.checkbook_card is not None:
@@ -63,7 +57,6 @@ Delete the payout debit card
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -100,7 +93,6 @@ Get the payout debit card
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

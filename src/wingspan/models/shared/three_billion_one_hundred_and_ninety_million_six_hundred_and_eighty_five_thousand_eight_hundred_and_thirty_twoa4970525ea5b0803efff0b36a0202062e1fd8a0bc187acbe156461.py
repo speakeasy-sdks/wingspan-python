@@ -11,6 +11,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461:
-    quickbooks: Optional[Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    quickbooks: Optional[Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks'), 'exclude': lambda f: f is ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461.UNSET }})
     
 

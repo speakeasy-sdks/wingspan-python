@@ -22,12 +22,6 @@ s = wingspan.Wingspan()
 req = shared.CollaboratorGroupCreateRequest(
     description='Multi-tiered human-resource model',
     name='string',
-    collaborator_settings={
-        'key': 'string',
-    },
-    eligibility_requirements=[
-        shared.CollaboratorGroupRequirement(),
-    ],
 )
 
 res = s.collaborator_group.create(req)
@@ -61,7 +55,6 @@ Get Collaborator Group
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -97,19 +90,12 @@ Update Collaborator Group
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.update(id='string', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest(
-    collaborator_settings={
-        'key': 'string',
-    },
-    eligibility_requirements=[
-        shared.CollaboratorGroupRequirement(),
-    ],
-))
+res = s.collaborator_group.update(id='string', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest())
 
 if res.collaborator_group_response is not None:
     # handle response

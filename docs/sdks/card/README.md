@@ -20,14 +20,7 @@ from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
-req = shared.CardCreateRequest(
-    shipping_address=shared.Address(
-        address_line1='string',
-        city='Jenafurt',
-        postal_code='42170-9739',
-        state='string',
-    ),
-)
+req = shared.CardCreateRequest()
 
 res = s.card.create(req)
 
@@ -60,7 +53,6 @@ Delete a card by cardId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -96,7 +88,6 @@ Get card by cardId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -132,7 +123,7 @@ Update card by cardId
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 

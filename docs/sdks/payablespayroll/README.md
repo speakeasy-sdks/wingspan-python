@@ -13,7 +13,6 @@ Get a list of payables connected to payroll run
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

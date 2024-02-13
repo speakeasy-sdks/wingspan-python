@@ -13,7 +13,6 @@ Get Institution By Routing Number
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

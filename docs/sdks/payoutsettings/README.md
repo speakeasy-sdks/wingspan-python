@@ -14,7 +14,6 @@ Get the payout settings
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -50,16 +49,12 @@ Update the payout settings
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.update(id='string', payout_settings_update=shared.PayoutSettingsUpdate(
-    payout_destinations=[
-        shared.PayoutDestinationUpdate(),
-    ],
-))
+res = s.payout_settings.update(id='string', payout_settings_update=shared.PayoutSettingsUpdate())
 
 if res.payout_settings_response is not None:
     # handle response

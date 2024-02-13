@@ -10,10 +10,11 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ExternalIdsQuickbooksData:
+    UNSET='__SPEAKEASY_UNSET__'
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     sync_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncToken') }})
-    do_create: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doCreate') }})
-    do_delete: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doDelete') }})
-    do_update: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doUpdate') }})
+    do_create: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doCreate'), 'exclude': lambda f: f is ExternalIdsQuickbooksData.UNSET }})
+    do_delete: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doDelete'), 'exclude': lambda f: f is ExternalIdsQuickbooksData.UNSET }})
+    do_update: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('doUpdate'), 'exclude': lambda f: f is ExternalIdsQuickbooksData.UNSET }})
     
 

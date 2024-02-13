@@ -11,9 +11,10 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915:
-    form1099_filings: Optional[Ba1d4c38921e9c7af45d17223c51562cb69a815c6bf72f6cf959d800ee59afdb] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Filings') }})
-    form_w9_document: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Document') }})
-    previous_temporary_track_user_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('previousTemporaryTrackUserIds') }})
-    temporary_track_user_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('temporaryTrackUserId') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    form1099_filings: Optional[Ba1d4c38921e9c7af45d17223c51562cb69a815c6bf72f6cf959d800ee59afdb] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Filings'), 'exclude': lambda f: f is Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915.UNSET }})
+    form_w9_document: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Document'), 'exclude': lambda f: f is Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915.UNSET }})
+    previous_temporary_track_user_ids: Optional[List[str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('previousTemporaryTrackUserIds'), 'exclude': lambda f: f is Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915.UNSET }})
+    temporary_track_user_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('temporaryTrackUserId'), 'exclude': lambda f: f is Twelved9f9a45dd678e21e49e960084c87d9e541aadd0c26b6e676a00139e89b6915.UNSET }})
     
 

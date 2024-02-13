@@ -11,11 +11,12 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CheckbookCardCreate:
+    UNSET='__SPEAKEASY_UNSET__'
     card_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardNumber') }})
     exp_mm: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expMM') }})
     exp_yyyy: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expYYYY') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    address: Optional[Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
-    cvv: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cvv') }})
+    address: Optional[Address] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is CheckbookCardCreate.UNSET }})
+    cvv: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cvv'), 'exclude': lambda f: f is CheckbookCardCreate.UNSET }})
     
 

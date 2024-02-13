@@ -19,11 +19,7 @@ from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
-req = shared.BulkBatchCreate(
-    labels={
-        'key': 'string',
-    },
-)
+req = shared.BulkBatchCreate()
 
 res = s.bulk_collaborator_batch.create(req)
 
@@ -56,7 +52,6 @@ Get a bulk collaborator batch
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -92,16 +87,12 @@ Update a bulk collaborator batch
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch.update(batch_id='string', bulk_batch_update=shared.BulkBatchUpdate(
-    labels={
-        'key': 'string',
-    },
-))
+res = s.bulk_collaborator_batch.update(batch_id='string', bulk_batch_update=shared.BulkBatchUpdate())
 
 if res.bulk_collaborator_batch is not None:
     # handle response

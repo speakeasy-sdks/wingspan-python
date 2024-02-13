@@ -21,16 +21,17 @@ class StatusInvoiceTemplateUpdateRequest(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class InvoiceTemplateUpdateRequest:
-    account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId') }})
-    auto_payment_required: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPaymentRequired') }})
-    due_in_days: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueInDays') }})
-    frequency: Optional[FrequencyUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency') }})
-    invoice_data: Optional[InvoiceUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceData') }})
-    is_scheduling_only: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSchedulingOnly') }})
-    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
-    payment_method_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethodId') }})
-    schedule_dates: Optional[List[ScheduleDateUpdate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates') }})
-    send_emails: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendEmails') }})
-    status: Optional[StatusInvoiceTemplateUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    account_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    auto_payment_required: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoPaymentRequired'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    due_in_days: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dueInDays'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    frequency: Optional[FrequencyUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    invoice_data: Optional[InvoiceUpdateRequest] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceData'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    is_scheduling_only: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSchedulingOnly'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    payment_method_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paymentMethodId'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    schedule_dates: Optional[List[ScheduleDateUpdate]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleDates'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    send_emails: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendEmails'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
+    status: Optional[StatusInvoiceTemplateUpdateRequest] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is InvoiceTemplateUpdateRequest.UNSET }})
     
 

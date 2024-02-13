@@ -15,7 +15,7 @@ Create a bulk invoice batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
@@ -26,13 +26,6 @@ res = s.bulk_invoice_batch_item.create(batch_id='string', bulk_invoice_item_crea
     due_date='string',
     invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.APPROVED,
     line_item_description='string',
-    accepted_payment_methods=[
-        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.MANUAL,
-    ],
-    credit_fee_handling=shared.FeeHandlingConfig(),
-    labels={
-        'key': 'string',
-    },
 ))
 
 if res.bulk_invoice_item is not None:
@@ -65,7 +58,6 @@ Get a bulk invoice batch item
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -102,20 +94,12 @@ Update a bulk invoice batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.update(batch_id='string', batch_item_id='string', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
-    accepted_payment_methods=[
-        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.LESS_THAN_NIL_GREATER_THAN_,
-    ],
-    credit_fee_handling=shared.FeeHandlingConfig(),
-    labels={
-        'key': 'string',
-    },
-))
+res = s.bulk_invoice_batch_item.update(batch_id='string', batch_item_id='string', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate())
 
 if res.bulk_invoice_item is not None:
     # handle response

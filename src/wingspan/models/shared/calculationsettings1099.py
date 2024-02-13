@@ -26,10 +26,11 @@ class ReimbursableExpensesCalculationSettings1099(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CalculationSettings1099:
-    card_processing_fees: Optional[CardProcessingFeesCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardProcessingFees') }})
-    off_platform_payments: Optional[OffPlatformPaymentsCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offPlatformPayments') }})
-    reimbursable_expenses: Optional[ReimbursableExpensesCalculationSettings1099] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpenses') }})
-    state_tax_id: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stateTaxId') }})
-    threshold_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('thresholdAmount') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    card_processing_fees: Optional[CardProcessingFeesCalculationSettings1099] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardProcessingFees'), 'exclude': lambda f: f is CalculationSettings1099.UNSET }})
+    off_platform_payments: Optional[OffPlatformPaymentsCalculationSettings1099] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offPlatformPayments'), 'exclude': lambda f: f is CalculationSettings1099.UNSET }})
+    reimbursable_expenses: Optional[ReimbursableExpensesCalculationSettings1099] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reimbursableExpenses'), 'exclude': lambda f: f is CalculationSettings1099.UNSET }})
+    state_tax_id: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stateTaxId'), 'exclude': lambda f: f is CalculationSettings1099.UNSET }})
+    threshold_amount: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('thresholdAmount'), 'exclude': lambda f: f is CalculationSettings1099.UNSET }})
     
 

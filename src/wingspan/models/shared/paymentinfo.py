@@ -15,10 +15,11 @@ class MeansTypePaymentInfo(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PaymentInfo:
+    UNSET='__SPEAKEASY_UNSET__'
     means_type: MeansTypePaymentInfo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansType') }})
-    brand_image_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brandImageUrl') }})
-    card_brand: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardBrand') }})
-    means_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansDescription') }})
-    means_last4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansLast4') }})
+    brand_image_url: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brandImageUrl'), 'exclude': lambda f: f is PaymentInfo.UNSET }})
+    card_brand: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cardBrand'), 'exclude': lambda f: f is PaymentInfo.UNSET }})
+    means_description: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansDescription'), 'exclude': lambda f: f is PaymentInfo.UNSET }})
+    means_last4: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meansLast4'), 'exclude': lambda f: f is PaymentInfo.UNSET }})
     
 

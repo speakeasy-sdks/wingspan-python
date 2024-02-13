@@ -13,7 +13,6 @@ List bulk payable batch items
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

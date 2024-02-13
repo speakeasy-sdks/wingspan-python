@@ -19,7 +19,8 @@ class StatusBulkPayableBatchUpdate(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class BulkPayableBatchUpdate:
-    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
-    status: Optional[StatusBulkPayableBatchUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is BulkPayableBatchUpdate.UNSET }})
+    status: Optional[StatusBulkPayableBatchUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is BulkPayableBatchUpdate.UNSET }})
     
 

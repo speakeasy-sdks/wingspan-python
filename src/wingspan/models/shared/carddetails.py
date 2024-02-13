@@ -28,6 +28,7 @@ class TypeCardDetails(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CardDetails:
+    UNSET='__SPEAKEASY_UNSET__'
     address: Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
     brand: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
@@ -37,6 +38,6 @@ class CardDetails:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     status: StatusCardDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     type: TypeCardDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-    pin_set: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pinSet') }})
+    pin_set: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pinSet'), 'exclude': lambda f: f is CardDetails.UNSET }})
     
 

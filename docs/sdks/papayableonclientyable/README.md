@@ -13,7 +13,6 @@ Delete payable on client by payableId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

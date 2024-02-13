@@ -20,7 +20,8 @@ class PayoutPreferencesPayoutSettingsUpdate(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PayoutSettingsUpdate:
-    payout_destinations: Optional[List[PayoutDestinationUpdate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations') }})
-    payout_preferences: Optional[PayoutPreferencesPayoutSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    payout_destinations: Optional[List[PayoutDestinationUpdate]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations'), 'exclude': lambda f: f is PayoutSettingsUpdate.UNSET }})
+    payout_preferences: Optional[PayoutPreferencesPayoutSettingsUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences'), 'exclude': lambda f: f is PayoutSettingsUpdate.UNSET }})
     
 

@@ -12,8 +12,9 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ExternalIds:
-    bulk: Optional[ExternalIdsBulkImport] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulk') }})
-    quickbooks: Optional[Dict[str, ExternalIdsQuickbooksData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks') }})
-    stripe: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stripe') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    bulk: Optional[ExternalIdsBulkImport] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulk'), 'exclude': lambda f: f is ExternalIds.UNSET }})
+    quickbooks: Optional[Dict[str, ExternalIdsQuickbooksData]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks'), 'exclude': lambda f: f is ExternalIds.UNSET }})
+    stripe: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stripe'), 'exclude': lambda f: f is ExternalIds.UNSET }})
     
 

@@ -25,11 +25,12 @@ class StatusCollaboratorUpdateRequest(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CollaboratorUpdateRequest:
-    client_data: Optional[ClientData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData') }})
-    form1099_balances: Optional[Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances') }})
-    form_w9_data: Optional[FormW9Data] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
-    integration: Optional[TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
-    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
-    status: Optional[StatusCollaboratorUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    client_data: Optional[ClientData] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientData'), 'exclude': lambda f: f is CollaboratorUpdateRequest.UNSET }})
+    form1099_balances: Optional[Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances'), 'exclude': lambda f: f is CollaboratorUpdateRequest.UNSET }})
+    form_w9_data: Optional[FormW9Data] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data'), 'exclude': lambda f: f is CollaboratorUpdateRequest.UNSET }})
+    integration: Optional[TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is CollaboratorUpdateRequest.UNSET }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is CollaboratorUpdateRequest.UNSET }})
+    status: Optional[StatusCollaboratorUpdateRequest] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is CollaboratorUpdateRequest.UNSET }})
     
 

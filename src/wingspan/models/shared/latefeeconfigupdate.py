@@ -11,8 +11,9 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class LateFeeConfigUpdate:
-    frequency: Optional[FrequencyUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency') }})
-    late_fee_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeAmount') }})
-    late_fee_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeePercentage') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    frequency: Optional[FrequencyUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is LateFeeConfigUpdate.UNSET }})
+    late_fee_amount: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeeAmount'), 'exclude': lambda f: f is LateFeeConfigUpdate.UNSET }})
+    late_fee_percentage: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateFeePercentage'), 'exclude': lambda f: f is LateFeeConfigUpdate.UNSET }})
     
 

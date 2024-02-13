@@ -12,7 +12,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class RedactedMember:
+    UNSET='__SPEAKEASY_UNSET__'
     user: RedactedUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user') }})
-    profile: Optional[TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('profile') }})
+    profile: Optional[TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('profile'), 'exclude': lambda f: f is RedactedMember.UNSET }})
     
 

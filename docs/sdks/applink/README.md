@@ -13,7 +13,6 @@ Gets an application link for creating the clearing bank account
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

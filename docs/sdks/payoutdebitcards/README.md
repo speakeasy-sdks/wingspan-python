@@ -13,7 +13,6 @@ List the payout debit cards
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 

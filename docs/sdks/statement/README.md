@@ -14,7 +14,6 @@ Download bank statement pdf
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
@@ -50,7 +49,6 @@ Get bank statement
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
