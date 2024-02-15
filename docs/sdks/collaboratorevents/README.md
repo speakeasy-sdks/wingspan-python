@@ -17,7 +17,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_events.get(id='string')
+res = s.collaborator_events.get(id='<value>')
 
 if res.collaborator_events is not None:
     # handle response

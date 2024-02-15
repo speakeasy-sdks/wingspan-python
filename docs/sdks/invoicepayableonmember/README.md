@@ -17,7 +17,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.invoice_payable_on_member.get(id='string')
+res = s.invoice_payable_on_member.get(id='<value>')
 
 if res.payable_schema is not None:
     # handle response

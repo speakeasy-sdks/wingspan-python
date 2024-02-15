@@ -17,7 +17,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.client_collaborator_v2.get(client_id='string')
+res = s.client_collaborator_v2.get(client_id='<value>')
 
 if res.collaborator_v2 is not None:
     # handle response

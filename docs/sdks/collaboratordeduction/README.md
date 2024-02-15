@@ -22,10 +22,10 @@ s = wingspan.Wingspan()
 
 req = shared.DeductionCreateRequest(
     amount=4865.89,
-    client_id='string',
+    client_id='<value>',
     currency=shared.DeductionCreateRequestCurrency.USD,
-    member_id='string',
-    name='string',
+    member_id='<value>',
+    name='<value>',
     type=shared.TypeDeductionCreateRequest.POST_PAYMENT,
 )
 
@@ -64,7 +64,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.delete(id='string')
+res = s.collaborator_deduction.delete(id='<value>')
 
 if res.deduction_response is not None:
     # handle response
@@ -99,7 +99,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.get(id='string')
+res = s.collaborator_deduction.get(id='<value>')
 
 if res.deduction_response is not None:
     # handle response
@@ -135,7 +135,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_deduction.update(id='string', deduction_update_request=shared.DeductionUpdateRequest())
+res = s.collaborator_deduction.update(id='<value>', deduction_update_request=shared.DeductionUpdateRequest())
 
 if res.deduction_response is not None:
     # handle response

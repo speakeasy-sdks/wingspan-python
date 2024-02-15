@@ -18,7 +18,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.pay_client_invoice.post(invoice_id='string', pay_request=shared.PayRequest())
+res = s.pay_client_invoice.post(invoice_id='<value>', pay_request=shared.PayRequest())
 
 if res.client_invoice is not None:
     # handle response

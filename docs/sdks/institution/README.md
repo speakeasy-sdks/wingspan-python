@@ -17,7 +17,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.institution.get(routing_number='string')
+res = s.institution.get(routing_number='<value>')
 
 if res.institution_response is not None:
     # handle response

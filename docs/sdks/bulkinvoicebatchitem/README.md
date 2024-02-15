@@ -20,12 +20,12 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.create(batch_id='string', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
+res = s.bulk_invoice_batch_item.create(batch_id='<value>', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
     amount=4865.89,
-    bulk_invoice_batch_id='string',
-    due_date='string',
+    bulk_invoice_batch_id='<value>',
+    due_date='<value>',
     invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.APPROVED,
-    line_item_description='string',
+    line_item_description='<value>',
 ))
 
 if res.bulk_invoice_item is not None:
@@ -62,7 +62,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.get(batch_id='string', batch_item_id='string')
+res = s.bulk_invoice_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 
 if res.bulk_invoice_item is not None:
     # handle response
@@ -99,7 +99,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.update(batch_id='string', batch_item_id='string', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate())
+res = s.bulk_invoice_batch_item.update(batch_id='<value>', batch_item_id='<value>', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate())
 
 if res.bulk_invoice_item is not None:
     # handle response

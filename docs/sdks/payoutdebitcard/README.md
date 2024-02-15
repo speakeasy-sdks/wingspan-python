@@ -20,11 +20,11 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.create(member_id='string', checkbook_card_create=shared.CheckbookCardCreate(
-    card_number='string',
-    exp_mm='string',
-    exp_yyyy='string',
-    name='string',
+res = s.payout_debit_card.create(member_id='<value>', checkbook_card_create=shared.CheckbookCardCreate(
+    card_number='<value>',
+    exp_mm='<value>',
+    exp_yyyy='<value>',
+    name='<value>',
 ))
 
 if res.checkbook_card is not None:
@@ -61,7 +61,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.delete(id='string', member_id='string')
+res = s.payout_debit_card.delete(id='<value>', member_id='<value>')
 
 if res.checkbook_card is not None:
     # handle response
@@ -97,7 +97,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.get(id='string', member_id='string')
+res = s.payout_debit_card.get(id='<value>', member_id='<value>')
 
 if res.checkbook_card is not None:
     # handle response

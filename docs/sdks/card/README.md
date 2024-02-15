@@ -57,7 +57,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.card.delete(id='string')
+res = s.card.delete(id='<value>')
 
 if res.card is not None:
     # handle response
@@ -92,7 +92,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.card.get(id='string')
+res = s.card.get(id='<value>')
 
 if res.card_details is not None:
     # handle response
@@ -128,7 +128,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.card.update(id='string', card_update_request=shared.CardUpdateRequest(
+res = s.card.update(id='<value>', card_update_request=shared.CardUpdateRequest(
     status=shared.PropertiesCardUpdateRequest.CLOSED_BY_CUSTOMER,
 ))
 

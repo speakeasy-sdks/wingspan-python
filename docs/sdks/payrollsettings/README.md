@@ -18,7 +18,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.payroll_settings.get(id='string')
+res = s.payroll_settings.get(id='<value>')
 
 if res.payroll_settings is not None:
     # handle response
@@ -54,7 +54,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.payroll_settings.update(id='string', payroll_settings_update=shared.PayrollSettingsUpdate())
+res = s.payroll_settings.update(id='<value>', payroll_settings_update=shared.PayrollSettingsUpdate())
 
 if res.payroll_settings is not None:
     # handle response

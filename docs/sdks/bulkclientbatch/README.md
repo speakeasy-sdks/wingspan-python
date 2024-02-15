@@ -56,7 +56,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch.get(batch_id='string')
+res = s.bulk_client_batch.get(batch_id='<value>')
 
 if res.bulk_client_batch is not None:
     # handle response
@@ -92,7 +92,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch.update(batch_id='string', bulk_batch_update=shared.BulkBatchUpdate())
+res = s.bulk_client_batch.update(batch_id='<value>', bulk_batch_update=shared.BulkBatchUpdate())
 
 if res.bulk_client_batch is not None:
     # handle response

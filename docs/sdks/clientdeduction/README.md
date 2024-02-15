@@ -19,10 +19,10 @@ s = wingspan.Wingspan()
 
 req = shared.DeductionCreateRequest(
     amount=4865.89,
-    client_id='string',
+    client_id='<value>',
     currency=shared.DeductionCreateRequestCurrency.USD,
-    member_id='string',
-    name='string',
+    member_id='<value>',
+    name='<value>',
     type=shared.TypeDeductionCreateRequest.POST_PAYMENT,
 )
 

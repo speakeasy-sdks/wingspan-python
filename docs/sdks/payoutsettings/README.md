@@ -18,7 +18,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.get(id='string')
+res = s.payout_settings.get(id='<value>')
 
 if res.payout_settings_response is not None:
     # handle response
@@ -54,7 +54,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.update(id='string', payout_settings_update=shared.PayoutSettingsUpdate())
+res = s.payout_settings.update(id='<value>', payout_settings_update=shared.PayoutSettingsUpdate())
 
 if res.payout_settings_response is not None:
     # handle response

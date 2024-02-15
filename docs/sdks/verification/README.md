@@ -18,8 +18,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.verification.send(id='string', card_code_request=shared.CardCodeRequest(
-    channel='string',
+res = s.verification.send(id='<value>', card_code_request=shared.CardCodeRequest(
+    channel='<value>',
 ))
 
 if res.card_code_response is not None:

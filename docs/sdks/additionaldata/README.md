@@ -21,7 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.AdditionalData(
     key='<key>',
-    name='string',
+    name='<value>',
     required=False,
     type=shared.Type.BOOLEAN,
 )
@@ -61,7 +61,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.delete(id='string')
+res = s.additional_data.delete(id='<value>')
 
 if res.additional_data is not None:
     # handle response
@@ -96,7 +96,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.get(id='string')
+res = s.additional_data.get(id='<value>')
 
 if res.additional_data is not None:
     # handle response

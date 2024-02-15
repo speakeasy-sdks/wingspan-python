@@ -17,7 +17,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.app_link.get(member_id='string')
+res = s.app_link.get(member_id='<value>')
 
 if res.banking_application_form is not None:
     # handle response

@@ -21,7 +21,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.CollaboratorCreateRequest(
-    client_id='string',
+    client_id='<value>',
 )
 
 res = s.collaborator.create(req)
@@ -59,7 +59,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.delete(id='string')
+res = s.collaborator.delete(id='<value>')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -94,7 +94,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.get(id='string')
+res = s.collaborator.get(id='<value>')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -130,7 +130,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator.update(id='string', collaborator_update_request=shared.CollaboratorUpdateRequest())
+res = s.collaborator.update(id='<value>', collaborator_update_request=shared.CollaboratorUpdateRequest())
 
 if res.collaborator_schema is not None:
     # handle response

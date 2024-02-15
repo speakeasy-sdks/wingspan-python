@@ -21,8 +21,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.PaymentEligibility(
-    field='string',
-    value='string',
+    field='<value>',
+    value='<value>',
 )
 
 res = s.payment_eligibility_requirement.create(req)
@@ -60,7 +60,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.delete(id='string')
+res = s.payment_eligibility_requirement.delete(id='<value>')
 
 if res.payment_eligibility is not None:
     # handle response
@@ -95,7 +95,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.get(id='string')
+res = s.payment_eligibility_requirement.get(id='<value>')
 
 if res.payment_eligibility is not None:
     # handle response
@@ -131,7 +131,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.update(id='string', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest())
+res = s.payment_eligibility_requirement.update(id='<value>', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest())
 
 if res.payment_eligibility is not None:
     # handle response

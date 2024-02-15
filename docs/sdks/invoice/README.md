@@ -18,7 +18,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.invoice.generate(invoice_id='string')
+res = s.invoice.generate(invoice_id='<value>')
 
 if res.invoice_pdf_generation_response is not None:
     # handle response
@@ -53,7 +53,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.invoice.send(invoice_id='string')
+res = s.invoice.send(invoice_id='<value>')
 
 if res.invoice is not None:
     # handle response

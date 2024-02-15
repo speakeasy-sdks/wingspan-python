@@ -18,7 +18,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.statement.download(id='string')
+res = s.statement.download(id='<value>')
 
 if res.status_code == 200:
     # handle response
@@ -53,7 +53,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.statement.get(id='string')
+res = s.statement.get(id='<value>')
 
 if res.classes is not None:
     # handle response

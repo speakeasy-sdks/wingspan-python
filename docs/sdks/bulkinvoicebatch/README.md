@@ -58,7 +58,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.get(batch_id='string')
+res = s.bulk_invoice_batch.get(batch_id='<value>')
 
 if res.bulk_invoice_batch is not None:
     # handle response
@@ -94,7 +94,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.update(batch_id='string', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate())
+res = s.bulk_invoice_batch.update(batch_id='<value>', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate())
 
 if res.bulk_invoice_batch is not None:
     # handle response

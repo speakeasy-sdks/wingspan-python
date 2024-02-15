@@ -18,7 +18,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.add(group_id='string', id='string')
+res = s.collaborator_to_group.add(group_id='<value>', id='<value>')
 
 if res.collaborator_schema is not None:
     # handle response
@@ -54,7 +54,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.remove(group_id='string', id='string')
+res = s.collaborator_to_group.remove(group_id='<value>', id='<value>')
 
 if res.collaborator_schema is not None:
     # handle response

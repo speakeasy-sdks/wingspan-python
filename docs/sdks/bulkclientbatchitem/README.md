@@ -20,7 +20,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.create(batch_id='string', bulk_client_item_create=shared.BulkClientItemCreate())
+res = s.bulk_client_batch_item.create(batch_id='<value>', bulk_client_item_create=shared.BulkClientItemCreate())
 
 if res.bulk_client_item is not None:
     # handle response
@@ -56,7 +56,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.get(batch_id='string', batch_item_id='string')
+res = s.bulk_client_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 
 if res.bulk_client_item is not None:
     # handle response
@@ -93,7 +93,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.update(batch_id='string', batch_item_id='string', bulk_client_item_update=shared.BulkClientItemUpdate())
+res = s.bulk_client_batch_item.update(batch_id='<value>', batch_item_id='<value>', bulk_client_item_update=shared.BulkClientItemUpdate())
 
 if res.bulk_client_item is not None:
     # handle response

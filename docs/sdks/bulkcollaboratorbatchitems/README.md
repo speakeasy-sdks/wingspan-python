@@ -17,7 +17,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_items.list(batch_id='string')
+res = s.bulk_collaborator_batch_items.list(batch_id='<value>')
 
 if res.classes is not None:
     # handle response

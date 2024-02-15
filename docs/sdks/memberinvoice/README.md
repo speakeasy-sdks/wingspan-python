@@ -22,11 +22,11 @@ s = wingspan.Wingspan()
 
 req = shared.InvoiceCreateRequest(
     credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='string',
+    due_date='<value>',
     line_items=[
         shared.InvoiceLineItemsCreateRequest(),
     ],
-    member_client_id='string',
+    member_client_id='<value>',
 )
 
 res = s.member_invoice.create(req)
@@ -64,7 +64,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.delete(id='string')
+res = s.member_invoice.delete(id='<value>')
 
 if res.invoice is not None:
     # handle response
@@ -99,7 +99,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.get(id='string')
+res = s.member_invoice.get(id='<value>')
 
 if res.invoice is not None:
     # handle response
@@ -135,7 +135,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.member_invoice.update(id='string', invoice_update_request=shared.InvoiceUpdateRequest())
+res = s.member_invoice.update(id='<value>', invoice_update_request=shared.InvoiceUpdateRequest())
 
 if res.invoice is not None:
     # handle response

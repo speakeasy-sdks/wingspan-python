@@ -18,9 +18,9 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.code_to_token.exchange(id='string', card_token_request=shared.CardTokenRequest(
-    verification_code='string',
-    verification_token='string',
+res = s.code_to_token.exchange(id='<value>', card_token_request=shared.CardTokenRequest(
+    verification_code='<value>',
+    verification_token='<value>',
 ))
 
 if res.card_token_response is not None:

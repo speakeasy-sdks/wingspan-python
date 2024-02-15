@@ -21,7 +21,7 @@ s = wingspan.Wingspan()
 
 req = shared.CollaboratorGroupCreateRequest(
     description='Multi-tiered human-resource model',
-    name='string',
+    name='<value>',
 )
 
 res = s.collaborator_group.create(req)
@@ -59,7 +59,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.get(id='string')
+res = s.collaborator_group.get(id='<value>')
 
 if res.collaborator_group_response is not None:
     # handle response
@@ -95,7 +95,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_group.update(id='string', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest())
+res = s.collaborator_group.update(id='<value>', collaborator_group_update_request=shared.CollaboratorGroupUpdateRequest())
 
 if res.collaborator_group_response is not None:
     # handle response

@@ -19,9 +19,9 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.PayableCreateRequest(
-    collaborator_id='string',
+    collaborator_id='<value>',
     credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='string',
+    due_date='<value>',
     line_items=[
         shared.InvoiceLineItemsCreateRequest(),
     ],
@@ -63,7 +63,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.payable_on_client.update(id='string', payable_update_request=shared.PayableUpdateRequest())
+res = s.payable_on_client.update(id='<value>', payable_update_request=shared.PayableUpdateRequest())
 
 if res.payable_schema is not None:
     # handle response

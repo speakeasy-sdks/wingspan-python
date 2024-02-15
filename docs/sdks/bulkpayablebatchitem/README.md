@@ -20,11 +20,11 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.create(batch_id='string', bulk_payable_item_create=shared.BulkPayableItemCreate(
+res = s.bulk_payable_batch_item.create(batch_id='<value>', bulk_payable_item_create=shared.BulkPayableItemCreate(
     amount=4865.89,
-    bulk_payable_batch_id='string',
-    due_date='string',
-    line_item_description='string',
+    bulk_payable_batch_id='<value>',
+    due_date='<value>',
+    line_item_description='<value>',
     payable_status=shared.PayableStatusBulkPayableItemCreate.APPROVED,
 ))
 
@@ -62,7 +62,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.get(batch_id='string', batch_item_id='string')
+res = s.bulk_payable_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 
 if res.bulk_payable_item is not None:
     # handle response
@@ -99,7 +99,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.update(batch_id='string', batch_item_id='string', bulk_payable_item_update=shared.BulkPayableItemUpdate())
+res = s.bulk_payable_batch_item.update(batch_id='<value>', batch_item_id='<value>', bulk_payable_item_update=shared.BulkPayableItemUpdate())
 
 if res.bulk_payable_item is not None:
     # handle response

@@ -20,7 +20,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Calculate1099Request(
-    member_client_id='string',
+    member_client_id='<value>',
     year=6611.96,
 )
 
@@ -60,7 +60,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Mark1099AsUndeliveredRequest(
-    member_id='string',
+    member_id='<value>',
     submission_index=2694.09,
     year=735.52,
 )
@@ -102,13 +102,13 @@ s = wingspan.Wingspan()
 
 req = shared.Remail1099Request(
     address=shared.Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56(
-        address_line1='string',
-        city='Port Cara',
-        postal_code='13281-2223',
-        state='string',
+        address_line1='71613 Rene Curve',
+        city='West Edd',
+        postal_code='30290',
+        state='Maine',
     ),
-    member_id='string',
-    year=3145.26,
+    member_id='<value>',
+    year=1008.29,
 )
 
 res = s.one_thousand_and_ninety_nine.remail(req)

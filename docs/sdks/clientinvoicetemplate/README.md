@@ -20,13 +20,13 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceTemplateCreateRequest(
-    client_email='string',
+    client_email='<value>',
     invoice_data=shared.ClientInvoiceDataCreateRequest(
         line_items=[
             shared.InvoiceLineItemsCreateRequest(),
         ],
     ),
-    member_id='string',
+    member_id='<value>',
     status=shared.StatusClientInvoiceTemplateCreateRequest.DRAFT,
 )
 
@@ -65,7 +65,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.get(id='string')
+res = s.client_invoice_template.get(id='<value>')
 
 if res.client_invoice_template is not None:
     # handle response
@@ -101,8 +101,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice_template.update(id='string', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
-    client_id='string',
+res = s.client_invoice_template.update(id='<value>', client_invoice_template_update_request=shared.ClientInvoiceTemplateUpdateRequest(
+    client_id='<value>',
 ))
 
 if res.client_invoice_template is not None:

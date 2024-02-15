@@ -57,7 +57,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.member_client.delete(id='string')
+res = s.member_client.delete(id='<value>')
 
 if res.member_client_schema is not None:
     # handle response
@@ -92,7 +92,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.member_client.get(id='string')
+res = s.member_client.get(id='<value>')
 
 if res.member_client_schema is not None:
     # handle response
@@ -128,7 +128,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.member_client.update(id='string', member_client_update_request=shared.MemberClientUpdateRequest())
+res = s.member_client.update(id='<value>', member_client_update_request=shared.MemberClientUpdateRequest())
 
 if res.member_client_schema is not None:
     # handle response

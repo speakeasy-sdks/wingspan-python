@@ -18,7 +18,7 @@ import wingspan
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice.get(id='string')
+res = s.client_invoice.get(id='<value>')
 
 if res.client_invoice is not None:
     # handle response
@@ -54,7 +54,7 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice.update(id='string', client_invoice_update_request=shared.ClientInvoiceUpdateRequest())
+res = s.client_invoice.update(id='<value>', client_invoice_update_request=shared.ClientInvoiceUpdateRequest())
 
 if res.client_invoice is not None:
     # handle response

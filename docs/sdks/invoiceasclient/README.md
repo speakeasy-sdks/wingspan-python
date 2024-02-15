@@ -18,12 +18,12 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceCreateRequest(
-    client_email='string',
-    due_date='string',
+    client_email='<value>',
+    due_date='<value>',
     line_items=[
         shared.InvoiceLineItemsCreateRequest(),
     ],
-    member_id='string',
+    member_id='<value>',
 )
 
 res = s.invoice_as_client.create(req)
