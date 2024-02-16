@@ -12,7 +12,6 @@ class BulkInvoiceItemUpdateAcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class InvoiceStatusBulkInvoiceItemUpdate(str, Enum):
     DRAFT = 'Draft'
@@ -20,7 +19,6 @@ class InvoiceStatusBulkInvoiceItemUpdate(str, Enum):
     APPROVED = 'Approved'
     PAID = 'Paid'
     CANCELLED = 'Cancelled'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -26,7 +26,6 @@ class StatusBulkPayableItem(str, Enum):
 
 class WorkflowSubStatus(str, Enum):
     SUBMITTED = 'Submitted'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

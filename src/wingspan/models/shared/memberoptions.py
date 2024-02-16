@@ -13,17 +13,14 @@ class PayoutPreferencesMemberOptions(str, Enum):
     EXPEDITED = 'Expedited'
     CHECK = 'Check'
     E_CHECK = 'ECheck'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class WorkflowStatusMemberOptions(str, Enum):
     DISPUTED = 'Disputed'
     ACCEPTED = 'Accepted'
     RESUBMITTED = 'Resubmitted'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class WorkflowSubStatusMemberOptions(str, Enum):
     SUBMITTED = 'Submitted'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

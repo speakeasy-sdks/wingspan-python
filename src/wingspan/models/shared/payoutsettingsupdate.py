@@ -14,7 +14,6 @@ class PayoutPreferencesPayoutSettingsUpdate(str, Enum):
     EXPEDITED = 'Expedited'
     CHECK = 'Check'
     E_CHECK = 'ECheck'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

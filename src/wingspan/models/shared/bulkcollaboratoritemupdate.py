@@ -12,7 +12,6 @@ class CollaboratorStatusBulkCollaboratorItemUpdate(str, Enum):
     ACTIVE = 'Active'
     INACTIVE = 'Inactive'
     PENDING = 'Pending'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

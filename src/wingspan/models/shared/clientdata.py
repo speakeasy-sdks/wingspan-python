@@ -10,12 +10,10 @@ from wingspan import utils
 class AutoPayStrategyClientData(str, Enum):
     ALL = 'All'
     NONE = 'None'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class VerificationStratgyClientData(str, Enum):
     NONE = 'None'
     ALL = 'All'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

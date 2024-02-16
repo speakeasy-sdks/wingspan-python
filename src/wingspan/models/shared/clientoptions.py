@@ -14,11 +14,9 @@ class WorkflowStatusClientOptions(str, Enum):
     PAYMENT_INITIATED = 'PaymentInitiated'
     FUNDED = 'Funded'
     DECLINED = 'Declined'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class WorkflowSubStatusClientOptions(str, Enum):
     SUBMITTED = 'Submitted'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

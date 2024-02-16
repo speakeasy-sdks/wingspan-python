@@ -15,7 +15,6 @@ class StatusInvoiceTemplateUpdateRequest(str, Enum):
     DRAFT = 'Draft'
     EXPIRED = 'Expired'
     CANCELLED = 'Cancelled'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

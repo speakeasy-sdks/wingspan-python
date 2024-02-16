@@ -10,7 +10,6 @@ from wingspan import utils
 class TypeAdditionalDataUpdateRequest(str, Enum):
     BOOLEAN = 'Boolean'
     STRING = 'String'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

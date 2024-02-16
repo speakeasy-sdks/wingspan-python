@@ -10,7 +10,6 @@ from wingspan import utils
 class CalculationTypeBulkCalculation1099ItemCreate(str, Enum):
     BALANCES = 'Balances'
     SUBMISSIONS = 'Submissions'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

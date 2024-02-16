@@ -33,7 +33,6 @@ class InvoiceAcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class CurrencyInvoice(str, Enum):
     USD = 'USD'

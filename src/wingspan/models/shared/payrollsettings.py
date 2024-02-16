@@ -20,7 +20,6 @@ class StatusPayrollSettings(str, Enum):
 class Workflow(str, Enum):
     SINGLE_STAGE = 'SingleStage'
     DUAL_STAGE = 'DualStage'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

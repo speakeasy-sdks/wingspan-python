@@ -10,7 +10,6 @@ from wingspan import utils
 class IntervalFrequencyUpdate(str, Enum):
     WEEK = 'Week'
     MONTH = 'Month'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

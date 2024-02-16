@@ -20,7 +20,6 @@ class StructureCompany(str, Enum):
     LLC_PARTNERSHIP = 'LLCPartnership'
     CORPORATION_C = 'CorporationC'
     PARTNERSHIP = 'Partnership'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

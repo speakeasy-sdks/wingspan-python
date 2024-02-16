@@ -10,12 +10,10 @@ from wingspan import utils
 class AutoPayRequirementMemberData(str, Enum):
     ALL = 'All'
     NONE = 'None'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class ShareTaxDocumentMemberData(str, Enum):
     ALLOW = 'Allow'
     DECLINE = 'Decline'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

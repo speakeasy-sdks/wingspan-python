@@ -12,7 +12,6 @@ class StatusScheduleDateUpdate(str, Enum):
     COMPLETED = 'Completed'
     SKIPPED = 'Skipped'
     MODIFIED = 'Modified'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

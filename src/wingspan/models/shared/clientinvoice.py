@@ -26,7 +26,6 @@ class ClientInvoiceAcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class Currency(str, Enum):
     USD = 'USD'

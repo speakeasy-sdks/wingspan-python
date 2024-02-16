@@ -11,7 +11,6 @@ class DestinationTypePayoutDestinationUpdate(str, Enum):
     ACCOUNT = 'Account'
     CARD = 'Card'
     WE_GIFT = 'WeGift'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class PayoutMethodPayoutDestinationUpdate(str, Enum):
     STANDARD = 'Standard'
@@ -19,7 +18,6 @@ class PayoutMethodPayoutDestinationUpdate(str, Enum):
     EXPEDITED = 'Expedited'
     CHECK = 'Check'
     E_CHECK = 'ECheck'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

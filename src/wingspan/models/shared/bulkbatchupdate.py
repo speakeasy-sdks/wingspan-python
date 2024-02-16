@@ -13,7 +13,6 @@ class StatusBulkBatchUpdate(str, Enum):
     PROCESSING = 'Processing'
     COMPLETE = 'Complete'
     FAILED = 'Failed'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

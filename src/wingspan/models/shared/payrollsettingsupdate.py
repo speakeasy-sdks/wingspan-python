@@ -16,12 +16,10 @@ class StatusPayrollSettingsUpdate(str, Enum):
     DRAFT = 'Draft'
     EXPIRED = 'Expired'
     CANCELLED = 'Cancelled'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class WorkflowPayrollSettingsUpdate(str, Enum):
     SINGLE_STAGE = 'SingleStage'
     DUAL_STAGE = 'DualStage'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -12,7 +12,6 @@ class BulkInvoiceItemCreateAcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class InvoiceStatusBulkInvoiceItemCreate(str, Enum):
     DRAFT = 'Draft'

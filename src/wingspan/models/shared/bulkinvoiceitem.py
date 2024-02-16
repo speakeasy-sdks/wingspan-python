@@ -15,7 +15,6 @@ class AcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class InvoiceStatusBulkInvoiceItem(str, Enum):
     DRAFT = 'Draft'

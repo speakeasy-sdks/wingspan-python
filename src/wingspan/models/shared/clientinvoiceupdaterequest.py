@@ -16,7 +16,6 @@ class StatusClientInvoiceUpdateRequest(str, Enum):
     PENDING = 'Pending'
     PAYMENT_IN_TRANSIT = 'PaymentInTransit'
     PAID = 'Paid'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

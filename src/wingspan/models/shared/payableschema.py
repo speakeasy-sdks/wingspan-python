@@ -26,7 +26,6 @@ class PayableSchemaAcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class CurrencyPayableSchema(str, Enum):
     USD = 'USD'

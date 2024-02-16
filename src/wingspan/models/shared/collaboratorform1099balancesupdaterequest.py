@@ -13,7 +13,6 @@ class DeliveryMethodCollaboratorForm1099BalancesUpdateRequest(str, Enum):
     ELECTRONIC = 'Electronic'
     MAIL = 'Mail'
     BOTH = 'Both'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclasses.dataclass
@@ -28,7 +27,6 @@ class StatusCollaboratorForm1099BalancesUpdateRequest(str, Enum):
     REJECTED = 'Rejected'
     ACCEPTED = 'Accepted'
     EXCLUDED = 'Excluded'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -11,7 +11,6 @@ class Status8a9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5(str
     OPEN = 'Open'
     ACCEPTED = 'Accepted'
     REJECTED = 'Rejected'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -16,7 +16,6 @@ class StatusMemberClientRequirementResponse(str, Enum):
     SENT = 'Sent'
     PENDING = 'Pending'
     COMPLETE = 'Complete'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

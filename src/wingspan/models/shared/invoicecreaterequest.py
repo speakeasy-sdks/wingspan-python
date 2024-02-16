@@ -19,7 +19,6 @@ class InvoiceCreateRequestAcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclasses.dataclass
@@ -29,7 +28,6 @@ class Client:
 class CurrencyInvoiceCreateRequest(str, Enum):
     USD = 'USD'
     CAD = 'CAD'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclasses.dataclass
@@ -44,7 +42,6 @@ class StatusInvoiceCreateRequest(str, Enum):
     PENDING = 'Pending'
     PAYMENT_IN_TRANSIT = 'PaymentInTransit'
     PAID = 'Paid'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

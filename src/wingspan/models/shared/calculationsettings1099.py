@@ -10,17 +10,14 @@ from wingspan import utils
 class CardProcessingFeesCalculationSettings1099(str, Enum):
     INCLUDE = 'Include'
     EXCLUDE = 'Exclude'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class OffPlatformPaymentsCalculationSettings1099(str, Enum):
     INCLUDE = 'Include'
     EXCLUDE = 'Exclude'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class ReimbursableExpensesCalculationSettings1099(str, Enum):
     INCLUDE = 'Include'
     EXCLUDE = 'Exclude'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

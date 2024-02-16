@@ -20,7 +20,6 @@ class PayableUpdateRequestAcceptedPaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclasses.dataclass
@@ -36,7 +35,6 @@ class PaymentMethods(str, Enum):
     CREDIT = 'Credit'
     ACH = 'ACH'
     MANUAL = 'Manual'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class StatusPayableUpdateRequest(str, Enum):
     DRAFT = 'Draft'
@@ -46,7 +44,6 @@ class StatusPayableUpdateRequest(str, Enum):
     PENDING = 'Pending'
     PAYMENT_IN_TRANSIT = 'PaymentInTransit'
     PAID = 'Paid'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

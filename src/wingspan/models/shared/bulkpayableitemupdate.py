@@ -13,11 +13,9 @@ class PayableStatusBulkPayableItemUpdate(str, Enum):
     APPROVED = 'Approved'
     PAID = 'Paid'
     CANCELLED = 'Cancelled'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class BulkPayableItemUpdateWorkflowSubStatus(str, Enum):
     SUBMITTED = 'Submitted'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -10,12 +10,10 @@ from wingspan import utils
 class CurrencyDeductionUpdateRequest(str, Enum):
     USD = 'USD'
     CAD = 'CAD'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class TypeDeductionUpdateRequest(str, Enum):
     PRE_PAYMENT = 'PrePayment'
     POST_PAYMENT = 'PostPayment'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
