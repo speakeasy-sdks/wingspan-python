@@ -495,3 +495,11 @@ Based on:
 - Speakeasy CLI 1.182.0 (2.259.1) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [python v5.0.1] .
+
+## 2024-03-01 00:21:23
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.198.1 (2.275.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v5.1.0] .

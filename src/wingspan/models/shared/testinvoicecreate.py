@@ -9,6 +9,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class TestInvoiceCreate:
+    __test__ = False
+    
     contact_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contactName') }})
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     
