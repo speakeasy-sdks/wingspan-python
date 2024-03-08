@@ -29,6 +29,7 @@ res = s.eligibility_requirement.create(req)
 if res.eligibility_requirement is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -64,6 +65,7 @@ res = s.eligibility_requirement.delete(id='<value>')
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -99,6 +101,7 @@ res = s.eligibility_requirement.get(id='<value>')
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -137,6 +140,7 @@ res = s.eligibility_requirement.update(id='<value>', eligibility_requirement_upd
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

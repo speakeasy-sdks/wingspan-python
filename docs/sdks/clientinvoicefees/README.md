@@ -28,6 +28,7 @@ res = s.client_invoice_fees.create(req)
 if res.client_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -63,6 +64,7 @@ res = s.client_invoice_fees.list(invoice_id='<value>')
 if res.invoice_fee_calculation is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

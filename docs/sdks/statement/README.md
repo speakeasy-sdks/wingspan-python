@@ -20,9 +20,10 @@ s = wingspan.Wingspan()
 
 res = s.statement.download(id='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -58,6 +59,7 @@ res = s.statement.get(id='<value>')
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

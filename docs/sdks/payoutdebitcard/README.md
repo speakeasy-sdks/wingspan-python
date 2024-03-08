@@ -30,6 +30,7 @@ res = s.payout_debit_card.create(member_id='<value>', checkbook_card_create=shar
 if res.checkbook_card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -66,6 +67,7 @@ res = s.payout_debit_card.delete(id='<value>', member_id='<value>')
 if res.checkbook_card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -102,6 +104,7 @@ res = s.payout_debit_card.get(id='<value>', member_id='<value>')
 if res.checkbook_card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

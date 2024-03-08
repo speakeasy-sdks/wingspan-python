@@ -23,6 +23,7 @@ res = s.client_invoice.get(id='<value>')
 if res.client_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -59,6 +60,7 @@ res = s.client_invoice.update(id='<value>', client_invoice_update_request=shared
 if res.client_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

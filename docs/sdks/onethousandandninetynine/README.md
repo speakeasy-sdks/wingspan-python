@@ -29,6 +29,7 @@ res = s.one_thousand_and_ninety_nine.calculate(req)
 if res.calculate1099_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -70,6 +71,7 @@ res = s.one_thousand_and_ninety_nine.mark(req)
 if res.mark1099_as_undelivered_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -116,6 +118,7 @@ res = s.one_thousand_and_ninety_nine.remail(req)
 if res.remail1099_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

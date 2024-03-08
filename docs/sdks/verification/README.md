@@ -25,6 +25,7 @@ res = s.verification.send(id='<value>', card_code_request=shared.CardCodeRequest
 if res.card_code_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

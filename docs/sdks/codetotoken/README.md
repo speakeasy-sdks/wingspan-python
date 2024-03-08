@@ -26,6 +26,7 @@ res = s.code_to_token.exchange(id='<value>', card_token_request=shared.CardToken
 if res.card_token_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

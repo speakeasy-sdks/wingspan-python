@@ -29,6 +29,7 @@ res = s.collaborator.create(req)
 if res.collaborator_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -64,6 +65,7 @@ res = s.collaborator.delete(id='<value>')
 if res.collaborator_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -99,6 +101,7 @@ res = s.collaborator.get(id='<value>')
 if res.collaborator_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -135,6 +138,7 @@ res = s.collaborator.update(id='<value>', collaborator_update_request=shared.Col
 if res.collaborator_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

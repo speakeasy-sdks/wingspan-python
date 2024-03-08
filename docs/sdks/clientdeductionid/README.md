@@ -24,6 +24,7 @@ res = s.client_deduction_id.delete(id='<value>')
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -59,6 +60,7 @@ res = s.client_deduction_id.get(id='<value>')
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -95,6 +97,7 @@ res = s.client_deduction_id.update(id='<value>', deduction_update_request=shared
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -26,6 +26,7 @@ res = s.bulk_client_batch.create(req)
 if res.bulk_client_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -61,6 +62,7 @@ res = s.bulk_client_batch.get(batch_id='<value>')
 if res.bulk_client_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -97,6 +99,7 @@ res = s.bulk_client_batch.update(batch_id='<value>', bulk_batch_update=shared.Bu
 if res.bulk_client_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

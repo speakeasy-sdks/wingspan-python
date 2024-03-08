@@ -22,6 +22,7 @@ res = s.cards.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

@@ -31,6 +31,7 @@ res = s.invoice_as_client.create(req)
 if res.client_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

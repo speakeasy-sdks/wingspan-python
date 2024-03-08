@@ -25,12 +25,12 @@ class PayoutSettings:
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetPayoutSettingsRequest, base_url, '/payments/payout-settings/{id}', request)
+        
         headers = {}
+        
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
-        
         client = self.sdk_configuration.client
-        
         
         try:
             req = self.sdk_configuration.get_hooks().before_request(
@@ -52,18 +52,20 @@ class PayoutSettings:
                 raise result
             http_res = result
         
-        content_type = http_res.headers.get('Content-Type')
         
-        res = operations.GetPayoutSettingsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetPayoutSettingsResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type'), raw_response=http_res)
         
         if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
+            if utils.match_content_type(http_res.headers.get('Content-Type'), 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[shared.PayoutSettingsResponse])
                 res.payout_settings_response = out
             else:
+                content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -80,15 +82,15 @@ class PayoutSettings:
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.UpdatePayoutSettingsRequest, base_url, '/payments/payout-settings/{id}', request)
+        
         headers = {}
+        
         req_content_type, data, form = utils.serialize_request_body(request, operations.UpdatePayoutSettingsRequest, "payout_settings_update", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
-        
         client = self.sdk_configuration.client
-        
         
         try:
             req = self.sdk_configuration.get_hooks().before_request(
@@ -110,18 +112,20 @@ class PayoutSettings:
                 raise result
             http_res = result
         
-        content_type = http_res.headers.get('Content-Type')
         
-        res = operations.UpdatePayoutSettingsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdatePayoutSettingsResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type'), raw_response=http_res)
         
         if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
+            if utils.match_content_type(http_res.headers.get('Content-Type'), 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[shared.PayoutSettingsResponse])
                 res.payout_settings_response = out
             else:
+                content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
 
         return res
 

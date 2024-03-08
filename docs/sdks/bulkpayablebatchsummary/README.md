@@ -22,6 +22,7 @@ res = s.bulk_payable_batch_summary.get(batch_id='<value>')
 if res.bulk_payable_import_summary is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

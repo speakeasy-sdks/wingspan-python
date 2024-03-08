@@ -26,6 +26,7 @@ res = s.bulk_calculation1099_batch.create(req)
 if res.bulk_calculation1099_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -61,6 +62,7 @@ res = s.bulk_calculation1099_batch.get(batch_id='<value>')
 if res.bulk_calculation1099_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -97,6 +99,7 @@ res = s.bulk_calculation1099_batch.update(batch_id='<value>', bulk_batch_update=
 if res.bulk_calculation1099_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

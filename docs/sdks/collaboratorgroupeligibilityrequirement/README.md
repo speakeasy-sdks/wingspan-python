@@ -23,6 +23,7 @@ res = s.collaborator_group_eligibility_requirement.delete(eligibility_requiremen
 if res.collaborator_group_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -62,6 +63,7 @@ res = s.collaborator_group_eligibility_requirement.replace(eligibility_requireme
 if res.collaborator_group_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

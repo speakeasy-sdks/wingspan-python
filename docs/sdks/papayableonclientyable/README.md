@@ -22,6 +22,7 @@ res = s.pa_payable_on_clientyable.delete(id='<value>')
 if res.payable_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

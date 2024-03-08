@@ -27,6 +27,7 @@ res = s.member_client.create(req)
 if res.member_client_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -62,6 +63,7 @@ res = s.member_client.delete(id='<value>')
 if res.member_client_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -97,6 +99,7 @@ res = s.member_client.get(id='<value>')
 if res.member_client_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -133,6 +136,7 @@ res = s.member_client.update(id='<value>', member_client_update_request=shared.M
 if res.member_client_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

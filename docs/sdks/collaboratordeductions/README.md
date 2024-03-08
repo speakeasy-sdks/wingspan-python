@@ -22,6 +22,7 @@ res = s.collaborator_deductions.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

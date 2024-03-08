@@ -23,6 +23,7 @@ res = s.collaborator_to_group.add(group_id='<value>', id='<value>')
 if res.collaborator_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -59,6 +60,7 @@ res = s.collaborator_to_group.remove(group_id='<value>', id='<value>')
 if res.collaborator_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

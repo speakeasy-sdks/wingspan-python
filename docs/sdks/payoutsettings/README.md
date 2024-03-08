@@ -23,6 +23,7 @@ res = s.payout_settings.get(id='<value>')
 if res.payout_settings_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -59,6 +60,7 @@ res = s.payout_settings.update(id='<value>', payout_settings_update=shared.Payou
 if res.payout_settings_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

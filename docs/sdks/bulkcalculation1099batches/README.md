@@ -22,6 +22,7 @@ res = s.bulk_calculation1099_batches.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

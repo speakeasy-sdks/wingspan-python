@@ -22,6 +22,7 @@ res = s.approved_payables.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

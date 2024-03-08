@@ -34,6 +34,7 @@ res = s.collaborator_deduction.create(req)
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -69,6 +70,7 @@ res = s.collaborator_deduction.delete(id='<value>')
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -104,6 +106,7 @@ res = s.collaborator_deduction.get(id='<value>')
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -140,6 +143,7 @@ res = s.collaborator_deduction.update(id='<value>', deduction_update_request=sha
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -30,6 +30,7 @@ res = s.payment_eligibility_requirement.create(req)
 if res.payment_eligibility is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -65,6 +66,7 @@ res = s.payment_eligibility_requirement.delete(id='<value>')
 if res.payment_eligibility is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -100,6 +102,7 @@ res = s.payment_eligibility_requirement.get(id='<value>')
 if res.payment_eligibility is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -136,6 +139,7 @@ res = s.payment_eligibility_requirement.update(id='<value>', payment_eligibility
 if res.payment_eligibility is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

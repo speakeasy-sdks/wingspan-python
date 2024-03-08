@@ -26,6 +26,7 @@ res = s.bulk_collaborator_batch.create(req)
 if res.bulk_collaborator_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -61,6 +62,7 @@ res = s.bulk_collaborator_batch.get(batch_id='<value>')
 if res.bulk_collaborator_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -97,6 +99,7 @@ res = s.bulk_collaborator_batch.update(batch_id='<value>', bulk_batch_update=sha
 if res.bulk_collaborator_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

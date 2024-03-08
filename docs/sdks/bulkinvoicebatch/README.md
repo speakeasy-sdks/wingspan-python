@@ -28,6 +28,7 @@ res = s.bulk_invoice_batch.create(req)
 if res.bulk_invoice_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -63,6 +64,7 @@ res = s.bulk_invoice_batch.get(batch_id='<value>')
 if res.bulk_invoice_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -99,6 +101,7 @@ res = s.bulk_invoice_batch.update(batch_id='<value>', bulk_invoice_batch_update=
 if res.bulk_invoice_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

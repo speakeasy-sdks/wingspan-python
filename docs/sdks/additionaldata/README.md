@@ -31,6 +31,7 @@ res = s.additional_data.create(req)
 if res.additional_data is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -66,6 +67,7 @@ res = s.additional_data.delete(id='<value>')
 if res.additional_data is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -101,6 +103,7 @@ res = s.additional_data.get(id='<value>')
 if res.additional_data is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

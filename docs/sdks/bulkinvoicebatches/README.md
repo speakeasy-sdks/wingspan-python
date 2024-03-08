@@ -22,6 +22,7 @@ res = s.bulk_invoice_batches.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

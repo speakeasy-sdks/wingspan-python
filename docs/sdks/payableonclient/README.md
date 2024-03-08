@@ -32,6 +32,7 @@ res = s.payable_on_client.create(req)
 if res.payable_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -68,6 +69,7 @@ res = s.payable_on_client.update(id='<value>', payable_update_request=shared.Pay
 if res.payable_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

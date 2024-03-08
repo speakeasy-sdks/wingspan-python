@@ -25,6 +25,7 @@ res = s.bulk_client_batch_item.create(batch_id='<value>', bulk_client_item_creat
 if res.bulk_client_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -61,6 +62,7 @@ res = s.bulk_client_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 if res.bulk_client_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -98,6 +100,7 @@ res = s.bulk_client_batch_item.update(batch_id='<value>', batch_item_id='<value>
 if res.bulk_client_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

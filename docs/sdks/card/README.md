@@ -27,6 +27,7 @@ res = s.card.create(req)
 if res.card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -62,6 +63,7 @@ res = s.card.delete(id='<value>')
 if res.card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -97,6 +99,7 @@ res = s.card.get(id='<value>')
 if res.card_details is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -135,6 +138,7 @@ res = s.card.update(id='<value>', card_update_request=shared.CardUpdateRequest(
 if res.card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

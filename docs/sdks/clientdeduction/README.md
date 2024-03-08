@@ -31,6 +31,7 @@ res = s.client_deduction.create(req)
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

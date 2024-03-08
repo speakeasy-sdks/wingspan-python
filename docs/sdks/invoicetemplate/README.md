@@ -35,6 +35,7 @@ res = s.invoice_template.create(req)
 if res.invoice_template is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -70,6 +71,7 @@ res = s.invoice_template.delete(id='<value>')
 if res.invoice_template is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -105,6 +107,7 @@ res = s.invoice_template.get(id='<value>')
 if res.invoice_template is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -141,6 +144,7 @@ res = s.invoice_template.update(id='<value>', invoice_template_update_request=sh
 if res.invoice_template is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

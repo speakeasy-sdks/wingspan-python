@@ -24,6 +24,7 @@ res = s.service_status.get()
 if res.ping is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -478,6 +479,7 @@ except errors.SDKError as e:
 if res.ping is not None:
     # handle response
     pass
+
 ```
 <!-- End Error Handling [errors] -->
 
@@ -510,6 +512,7 @@ res = s.service_status.get()
 if res.ping is not None:
     # handle response
     pass
+
 ```
 
 
@@ -529,6 +532,7 @@ res = s.service_status.get()
 if res.ping is not None:
     # handle response
     pass
+
 ```
 <!-- End Server Selection [server] -->
 

@@ -23,6 +23,7 @@ res = s.pay_client_invoice.post(invoice_id='<value>', pay_request=shared.PayRequ
 if res.client_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

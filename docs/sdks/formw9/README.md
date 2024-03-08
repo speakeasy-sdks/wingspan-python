@@ -22,6 +22,7 @@ res = s.form_w9.download(id='<value>')
 if res.download_w9_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

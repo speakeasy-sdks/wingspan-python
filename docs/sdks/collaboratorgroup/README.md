@@ -29,6 +29,7 @@ res = s.collaborator_group.create(req)
 if res.collaborator_group_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -64,6 +65,7 @@ res = s.collaborator_group.get(id='<value>')
 if res.collaborator_group_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -100,6 +102,7 @@ res = s.collaborator_group.update(id='<value>', collaborator_group_update_reques
 if res.collaborator_group_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

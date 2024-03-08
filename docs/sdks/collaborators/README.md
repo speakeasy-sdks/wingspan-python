@@ -22,6 +22,7 @@ res = s.collaborators.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

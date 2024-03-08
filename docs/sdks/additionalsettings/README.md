@@ -23,6 +23,7 @@ res = s.additional_settings.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -53,6 +54,7 @@ res = s.additional_settings.update(id='<value>', additional_data_update_request=
 if res.additional_data is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

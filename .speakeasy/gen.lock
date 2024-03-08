@@ -3,20 +3,21 @@ id: 523fc1bf-f0b6-4ace-bc86-b36330754e1c
 management:
   docChecksum: 213e6692a623ef7a4c2e2fbeb0e17e0f
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.275.4
-  releaseVersion: 5.1.0
-  configChecksum: e2a6f017d323ef61e54fb35c85dc0114
+  speakeasyVersion: 1.204.1
+  generationVersion: 2.279.1
+  releaseVersion: 5.2.0
+  configChecksum: c5c11c532ff05c223aba83a632cbc9a2
   repoURL: https://github.com/speakeasy-sdks/wingspan-python.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/wingspan-python.git
 features:
   python:
-    core: 4.5.0
+    core: 4.5.1
     flattening: 2.81.1
     globalServerURLs: 2.82.1
     groups: 2.81.2
     nameOverrides: 2.81.1
+    responseFormat: 0.1.0
 generatedFiles:
   - src/wingspan/sdkconfiguration.py
   - src/wingspan/servicestatus.py
@@ -106,6 +107,7 @@ generatedFiles:
   - src/wingspan/collaboratorsv2.py
   - src/wingspan/collaboratorv2.py
   - src/wingspan/sdk.py
+  - py.typed
   - pylintrc
   - setup.py
   - src/wingspan/__init__.py

@@ -22,6 +22,7 @@ res = s.client_invoices.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

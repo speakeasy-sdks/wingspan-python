@@ -23,6 +23,7 @@ res = s.payroll_settings.get(id='<value>')
 if res.payroll_settings is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -59,6 +60,7 @@ res = s.payroll_settings.update(id='<value>', payroll_settings_update=shared.Pay
 if res.payroll_settings is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

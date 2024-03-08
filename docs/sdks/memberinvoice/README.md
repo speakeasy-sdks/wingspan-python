@@ -34,6 +34,7 @@ res = s.member_invoice.create(req)
 if res.invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -69,6 +70,7 @@ res = s.member_invoice.delete(id='<value>')
 if res.invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -104,6 +106,7 @@ res = s.member_invoice.get(id='<value>')
 if res.invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -140,6 +143,7 @@ res = s.member_invoice.update(id='<value>', invoice_update_request=shared.Invoic
 if res.invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

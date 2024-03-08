@@ -22,6 +22,7 @@ res = s.bank_statements.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

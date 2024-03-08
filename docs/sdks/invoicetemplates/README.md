@@ -22,6 +22,7 @@ res = s.invoice_templates.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 

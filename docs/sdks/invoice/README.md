@@ -23,6 +23,7 @@ res = s.invoice.generate(invoice_id='<value>')
 if res.invoice_pdf_generation_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -58,6 +59,7 @@ res = s.invoice.send(invoice_id='<value>')
 if res.invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

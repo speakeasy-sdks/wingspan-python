@@ -31,6 +31,7 @@ res = s.bulk_payable_batch_item.create(batch_id='<value>', bulk_payable_item_cre
 if res.bulk_payable_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -67,6 +68,7 @@ res = s.bulk_payable_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 if res.bulk_payable_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -104,6 +106,7 @@ res = s.bulk_payable_batch_item.update(batch_id='<value>', batch_item_id='<value
 if res.bulk_payable_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
