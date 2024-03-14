@@ -1,4 +1,4 @@
-# DeductionResponseStatus
+# Status
 
 
 ## Values

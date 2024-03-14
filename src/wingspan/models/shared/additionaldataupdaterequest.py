@@ -10,15 +10,15 @@ from wingspan import utils
 class TypeAdditionalDataUpdateRequest(str, Enum):
     BOOLEAN = 'Boolean'
     STRING = 'String'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AdditionalDataUpdateRequest:
-    key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key') }})
-    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    required: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('required') }})
-    type: Optional[TypeAdditionalDataUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    key: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key'), 'exclude': lambda f: f is AdditionalDataUpdateRequest.UNSET }})
+    name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is AdditionalDataUpdateRequest.UNSET }})
+    required: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('required'), 'exclude': lambda f: f is AdditionalDataUpdateRequest.UNSET }})
+    type: Optional[TypeAdditionalDataUpdateRequest] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is AdditionalDataUpdateRequest.UNSET }})
     
 

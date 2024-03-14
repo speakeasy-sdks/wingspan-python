@@ -10,10 +10,11 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56:
+    UNSET='__SPEAKEASY_UNSET__'
     address_line1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addressLine1') }})
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }})
     postal_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postalCode') }})
     state: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
-    address_line2: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addressLine2') }})
+    address_line2: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addressLine2'), 'exclude': lambda f: f is Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56.UNSET }})
     
 

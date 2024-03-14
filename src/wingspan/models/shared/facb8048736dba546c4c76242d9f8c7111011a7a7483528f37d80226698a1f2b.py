@@ -10,8 +10,9 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b:
-    amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
-    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
-    percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    amount: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount'), 'exclude': lambda f: f is Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b.UNSET }})
+    description: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b.UNSET }})
+    percentage: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage'), 'exclude': lambda f: f is Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b.UNSET }})
     
 

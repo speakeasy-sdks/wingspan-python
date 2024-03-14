@@ -18,24 +18,12 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.ClientInvoiceCreateRequest(
-    client_email='online',
-    client_email_cc=[
-        'Configuration',
-    ],
-    credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='Money',
+    client_email='<value>',
+    due_date='<value>',
     line_items=[
-        shared.InvoiceLineItemsCreateRequest(
-            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
-            ),
-            labels={
-                "blue": 'shred',
-            },
-        ),
+        shared.InvoiceLineItemsCreateRequest(),
     ],
-    member_id='abnormally',
+    member_id='<value>',
 )
 
 res = s.invoice_as_client.create(req)
@@ -43,6 +31,7 @@ res = s.invoice_as_client.create(req)
 if res.client_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -55,4 +44,8 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.CreateInvoiceAsClientResponse](../../models/operations/createinvoiceasclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

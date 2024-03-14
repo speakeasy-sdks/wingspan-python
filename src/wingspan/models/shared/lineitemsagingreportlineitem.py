@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b as shared_facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
-from ..shared import invoiceintegrations as shared_invoiceintegrations
-from ..shared import userroles as shared_userroles
+from .facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b import Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
+from .invoiceintegrations import InvoiceIntegrations
+from .userroles import UserRoles
 from dataclasses_json import Undefined, dataclass_json
 from typing import Dict, Optional
 from wingspan import utils
@@ -13,6 +13,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class LineItemsAgingReportLineItem:
+    UNSET='__SPEAKEASY_UNSET__'
     cost_per_unit: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('costPerUnit') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     index: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index') }})
@@ -22,12 +23,12 @@ class LineItemsAgingReportLineItem:
     total_cost: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalCost') }})
     unit: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
-    user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
-    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
-    detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detail') }})
-    discount: Optional[shared_facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount') }})
-    discount_total: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discountTotal') }})
-    integration: Optional[shared_invoiceintegrations.InvoiceIntegrations] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
+    user_roles: UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
+    amount: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount'), 'exclude': lambda f: f is LineItemsAgingReportLineItem.UNSET }})
+    description: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is LineItemsAgingReportLineItem.UNSET }})
+    detail: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detail'), 'exclude': lambda f: f is LineItemsAgingReportLineItem.UNSET }})
+    discount: Optional[Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount'), 'exclude': lambda f: f is LineItemsAgingReportLineItem.UNSET }})
+    discount_total: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discountTotal'), 'exclude': lambda f: f is LineItemsAgingReportLineItem.UNSET }})
+    integration: Optional[InvoiceIntegrations] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is LineItemsAgingReportLineItem.UNSET }})
     
 

@@ -10,10 +10,11 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CompanyLinks:
-    instagram_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instagramUrl') }})
-    linked_in_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('linkedInUrl') }})
-    other_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('otherUrl') }})
-    twitter_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twitterUrl') }})
-    website_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('websiteUrl') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    instagram_url: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instagramUrl'), 'exclude': lambda f: f is CompanyLinks.UNSET }})
+    linked_in_url: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('linkedInUrl'), 'exclude': lambda f: f is CompanyLinks.UNSET }})
+    other_url: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('otherUrl'), 'exclude': lambda f: f is CompanyLinks.UNSET }})
+    twitter_url: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twitterUrl'), 'exclude': lambda f: f is CompanyLinks.UNSET }})
+    website_url: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('websiteUrl'), 'exclude': lambda f: f is CompanyLinks.UNSET }})
     
 

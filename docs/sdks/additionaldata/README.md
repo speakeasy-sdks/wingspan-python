@@ -21,9 +21,9 @@ s = wingspan.Wingspan()
 
 req = shared.AdditionalData(
     key='<key>',
-    name='online',
+    name='<value>',
     required=False,
-    type=shared.AdditionalDataType.STRING,
+    type=shared.Type.BOOLEAN,
 )
 
 res = s.additional_data.create(req)
@@ -31,6 +31,7 @@ res = s.additional_data.create(req)
 if res.additional_data is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -43,7 +44,11 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.CreateAdditionalDataResponse](../../models/operations/createadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -53,16 +58,16 @@ Delete additional data
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.delete(id='program')
+res = s.additional_data.delete(id='<value>')
 
 if res.additional_data is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,7 +80,11 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.DeleteAdditionalDataResponse](../../models/operations/deleteadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -85,16 +94,16 @@ Get additional data
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.additional_data.get(id='female')
+res = s.additional_data.get(id='<value>')
 
 if res.additional_data is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -107,4 +116,8 @@ if res.additional_data is not None:
 ### Response
 
 **[operations.GetAdditionalDataResponse](../../models/operations/getadditionaldataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

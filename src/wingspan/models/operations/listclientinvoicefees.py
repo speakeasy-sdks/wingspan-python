@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import invoicefeecalculation as shared_invoicefeecalculation
+from ...models.shared import invoicefeecalculation as shared_invoicefeecalculation
 from typing import Optional
 
 
@@ -21,9 +21,9 @@ class ListClientInvoiceFeesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     invoice_fee_calculation: Optional[shared_invoicefeecalculation.InvoiceFeeCalculation] = dataclasses.field(default=None)
     r"""Fees on Invoice"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

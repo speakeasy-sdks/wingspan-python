@@ -13,16 +13,16 @@ Delete payable on client by payableId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.pa_payable_on_clientyable.delete(id='program')
+res = s.pa_payable_on_clientyable.delete(id='<value>')
 
 if res.payable_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -35,4 +35,8 @@ if res.payable_schema is not None:
 ### Response
 
 **[operations.DeletePayableOnClientResponse](../../models/operations/deletepayableonclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

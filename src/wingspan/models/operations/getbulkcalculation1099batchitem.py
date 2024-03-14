@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkcalculation1099item as shared_bulkcalculation1099item
+from ...models.shared import bulkcalculation1099item as shared_bulkcalculation1099item
 from typing import Optional
 
 
@@ -23,9 +23,9 @@ class GetBulkCalculation1099BatchItemResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     bulk_calculation1099_item: Optional[shared_bulkcalculation1099item.BulkCalculation1099Item] = dataclasses.field(default=None)
     r"""An item that will be converted into a calculation 1099"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

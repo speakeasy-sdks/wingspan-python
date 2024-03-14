@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import memberclient as shared_memberclient
+from .memberclient import MemberClient
 from dataclasses_json import Undefined, dataclass_json
 from wingspan import utils
 
@@ -10,6 +10,6 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Calculate1099Response:
-    member_client: shared_memberclient.MemberClient = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClient') }})
+    member_client: MemberClient = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClient') }})
     
 

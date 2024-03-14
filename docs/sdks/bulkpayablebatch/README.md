@@ -21,9 +21,6 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkPayableBatchCreate(
-    labels={
-        "online": 'Configuration',
-    },
     processing_strategy=shared.BulkPayableBatchCreateProcessingStrategy.MERGE,
 )
 
@@ -32,6 +29,7 @@ res = s.bulk_payable_batch.create(req)
 if res.bulk_payable_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -44,7 +42,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.CreateBulkPayableBatchResponse](../../models/operations/createbulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -54,16 +56,16 @@ Delete a bulk payable batch
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.delete(batch_id='program')
+res = s.bulk_payable_batch.delete(batch_id='<value>')
 
 if res.bulk_payable_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -76,7 +78,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.DeleteBulkPayableBatchResponse](../../models/operations/deletebulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -86,16 +92,16 @@ Get a bulk payable batch
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.get(batch_id='female')
+res = s.bulk_payable_batch.get(batch_id='<value>')
 
 if res.bulk_payable_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -108,7 +114,11 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.GetBulkPayableBatchResponse](../../models/operations/getbulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -118,20 +128,17 @@ Update a bulk payable batch
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch.update(batch_id='Van', bulk_payable_batch_update=shared.BulkPayableBatchUpdate(
-    labels={
-        "East": 'male',
-    },
-))
+res = s.bulk_payable_batch.update(batch_id='<value>', bulk_payable_batch_update=shared.BulkPayableBatchUpdate())
 
 if res.bulk_payable_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -145,4 +152,8 @@ if res.bulk_payable_batch is not None:
 ### Response
 
 **[operations.UpdateBulkPayableBatchResponse](../../models/operations/updatebulkpayablebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -20,9 +20,6 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.BulkInvoiceBatchCreate(
-    labels={
-        "online": 'Configuration',
-    },
     processing_strategy=shared.BulkInvoiceBatchCreateProcessingStrategy.MERGE,
 )
 
@@ -31,6 +28,7 @@ res = s.bulk_invoice_batch.create(req)
 if res.bulk_invoice_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -43,7 +41,11 @@ if res.bulk_invoice_batch is not None:
 ### Response
 
 **[operations.CreateBulkInvoiceBatchResponse](../../models/operations/createbulkinvoicebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -53,16 +55,16 @@ Get a bulk invoice batch
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.get(batch_id='female')
+res = s.bulk_invoice_batch.get(batch_id='<value>')
 
 if res.bulk_invoice_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,7 +77,11 @@ if res.bulk_invoice_batch is not None:
 ### Response
 
 **[operations.GetBulkInvoiceBatchResponse](../../models/operations/getbulkinvoicebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -85,20 +91,17 @@ Update a bulk invoice batch
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch.update(batch_id='Van', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate(
-    labels={
-        "East": 'male',
-    },
-))
+res = s.bulk_invoice_batch.update(batch_id='<value>', bulk_invoice_batch_update=shared.BulkInvoiceBatchUpdate())
 
 if res.bulk_invoice_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -112,4 +115,8 @@ if res.bulk_invoice_batch is not None:
 ### Response
 
 **[operations.UpdateBulkInvoiceBatchResponse](../../models/operations/updatebulkinvoicebatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

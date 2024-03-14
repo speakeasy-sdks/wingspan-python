@@ -15,29 +15,23 @@ Create a bulk invoice batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.create(batch_id='online', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
-    accepted_payment_methods=[
-        shared.BulkInvoiceItemCreateAcceptedPaymentMethods.MANUAL,
-    ],
-    amount=8592.13,
-    bulk_invoice_batch_id='Money',
-    credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='blue',
-    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.CANCELLED,
-    labels={
-        "grey": 'technology',
-    },
-    line_item_description='East',
+res = s.bulk_invoice_batch_item.create(batch_id='<value>', bulk_invoice_item_create=shared.BulkInvoiceItemCreate(
+    amount=4865.89,
+    bulk_invoice_batch_id='<value>',
+    due_date='<value>',
+    invoice_status=shared.InvoiceStatusBulkInvoiceItemCreate.APPROVED,
+    line_item_description='<value>',
 ))
 
 if res.bulk_invoice_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -51,7 +45,11 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.CreateBulkInvoiceBatchItemResponse](../../models/operations/createbulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -61,16 +59,16 @@ Get a bulk invoice batch item
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.get(batch_id='female', batch_item_id='program')
+res = s.bulk_invoice_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 
 if res.bulk_invoice_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -84,7 +82,11 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.GetBulkInvoiceBatchItemResponse](../../models/operations/getbulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -94,24 +96,17 @@ Update a bulk invoice batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_invoice_batch_item.update(batch_id='Van', batch_item_id='East', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate(
-    accepted_payment_methods=[
-        shared.BulkInvoiceItemUpdateAcceptedPaymentMethods.MANUAL,
-    ],
-    credit_fee_handling=shared.FeeHandlingConfig(),
-    labels={
-        "dock": 'Quality',
-    },
-))
+res = s.bulk_invoice_batch_item.update(batch_id='<value>', batch_item_id='<value>', bulk_invoice_item_update=shared.BulkInvoiceItemUpdate())
 
 if res.bulk_invoice_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -126,4 +121,8 @@ if res.bulk_invoice_item is not None:
 ### Response
 
 **[operations.UpdateBulkInvoiceBatchItemResponse](../../models/operations/updatebulkinvoicebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

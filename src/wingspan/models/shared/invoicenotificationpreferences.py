@@ -10,8 +10,9 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class InvoiceNotificationPreferences:
+    UNSET='__SPEAKEASY_UNSET__'
     send_reminders: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendReminders') }})
-    send_invoice: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendInvoice') }})
-    send_receipt: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendReceipt') }})
+    send_invoice: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendInvoice'), 'exclude': lambda f: f is InvoiceNotificationPreferences.UNSET }})
+    send_receipt: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendReceipt'), 'exclude': lambda f: f is InvoiceNotificationPreferences.UNSET }})
     
 

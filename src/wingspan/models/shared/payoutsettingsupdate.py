@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import payoutdestinationupdate as shared_payoutdestinationupdate
+from .payoutdestinationupdate import PayoutDestinationUpdate
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import List, Optional
@@ -14,13 +14,13 @@ class PayoutPreferencesPayoutSettingsUpdate(str, Enum):
     EXPEDITED = 'Expedited'
     CHECK = 'Check'
     E_CHECK = 'ECheck'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PayoutSettingsUpdate:
-    payout_destinations: Optional[List[shared_payoutdestinationupdate.PayoutDestinationUpdate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations') }})
-    payout_preferences: Optional[PayoutPreferencesPayoutSettingsUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    payout_destinations: Optional[List[PayoutDestinationUpdate]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutDestinations'), 'exclude': lambda f: f is PayoutSettingsUpdate.UNSET }})
+    payout_preferences: Optional[PayoutPreferencesPayoutSettingsUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutPreferences'), 'exclude': lambda f: f is PayoutSettingsUpdate.UNSET }})
     
 

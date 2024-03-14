@@ -10,23 +10,22 @@ from wingspan import utils
 class CurrencyDeductionUpdateRequest(str, Enum):
     USD = 'USD'
     CAD = 'CAD'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class TypeDeductionUpdateRequest(str, Enum):
     PRE_PAYMENT = 'PrePayment'
     POST_PAYMENT = 'PostPayment'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DeductionUpdateRequest:
-    amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
-    currency: Optional[CurrencyDeductionUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency') }})
-    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    priority: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priority') }})
-    source_invoice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId') }})
-    start_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startDate') }})
-    type: Optional[TypeDeductionUpdateRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    amount: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount'), 'exclude': lambda f: f is DeductionUpdateRequest.UNSET }})
+    currency: Optional[CurrencyDeductionUpdateRequest] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency'), 'exclude': lambda f: f is DeductionUpdateRequest.UNSET }})
+    name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is DeductionUpdateRequest.UNSET }})
+    priority: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priority'), 'exclude': lambda f: f is DeductionUpdateRequest.UNSET }})
+    source_invoice_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceInvoiceId'), 'exclude': lambda f: f is DeductionUpdateRequest.UNSET }})
+    start_date: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startDate'), 'exclude': lambda f: f is DeductionUpdateRequest.UNSET }})
+    type: Optional[TypeDeductionUpdateRequest] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is DeductionUpdateRequest.UNSET }})
     
 

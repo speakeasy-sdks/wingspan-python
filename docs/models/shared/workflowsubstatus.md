@@ -1,8 +1,8 @@
-# EligibilityRequirementRequirementType
+# WorkflowSubStatus
 
 
 ## Values
 
 | Name        | Value       |
 | ----------- | ----------- |
-| `SIGNATURE` | Signature   |
+| `SUBMITTED` | Submitted   |

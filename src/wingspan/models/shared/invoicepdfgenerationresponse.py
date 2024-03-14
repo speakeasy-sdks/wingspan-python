@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import invoiceattachments as shared_invoiceattachments
+from .invoiceattachments import InvoiceAttachments
 from dataclasses_json import Undefined, dataclass_json
 from wingspan import utils
 
@@ -10,7 +10,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class InvoicePdfGenerationResponse:
-    attachments: shared_invoiceattachments.InvoiceAttachments = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments') }})
+    attachments: InvoiceAttachments = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachments') }})
     invoice_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceId') }})
     
 

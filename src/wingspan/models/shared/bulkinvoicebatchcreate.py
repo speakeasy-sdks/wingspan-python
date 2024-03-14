@@ -15,7 +15,8 @@ class BulkInvoiceBatchCreateProcessingStrategy(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class BulkInvoiceBatchCreate:
+    UNSET='__SPEAKEASY_UNSET__'
     processing_strategy: BulkInvoiceBatchCreateProcessingStrategy = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processingStrategy') }})
-    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is BulkInvoiceBatchCreate.UNSET }})
     
 

@@ -20,8 +20,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Calculate1099Request(
-    member_client_id='Program',
-    year=9615.59,
+    member_client_id='<value>',
+    year=6611.96,
 )
 
 res = s.one_thousand_and_ninety_nine.calculate(req)
@@ -29,6 +29,7 @@ res = s.one_thousand_and_ninety_nine.calculate(req)
 if res.calculate1099_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -41,7 +42,11 @@ if res.calculate1099_response is not None:
 ### Response
 
 **[operations.Calculate1099Response](../../models/operations/calculate1099response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## mark
 
@@ -56,9 +61,9 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.Mark1099AsUndeliveredRequest(
-    member_id='Bronze',
-    submission_index=5411.01,
-    year=7928.06,
+    member_id='<value>',
+    submission_index=2694.09,
+    year=735.52,
 )
 
 res = s.one_thousand_and_ninety_nine.mark(req)
@@ -66,6 +71,7 @@ res = s.one_thousand_and_ninety_nine.mark(req)
 if res.mark1099_as_undelivered_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -78,7 +84,11 @@ if res.mark1099_as_undelivered_response is not None:
 ### Response
 
 **[operations.Mark1099Response](../../models/operations/mark1099response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## remail
 
@@ -94,13 +104,13 @@ s = wingspan.Wingspan()
 
 req = shared.Remail1099Request(
     address=shared.Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56(
-        address_line1='schemas',
-        city='Lake Brycebury',
-        postal_code='81222',
-        state='South',
+        address_line1='71613 Rene Curve',
+        city='West Edd',
+        postal_code='30290',
+        state='Maine',
     ),
-    member_id='as',
-    year=3622.81,
+    member_id='<value>',
+    year=1008.29,
 )
 
 res = s.one_thousand_and_ninety_nine.remail(req)
@@ -108,6 +118,7 @@ res = s.one_thousand_and_ninety_nine.remail(req)
 if res.remail1099_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -120,4 +131,8 @@ if res.remail1099_response is not None:
 ### Response
 
 **[operations.Remail1099Response](../../models/operations/remail1099response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

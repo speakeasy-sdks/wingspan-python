@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import f6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef as shared_f6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef
-from ..shared import seven_thousand_nine_hundred_and_ninety_sixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051 as shared_seven_thousand_nine_hundred_and_ninety_sixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051
+from .f6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef import F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef
+from .seven_thousand_nine_hundred_and_ninety_sixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051 import SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from wingspan import utils
@@ -12,9 +12,10 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class RedactedUser:
-    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
-    phone: Optional[shared_seven_thousand_nine_hundred_and_ninety_sixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051.SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('phone') }})
-    profile: Optional[shared_f6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef.F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('profile') }})
-    tag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tag') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    email: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is RedactedUser.UNSET }})
+    phone: Optional[SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('phone'), 'exclude': lambda f: f is RedactedUser.UNSET }})
+    profile: Optional[F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('profile'), 'exclude': lambda f: f is RedactedUser.UNSET }})
+    tag: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tag'), 'exclude': lambda f: f is RedactedUser.UNSET }})
     
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import collaboratorgroupresponse as shared_collaboratorgroupresponse
+from ...models.shared import collaboratorgroupresponse as shared_collaboratorgroupresponse
 from typing import Optional
 
 
@@ -23,9 +23,9 @@ class DeleteCollaboratorGroupEligibilityRequirementResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     collaborator_group_response: Optional[shared_collaboratorgroupresponse.CollaboratorGroupResponse] = dataclasses.field(default=None)
     r"""Collaborator Configuration Per Group"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

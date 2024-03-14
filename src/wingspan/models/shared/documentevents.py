@@ -10,7 +10,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DocumentEvents:
-    client_signed_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientSignedAt') }})
-    member_signed_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberSignedAt') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    client_signed_at: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientSignedAt'), 'exclude': lambda f: f is DocumentEvents.UNSET }})
+    member_signed_at: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberSignedAt'), 'exclude': lambda f: f is DocumentEvents.UNSET }})
     
 

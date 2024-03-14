@@ -14,8 +14,9 @@ class EligibilityRequirementCreateRequestRequirementType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class EligibilityRequirementCreateRequest:
+    UNSET='__SPEAKEASY_UNSET__'
     requirement_type: EligibilityRequirementCreateRequestRequirementType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requirementType') }})
-    template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('templateId') }})
-    valid_for: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('validFor') }})
+    template_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('templateId'), 'exclude': lambda f: f is EligibilityRequirementCreateRequest.UNSET }})
+    valid_for: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('validFor'), 'exclude': lambda f: f is EligibilityRequirementCreateRequest.UNSET }})
     
 

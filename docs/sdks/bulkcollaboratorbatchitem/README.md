@@ -15,28 +15,17 @@ Create a bulk collaborator batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.create(batch_id='online', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate(
-    form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='Configuration',
-        city='Edwardoville',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.LLC_PARTNERSHIP,
-        country='Bahrain',
-        postal_code='73980-4130',
-        state='male',
-    ),
-    labels={
-        "SUV": 'quantify',
-    },
-))
+res = s.bulk_collaborator_batch_item.create(batch_id='<value>', bulk_collaborator_item_create=shared.BulkCollaboratorItemCreate())
 
 if res.bulk_collaborator_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -50,7 +39,11 @@ if res.bulk_collaborator_item is not None:
 ### Response
 
 **[operations.CreateBulkCollaboratorBatchItemResponse](../../models/operations/createbulkcollaboratorbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -60,16 +53,16 @@ Get a bulk collaborator batch item
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.get(batch_id='female', batch_item_id='program')
+res = s.bulk_collaborator_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 
 if res.bulk_collaborator_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -83,7 +76,11 @@ if res.bulk_collaborator_item is not None:
 ### Response
 
 **[operations.GetBulkCollaboratorBatchItemResponse](../../models/operations/getbulkcollaboratorbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -93,28 +90,17 @@ Update a bulk collaborator batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_item.update(batch_id='Van', batch_item_id='East', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate(
-    form_w9_data=shared.MemberClientFormW9Info(
-        address_line1='male',
-        city='Lake Marlee',
-        company_structure=shared.CompanyStructureMemberClientFormW9Info.CORPORATION_S,
-        country='Jersey',
-        postal_code='10284-4337',
-        state='Plastic',
-    ),
-    labels={
-        "Carolina": 'syndicate',
-    },
-))
+res = s.bulk_collaborator_batch_item.update(batch_id='<value>', batch_item_id='<value>', bulk_collaborator_item_update=shared.BulkCollaboratorItemUpdate())
 
 if res.bulk_collaborator_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -129,4 +115,8 @@ if res.bulk_collaborator_item is not None:
 ### Response
 
 **[operations.UpdateBulkCollaboratorBatchItemResponse](../../models/operations/updatebulkcollaboratorbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -14,19 +14,23 @@ Lists all collaborators in the V2 format
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.collaborators_v2.list()
 
-if res.collaborator_v2s is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
 ### Response
 
 **[operations.ListCollaboratorsV2Response](../../models/operations/listcollaboratorsv2response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

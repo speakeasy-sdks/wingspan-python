@@ -14,16 +14,16 @@ Add collaborator to collaborators group
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.add(group_id='transmit', id='calculate')
+res = s.collaborator_to_group.add(group_id='<value>', id='<value>')
 
 if res.collaborator_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -37,7 +37,11 @@ if res.collaborator_schema is not None:
 ### Response
 
 **[operations.AddCollaboratorToGroupResponse](../../models/operations/addcollaboratortogroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## remove
 
@@ -47,16 +51,16 @@ Remove collaborator from collaborators group
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_to_group.remove(group_id='Usability', id='Southwest')
+res = s.collaborator_to_group.remove(group_id='<value>', id='<value>')
 
 if res.collaborator_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -70,4 +74,8 @@ if res.collaborator_schema is not None:
 ### Response
 
 **[operations.RemoveCollaboratorToGroupResponse](../../models/operations/removecollaboratortogroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

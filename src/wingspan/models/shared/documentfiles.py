@@ -10,7 +10,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DocumentFiles:
-    client: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client') }})
-    member: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    client: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client'), 'exclude': lambda f: f is DocumentFiles.UNSET }})
+    member: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member'), 'exclude': lambda f: f is DocumentFiles.UNSET }})
     
 

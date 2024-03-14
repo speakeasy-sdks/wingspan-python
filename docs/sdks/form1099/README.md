@@ -13,16 +13,16 @@ Downloads a form 1099 PDF for a collaborator
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.form1099.download(id='optical', index='Dakota', year='infrastructures')
+res = s.form1099.download(id='<value>', index='<value>', year='<value>')
 
 if res.download1099_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -37,4 +37,8 @@ if res.download1099_response is not None:
 ### Response
 
 **[operations.DownloadForm1099Response](../../models/operations/downloadform1099response.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

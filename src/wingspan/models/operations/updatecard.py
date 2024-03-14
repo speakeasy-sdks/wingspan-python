@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import card as shared_card
-from ..shared import cardupdaterequest as shared_cardupdaterequest
+from ...models.shared import card as shared_card
+from ...models.shared import cardupdaterequest as shared_cardupdaterequest
 from typing import Optional
 
 
@@ -23,9 +23,9 @@ class UpdateCardResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     card: Optional[shared_card.Card] = dataclasses.field(default=None)
     r"""A card summary"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

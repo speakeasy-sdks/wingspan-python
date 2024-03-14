@@ -15,25 +15,23 @@ Create a bulk payable batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.create(batch_id='online', bulk_payable_item_create=shared.BulkPayableItemCreate(
-    amount=6384.24,
-    bulk_payable_batch_id='Extended',
-    due_date='South',
-    labels={
-        "shred": 'abnormally',
-    },
-    line_item_description='deposit',
-    payable_status=shared.PayableStatusBulkPayableItemCreate.OPEN,
+res = s.bulk_payable_batch_item.create(batch_id='<value>', bulk_payable_item_create=shared.BulkPayableItemCreate(
+    amount=4865.89,
+    bulk_payable_batch_id='<value>',
+    due_date='<value>',
+    line_item_description='<value>',
+    payable_status=shared.PayableStatusBulkPayableItemCreate.APPROVED,
 ))
 
 if res.bulk_payable_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -47,7 +45,11 @@ if res.bulk_payable_item is not None:
 ### Response
 
 **[operations.CreateBulkPayableBatchItemResponse](../../models/operations/createbulkpayablebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -57,16 +59,16 @@ Get a bulk payable batch item
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.get(batch_id='female', batch_item_id='program')
+res = s.bulk_payable_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 
 if res.bulk_payable_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -80,7 +82,11 @@ if res.bulk_payable_item is not None:
 ### Response
 
 **[operations.GetBulkPayableBatchItemResponse](../../models/operations/getbulkpayablebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -90,20 +96,17 @@ Update a bulk payable batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_item.update(batch_id='Van', batch_item_id='East', bulk_payable_item_update=shared.BulkPayableItemUpdate(
-    labels={
-        "male": 'Metal',
-    },
-))
+res = s.bulk_payable_batch_item.update(batch_id='<value>', batch_item_id='<value>', bulk_payable_item_update=shared.BulkPayableItemUpdate())
 
 if res.bulk_payable_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -118,4 +121,8 @@ if res.bulk_payable_item is not None:
 ### Response
 
 **[operations.UpdateBulkPayableBatchItemResponse](../../models/operations/updatebulkpayablebatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkclientitem as shared_bulkclientitem
-from ..shared import bulkclientitemupdate as shared_bulkclientitemupdate
+from ...models.shared import bulkclientitem as shared_bulkclientitem
+from ...models.shared import bulkclientitemupdate as shared_bulkclientitemupdate
 from typing import Optional
 
 
@@ -25,9 +25,9 @@ class UpdateBulkClientBatchItemResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     bulk_client_item: Optional[shared_bulkclientitem.BulkClientItem] = dataclasses.field(default=None)
     r"""An item that will be converted into a client"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

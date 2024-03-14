@@ -13,16 +13,16 @@ Get Bulk Payable Batch Import Summary
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_payable_batch_summary.get(batch_id='female')
+res = s.bulk_payable_batch_summary.get(batch_id='<value>')
 
 if res.bulk_payable_import_summary is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -35,4 +35,8 @@ if res.bulk_payable_import_summary is not None:
 ### Response
 
 **[operations.GetBulkPayableBatchSummaryResponse](../../models/operations/getbulkpayablebatchsummaryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

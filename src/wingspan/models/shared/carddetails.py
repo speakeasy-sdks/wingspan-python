@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import address as shared_address
-from ..shared import c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 as shared_c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875
+from .address import Address
+from .c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 import C43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
@@ -28,15 +28,16 @@ class TypeCardDetails(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CardDetails:
-    address: shared_address.Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    address: Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
     brand: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     expiration_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expirationDate') }})
-    internal: shared_c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875.C43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internal') }})
+    internal: C43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internal') }})
     last4_digits: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last4Digits') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     status: StatusCardDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     type: TypeCardDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-    pin_set: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pinSet') }})
+    pin_set: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pinSet'), 'exclude': lambda f: f is CardDetails.UNSET }})
     
 

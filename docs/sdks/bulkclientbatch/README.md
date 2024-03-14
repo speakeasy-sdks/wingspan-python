@@ -19,17 +19,14 @@ from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
-req = shared.BulkBatchCreate(
-    labels={
-        "online": 'Configuration',
-    },
-)
+req = shared.BulkBatchCreate()
 
 res = s.bulk_client_batch.create(req)
 
 if res.bulk_client_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -42,7 +39,11 @@ if res.bulk_client_batch is not None:
 ### Response
 
 **[operations.CreateBulkClientBatchResponse](../../models/operations/createbulkclientbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -52,16 +53,16 @@ Get a bulk client batch
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch.get(batch_id='female')
+res = s.bulk_client_batch.get(batch_id='<value>')
 
 if res.bulk_client_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -74,7 +75,11 @@ if res.bulk_client_batch is not None:
 ### Response
 
 **[operations.GetBulkClientBatchResponse](../../models/operations/getbulkclientbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -84,20 +89,17 @@ Update a bulk client batch
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch.update(batch_id='Van', bulk_batch_update=shared.BulkBatchUpdate(
-    labels={
-        "East": 'male',
-    },
-))
+res = s.bulk_client_batch.update(batch_id='<value>', bulk_batch_update=shared.BulkBatchUpdate())
 
 if res.bulk_client_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -111,4 +113,8 @@ if res.bulk_client_batch is not None:
 ### Response
 
 **[operations.UpdateBulkClientBatchResponse](../../models/operations/updatebulkclientbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

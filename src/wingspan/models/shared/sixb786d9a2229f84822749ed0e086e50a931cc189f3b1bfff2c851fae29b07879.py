@@ -10,6 +10,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Sixb786d9a2229f84822749ed0e086e50a931cc189f3b1bfff2c851fae29b07879:
-    expense_account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expenseAccountId') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    expense_account_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expenseAccountId'), 'exclude': lambda f: f is Sixb786d9a2229f84822749ed0e086e50a931cc189f3b1bfff2c851fae29b07879.UNSET }})
     
 

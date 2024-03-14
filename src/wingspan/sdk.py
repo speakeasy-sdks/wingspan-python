@@ -88,109 +88,110 @@ from .sdkconfiguration import SDKConfiguration
 from .servicestatus import ServiceStatus
 from .statement import Statement
 from .verification import Verification
-from typing import Dict
+from typing import Dict, Optional
 from wingspan import utils
+from wingspan._hooks import SDKHooks
 
 class Wingspan:
     r"""Wingspan Payments API: Payments"""
-    one_thousand_and_ninety_nine: OneThousandAndNinetyNine
-    additional_data: AdditionalData
-    additional_settings: AdditionalSettings
-    app_link: AppLink
-    approved_payables: ApprovedPayables
-    bank_statements: BankStatements
-    bulk_calculation1099_batch: BulkCalculation1099Batch
-    bulk_calculation1099_batch_item: BulkCalculation1099BatchItem
-    bulk_calculation1099_batch_items: BulkCalculation1099BatchItems
-    bulk_calculation1099_batches: BulkCalculation1099Batches
-    bulk_client_batch: BulkClientBatch
-    bulk_client_batch_item: BulkClientBatchItem
-    bulk_client_batch_items: BulkClientBatchItems
-    bulk_client_batches: BulkClientBatches
-    bulk_collaborator_batch: BulkCollaboratorBatch
-    bulk_collaborator_batch_item: BulkCollaboratorBatchItem
-    bulk_collaborator_batch_items: BulkCollaboratorBatchItems
-    bulk_collaborator_batches: BulkCollaboratorBatches
-    bulk_invoice_batch: BulkInvoiceBatch
-    bulk_invoice_batch_item: BulkInvoiceBatchItem
-    bulk_invoice_batch_items: BulkInvoiceBatchItems
-    bulk_invoice_batches: BulkInvoiceBatches
-    bulk_payable_batch: BulkPayableBatch
-    bulk_payable_batch_item: BulkPayableBatchItem
-    bulk_payable_batch_items: BulkPayableBatchItems
-    bulk_payable_batch_summary: BulkPayableBatchSummary
-    bulk_payable_batches: BulkPayableBatches
-    card: Card
+    service_status: ServiceStatus
     cards: Cards
-    client_collaborator_v2: ClientCollaboratorV2
-    client_collaborators_v2: ClientCollaboratorsV2
-    client_deduction: ClientDeduction
-    client_deduction_id: ClientDeductionID
-    client_deductions: ClientDeductions
-    client_invoice: ClientInvoice
-    client_invoice_fees: ClientInvoiceFees
-    client_invoice_template: ClientInvoiceTemplate
-    client_invoice_templates: ClientInvoiceTemplates
-    client_invoices: ClientInvoices
+    card: Card
     code_to_token: CodeToToken
-    collaborator: Collaborator
-    collaborator_deduction: CollaboratorDeduction
-    collaborator_deductions: CollaboratorDeductions
-    collaborator_events: CollaboratorEvents
-    collaborator_group: CollaboratorGroup
-    collaborator_group_eligibility_requirement: CollaboratorGroupEligibilityRequirement
-    collaborator_groups: CollaboratorGroups
-    collaborator_to_group: CollaboratorToGroup
-    collaborator_v2: CollaboratorV2
-    collaborators: Collaborators
-    collaborators_details_v2: CollaboratorsDetailsV2
-    collaborators_v2: CollaboratorsV2
-    created_invoices_by_client: CreatedInvoicesByClient
-    eligibility_requirement: EligibilityRequirement
-    eligibility_requirements: EligibilityRequirements
-    form1099: Form1099
-    form_w9: FormW9
+    verification: Verification
     instant_payout: InstantPayout
     institution: Institution
-    invoice: Invoice
-    invoice_as_client: InvoiceAsClient
-    invoice_payable_on_member: InvoicePayableOnMember
-    invoice_template: InvoiceTemplate
-    invoice_templates: InvoiceTemplates
-    line_items_aging_group: LineItemsAgingGroup
-    mcc: Mcc
-    member_client: MemberClient
-    member_clients: MemberClients
-    member_invoice: MemberInvoice
-    member_invoices: MemberInvoices
-    pa_payable_on_clientyable: PaPayableOnClientyable
-    pay_client_invoice: PayClientInvoice
-    payable_on_client: PayableOnClient
-    payables: Payables
-    payables_aging_group: PayablesAgingGroup
-    payables_payroll: PayablesPayroll
-    payment_eligibility_requirement: PaymentEligibilityRequirement
-    payment_eligibility_requirements: PaymentEligibilityRequirements
-    payout_debit_card: PayoutDebitCard
-    payout_debit_cards: PayoutDebitCards
-    payout_settings: PayoutSettings
-    payroll: Payroll
-    payroll_settings: PayrollSettings
-    service_status: ServiceStatus
+    bank_statements: BankStatements
     statement: Statement
-    verification: Verification
+    bulk_calculation1099_batches: BulkCalculation1099Batches
+    bulk_calculation1099_batch: BulkCalculation1099Batch
+    bulk_calculation1099_batch_items: BulkCalculation1099BatchItems
+    bulk_calculation1099_batch_item: BulkCalculation1099BatchItem
+    bulk_client_batches: BulkClientBatches
+    bulk_client_batch: BulkClientBatch
+    bulk_client_batch_items: BulkClientBatchItems
+    bulk_client_batch_item: BulkClientBatchItem
+    bulk_collaborator_batches: BulkCollaboratorBatches
+    bulk_collaborator_batch: BulkCollaboratorBatch
+    bulk_collaborator_batch_items: BulkCollaboratorBatchItems
+    bulk_collaborator_batch_item: BulkCollaboratorBatchItem
+    bulk_invoice_batches: BulkInvoiceBatches
+    bulk_invoice_batch: BulkInvoiceBatch
+    bulk_invoice_batch_items: BulkInvoiceBatchItems
+    bulk_invoice_batch_item: BulkInvoiceBatchItem
+    bulk_payable_batches: BulkPayableBatches
+    bulk_payable_batch: BulkPayableBatch
+    bulk_payable_batch_summary: BulkPayableBatchSummary
+    bulk_payable_batch_items: BulkPayableBatchItems
+    bulk_payable_batch_item: BulkPayableBatchItem
+    client_deductions: ClientDeductions
+    client_deduction: ClientDeduction
+    client_deduction_id: ClientDeductionID
+    created_invoices_by_client: CreatedInvoicesByClient
+    invoice_as_client: InvoiceAsClient
+    client_invoice_templates: ClientInvoiceTemplates
+    client_invoice_template: ClientInvoiceTemplate
+    client_invoice: ClientInvoice
+    client_invoice_fees: ClientInvoiceFees
+    pay_client_invoice: PayClientInvoice
+    collaborators: Collaborators
+    collaborator: Collaborator
+    collaborator_deductions: CollaboratorDeductions
+    collaborator_deduction: CollaboratorDeduction
+    collaborator_groups: CollaboratorGroups
+    collaborator_group: CollaboratorGroup
+    collaborator_group_eligibility_requirement: CollaboratorGroupEligibilityRequirement
+    additional_settings: AdditionalSettings
+    additional_data: AdditionalData
+    eligibility_requirements: EligibilityRequirements
+    eligibility_requirement: EligibilityRequirement
+    payment_eligibility_requirements: PaymentEligibilityRequirements
+    payment_eligibility_requirement: PaymentEligibilityRequirement
+    one_thousand_and_ninety_nine: OneThousandAndNinetyNine
+    collaborator_to_group: CollaboratorToGroup
+    form1099: Form1099
+    form_w9: FormW9
+    collaborator_events: CollaboratorEvents
+    member_invoices: MemberInvoices
+    member_invoice: MemberInvoice
+    invoice_templates: InvoiceTemplates
+    invoice_template: InvoiceTemplate
+    invoice: Invoice
+    mcc: Mcc
+    member_clients: MemberClients
+    member_client: MemberClient
+    payroll: Payroll
+    client_invoices: ClientInvoices
+    payable_on_client: PayableOnClient
+    pa_payable_on_clientyable: PaPayableOnClientyable
+    invoice_payable_on_member: InvoicePayableOnMember
+    payout_settings: PayoutSettings
+    payout_debit_cards: PayoutDebitCards
+    payout_debit_card: PayoutDebitCard
+    payroll_settings: PayrollSettings
+    approved_payables: ApprovedPayables
+    line_items_aging_group: LineItemsAgingGroup
+    payables_aging_group: PayablesAgingGroup
+    collaborators_details_v2: CollaboratorsDetailsV2
+    payables_payroll: PayablesPayroll
+    app_link: AppLink
+    payables: Payables
+    client_collaborators_v2: ClientCollaboratorsV2
+    client_collaborator_v2: ClientCollaboratorV2
+    collaborators_v2: CollaboratorsV2
+    collaborator_v2: CollaboratorV2
 
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 server_idx: int = None,
-                 server_url: str = None,
-                 url_params: Dict[str, str] = None,
-                 client: requests_http.Session = None,
-                 retry_config: utils.RetryConfig = None
+                 server_idx: Optional[int] = None,
+                 server_url: Optional[str] = None,
+                 url_params: Optional[Dict[str, str]] = None,
+                 client: Optional[requests_http.Session] = None,
+                 retry_config: Optional[utils.RetryConfig] = None
                  ) -> None:
         """Instantiates the SDK configuring it with the provided parameters.
-        
+
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -204,102 +205,115 @@ class Wingspan:
         """
         if client is None:
             client = requests_http.Session()
-        
-        security_client = client
-        
+
         if server_url is not None:
             if url_params is not None:
                 server_url = utils.template_url(server_url, url_params)
 
-        self.sdk_configuration = SDKConfiguration(client, security_client, server_url, server_idx, retry_config=retry_config)
-       
+        self.sdk_configuration = SDKConfiguration(
+            client,
+            server_url,
+            server_idx,
+            retry_config=retry_config
+        )
+
+        hooks = SDKHooks()
+
+        current_server_url, *_ = self.sdk_configuration.get_server_details()
+        server_url, self.sdk_configuration.client = hooks.sdk_init(current_server_url, self.sdk_configuration.client)
+        if current_server_url != server_url:
+            self.sdk_configuration.server_url = server_url
+
+        # pylint: disable=protected-access
+        self.sdk_configuration._hooks = hooks
+
         self._init_sdks()
-    
+
+
     def _init_sdks(self):
-        self.one_thousand_and_ninety_nine = OneThousandAndNinetyNine(self.sdk_configuration)
-        self.additional_data = AdditionalData(self.sdk_configuration)
-        self.additional_settings = AdditionalSettings(self.sdk_configuration)
-        self.app_link = AppLink(self.sdk_configuration)
-        self.approved_payables = ApprovedPayables(self.sdk_configuration)
-        self.bank_statements = BankStatements(self.sdk_configuration)
-        self.bulk_calculation1099_batch = BulkCalculation1099Batch(self.sdk_configuration)
-        self.bulk_calculation1099_batch_item = BulkCalculation1099BatchItem(self.sdk_configuration)
-        self.bulk_calculation1099_batch_items = BulkCalculation1099BatchItems(self.sdk_configuration)
-        self.bulk_calculation1099_batches = BulkCalculation1099Batches(self.sdk_configuration)
-        self.bulk_client_batch = BulkClientBatch(self.sdk_configuration)
-        self.bulk_client_batch_item = BulkClientBatchItem(self.sdk_configuration)
-        self.bulk_client_batch_items = BulkClientBatchItems(self.sdk_configuration)
-        self.bulk_client_batches = BulkClientBatches(self.sdk_configuration)
-        self.bulk_collaborator_batch = BulkCollaboratorBatch(self.sdk_configuration)
-        self.bulk_collaborator_batch_item = BulkCollaboratorBatchItem(self.sdk_configuration)
-        self.bulk_collaborator_batch_items = BulkCollaboratorBatchItems(self.sdk_configuration)
-        self.bulk_collaborator_batches = BulkCollaboratorBatches(self.sdk_configuration)
-        self.bulk_invoice_batch = BulkInvoiceBatch(self.sdk_configuration)
-        self.bulk_invoice_batch_item = BulkInvoiceBatchItem(self.sdk_configuration)
-        self.bulk_invoice_batch_items = BulkInvoiceBatchItems(self.sdk_configuration)
-        self.bulk_invoice_batches = BulkInvoiceBatches(self.sdk_configuration)
-        self.bulk_payable_batch = BulkPayableBatch(self.sdk_configuration)
-        self.bulk_payable_batch_item = BulkPayableBatchItem(self.sdk_configuration)
-        self.bulk_payable_batch_items = BulkPayableBatchItems(self.sdk_configuration)
-        self.bulk_payable_batch_summary = BulkPayableBatchSummary(self.sdk_configuration)
-        self.bulk_payable_batches = BulkPayableBatches(self.sdk_configuration)
-        self.card = Card(self.sdk_configuration)
+        self.service_status = ServiceStatus(self.sdk_configuration)
         self.cards = Cards(self.sdk_configuration)
-        self.client_collaborator_v2 = ClientCollaboratorV2(self.sdk_configuration)
-        self.client_collaborators_v2 = ClientCollaboratorsV2(self.sdk_configuration)
-        self.client_deduction = ClientDeduction(self.sdk_configuration)
-        self.client_deduction_id = ClientDeductionID(self.sdk_configuration)
-        self.client_deductions = ClientDeductions(self.sdk_configuration)
-        self.client_invoice = ClientInvoice(self.sdk_configuration)
-        self.client_invoice_fees = ClientInvoiceFees(self.sdk_configuration)
-        self.client_invoice_template = ClientInvoiceTemplate(self.sdk_configuration)
-        self.client_invoice_templates = ClientInvoiceTemplates(self.sdk_configuration)
-        self.client_invoices = ClientInvoices(self.sdk_configuration)
+        self.card = Card(self.sdk_configuration)
         self.code_to_token = CodeToToken(self.sdk_configuration)
-        self.collaborator = Collaborator(self.sdk_configuration)
-        self.collaborator_deduction = CollaboratorDeduction(self.sdk_configuration)
-        self.collaborator_deductions = CollaboratorDeductions(self.sdk_configuration)
-        self.collaborator_events = CollaboratorEvents(self.sdk_configuration)
-        self.collaborator_group = CollaboratorGroup(self.sdk_configuration)
-        self.collaborator_group_eligibility_requirement = CollaboratorGroupEligibilityRequirement(self.sdk_configuration)
-        self.collaborator_groups = CollaboratorGroups(self.sdk_configuration)
-        self.collaborator_to_group = CollaboratorToGroup(self.sdk_configuration)
-        self.collaborator_v2 = CollaboratorV2(self.sdk_configuration)
-        self.collaborators = Collaborators(self.sdk_configuration)
-        self.collaborators_details_v2 = CollaboratorsDetailsV2(self.sdk_configuration)
-        self.collaborators_v2 = CollaboratorsV2(self.sdk_configuration)
-        self.created_invoices_by_client = CreatedInvoicesByClient(self.sdk_configuration)
-        self.eligibility_requirement = EligibilityRequirement(self.sdk_configuration)
-        self.eligibility_requirements = EligibilityRequirements(self.sdk_configuration)
-        self.form1099 = Form1099(self.sdk_configuration)
-        self.form_w9 = FormW9(self.sdk_configuration)
+        self.verification = Verification(self.sdk_configuration)
         self.instant_payout = InstantPayout(self.sdk_configuration)
         self.institution = Institution(self.sdk_configuration)
-        self.invoice = Invoice(self.sdk_configuration)
-        self.invoice_as_client = InvoiceAsClient(self.sdk_configuration)
-        self.invoice_payable_on_member = InvoicePayableOnMember(self.sdk_configuration)
-        self.invoice_template = InvoiceTemplate(self.sdk_configuration)
-        self.invoice_templates = InvoiceTemplates(self.sdk_configuration)
-        self.line_items_aging_group = LineItemsAgingGroup(self.sdk_configuration)
-        self.mcc = Mcc(self.sdk_configuration)
-        self.member_client = MemberClient(self.sdk_configuration)
-        self.member_clients = MemberClients(self.sdk_configuration)
-        self.member_invoice = MemberInvoice(self.sdk_configuration)
-        self.member_invoices = MemberInvoices(self.sdk_configuration)
-        self.pa_payable_on_clientyable = PaPayableOnClientyable(self.sdk_configuration)
-        self.pay_client_invoice = PayClientInvoice(self.sdk_configuration)
-        self.payable_on_client = PayableOnClient(self.sdk_configuration)
-        self.payables = Payables(self.sdk_configuration)
-        self.payables_aging_group = PayablesAgingGroup(self.sdk_configuration)
-        self.payables_payroll = PayablesPayroll(self.sdk_configuration)
-        self.payment_eligibility_requirement = PaymentEligibilityRequirement(self.sdk_configuration)
-        self.payment_eligibility_requirements = PaymentEligibilityRequirements(self.sdk_configuration)
-        self.payout_debit_card = PayoutDebitCard(self.sdk_configuration)
-        self.payout_debit_cards = PayoutDebitCards(self.sdk_configuration)
-        self.payout_settings = PayoutSettings(self.sdk_configuration)
-        self.payroll = Payroll(self.sdk_configuration)
-        self.payroll_settings = PayrollSettings(self.sdk_configuration)
-        self.service_status = ServiceStatus(self.sdk_configuration)
+        self.bank_statements = BankStatements(self.sdk_configuration)
         self.statement = Statement(self.sdk_configuration)
-        self.verification = Verification(self.sdk_configuration)
-    
+        self.bulk_calculation1099_batches = BulkCalculation1099Batches(self.sdk_configuration)
+        self.bulk_calculation1099_batch = BulkCalculation1099Batch(self.sdk_configuration)
+        self.bulk_calculation1099_batch_items = BulkCalculation1099BatchItems(self.sdk_configuration)
+        self.bulk_calculation1099_batch_item = BulkCalculation1099BatchItem(self.sdk_configuration)
+        self.bulk_client_batches = BulkClientBatches(self.sdk_configuration)
+        self.bulk_client_batch = BulkClientBatch(self.sdk_configuration)
+        self.bulk_client_batch_items = BulkClientBatchItems(self.sdk_configuration)
+        self.bulk_client_batch_item = BulkClientBatchItem(self.sdk_configuration)
+        self.bulk_collaborator_batches = BulkCollaboratorBatches(self.sdk_configuration)
+        self.bulk_collaborator_batch = BulkCollaboratorBatch(self.sdk_configuration)
+        self.bulk_collaborator_batch_items = BulkCollaboratorBatchItems(self.sdk_configuration)
+        self.bulk_collaborator_batch_item = BulkCollaboratorBatchItem(self.sdk_configuration)
+        self.bulk_invoice_batches = BulkInvoiceBatches(self.sdk_configuration)
+        self.bulk_invoice_batch = BulkInvoiceBatch(self.sdk_configuration)
+        self.bulk_invoice_batch_items = BulkInvoiceBatchItems(self.sdk_configuration)
+        self.bulk_invoice_batch_item = BulkInvoiceBatchItem(self.sdk_configuration)
+        self.bulk_payable_batches = BulkPayableBatches(self.sdk_configuration)
+        self.bulk_payable_batch = BulkPayableBatch(self.sdk_configuration)
+        self.bulk_payable_batch_summary = BulkPayableBatchSummary(self.sdk_configuration)
+        self.bulk_payable_batch_items = BulkPayableBatchItems(self.sdk_configuration)
+        self.bulk_payable_batch_item = BulkPayableBatchItem(self.sdk_configuration)
+        self.client_deductions = ClientDeductions(self.sdk_configuration)
+        self.client_deduction = ClientDeduction(self.sdk_configuration)
+        self.client_deduction_id = ClientDeductionID(self.sdk_configuration)
+        self.created_invoices_by_client = CreatedInvoicesByClient(self.sdk_configuration)
+        self.invoice_as_client = InvoiceAsClient(self.sdk_configuration)
+        self.client_invoice_templates = ClientInvoiceTemplates(self.sdk_configuration)
+        self.client_invoice_template = ClientInvoiceTemplate(self.sdk_configuration)
+        self.client_invoice = ClientInvoice(self.sdk_configuration)
+        self.client_invoice_fees = ClientInvoiceFees(self.sdk_configuration)
+        self.pay_client_invoice = PayClientInvoice(self.sdk_configuration)
+        self.collaborators = Collaborators(self.sdk_configuration)
+        self.collaborator = Collaborator(self.sdk_configuration)
+        self.collaborator_deductions = CollaboratorDeductions(self.sdk_configuration)
+        self.collaborator_deduction = CollaboratorDeduction(self.sdk_configuration)
+        self.collaborator_groups = CollaboratorGroups(self.sdk_configuration)
+        self.collaborator_group = CollaboratorGroup(self.sdk_configuration)
+        self.collaborator_group_eligibility_requirement = CollaboratorGroupEligibilityRequirement(self.sdk_configuration)
+        self.additional_settings = AdditionalSettings(self.sdk_configuration)
+        self.additional_data = AdditionalData(self.sdk_configuration)
+        self.eligibility_requirements = EligibilityRequirements(self.sdk_configuration)
+        self.eligibility_requirement = EligibilityRequirement(self.sdk_configuration)
+        self.payment_eligibility_requirements = PaymentEligibilityRequirements(self.sdk_configuration)
+        self.payment_eligibility_requirement = PaymentEligibilityRequirement(self.sdk_configuration)
+        self.one_thousand_and_ninety_nine = OneThousandAndNinetyNine(self.sdk_configuration)
+        self.collaborator_to_group = CollaboratorToGroup(self.sdk_configuration)
+        self.form1099 = Form1099(self.sdk_configuration)
+        self.form_w9 = FormW9(self.sdk_configuration)
+        self.collaborator_events = CollaboratorEvents(self.sdk_configuration)
+        self.member_invoices = MemberInvoices(self.sdk_configuration)
+        self.member_invoice = MemberInvoice(self.sdk_configuration)
+        self.invoice_templates = InvoiceTemplates(self.sdk_configuration)
+        self.invoice_template = InvoiceTemplate(self.sdk_configuration)
+        self.invoice = Invoice(self.sdk_configuration)
+        self.mcc = Mcc(self.sdk_configuration)
+        self.member_clients = MemberClients(self.sdk_configuration)
+        self.member_client = MemberClient(self.sdk_configuration)
+        self.payroll = Payroll(self.sdk_configuration)
+        self.client_invoices = ClientInvoices(self.sdk_configuration)
+        self.payable_on_client = PayableOnClient(self.sdk_configuration)
+        self.pa_payable_on_clientyable = PaPayableOnClientyable(self.sdk_configuration)
+        self.invoice_payable_on_member = InvoicePayableOnMember(self.sdk_configuration)
+        self.payout_settings = PayoutSettings(self.sdk_configuration)
+        self.payout_debit_cards = PayoutDebitCards(self.sdk_configuration)
+        self.payout_debit_card = PayoutDebitCard(self.sdk_configuration)
+        self.payroll_settings = PayrollSettings(self.sdk_configuration)
+        self.approved_payables = ApprovedPayables(self.sdk_configuration)
+        self.line_items_aging_group = LineItemsAgingGroup(self.sdk_configuration)
+        self.payables_aging_group = PayablesAgingGroup(self.sdk_configuration)
+        self.collaborators_details_v2 = CollaboratorsDetailsV2(self.sdk_configuration)
+        self.payables_payroll = PayablesPayroll(self.sdk_configuration)
+        self.app_link = AppLink(self.sdk_configuration)
+        self.payables = Payables(self.sdk_configuration)
+        self.client_collaborators_v2 = ClientCollaboratorsV2(self.sdk_configuration)
+        self.client_collaborator_v2 = ClientCollaboratorV2(self.sdk_configuration)
+        self.collaborators_v2 = CollaboratorsV2(self.sdk_configuration)
+        self.collaborator_v2 = CollaboratorV2(self.sdk_configuration)

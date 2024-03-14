@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import payrollsettings as shared_payrollsettings
-from ..shared import payrollsettingsupdate as shared_payrollsettingsupdate
+from ...models.shared import payrollsettings as shared_payrollsettings
+from ...models.shared import payrollsettingsupdate as shared_payrollsettingsupdate
 from typing import Optional
 
 
@@ -23,9 +23,9 @@ class UpdatePayrollSettingsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     payroll_settings: Optional[shared_payrollsettings.PayrollSettings] = dataclasses.field(default=None)
     r"""The payroll settings for a member"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
