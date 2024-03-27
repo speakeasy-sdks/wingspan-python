@@ -13,16 +13,16 @@ Get Institution By Routing Number
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.institution.get(routing_number='female')
+res = s.institution.get(routing_number='<value>')
 
 if res.institution_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -35,4 +35,8 @@ if res.institution_response is not None:
 ### Response
 
 **[operations.GetInstitutionResponse](../../models/operations/getinstitutionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

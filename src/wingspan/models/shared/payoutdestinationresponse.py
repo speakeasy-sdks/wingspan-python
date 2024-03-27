@@ -23,11 +23,12 @@ class PayoutMethodPayoutDestinationResponse(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PayoutDestinationResponse:
+    UNSET='__SPEAKEASY_UNSET__'
     destination_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationId') }})
     destination_type: DestinationTypePayoutDestinationResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationType') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     payout_method: PayoutMethodPayoutDestinationResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payoutMethod') }})
     percentage: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage') }})
-    last4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last4') }})
+    last4: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last4'), 'exclude': lambda f: f is PayoutDestinationResponse.UNSET }})
     
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import sixty_four_million_eight_hundred_and_forty_six_thousand_one_hundred_and_thirty_sixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc as shared_sixty_four_million_eight_hundred_and_forty_six_thousand_one_hundred_and_thirty_sixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc
+from .sixty_four_million_eight_hundred_and_forty_six_thousand_one_hundred_and_thirty_sixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc import SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from wingspan import utils
@@ -11,6 +11,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0:
-    quickbooks: Optional[shared_sixty_four_million_eight_hundred_and_forty_six_thousand_one_hundred_and_thirty_sixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    quickbooks: Optional[SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks'), 'exclude': lambda f: f is D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0.UNSET }})
     
 

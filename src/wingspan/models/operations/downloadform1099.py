@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import download1099response as shared_download1099response
+from ...models.shared import download1099response as shared_download1099response
 from typing import Optional
 
 
@@ -25,9 +25,9 @@ class DownloadForm1099Response:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     download1099_response: Optional[shared_download1099response.Download1099Response] = dataclasses.field(default=None)
     r"""Download1099Response"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

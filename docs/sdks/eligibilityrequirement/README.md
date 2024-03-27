@@ -29,6 +29,7 @@ res = s.eligibility_requirement.create(req)
 if res.eligibility_requirement is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -41,7 +42,11 @@ if res.eligibility_requirement is not None:
 ### Response
 
 **[operations.CreateEligibilityRequirementResponse](../../models/operations/createeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -51,16 +56,16 @@ Delete Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.delete(id='program')
+res = s.eligibility_requirement.delete(id='<value>')
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -73,7 +78,11 @@ if res.eligibility_requirements is not None:
 ### Response
 
 **[operations.DeleteEligibilityRequirementResponse](../../models/operations/deleteeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -83,16 +92,16 @@ Get Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.get(id='female')
+res = s.eligibility_requirement.get(id='<value>')
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -105,7 +114,11 @@ if res.eligibility_requirements is not None:
 ### Response
 
 **[operations.GetEligibilityRequirementResponse](../../models/operations/geteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -115,18 +128,19 @@ Update Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.eligibility_requirement.update(id='Van', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
+res = s.eligibility_requirement.update(id='<value>', eligibility_requirement_update_request=shared.EligibilityRequirementUpdateRequest(
     requirement_type=shared.EligibilityRequirementUpdateRequestRequirementType.SIGNATURE,
 ))
 
-if res.eligibility_requirements is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -140,4 +154,8 @@ if res.eligibility_requirements is not None:
 ### Response
 
 **[operations.UpdateEligibilityRequirementResponse](../../models/operations/updateeligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

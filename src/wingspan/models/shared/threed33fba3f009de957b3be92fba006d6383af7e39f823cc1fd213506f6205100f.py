@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863 as shared_d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863
+from .d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863 import D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from wingspan import utils
@@ -11,6 +11,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f:
-    quickbooks: Optional[shared_d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863.D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    quickbooks: Optional[D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quickbooks'), 'exclude': lambda f: f is Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f.UNSET }})
     
 

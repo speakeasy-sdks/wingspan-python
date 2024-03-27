@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1 as shared_eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1
-from ..shared import memberclientformw9info as shared_memberclientformw9info
-from ..shared import userroles as shared_userroles
+from .eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1 import Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1
+from .memberclientformw9info import MemberClientFormW9Info
+from .userroles import UserRoles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Dict, Optional
@@ -26,6 +26,7 @@ class StatusBulkCollaboratorItem(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class BulkCollaboratorItem:
+    UNSET='__SPEAKEASY_UNSET__'
     bulk_collaborator_batch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkCollaboratorBatchId') }})
     bulk_collaborator_item_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bulkCollaboratorItemId') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
@@ -34,15 +35,15 @@ class BulkCollaboratorItem:
     labels: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     status: StatusBulkCollaboratorItem = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
-    user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    collaborator_group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId') }})
-    collaborator_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorId') }})
-    company: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company') }})
-    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
-    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
-    first_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstLastName') }})
-    form_w9_data: Optional[shared_memberclientformw9info.MemberClientFormW9Info] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
-    member_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})
-    metadata: Optional[shared_eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1.Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
+    user_roles: UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
+    collaborator_group_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
+    collaborator_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorId'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
+    company: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
+    email: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
+    external_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
+    first_last_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstLastName'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
+    form_w9_data: Optional[MemberClientFormW9Info] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
+    member_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
+    metadata: Optional[Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is BulkCollaboratorItem.UNSET }})
     
 

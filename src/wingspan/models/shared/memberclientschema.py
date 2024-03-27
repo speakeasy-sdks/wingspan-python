@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c as shared_b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c
-from ..shared import memberclientrequirementresponse as shared_memberclientrequirementresponse
-from ..shared import memberclientwireaccount as shared_memberclientwireaccount
-from ..shared import redactedmember as shared_redactedmember
-from ..shared import threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f as shared_threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f
-from ..shared import userroles as shared_userroles
+from .b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c import B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c
+from .memberclientrequirementresponse import MemberClientRequirementResponse
+from .memberclientwireaccount import MemberClientWireAccount
+from .redactedmember import RedactedMember
+from .threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f import Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f
+from .userroles import UserRoles
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Dict, List, Optional
@@ -22,23 +22,24 @@ class StatusMemberClientSchema(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class MemberClientSchema:
-    ach_credit_account: shared_memberclientwireaccount.MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('achCreditAccount') }})
-    client: shared_redactedmember.RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    ach_credit_account: MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('achCreditAccount') }})
+    client: RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client') }})
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     email_to: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emailTo') }})
-    form1099_balances: shared_b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c.B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances') }})
-    international_wire_account: shared_memberclientwireaccount.MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internationalWireAccount') }})
+    form1099_balances: B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form1099Balances') }})
+    international_wire_account: MemberClientWireAccount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internationalWireAccount') }})
     labels: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
     member_client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClientId') }})
     status: StatusMemberClientSchema = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
-    user_roles: shared_userroles.UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
-    collaborator_group_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupIds') }})
-    company: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company') }})
-    eligibility_requirements: Optional[List[shared_memberclientrequirementresponse.MemberClientRequirementResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
-    email_cc: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emailCC') }})
-    integration: Optional[shared_threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f.Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration') }})
-    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
+    user_roles: UserRoles = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRoles') }})
+    collaborator_group_ids: Optional[List[str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupIds'), 'exclude': lambda f: f is MemberClientSchema.UNSET }})
+    company: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is MemberClientSchema.UNSET }})
+    eligibility_requirements: Optional[List[MemberClientRequirementResponse]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements'), 'exclude': lambda f: f is MemberClientSchema.UNSET }})
+    email_cc: Optional[List[str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emailCC'), 'exclude': lambda f: f is MemberClientSchema.UNSET }})
+    integration: Optional[Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration'), 'exclude': lambda f: f is MemberClientSchema.UNSET }})
+    name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is MemberClientSchema.UNSET }})
     
 

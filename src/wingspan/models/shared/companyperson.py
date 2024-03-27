@@ -10,7 +10,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CompanyPerson:
+    UNSET='__SPEAKEASY_UNSET__'
     member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})
-    ownership_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ownershipPercentage') }})
+    ownership_percentage: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ownershipPercentage'), 'exclude': lambda f: f is CompanyPerson.UNSET }})
     
 

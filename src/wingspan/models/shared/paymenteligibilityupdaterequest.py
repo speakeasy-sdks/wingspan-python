@@ -8,14 +8,15 @@ from wingspan import utils
 
 
 @dataclasses.dataclass
-class PaymentEligibilityUpdateRequestValue:
+class Value:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PaymentEligibilityUpdateRequest:
-    field: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('field') }})
-    value: Optional[PaymentEligibilityUpdateRequestValue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    field: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('field'), 'exclude': lambda f: f is PaymentEligibilityUpdateRequest.UNSET }})
+    value: Optional[Value] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is PaymentEligibilityUpdateRequest.UNSET }})
     
 

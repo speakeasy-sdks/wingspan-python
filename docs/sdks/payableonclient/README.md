@@ -19,43 +19,12 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.PayableCreateRequest(
-    accepted_payment_methods=[
-        shared.PayableCreateRequestAcceptedPaymentMethods.ACH,
-    ],
-    attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
-        custom_attachment_ids=[
-            'bluetooth',
-        ],
-    ),
-    client=shared.PayableCreateRequestClient(),
-    collaborator_id='Extended',
+    collaborator_id='<value>',
     credit_fee_handling=shared.FeeHandlingConfig(),
-    due_date='South',
-    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-        quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
-    ),
-    labels={
-        "shred": 'abnormally',
-    },
-    late_fee_handling=shared.LateFeeConfigUpdate(
-        frequency=shared.FrequencyUpdate(),
-    ),
+    due_date='<value>',
     line_items=[
-        shared.InvoiceLineItemsCreateRequest(
-            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
-            ),
-            labels={
-                "deposit": 'evolve',
-            },
-        ),
+        shared.InvoiceLineItemsCreateRequest(),
     ],
-    member=shared.PayableCreateRequestMember(),
-    metadata=shared.InvoiceMetadata(),
-    notification_preferences=shared.InvoiceNotificationPreferences(
-        send_reminders=False,
-    ),
 )
 
 res = s.payable_on_client.create(req)
@@ -63,6 +32,7 @@ res = s.payable_on_client.create(req)
 if res.payable_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,7 +45,11 @@ if res.payable_schema is not None:
 ### Response
 
 **[operations.CreatePayableOnClientResponse](../../models/operations/createpayableonclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -85,66 +59,17 @@ Update payable on client by payableId
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.payable_on_client.update(id='Van', payable_update_request=shared.PayableUpdateRequest(
-    accepted_payment_methods=[
-        shared.PayableUpdateRequestAcceptedPaymentMethods.CREDIT,
-    ],
-    attachments=shared.ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2(
-        custom_attachment_ids=[
-            'Reactive',
-        ],
-    ),
-    charged_fees=shared.Fees(
-        late_fee=shared.Fee(
-            amount=9914.64,
-        ),
-        processing_fee=shared.Fee(
-            amount=2703.24,
-        ),
-    ),
-    client=shared.PayableUpdateRequestClient(),
-    collaborators=[
-        shared.InvoiceCollaboratorUpdateRequest(),
-    ],
-    credit_fee_handling=shared.FeeHandlingConfig(),
-    integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-        quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
-    ),
-    labels={
-        "Quality": 'redundant',
-    },
-    late_fee_handling=shared.LateFeeConfigUpdate(
-        frequency=shared.FrequencyUpdate(),
-    ),
-    line_items=[
-        shared.InvoiceLineItemsCreateRequest(
-            discount=shared.Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b(),
-            integration=shared.ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461(
-                quickbooks=shared.Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d(),
-            ),
-            labels={
-                "cheater": 'Islands',
-            },
-        ),
-    ],
-    member=shared.PayableUpdateRequestMember(),
-    metadata=shared.InvoiceMetadata(),
-    notification_preferences=shared.InvoiceNotificationPreferences(
-        send_reminders=False,
-    ),
-    payment_methods=[
-        shared.PayableUpdateRequestPaymentMethods.ACH,
-    ],
-))
+res = s.payable_on_client.update(id='<value>', payable_update_request=shared.PayableUpdateRequest())
 
 if res.payable_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -158,4 +83,8 @@ if res.payable_schema is not None:
 ### Response
 
 **[operations.UpdatePayableOnClientResponse](../../models/operations/updatepayableonclientresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

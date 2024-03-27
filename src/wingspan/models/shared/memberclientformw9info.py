@@ -23,18 +23,19 @@ class CompanyStructureMemberClientFormW9Info(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class MemberClientFormW9Info:
+    UNSET='__SPEAKEASY_UNSET__'
     address_line1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addressLine1') }})
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }})
     company_structure: CompanyStructureMemberClientFormW9Info = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('companyStructure') }})
     country: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('country') }})
     postal_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postalCode') }})
     state: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
-    address_line2: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addressLine2') }})
-    dob: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dob') }})
-    ein: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ein') }})
-    first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstName') }})
-    last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastName') }})
-    legal_business_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('legalBusinessName') }})
-    ssn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssn') }})
+    address_line2: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addressLine2'), 'exclude': lambda f: f is MemberClientFormW9Info.UNSET }})
+    dob: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dob'), 'exclude': lambda f: f is MemberClientFormW9Info.UNSET }})
+    ein: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ein'), 'exclude': lambda f: f is MemberClientFormW9Info.UNSET }})
+    first_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstName'), 'exclude': lambda f: f is MemberClientFormW9Info.UNSET }})
+    last_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastName'), 'exclude': lambda f: f is MemberClientFormW9Info.UNSET }})
+    legal_business_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('legalBusinessName'), 'exclude': lambda f: f is MemberClientFormW9Info.UNSET }})
+    ssn: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ssn'), 'exclude': lambda f: f is MemberClientFormW9Info.UNSET }})
     
 

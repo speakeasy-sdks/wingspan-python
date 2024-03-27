@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import invoiceattachmentfile as shared_invoiceattachmentfile
+from .invoiceattachmentfile import InvoiceAttachmentFile
 from dataclasses_json import Undefined, dataclass_json
 from typing import List, Optional
 from wingspan import utils
@@ -11,10 +11,11 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class InvoiceAttachments:
-    custom_attachment_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds') }})
-    custom_attachment_info: Optional[List[shared_invoiceattachmentfile.InvoiceAttachmentFile]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentInfo') }})
-    invoice_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceLink') }})
-    invoice_pdf: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicePdf') }})
-    receipt_pdf: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('receiptPdf') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    custom_attachment_ids: Optional[List[str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds'), 'exclude': lambda f: f is InvoiceAttachments.UNSET }})
+    custom_attachment_info: Optional[List[InvoiceAttachmentFile]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentInfo'), 'exclude': lambda f: f is InvoiceAttachments.UNSET }})
+    invoice_link: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoiceLink'), 'exclude': lambda f: f is InvoiceAttachments.UNSET }})
+    invoice_pdf: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoicePdf'), 'exclude': lambda f: f is InvoiceAttachments.UNSET }})
+    receipt_pdf: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('receiptPdf'), 'exclude': lambda f: f is InvoiceAttachments.UNSET }})
     
 

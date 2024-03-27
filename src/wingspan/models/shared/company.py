@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import companylinks as shared_companylinks
-from ..shared import companyperson as shared_companyperson
+from .companylinks import CompanyLinks
+from .companyperson import CompanyPerson
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import List, Optional
@@ -20,22 +20,22 @@ class StructureCompany(str, Enum):
     LLC_PARTNERSHIP = 'LLCPartnership'
     CORPORATION_C = 'CorporationC'
     PARTNERSHIP = 'Partnership'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Company:
-    banking: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('banking') }})
-    company_owners: Optional[List[shared_companyperson.CompanyPerson]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('companyOwners') }})
-    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
-    legal_business_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('legalBusinessName') }})
-    links: Optional[shared_companylinks.CompanyLinks] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('links') }})
-    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    state_of_incorporation: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stateOfIncorporation') }})
-    structure: Optional[StructureCompany] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('structure') }})
-    tax_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxId') }})
-    website: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('website') }})
-    year_of_incorporation: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('yearOfIncorporation') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    banking: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('banking'), 'exclude': lambda f: f is Company.UNSET }})
+    company_owners: Optional[List[CompanyPerson]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('companyOwners'), 'exclude': lambda f: f is Company.UNSET }})
+    description: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is Company.UNSET }})
+    legal_business_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('legalBusinessName'), 'exclude': lambda f: f is Company.UNSET }})
+    links: Optional[CompanyLinks] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('links'), 'exclude': lambda f: f is Company.UNSET }})
+    name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is Company.UNSET }})
+    state_of_incorporation: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stateOfIncorporation'), 'exclude': lambda f: f is Company.UNSET }})
+    structure: Optional[StructureCompany] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('structure'), 'exclude': lambda f: f is Company.UNSET }})
+    tax_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxId'), 'exclude': lambda f: f is Company.UNSET }})
+    website: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('website'), 'exclude': lambda f: f is Company.UNSET }})
+    year_of_incorporation: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('yearOfIncorporation'), 'exclude': lambda f: f is Company.UNSET }})
     
 

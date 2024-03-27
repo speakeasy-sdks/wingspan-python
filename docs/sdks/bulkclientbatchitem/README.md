@@ -15,24 +15,17 @@ Create a bulk client batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.create(batch_id='online', bulk_client_item_create=shared.BulkClientItemCreate(
-    integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
-        quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
-    ),
-    labels={
-        "Configuration": 'Money',
-    },
-    member_data=shared.MemberData(),
-))
+res = s.bulk_client_batch_item.create(batch_id='<value>', bulk_client_item_create=shared.BulkClientItemCreate())
 
 if res.bulk_client_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -46,7 +39,11 @@ if res.bulk_client_item is not None:
 ### Response
 
 **[operations.CreateBulkClientBatchItemResponse](../../models/operations/createbulkclientbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -56,16 +53,16 @@ Get a bulk client batch item
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.get(batch_id='female', batch_item_id='program')
+res = s.bulk_client_batch_item.get(batch_id='<value>', batch_item_id='<value>')
 
 if res.bulk_client_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,7 +76,11 @@ if res.bulk_client_item is not None:
 ### Response
 
 **[operations.GetBulkClientBatchItemResponse](../../models/operations/getbulkclientbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -89,24 +90,17 @@ Update a bulk client batch item
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_item.update(batch_id='Van', batch_item_id='East', bulk_client_item_update=shared.BulkClientItemUpdate(
-    integration=shared.D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0(
-        quickbooks=shared.SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc(),
-    ),
-    labels={
-        "male": 'Metal',
-    },
-    member_data=shared.MemberData(),
-))
+res = s.bulk_client_batch_item.update(batch_id='<value>', batch_item_id='<value>', bulk_client_item_update=shared.BulkClientItemUpdate())
 
 if res.bulk_client_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -121,4 +115,8 @@ if res.bulk_client_item is not None:
 ### Response
 
 **[operations.UpdateBulkClientBatchItemResponse](../../models/operations/updatebulkclientbatchitemresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

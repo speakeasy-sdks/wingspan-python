@@ -10,9 +10,10 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14:
-    deduction_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionId') }})
-    error_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('errorMessage') }})
-    payable_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payableId') }})
-    resolved_collaborator_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resolvedCollaboratorId') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    deduction_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deductionId'), 'exclude': lambda f: f is A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.UNSET }})
+    error_message: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('errorMessage'), 'exclude': lambda f: f is A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.UNSET }})
+    payable_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payableId'), 'exclude': lambda f: f is A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.UNSET }})
+    resolved_collaborator_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resolvedCollaboratorId'), 'exclude': lambda f: f is A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.UNSET }})
     
 

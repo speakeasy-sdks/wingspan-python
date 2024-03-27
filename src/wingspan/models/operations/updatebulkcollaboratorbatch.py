@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bulkbatchupdate as shared_bulkbatchupdate
-from ..shared import bulkcollaboratorbatch as shared_bulkcollaboratorbatch
+from ...models.shared import bulkbatchupdate as shared_bulkbatchupdate
+from ...models.shared import bulkcollaboratorbatch as shared_bulkcollaboratorbatch
 from typing import Optional
 
 
@@ -23,9 +23,9 @@ class UpdateBulkCollaboratorBatchResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     bulk_collaborator_batch: Optional[shared_bulkcollaboratorbatch.BulkCollaboratorBatch] = dataclasses.field(default=None)
     r"""A batch of items for importing as collaborators"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

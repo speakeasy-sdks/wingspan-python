@@ -14,7 +14,6 @@ Get payables summary
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
@@ -23,10 +22,15 @@ res = s.payables.get()
 if res.payables_summary is not None:
     # handle response
     pass
+
 ```
 
 
 ### Response
 
 **[operations.GetPayablesResponse](../../models/operations/getpayablesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

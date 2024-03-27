@@ -13,16 +13,16 @@ Get collaborator events by collaboratorId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.collaborator_events.get(id='female')
+res = s.collaborator_events.get(id='<value>')
 
 if res.collaborator_events is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -35,4 +35,8 @@ if res.collaborator_events is not None:
 ### Response
 
 **[operations.GetCollaboratorEventsResponse](../../models/operations/getcollaboratoreventsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

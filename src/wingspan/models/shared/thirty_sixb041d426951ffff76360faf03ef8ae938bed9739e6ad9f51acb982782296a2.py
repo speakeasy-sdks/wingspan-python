@@ -10,6 +10,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2:
-    custom_attachment_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    custom_attachment_ids: Optional[List[str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customAttachmentIds'), 'exclude': lambda f: f is ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2.UNSET }})
     
 

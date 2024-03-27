@@ -15,16 +15,16 @@ Delete deduction
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.delete(id='program')
+res = s.client_deduction_id.delete(id='<value>')
 
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -37,7 +37,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.DeleteClientDeductionIDResponse](../../models/operations/deleteclientdeductionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -47,16 +51,16 @@ Get deduction
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.get(id='female')
+res = s.client_deduction_id.get(id='<value>')
 
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -69,7 +73,11 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.GetClientDeductionIDResponse](../../models/operations/getclientdeductionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -79,16 +87,17 @@ Update deduction
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.client_deduction_id.update(id='Van', deduction_update_request=shared.DeductionUpdateRequest())
+res = s.client_deduction_id.update(id='<value>', deduction_update_request=shared.DeductionUpdateRequest())
 
 if res.deduction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -102,4 +111,8 @@ if res.deduction_response is not None:
 ### Response
 
 **[operations.UpdateClientDeductionIDResponse](../../models/operations/updateclientdeductionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

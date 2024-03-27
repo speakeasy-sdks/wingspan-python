@@ -10,6 +10,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Ba1d4c38921e9c7af45d17223c51562cb69a815c6bf72f6cf959d800ee59afdb:
-    two_thousand_and_twenty_one: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('2021') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    two_thousand_and_twenty_one: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('2021'), 'exclude': lambda f: f is Ba1d4c38921e9c7af45d17223c51562cb69a815c6bf72f6cf959d800ee59afdb.UNSET }})
     
 

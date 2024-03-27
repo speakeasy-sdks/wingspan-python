@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import memberclientformw9info as shared_memberclientformw9info
+from .memberclientformw9info import MemberClientFormW9Info
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Dict, Optional
@@ -12,20 +12,20 @@ class CollaboratorStatusBulkCollaboratorItemUpdate(str, Enum):
     ACTIVE = 'Active'
     INACTIVE = 'Inactive'
     PENDING = 'Pending'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class BulkCollaboratorItemUpdate:
-    collaborator_group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId') }})
-    collaborator_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorId') }})
-    collaborator_status: Optional[CollaboratorStatusBulkCollaboratorItemUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorStatus') }})
-    company: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company') }})
-    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
-    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
-    first_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstLastName') }})
-    form_w9_data: Optional[shared_memberclientformw9info.MemberClientFormW9Info] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data') }})
-    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    collaborator_group_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroupId'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
+    collaborator_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorId'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
+    collaborator_status: Optional[CollaboratorStatusBulkCollaboratorItemUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorStatus'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
+    company: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
+    email: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
+    external_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
+    first_last_name: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('firstLastName'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
+    form_w9_data: Optional[MemberClientFormW9Info] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('formW9Data'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is BulkCollaboratorItemUpdate.UNSET }})
     
 

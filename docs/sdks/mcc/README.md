@@ -14,19 +14,23 @@ List mcc codes
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.mcc.list()
 
-if res.mcc_responses is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
 ### Response
 
 **[operations.ListMCCResponse](../../models/operations/listmccresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -10,18 +10,18 @@ from wingspan import utils
 class IntervalFrequencyUpdate(str, Enum):
     WEEK = 'Week'
     MONTH = 'Month'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class FrequencyUpdate:
-    daily: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('daily') }})
-    day_in_interval: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dayInInterval') }})
-    end_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endDate') }})
-    every: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('every') }})
-    interval: Optional[IntervalFrequencyUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval') }})
-    start_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startDate') }})
-    twice_per_month: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twicePerMonth') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    daily: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('daily'), 'exclude': lambda f: f is FrequencyUpdate.UNSET }})
+    day_in_interval: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dayInInterval'), 'exclude': lambda f: f is FrequencyUpdate.UNSET }})
+    end_date: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endDate'), 'exclude': lambda f: f is FrequencyUpdate.UNSET }})
+    every: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('every'), 'exclude': lambda f: f is FrequencyUpdate.UNSET }})
+    interval: Optional[IntervalFrequencyUpdate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval'), 'exclude': lambda f: f is FrequencyUpdate.UNSET }})
+    start_date: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startDate'), 'exclude': lambda f: f is FrequencyUpdate.UNSET }})
+    twice_per_month: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twicePerMonth'), 'exclude': lambda f: f is FrequencyUpdate.UNSET }})
     
 

@@ -10,9 +10,10 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class MemberClientWireAccount:
+    UNSET='__SPEAKEASY_UNSET__'
     account_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountNumber') }})
     bank_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bankName') }})
-    routing_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('routingNumber') }})
-    swift_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('swiftCode') }})
+    routing_number: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('routingNumber'), 'exclude': lambda f: f is MemberClientWireAccount.UNSET }})
+    swift_code: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('swiftCode'), 'exclude': lambda f: f is MemberClientWireAccount.UNSET }})
     
 

@@ -19,17 +19,14 @@ from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
-req = shared.BulkBatchCreate(
-    labels={
-        "online": 'Configuration',
-    },
-)
+req = shared.BulkBatchCreate()
 
 res = s.bulk_calculation1099_batch.create(req)
 
 if res.bulk_calculation1099_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -42,7 +39,11 @@ if res.bulk_calculation1099_batch is not None:
 ### Response
 
 **[operations.CreateBulkCalculation1099BatchResponse](../../models/operations/createbulkcalculation1099batchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -52,16 +53,16 @@ Get a bulk calculation1099 batch
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch.get(batch_id='female')
+res = s.bulk_calculation1099_batch.get(batch_id='<value>')
 
 if res.bulk_calculation1099_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -74,7 +75,11 @@ if res.bulk_calculation1099_batch is not None:
 ### Response
 
 **[operations.GetBulkCalculation1099BatchResponse](../../models/operations/getbulkcalculation1099batchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -84,20 +89,17 @@ Update a bulk calculation1099 batch
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_calculation1099_batch.update(batch_id='Van', bulk_batch_update=shared.BulkBatchUpdate(
-    labels={
-        "East": 'male',
-    },
-))
+res = s.bulk_calculation1099_batch.update(batch_id='<value>', bulk_batch_update=shared.BulkBatchUpdate())
 
 if res.bulk_calculation1099_batch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -111,4 +113,8 @@ if res.bulk_calculation1099_batch is not None:
 ### Response
 
 **[operations.UpdateBulkCalculation1099BatchResponse](../../models/operations/updatebulkcalculation1099batchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

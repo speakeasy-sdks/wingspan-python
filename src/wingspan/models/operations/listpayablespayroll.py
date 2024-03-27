@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import payrollreportresponse as shared_payrollreportresponse
+from ...models.shared import payrollreportresponse as shared_payrollreportresponse
 from typing import Optional
 
 
@@ -21,9 +21,9 @@ class ListPayablesPayrollResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     payroll_report_response: Optional[shared_payrollreportresponse.PayrollReportResponse] = dataclasses.field(default=None)
     r"""Payroll report with line items and payroll summary"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

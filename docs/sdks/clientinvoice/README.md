@@ -14,16 +14,16 @@ Get client-invoice by invoiceId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice.get(id='female')
+res = s.client_invoice.get(id='<value>')
 
 if res.client_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -36,7 +36,11 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.GetClientInvoiceResponse](../../models/operations/getclientinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -46,18 +50,17 @@ Update client-invoice by invoiceId
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.client_invoice.update(id='Van', client_invoice_update_request=shared.ClientInvoiceUpdateRequest(
-    credit_fee_handling=shared.FeeHandlingConfig(),
-))
+res = s.client_invoice.update(id='<value>', client_invoice_update_request=shared.ClientInvoiceUpdateRequest())
 
 if res.client_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -71,4 +74,8 @@ if res.client_invoice is not None:
 ### Response
 
 **[operations.UpdateClientInvoiceResponse](../../models/operations/updateclientinvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

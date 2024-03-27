@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import invoice as shared_invoice
-from ..shared import invoiceupdaterequest as shared_invoiceupdaterequest
+from ...models.shared import invoice as shared_invoice
+from ...models.shared import invoiceupdaterequest as shared_invoiceupdaterequest
 from typing import Optional
 
 
@@ -23,9 +23,9 @@ class UpdateMemberInvoiceResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     invoice: Optional[shared_invoice.Invoice] = dataclasses.field(default=None)
     r"""An invoice"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import collaboratorevents as shared_collaboratorevents
-from ..shared import redactedmember as shared_redactedmember
-from ..shared import sixty_sixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d as shared_sixty_sixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d
+from .collaboratorevents import CollaboratorEvents
+from .redactedmember import RedactedMember
+from .sixty_sixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d import SixtySixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import List, Optional
@@ -12,7 +12,7 @@ from wingspan import utils
 
 
 @dataclasses.dataclass
-class CollaboratorsReportResponseLabels:
+class Labels:
     pass
 
 class StatusCollaboratorsReportResponse(str, Enum):
@@ -30,19 +30,20 @@ class TaxStatusCollaboratorsReportResponse(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CollaboratorsReportResponse:
+    UNSET='__SPEAKEASY_UNSET__'
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
-    collaborator_groups: List[shared_sixty_sixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d.SixtySixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroups') }})
+    collaborator_groups: List[SixtySixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorGroups') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     invite_email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inviteEmail') }})
-    member: shared_redactedmember.RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member') }})
+    member: RedactedMember = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('member') }})
     member_client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberClientId') }})
     member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberId') }})
     status: StatusCollaboratorsReportResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     tax_status: TaxStatusCollaboratorsReportResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxStatus') }})
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
-    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId') }})
-    labels: Optional[CollaboratorsReportResponseLabels] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
-    member_events: Optional[shared_collaboratorevents.CollaboratorEvents] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberEvents') }})
-    tax_document_stared: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxDocumentStared') }})
+    external_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalId'), 'exclude': lambda f: f is CollaboratorsReportResponse.UNSET }})
+    labels: Optional[Labels] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is CollaboratorsReportResponse.UNSET }})
+    member_events: Optional[CollaboratorEvents] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberEvents'), 'exclude': lambda f: f is CollaboratorsReportResponse.UNSET }})
+    tax_document_stared: Optional[bool] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('taxDocumentStared'), 'exclude': lambda f: f is CollaboratorsReportResponse.UNSET }})
     
 

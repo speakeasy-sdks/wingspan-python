@@ -10,7 +10,8 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac:
-    error_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('errorMessage') }})
-    resolved_member_client_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resolvedMemberClientId') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    error_message: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('errorMessage'), 'exclude': lambda f: f is FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac.UNSET }})
+    resolved_member_client_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resolvedMemberClientId'), 'exclude': lambda f: f is FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac.UNSET }})
     
 

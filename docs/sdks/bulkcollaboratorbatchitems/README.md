@@ -13,16 +13,16 @@ List bulk collaborator batch items
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_collaborator_batch_items.list(batch_id='Bicycle')
+res = s.bulk_collaborator_batch_items.list(batch_id='<value>')
 
-if res.bulk_collaborator_items is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -35,4 +35,8 @@ if res.bulk_collaborator_items is not None:
 ### Response
 
 **[operations.ListBulkCollaboratorBatchItemsResponse](../../models/operations/listbulkcollaboratorbatchitemsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

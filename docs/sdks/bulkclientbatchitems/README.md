@@ -13,16 +13,16 @@ List bulk client batch items
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.bulk_client_batch_items.list(batch_id='Bicycle')
+res = s.bulk_client_batch_items.list(batch_id='<value>')
 
-if res.bulk_client_items is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -35,4 +35,8 @@ if res.bulk_client_items is not None:
 ### Response
 
 **[operations.ListBulkClientBatchItemsResponse](../../models/operations/listbulkclientbatchitemsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

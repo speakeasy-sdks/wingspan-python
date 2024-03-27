@@ -14,16 +14,16 @@ Download bank statement pdf
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.statement.download(id='optical')
+res = s.statement.download(id='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -36,7 +36,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DownloadStatementResponse](../../models/operations/downloadstatementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -46,16 +50,16 @@ Get bank statement
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.statement.get(id='female')
+res = s.statement.get(id='<value>')
 
-if res.bank_statements is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -68,4 +72,8 @@ if res.bank_statements is not None:
 ### Response
 
 **[operations.GetStatementResponse](../../models/operations/getstatementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

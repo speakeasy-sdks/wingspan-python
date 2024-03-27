@@ -15,27 +15,22 @@ Create a payout debit card
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.create(member_id='online', checkbook_card_create=shared.CheckbookCardCreate(
-    address=shared.Address(
-        address_line1='Configuration',
-        city='Edwardoville',
-        postal_code='09739-8041',
-        state='evolve',
-    ),
-    card_number='male',
-    exp_mm='SUV',
-    exp_yyyy='quantify',
-    name='Polestar',
+res = s.payout_debit_card.create(member_id='<value>', checkbook_card_create=shared.CheckbookCardCreate(
+    card_number='<value>',
+    exp_mm='<value>',
+    exp_yyyy='<value>',
+    name='<value>',
 ))
 
 if res.checkbook_card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -49,7 +44,11 @@ if res.checkbook_card is not None:
 ### Response
 
 **[operations.CreatePayoutDebitCardResponse](../../models/operations/createpayoutdebitcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -59,16 +58,16 @@ Delete the payout debit card
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.delete(id='program', member_id='Designer')
+res = s.payout_debit_card.delete(id='<value>', member_id='<value>')
 
 if res.checkbook_card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -82,7 +81,11 @@ if res.checkbook_card is not None:
 ### Response
 
 **[operations.DeletePayoutDebitCardResponse](../../models/operations/deletepayoutdebitcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -92,16 +95,16 @@ Get the payout debit card
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.payout_debit_card.get(id='female', member_id='program')
+res = s.payout_debit_card.get(id='<value>', member_id='<value>')
 
 if res.checkbook_card is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -115,4 +118,8 @@ if res.checkbook_card is not None:
 ### Response
 
 **[operations.GetPayoutDebitCardResponse](../../models/operations/getpayoutdebitcardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

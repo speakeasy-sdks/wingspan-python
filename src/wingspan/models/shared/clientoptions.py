@@ -14,19 +14,18 @@ class WorkflowStatusClientOptions(str, Enum):
     PAYMENT_INITIATED = 'PaymentInitiated'
     FUNDED = 'Funded'
     DECLINED = 'Declined'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 class WorkflowSubStatusClientOptions(str, Enum):
     SUBMITTED = 'Submitted'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientOptions:
-    comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment') }})
-    pay_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payDate') }})
-    workflow_status: Optional[WorkflowStatusClientOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowStatus') }})
-    workflow_sub_status: Optional[WorkflowSubStatusClientOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowSubStatus') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    comment: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment'), 'exclude': lambda f: f is ClientOptions.UNSET }})
+    pay_date: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payDate'), 'exclude': lambda f: f is ClientOptions.UNSET }})
+    workflow_status: Optional[WorkflowStatusClientOptions] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowStatus'), 'exclude': lambda f: f is ClientOptions.UNSET }})
+    workflow_sub_status: Optional[WorkflowSubStatusClientOptions] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workflowSubStatus'), 'exclude': lambda f: f is ClientOptions.UNSET }})
     
 

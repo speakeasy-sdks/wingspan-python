@@ -21,8 +21,8 @@ from wingspan.models import shared
 s = wingspan.Wingspan()
 
 req = shared.PaymentEligibility(
-    field='online',
-    value='Configuration',
+    field='<value>',
+    value='<value>',
 )
 
 res = s.payment_eligibility_requirement.create(req)
@@ -30,6 +30,7 @@ res = s.payment_eligibility_requirement.create(req)
 if res.payment_eligibility is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -42,7 +43,11 @@ if res.payment_eligibility is not None:
 ### Response
 
 **[operations.CreatePaymentEligibilityRequirementResponse](../../models/operations/createpaymenteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete
 
@@ -52,16 +57,16 @@ Delete Payment Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.delete(id='program')
+res = s.payment_eligibility_requirement.delete(id='<value>')
 
 if res.payment_eligibility is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -74,7 +79,11 @@ if res.payment_eligibility is not None:
 ### Response
 
 **[operations.DeletePaymentEligibilityRequirementResponse](../../models/operations/deletepaymenteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -84,16 +93,16 @@ Get Payment Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.get(id='female')
+res = s.payment_eligibility_requirement.get(id='<value>')
 
 if res.payment_eligibility is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -106,7 +115,11 @@ if res.payment_eligibility is not None:
 ### Response
 
 **[operations.GetPaymentEligibilityRequirementResponse](../../models/operations/getpaymenteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -116,18 +129,17 @@ Update Payment Eligibility Requirement
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.payment_eligibility_requirement.update(id='Van', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest(
-    value=shared.PaymentEligibilityUpdateRequestValue(),
-))
+res = s.payment_eligibility_requirement.update(id='<value>', payment_eligibility_update_request=shared.PaymentEligibilityUpdateRequest())
 
 if res.payment_eligibility is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -141,4 +153,8 @@ if res.payment_eligibility is not None:
 ### Response
 
 **[operations.UpdatePaymentEligibilityRequirementResponse](../../models/operations/updatepaymenteligibilityrequirementresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

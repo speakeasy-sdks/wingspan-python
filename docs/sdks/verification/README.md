@@ -13,18 +13,19 @@ Sends a verification code
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.verification.send(id='hacking', card_code_request=shared.CardCodeRequest(
-    channel='withdrawal',
+res = s.verification.send(id='<value>', card_code_request=shared.CardCodeRequest(
+    channel='<value>',
 ))
 
 if res.card_code_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -38,4 +39,8 @@ if res.card_code_response is not None:
 ### Response
 
 **[operations.SendVerificationResponse](../../models/operations/sendverificationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

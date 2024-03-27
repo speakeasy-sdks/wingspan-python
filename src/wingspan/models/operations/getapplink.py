@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bankingapplicationform as shared_bankingapplicationform
+from ...models.shared import bankingapplicationform as shared_bankingapplicationform
 from typing import Optional
 
 
@@ -21,9 +21,9 @@ class GetAppLinkResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     banking_application_form: Optional[shared_bankingapplicationform.BankingApplicationForm] = dataclasses.field(default=None)
     r"""A Bank Application form"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

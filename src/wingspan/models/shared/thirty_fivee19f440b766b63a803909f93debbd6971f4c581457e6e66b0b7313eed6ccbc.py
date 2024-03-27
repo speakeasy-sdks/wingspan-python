@@ -15,8 +15,9 @@ class Provider35e19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc(s
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ThirtyFivee19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc:
+    UNSET='__SPEAKEASY_UNSET__'
     provider: Provider35e19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
     provider_account_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('providerAccountId') }})
-    wingspan_account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wingspanAccountId') }})
+    wingspan_account_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wingspanAccountId'), 'exclude': lambda f: f is ThirtyFivee19f440b766b63a803909f93debbd6971f4c581457e6e66b0b7313eed6ccbc.UNSET }})
     
 

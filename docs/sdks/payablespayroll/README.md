@@ -13,16 +13,16 @@ Get a list of payables connected to payroll run
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.payables_payroll.list(payroll_id='Bicycle')
+res = s.payables_payroll.list(payroll_id='<value>')
 
 if res.payroll_report_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -35,4 +35,8 @@ if res.payroll_report_response is not None:
 ### Response
 
 **[operations.ListPayablesPayrollResponse](../../models/operations/listpayablespayrollresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

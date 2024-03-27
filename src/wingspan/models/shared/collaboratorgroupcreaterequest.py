@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import collaboratorgrouprequirement as shared_collaboratorgrouprequirement
+from .collaboratorgrouprequirement import CollaboratorGroupRequirement
 from dataclasses_json import Undefined, dataclass_json
 from typing import Dict, List, Optional
 from wingspan import utils
@@ -11,9 +11,10 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CollaboratorGroupCreateRequest:
+    UNSET='__SPEAKEASY_UNSET__'
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    collaborator_settings: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings') }})
-    eligibility_requirements: Optional[List[shared_collaboratorgrouprequirement.CollaboratorGroupRequirement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements') }})
+    collaborator_settings: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collaboratorSettings'), 'exclude': lambda f: f is CollaboratorGroupCreateRequest.UNSET }})
+    eligibility_requirements: Optional[List[CollaboratorGroupRequirement]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirements'), 'exclude': lambda f: f is CollaboratorGroupCreateRequest.UNSET }})
     
 

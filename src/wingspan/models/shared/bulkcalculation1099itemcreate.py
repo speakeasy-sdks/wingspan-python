@@ -10,15 +10,15 @@ from wingspan import utils
 class CalculationTypeBulkCalculation1099ItemCreate(str, Enum):
     BALANCES = 'Balances'
     SUBMISSIONS = 'Submissions'
-    LESS_THAN_NIL_GREATER_THAN_ = '<nil>'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class BulkCalculation1099ItemCreate:
+    UNSET='__SPEAKEASY_UNSET__'
     client_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientId') }})
     year: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('year') }})
-    calculation_type: Optional[CalculationTypeBulkCalculation1099ItemCreate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationType') }})
-    labels: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels') }})
+    calculation_type: Optional[CalculationTypeBulkCalculation1099ItemCreate] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculationType'), 'exclude': lambda f: f is BulkCalculation1099ItemCreate.UNSET }})
+    labels: Optional[Dict[str, str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is BulkCalculation1099ItemCreate.UNSET }})
     
 

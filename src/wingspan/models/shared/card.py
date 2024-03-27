@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 as shared_c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875
+from .c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 import C43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from wingspan import utils
@@ -29,7 +29,7 @@ class Card:
     brand: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand') }})
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     expiration_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expirationDate') }})
-    internal: shared_c43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875.C43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internal') }})
+    internal: C43d8e931fa2aa65f8160dad6cddeff3ae5f333e9b96d96dc85708e786c6a875 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internal') }})
     last4_digits: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last4Digits') }})
     status: StatusCard = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     type: TypeCard = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})

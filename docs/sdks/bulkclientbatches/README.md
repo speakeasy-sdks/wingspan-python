@@ -14,19 +14,23 @@ List bulk client batches
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.bulk_client_batches.list()
 
-if res.bulk_client_batches is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
 ### Response
 
 **[operations.ListBulkClientBatchesResponse](../../models/operations/listbulkclientbatchesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -10,8 +10,9 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class FeeHandlingConfig:
-    client_absolute_percentage: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientAbsolutePercentage') }})
-    client_pays: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientPays') }})
-    member_pays: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberPays') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    client_absolute_percentage: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientAbsolutePercentage'), 'exclude': lambda f: f is FeeHandlingConfig.UNSET }})
+    client_pays: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientPays'), 'exclude': lambda f: f is FeeHandlingConfig.UNSET }})
+    member_pays: Optional[float] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memberPays'), 'exclude': lambda f: f is FeeHandlingConfig.UNSET }})
     
 

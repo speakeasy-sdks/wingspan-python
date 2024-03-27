@@ -13,16 +13,16 @@ Get invoice on member by payableId
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.invoice_payable_on_member.get(id='female')
+res = s.invoice_payable_on_member.get(id='<value>')
 
 if res.payable_schema is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -35,4 +35,8 @@ if res.payable_schema is not None:
 ### Response
 
 **[operations.GetInvoicePayableOnMemberResponse](../../models/operations/getinvoicepayableonmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -10,6 +10,7 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CollaboratorGroupRequirement:
-    eligibility_requirement_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirementId') }})
+    UNSET='__SPEAKEASY_UNSET__'
+    eligibility_requirement_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibilityRequirementId'), 'exclude': lambda f: f is CollaboratorGroupRequirement.UNSET }})
     
 

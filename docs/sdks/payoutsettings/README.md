@@ -14,16 +14,16 @@ Get the payout settings
 
 ```python
 import wingspan
-from wingspan.models import operations
 
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.get(id='female')
+res = s.payout_settings.get(id='<value>')
 
 if res.payout_settings_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -36,7 +36,11 @@ if res.payout_settings_response is not None:
 ### Response
 
 **[operations.GetPayoutSettingsResponse](../../models/operations/getpayoutsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## update
 
@@ -46,20 +50,17 @@ Update the payout settings
 
 ```python
 import wingspan
-from wingspan.models import operations, shared
+from wingspan.models import shared
 
 s = wingspan.Wingspan()
 
 
-res = s.payout_settings.update(id='Van', payout_settings_update=shared.PayoutSettingsUpdate(
-    payout_destinations=[
-        shared.PayoutDestinationUpdate(),
-    ],
-))
+res = s.payout_settings.update(id='<value>', payout_settings_update=shared.PayoutSettingsUpdate())
 
 if res.payout_settings_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -73,4 +74,8 @@ if res.payout_settings_response is not None:
 ### Response
 
 **[operations.UpdatePayoutSettingsResponse](../../models/operations/updatepayoutsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

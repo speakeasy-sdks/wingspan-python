@@ -10,8 +10,9 @@ from wingspan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DeductionApplication:
+    UNSET='__SPEAKEASY_UNSET__'
     amount_deducted: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amountDeducted') }})
     payable_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payableId') }})
-    disbursement_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursementId') }})
+    disbursement_id: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disbursementId'), 'exclude': lambda f: f is DeductionApplication.UNSET }})
     
 

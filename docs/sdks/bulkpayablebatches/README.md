@@ -14,19 +14,23 @@ List bulk payable batches
 ```python
 import wingspan
 
-
 s = wingspan.Wingspan()
 
 
 res = s.bulk_payable_batches.list()
 
-if res.bulk_payable_batches is not None:
+if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
 ### Response
 
 **[operations.ListBulkPayableBatchesResponse](../../models/operations/listbulkpayablebatchesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
